@@ -46,12 +46,14 @@
             this.buttonConfigurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(84, 241);
+            this.button1.Location = new System.Drawing.Point(85, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 35);
             this.button1.TabIndex = 0;
@@ -60,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(84, 282);
+            this.button2.Location = new System.Drawing.Point(85, 180);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 35);
             this.button2.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(84, 323);
+            this.button3.Location = new System.Drawing.Point(85, 221);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 35);
             this.button3.TabIndex = 2;
@@ -78,7 +80,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(84, 364);
+            this.button4.Location = new System.Drawing.Point(85, 262);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 35);
             this.button4.TabIndex = 3;
@@ -87,7 +89,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(84, 405);
+            this.button5.Location = new System.Drawing.Point(85, 303);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 35);
             this.button5.TabIndex = 4;
@@ -96,7 +98,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(340, 241);
+            this.button6.Location = new System.Drawing.Point(341, 139);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(250, 35);
             this.button6.TabIndex = 5;
@@ -105,7 +107,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(340, 282);
+            this.button7.Location = new System.Drawing.Point(341, 180);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(250, 35);
             this.button7.TabIndex = 6;
@@ -114,7 +116,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(340, 323);
+            this.button8.Location = new System.Drawing.Point(341, 221);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(250, 35);
             this.button8.TabIndex = 7;
@@ -123,7 +125,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(340, 364);
+            this.button9.Location = new System.Drawing.Point(341, 262);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(250, 35);
             this.button9.TabIndex = 8;
@@ -132,7 +134,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(340, 405);
+            this.button10.Location = new System.Drawing.Point(341, 303);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(250, 35);
             this.button10.TabIndex = 9;
@@ -141,6 +143,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolsToolStripMenuItem,
@@ -162,7 +165,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -203,12 +206,33 @@
             this.supportToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.supportToolStripMenuItem.Text = "Support";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(261, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Store Procedure Manager";
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(587, 378);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 12;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(674, 511);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(674, 413);
+            this.Controls.Add(this.CloseButton);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -220,9 +244,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
-            this.Text = "Main";
+            this.RightToLeftLayout = true;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Store Procedure Manager";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -250,6 +278,8 @@
         private System.Windows.Forms.ToolStripMenuItem buttonConfigurationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supportToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CloseButton;
     }
 }
 

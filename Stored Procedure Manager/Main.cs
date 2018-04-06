@@ -28,7 +28,28 @@ namespace Stored_Procedure_Manager
         public Main()
         {
             InitializeComponent();
-            loadButtonConfig();
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    loadButtonConfig();
+                }
+            }
+            catch (Exception ex)
+            {
+                DBConnection M = new DBConnection();
+                M.Show();
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Connection Information");
+            }            
         }
 
         // Load the names of the buttons
@@ -165,9 +186,15 @@ namespace Stored_Procedure_Manager
         {
             ButtonConfig M = new ButtonConfig();
             M.Show();
+            this.Hide();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
