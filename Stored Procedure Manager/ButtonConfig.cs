@@ -87,8 +87,9 @@ namespace Stored_Procedure_Manager
 
         // Save Button function
         private void SaveButton_Click(object sender, EventArgs e)
-        { 
+        {
             // Save the data from the text fields in the database
+            // TO-DO Need to replace the button text in the Values to use Parameters instead (@Button1Name instead of Button1NameText.Text)
             SqlCommand cmd = new SqlCommand
                 (
                     "update SPManagerButtonConfig " +
