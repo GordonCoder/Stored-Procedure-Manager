@@ -16,7 +16,7 @@ namespace Stored_Procedure_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Home());
         }
     }
 }

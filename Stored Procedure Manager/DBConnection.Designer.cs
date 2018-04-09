@@ -39,12 +39,11 @@
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ServerNameTextBox
             // 
-            this.ServerNameTextBox.Location = new System.Drawing.Point(83, 47);
+            this.ServerNameTextBox.Location = new System.Drawing.Point(233, 114);
             this.ServerNameTextBox.Name = "ServerNameTextBox";
             this.ServerNameTextBox.Size = new System.Drawing.Size(288, 20);
             this.ServerNameTextBox.TabIndex = 0;
@@ -52,7 +51,7 @@
             // 
             // InstanceTextBox
             // 
-            this.InstanceTextBox.Location = new System.Drawing.Point(83, 73);
+            this.InstanceTextBox.Location = new System.Drawing.Point(233, 140);
             this.InstanceTextBox.Name = "InstanceTextBox";
             this.InstanceTextBox.Size = new System.Drawing.Size(288, 20);
             this.InstanceTextBox.TabIndex = 1;
@@ -61,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 50);
+            this.label1.Location = new System.Drawing.Point(158, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 2;
@@ -70,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 76);
+            this.label2.Location = new System.Drawing.Point(179, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 3;
@@ -79,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 102);
+            this.label3.Location = new System.Drawing.Point(174, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 4;
@@ -88,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 128);
+            this.label4.Location = new System.Drawing.Point(167, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 5;
@@ -97,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 154);
+            this.label5.Location = new System.Drawing.Point(174, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 6;
@@ -105,7 +104,7 @@
             // 
             // DatabaseTextBox
             // 
-            this.DatabaseTextBox.Location = new System.Drawing.Point(83, 99);
+            this.DatabaseTextBox.Location = new System.Drawing.Point(233, 166);
             this.DatabaseTextBox.Name = "DatabaseTextBox";
             this.DatabaseTextBox.Size = new System.Drawing.Size(288, 20);
             this.DatabaseTextBox.TabIndex = 7;
@@ -113,7 +112,7 @@
             // 
             // UserNameTextBox
             // 
-            this.UserNameTextBox.Location = new System.Drawing.Point(83, 125);
+            this.UserNameTextBox.Location = new System.Drawing.Point(233, 192);
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.Size = new System.Drawing.Size(288, 20);
             this.UserNameTextBox.TabIndex = 8;
@@ -121,7 +120,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(83, 151);
+            this.PasswordTextBox.Location = new System.Drawing.Point(233, 218);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(288, 20);
             this.PasswordTextBox.TabIndex = 9;
@@ -129,7 +128,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(215, 233);
+            this.SaveButton.Location = new System.Drawing.Point(446, 258);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 10;
@@ -137,23 +136,12 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // CloseButton
-            // 
-            this.CloseButton.Location = new System.Drawing.Point(296, 233);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(75, 23);
-            this.CloseButton.TabIndex = 11;
-            this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(433, 270);
-            this.Controls.Add(this.CloseButton);
+            this.ClientSize = new System.Drawing.Size(713, 383);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
@@ -165,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InstanceTextBox);
             this.Controls.Add(this.ServerNameTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DBConnection";
             this.Text = "DBConnection";
             this.ResumeLayout(false);
@@ -185,6 +174,5 @@
         private System.Windows.Forms.TextBox UserNameTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button CloseButton;
     }
 }

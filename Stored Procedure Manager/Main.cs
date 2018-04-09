@@ -76,6 +76,9 @@ namespace Stored_Procedure_Manager
             cn.Close();
         }
 
+        // TO - DO I need to make this more secure by following the information in this link
+        // https://msdn.microsoft.com/library/ms182310.aspx
+
         private void button1_Click(object sender, EventArgs e)
         {
             cn.Open();
@@ -197,6 +200,18 @@ namespace Stored_Procedure_Manager
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModernUI_Click(object sender, EventArgs e)
+        {
+            Home h = new Home();
+            h.Show();
+            this.Hide();
         }
     }
 }

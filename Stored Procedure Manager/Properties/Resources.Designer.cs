@@ -69,5 +69,45 @@ namespace Stored_Procedure_Manager.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Executable_Logo_117___50 {
+            get {
+                object obj = ResourceManager.GetObject("Executable Logo 117 - 50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Executable_Logo_250___105 {
+            get {
+                object obj = ResourceManager.GetObject("Executable Logo 250 - 105", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Executable_Logo_350___150 {
+            get {
+                object obj = ResourceManager.GetObject("Executable Logo 350 - 150", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sierra_WS_250_83 {
+            get {
+                object obj = ResourceManager.GetObject("Sierra WS 250-83", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -264,5 +264,9 @@ namespace Stored_Procedure_Manager
 
         }
 
+        private void ButtonConfig_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
