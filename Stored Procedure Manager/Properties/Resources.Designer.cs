@@ -73,6 +73,36 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ConfigurationCenter {
+            get {
+                object obj = ResourceManager.GetObject("ConfigurationCenter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ConfigurationCenter_60_55 {
+            get {
+                object obj = ResourceManager.GetObject("ConfigurationCenter 60-55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DBConnectionManager_60_55 {
+            get {
+                object obj = ResourceManager.GetObject("DBConnectionManager 60-55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Executable_Logo_117___50 {
             get {
                 object obj = ResourceManager.GetObject("Executable Logo 117 - 50", resourceCulture);

@@ -46,10 +46,12 @@ namespace Stored_Procedure_Manager
             }
             catch (Exception ex)
             {
-                DBConnection M = new DBConnection();
-                M.Show();
-                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Connection Information");
-            }            
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         // Load the names of the buttons
@@ -57,7 +59,7 @@ namespace Stored_Procedure_Manager
         {
             DataTable dt = new DataTable();
             cn.Open();
-            SqlCommand sqlcmd = new SqlCommand("SELECT * FROM SPManagerButtonConfig", cn);
+            SqlCommand sqlcmd = new SqlCommand("SELECT * FROM cust_SPManagerConfig", cn);
             SqlDataAdapter sqlDa = new SqlDataAdapter(sqlcmd);
             sqlDa.Fill(dt);
             if (dt.Rows.Count > 0)
@@ -83,6 +85,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName1String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -93,6 +96,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName2String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -103,6 +107,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -113,6 +118,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName4String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -123,6 +129,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName5String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -133,6 +140,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName6String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -143,6 +151,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName7String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -153,6 +162,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName8String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -163,6 +173,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName9String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -173,6 +184,7 @@ namespace Stored_Procedure_Manager
         {
             cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName10String, cn);
+            cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -181,25 +193,22 @@ namespace Stored_Procedure_Manager
 
         private void databaseConnectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DBConnection M = new DBConnection();
-            M.Show();
+
         }
 
         private void buttonConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ButtonConfig M = new ButtonConfig();
-            M.Show();
-            this.Hide();
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -209,9 +218,7 @@ namespace Stored_Procedure_Manager
 
         private void ModernUI_Click(object sender, EventArgs e)
         {
-            Home h = new Home();
-            h.Show();
-            this.Hide();
+
         }
     }
 }

@@ -30,7 +30,31 @@ namespace Stored_Procedure_Manager
         public ButtonConfig()
         {
             InitializeComponent();
-            loadButtonConfig();
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    loadButtonConfig();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         // Load all needed configuration
@@ -50,7 +74,7 @@ namespace Stored_Procedure_Manager
 
             // Open the connection to the database and select the data within the table
             cn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from SPManagerButtonConfig", cn);
+            SqlCommand cmd = new SqlCommand("Select * from cust_SPManagerConfig", cn);
             dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
@@ -92,7 +116,7 @@ namespace Stored_Procedure_Manager
             // TO-DO Need to replace the button text in the Values to use Parameters instead (@Button1Name instead of Button1NameText.Text)
             SqlCommand cmd = new SqlCommand
                 (
-                    "update SPManagerButtonConfig " +
+                    "update cust_SPManagerConfig " +
                     "set " +
                     "ButtonName01 = '" + Button1NameText.Text + "', " +
                     "ButtonName02 = '" + Button2NameText.Text + "', " +
@@ -132,6 +156,7 @@ namespace Stored_Procedure_Manager
             Properties.Settings.Default.Save();
 
             loadButtonConfig();
+
             Button1NameText.Text = "";
             Button2NameText.Text = "";
             Button3NameText.Text = "";
@@ -154,19 +179,14 @@ namespace Stored_Procedure_Manager
             SPName9TextBox.Text = "";
             SPName10TextBox.Text = "";
 
-            Main M = new Main();
-            M.Show();
-            this.Hide();
-
+            loadButtonConfig();
         }
 
 
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            Main M = new Main();
-            M.Show();
-            this.Hide();
+
         }
 
         private void Button1NameText_TextChanged(object sender, EventArgs e)

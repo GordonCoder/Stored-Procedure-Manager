@@ -7,15 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Stored_Procedure_Manager
 {
     public partial class DBConnection : Form
     {
+        // SQL Connection that can be used throughout the Form
+        SqlConnection cn = new SqlConnection
+            (
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString
+            );
+
         public DBConnection()
         {
             InitializeComponent();
-            loadDBConfig();
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    loadDBConfig();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+                loadDBConfig();
+            }
+            finally
+            {
+                cn.Close();
+            }
+
         }
 
         private void loadDBConfig()
@@ -50,7 +88,7 @@ namespace Stored_Procedure_Manager
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            PasswordTextBox.PasswordChar = '*';
+
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -61,12 +99,16 @@ namespace Stored_Procedure_Manager
             Properties.Settings.Default.UserNameString = UserNameTextBox.Text;
             Properties.Settings.Default.PasswordString = PasswordTextBox.Text;
             Properties.Settings.Default.Save();
-            this.Hide();
+            MessageBox.Show("Record updated");
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+        }
+
+        private void DBConnection_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

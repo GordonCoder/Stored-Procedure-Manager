@@ -33,10 +33,13 @@
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
-            this.logopanel = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
             this.container = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.logopanel = new System.Windows.Forms.Panel();
             this.sidepanel.SuspendLayout();
             this.headerpanel.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +47,8 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
+            this.sidepanel.Controls.Add(this.panel2);
+            this.sidepanel.Controls.Add(this.panel1);
             this.sidepanel.Controls.Add(this.BottomPanel);
             this.sidepanel.Controls.Add(this.dbconnectbutton);
             this.sidepanel.Controls.Add(this.buttonconfigbutton);
@@ -69,9 +74,9 @@
             this.dbconnectbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
             this.dbconnectbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dbconnectbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dbconnectbutton.Location = new System.Drawing.Point(-3, 219);
+            this.dbconnectbutton.Location = new System.Drawing.Point(66, 231);
             this.dbconnectbutton.Name = "dbconnectbutton";
-            this.dbconnectbutton.Size = new System.Drawing.Size(250, 48);
+            this.dbconnectbutton.Size = new System.Drawing.Size(181, 55);
             this.dbconnectbutton.TabIndex = 4;
             this.dbconnectbutton.Text = "Database Connection";
             this.dbconnectbutton.UseVisualStyleBackColor = true;
@@ -83,9 +88,9 @@
             this.buttonconfigbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
             this.buttonconfigbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonconfigbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.buttonconfigbutton.Location = new System.Drawing.Point(-3, 159);
+            this.buttonconfigbutton.Location = new System.Drawing.Point(66, 159);
             this.buttonconfigbutton.Name = "buttonconfigbutton";
-            this.buttonconfigbutton.Size = new System.Drawing.Size(250, 48);
+            this.buttonconfigbutton.Size = new System.Drawing.Size(181, 55);
             this.buttonconfigbutton.TabIndex = 3;
             this.buttonconfigbutton.Text = "Button Configuration";
             this.buttonconfigbutton.UseVisualStyleBackColor = true;
@@ -97,26 +102,18 @@
             this.homebutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
             this.homebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homebutton.Location = new System.Drawing.Point(-3, 99);
+            this.homebutton.Location = new System.Drawing.Point(66, 99);
             this.homebutton.Name = "homebutton";
-            this.homebutton.Size = new System.Drawing.Size(250, 48);
+            this.homebutton.Size = new System.Drawing.Size(181, 48);
             this.homebutton.TabIndex = 2;
             this.homebutton.Text = "Home";
             this.homebutton.UseVisualStyleBackColor = true;
             this.homebutton.Click += new System.EventHandler(this.homebutton_Click);
             // 
-            // logopanel
-            // 
-            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
-            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logopanel.Location = new System.Drawing.Point(0, 0);
-            this.logopanel.Name = "logopanel";
-            this.logopanel.Size = new System.Drawing.Size(250, 83);
-            this.logopanel.TabIndex = 0;
-            // 
             // headerpanel
             // 
-            this.headerpanel.BackColor = System.Drawing.Color.White;
+            this.headerpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.headerpanel.Controls.Add(this.label1);
             this.headerpanel.Controls.Add(this.CloseButton);
             this.headerpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerpanel.Location = new System.Drawing.Point(250, 0);
@@ -139,13 +136,48 @@
             this.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseButton.Location = new System.Drawing.Point(658, 12);
+            this.CloseButton.Location = new System.Drawing.Point(658, 16);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(43, 48);
             this.CloseButton.TabIndex = 7;
             this.CloseButton.Text = "X";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(271, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Stored Procedure Manager";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.DBConnectionManager_60_55;
+            this.panel2.Location = new System.Drawing.Point(10, 231);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 55);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.ConfigurationCenter_60_55;
+            this.panel1.Location = new System.Drawing.Point(10, 159);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(60, 55);
+            this.panel1.TabIndex = 7;
+            // 
+            // logopanel
+            // 
+            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
+            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logopanel.Location = new System.Drawing.Point(0, 0);
+            this.logopanel.Name = "logopanel";
+            this.logopanel.Size = new System.Drawing.Size(250, 83);
+            this.logopanel.TabIndex = 0;
             // 
             // Home
             // 
@@ -162,6 +194,7 @@
             this.Text = "Home";
             this.sidepanel.ResumeLayout(false);
             this.headerpanel.ResumeLayout(false);
+            this.headerpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +210,8 @@
         private System.Windows.Forms.Button buttonconfigbutton;
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

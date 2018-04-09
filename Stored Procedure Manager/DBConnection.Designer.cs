@@ -122,6 +122,7 @@
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(233, 218);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(288, 20);
             this.PasswordTextBox.TabIndex = 9;
             this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
@@ -156,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DBConnection";
             this.Text = "DBConnection";
+            this.Load += new System.EventHandler(this.DBConnection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
