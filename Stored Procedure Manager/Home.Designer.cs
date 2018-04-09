@@ -34,17 +34,19 @@
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
             this.headerpanel = new System.Windows.Forms.Panel();
-            this.container = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolsButton = new System.Windows.Forms.Button();
+            this.container = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.logopanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.sidepanel.SuspendLayout();
             this.headerpanel.SuspendLayout();
+            this.container.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidepanel
@@ -130,15 +132,6 @@
             this.headerpanel.Size = new System.Drawing.Size(713, 83);
             this.headerpanel.TabIndex = 1;
             // 
-            // container
-            // 
-            this.container.BackColor = System.Drawing.SystemColors.Control;
-            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(250, 83);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(713, 383);
-            this.container.TabIndex = 2;
-            // 
             // CloseButton
             // 
             this.CloseButton.FlatAppearance.BorderSize = 0;
@@ -177,6 +170,17 @@
             this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolsButton.UseVisualStyleBackColor = true;
             this.toolsButton.Click += new System.EventHandler(this.toolsButton_Click);
+            // 
+            // container
+            // 
+            this.container.BackColor = System.Drawing.SystemColors.Control;
+            this.container.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Splash_Page_713_383;
+            this.container.Controls.Add(this.label2);
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(250, 83);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(713, 383);
+            this.container.TabIndex = 2;
             // 
             // panel4
             // 
@@ -219,6 +223,16 @@
             this.logopanel.Size = new System.Drawing.Size(250, 83);
             this.logopanel.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(338, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(271, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Stored Procedure Manager";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +249,8 @@
             this.sidepanel.ResumeLayout(false);
             this.headerpanel.ResumeLayout(false);
             this.headerpanel.PerformLayout();
+            this.container.ResumeLayout(false);
+            this.container.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +272,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button toolsButton;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
     }
 }

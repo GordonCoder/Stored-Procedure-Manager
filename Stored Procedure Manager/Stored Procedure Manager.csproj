@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Favicon.ico" />
+    <None Include="Resources\Splash Page 713-383.png" />
     <None Include="Resources\Clocks 60-55.jpg" />
     <None Include="Resources\TerminalsConfiguration 60-53.jpg" />
     <None Include="Resources\TerminalsConfiguration 60-50.jpg" />
