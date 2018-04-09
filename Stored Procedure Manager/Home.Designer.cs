@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.sidepanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.BottomPanel = new System.Windows.Forms.Panel();
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
-            this.sidepanel.Controls.Add(this.panel1);
+            this.sidepanel.Controls.Add(this.BottomPanel);
             this.sidepanel.Controls.Add(this.dbconnectbutton);
             this.sidepanel.Controls.Add(this.buttonconfigbutton);
             this.sidepanel.Controls.Add(this.homebutton);
@@ -55,12 +55,13 @@
             this.sidepanel.Size = new System.Drawing.Size(250, 466);
             this.sidepanel.TabIndex = 0;
             // 
-            // panel1
+            // BottomPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 383);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 83);
-            this.panel1.TabIndex = 6;
+            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(70)))), ((int)(((byte)(125)))));
+            this.BottomPanel.Location = new System.Drawing.Point(0, 383);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(250, 83);
+            this.BottomPanel.TabIndex = 6;
             // 
             // dbconnectbutton
             // 
@@ -125,6 +126,7 @@
             // 
             // container
             // 
+            this.container.BackColor = System.Drawing.SystemColors.Control;
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(250, 83);
             this.container.Name = "container";
@@ -156,6 +158,7 @@
             this.Controls.Add(this.sidepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.sidepanel.ResumeLayout(false);
             this.headerpanel.ResumeLayout(false);
@@ -169,7 +172,7 @@
         private System.Windows.Forms.Panel logopanel;
         private System.Windows.Forms.Panel headerpanel;
         private System.Windows.Forms.Button homebutton;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Button dbconnectbutton;
         private System.Windows.Forms.Button buttonconfigbutton;
         private System.Windows.Forms.Panel container;
