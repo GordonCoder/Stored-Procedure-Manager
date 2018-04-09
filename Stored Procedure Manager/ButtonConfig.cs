@@ -114,6 +114,8 @@ namespace Stored_Procedure_Manager
         {
             // Save the data from the text fields in the database
             // TO-DO Need to replace the button text in the Values to use Parameters instead (@Button1Name instead of Button1NameText.Text)
+            // TO - DO Need to do this https://stackoverflow.com/questions/19866570/how-do-i-encrypt-user-settings
+
             SqlCommand cmd = new SqlCommand
                 (
                     "update cust_SPManagerConfig " +
@@ -157,29 +159,6 @@ namespace Stored_Procedure_Manager
 
             loadButtonConfig();
 
-            Button1NameText.Text = "";
-            Button2NameText.Text = "";
-            Button3NameText.Text = "";
-            Button4NameText.Text = "";
-            Button5NameText.Text = "";
-            Button6NameText.Text = "";
-            Button7NameText.Text = "";
-            Button8NameText.Text = "";
-            Button9NameText.Text = "";
-            Button10NameText.Text = "";
-
-            SPName1TextBox.Text = "";
-            SPName2TextBox.Text = "";
-            SPName3TextBox.Text = "";
-            SPName4TextBox.Text = "";
-            SPName5TextBox.Text = "";
-            SPName6TextBox.Text = "";
-            SPName7TextBox.Text = "";
-            SPName8TextBox.Text = "";
-            SPName9TextBox.Text = "";
-            SPName10TextBox.Text = "";
-
-            loadButtonConfig();
         }
 
 

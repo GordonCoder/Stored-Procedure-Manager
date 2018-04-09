@@ -73,6 +73,16 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clocks_60_55 {
+            get {
+                object obj = ResourceManager.GetObject("Clocks 60-55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ConfigurationCenter {
             get {
                 object obj = ResourceManager.GetObject("ConfigurationCenter", resourceCulture);
@@ -136,6 +146,36 @@ namespace Stored_Procedure_Manager.Properties {
         internal static System.Drawing.Bitmap Sierra_WS_250_83 {
             get {
                 object obj = ResourceManager.GetObject("Sierra WS 250-83", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TerminalsConfiguration_60_50 {
+            get {
+                object obj = ResourceManager.GetObject("TerminalsConfiguration 60-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TerminalsConfiguration_60_53 {
+            get {
+                object obj = ResourceManager.GetObject("TerminalsConfiguration 60-53", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TerminalsConfiguration_70_60 {
+            get {
+                object obj = ResourceManager.GetObject("TerminalsConfiguration 70-60", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

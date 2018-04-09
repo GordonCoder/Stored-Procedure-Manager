@@ -17,6 +17,31 @@ namespace Stored_Procedure_Manager
             InitializeComponent();
         }
 
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+        private void Home_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void Home_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void Home_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
         private void homebutton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
