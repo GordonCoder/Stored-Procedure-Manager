@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TableButton = new System.Windows.Forms.Button();
+            this.SPButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.SQLUtilitiesButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // TableButton
             // 
-            this.button1.Location = new System.Drawing.Point(626, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
+            this.TableButton.Location = new System.Drawing.Point(533, 66);
+            this.TableButton.Name = "TableButton";
+            this.TableButton.Size = new System.Drawing.Size(144, 53);
+            this.TableButton.TabIndex = 0;
+            this.TableButton.Text = "Create Table";
+            this.TableButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // SPButton
             // 
-            this.button2.Location = new System.Drawing.Point(626, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Create";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SPButton.Location = new System.Drawing.Point(533, 144);
+            this.SPButton.Name = "SPButton";
+            this.SPButton.Size = new System.Drawing.Size(144, 53);
+            this.SPButton.TabIndex = 1;
+            this.SPButton.Text = " Create Stored Procedure";
+            this.SPButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -69,14 +71,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(54, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(398, 13);
+            this.label2.Size = new System.Drawing.Size(438, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "This will create the needed Stored Procedure needed to update the database table";
+            this.label2.Text = "This table will be created within the database that is populated in the Database " +
+    "Connection.";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 128);
+            this.label3.Location = new System.Drawing.Point(54, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(375, 13);
             this.label3.TabIndex = 4;
@@ -85,24 +88,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 141);
+            this.label4.Location = new System.Drawing.Point(54, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(438, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "This table will be created within the database that is populated in the Database " +
     "Connection.";
             // 
+            // SQLUtilitiesButton
+            // 
+            this.SQLUtilitiesButton.Location = new System.Drawing.Point(533, 222);
+            this.SQLUtilitiesButton.Name = "SQLUtilitiesButton";
+            this.SQLUtilitiesButton.Size = new System.Drawing.Size(144, 53);
+            this.SQLUtilitiesButton.TabIndex = 6;
+            this.SQLUtilitiesButton.Text = "Install SQL Utilities";
+            this.SQLUtilitiesButton.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(54, 242);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(284, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Install the needed tools to communicate with the database.";
+            // 
             // Tools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 383);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SQLUtilitiesButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SPButton);
+            this.Controls.Add(this.TableButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tools";
             this.Text = "Tools";
@@ -113,11 +136,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button TableButton;
+        private System.Windows.Forms.Button SPButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button SQLUtilitiesButton;
+        private System.Windows.Forms.Label label5;
     }
 }

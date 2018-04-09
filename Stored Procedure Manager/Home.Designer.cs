@@ -37,7 +37,7 @@
             this.container = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolsButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,7 +52,7 @@
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
             this.sidepanel.Controls.Add(this.panel4);
             this.sidepanel.Controls.Add(this.panel3);
-            this.sidepanel.Controls.Add(this.button1);
+            this.sidepanel.Controls.Add(this.toolsButton);
             this.sidepanel.Controls.Add(this.panel2);
             this.sidepanel.Controls.Add(this.panel1);
             this.sidepanel.Controls.Add(this.BottomPanel);
@@ -163,19 +163,20 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Stored Procedure Manager";
             // 
-            // button1
+            // toolsButton
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(81, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 55);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Tools";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.toolsButton.FlatAppearance.BorderSize = 0;
+            this.toolsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
+            this.toolsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toolsButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolsButton.Location = new System.Drawing.Point(81, 305);
+            this.toolsButton.Name = "toolsButton";
+            this.toolsButton.Size = new System.Drawing.Size(166, 55);
+            this.toolsButton.TabIndex = 9;
+            this.toolsButton.Text = "Tools";
+            this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolsButton.UseVisualStyleBackColor = true;
+            this.toolsButton.Click += new System.EventHandler(this.toolsButton_Click);
             // 
             // panel4
             // 
@@ -253,7 +254,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button toolsButton;
         private System.Windows.Forms.Panel panel4;
     }
 }

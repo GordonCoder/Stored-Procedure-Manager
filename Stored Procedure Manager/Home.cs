@@ -73,5 +73,14 @@ namespace Stored_Procedure_Manager
         {
             Application.Exit();
         }
+
+        private void toolsButton_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            Tools t = new Tools();
+            t.TopLevel = false;
+            container.Controls.Add(t);
+            t.Show();
+        }
     }
 }
