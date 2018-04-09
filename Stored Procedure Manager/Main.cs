@@ -76,7 +76,29 @@ namespace Stored_Procedure_Manager
                 this.button10.Text = dt.Rows[0]["ButtonName10"].ToString();
             }
             cn.Close();
+
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName1String))
+            { button1.Enabled = false; } else { button1.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName2String))
+            { button2.Enabled = false; } else { button2.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName3String))
+            { button3.Enabled = false; } else { button3.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName4String))
+            { button4.Enabled = false; } else { button4.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName5String))
+            { button5.Enabled = false; } else { button5.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName6String))
+            { button6.Enabled = false; } else { button6.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName7String))
+            { button7.Enabled = false; } else { button7.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName8String))
+            { button8.Enabled = false; } else { button8.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName9String))
+            { button9.Enabled = false; } else { button9.Enabled = true; }
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName10String))
+            { button10.Enabled = false; } else { button10.Enabled = true; }
         }
+
 
         // TO - DO I need to make this more secure by following the information in this link
         // https://msdn.microsoft.com/library/ms182310.aspx
