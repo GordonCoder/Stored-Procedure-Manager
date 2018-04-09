@@ -86,7 +86,7 @@
             this.Button2NameText.Location = new System.Drawing.Point(93, 68);
             this.Button2NameText.Name = "Button2NameText";
             this.Button2NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button2NameText.TabIndex = 1;
+            this.Button2NameText.TabIndex = 2;
             this.Button2NameText.TextChanged += new System.EventHandler(this.Button2NameText_TextChanged);
             // 
             // Button3NameText
@@ -94,14 +94,14 @@
             this.Button3NameText.Location = new System.Drawing.Point(93, 95);
             this.Button3NameText.Name = "Button3NameText";
             this.Button3NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button3NameText.TabIndex = 2;
+            this.Button3NameText.TabIndex = 4;
             // 
             // Button4NameText
             // 
             this.Button4NameText.Location = new System.Drawing.Point(93, 122);
             this.Button4NameText.Name = "Button4NameText";
             this.Button4NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button4NameText.TabIndex = 3;
+            this.Button4NameText.TabIndex = 6;
             this.Button4NameText.TextChanged += new System.EventHandler(this.Button4NameText_TextChanged);
             // 
             // Button5NameText
@@ -109,7 +109,7 @@
             this.Button5NameText.Location = new System.Drawing.Point(93, 149);
             this.Button5NameText.Name = "Button5NameText";
             this.Button5NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button5NameText.TabIndex = 4;
+            this.Button5NameText.TabIndex = 8;
             this.Button5NameText.TextChanged += new System.EventHandler(this.Button5NameText_TextChanged);
             // 
             // Button6NameText
@@ -117,7 +117,7 @@
             this.Button6NameText.Location = new System.Drawing.Point(93, 176);
             this.Button6NameText.Name = "Button6NameText";
             this.Button6NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button6NameText.TabIndex = 5;
+            this.Button6NameText.TabIndex = 10;
             this.Button6NameText.TextChanged += new System.EventHandler(this.Button6NameText_TextChanged);
             // 
             // Button7NameText
@@ -125,7 +125,7 @@
             this.Button7NameText.Location = new System.Drawing.Point(93, 203);
             this.Button7NameText.Name = "Button7NameText";
             this.Button7NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button7NameText.TabIndex = 6;
+            this.Button7NameText.TabIndex = 12;
             this.Button7NameText.TextChanged += new System.EventHandler(this.Button7NameText_TextChanged);
             // 
             // Button8NameText
@@ -133,7 +133,7 @@
             this.Button8NameText.Location = new System.Drawing.Point(93, 230);
             this.Button8NameText.Name = "Button8NameText";
             this.Button8NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button8NameText.TabIndex = 7;
+            this.Button8NameText.TabIndex = 14;
             this.Button8NameText.TextChanged += new System.EventHandler(this.Button8NameText_TextChanged);
             // 
             // Button9NameText
@@ -141,7 +141,7 @@
             this.Button9NameText.Location = new System.Drawing.Point(93, 257);
             this.Button9NameText.Name = "Button9NameText";
             this.Button9NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button9NameText.TabIndex = 8;
+            this.Button9NameText.TabIndex = 16;
             this.Button9NameText.TextChanged += new System.EventHandler(this.Button9NameText_TextChanged);
             // 
             // Button10NameText
@@ -149,7 +149,7 @@
             this.Button10NameText.Location = new System.Drawing.Point(93, 284);
             this.Button10NameText.Name = "Button10NameText";
             this.Button10NameText.Size = new System.Drawing.Size(244, 20);
-            this.Button10NameText.TabIndex = 9;
+            this.Button10NameText.TabIndex = 18;
             this.Button10NameText.TextChanged += new System.EventHandler(this.Button10NameText_TextChanged);
             // 
             // SPName1TextBox
@@ -157,7 +157,7 @@
             this.SPName1TextBox.Location = new System.Drawing.Point(344, 42);
             this.SPName1TextBox.Name = "SPName1TextBox";
             this.SPName1TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName1TextBox.TabIndex = 10;
+            this.SPName1TextBox.TabIndex = 1;
             this.SPName1TextBox.TextChanged += new System.EventHandler(this.SPName1TextBox_TextChanged);
             // 
             // SPName2TextBox
@@ -165,7 +165,7 @@
             this.SPName2TextBox.Location = new System.Drawing.Point(344, 68);
             this.SPName2TextBox.Name = "SPName2TextBox";
             this.SPName2TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName2TextBox.TabIndex = 11;
+            this.SPName2TextBox.TabIndex = 3;
             this.SPName2TextBox.TextChanged += new System.EventHandler(this.SPName2TextBox_TextChanged);
             // 
             // SPName3TextBox
@@ -173,7 +173,7 @@
             this.SPName3TextBox.Location = new System.Drawing.Point(344, 95);
             this.SPName3TextBox.Name = "SPName3TextBox";
             this.SPName3TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName3TextBox.TabIndex = 12;
+            this.SPName3TextBox.TabIndex = 5;
             this.SPName3TextBox.TextChanged += new System.EventHandler(this.SPName3TextBox_TextChanged);
             // 
             // SPName4TextBox
@@ -181,7 +181,7 @@
             this.SPName4TextBox.Location = new System.Drawing.Point(344, 122);
             this.SPName4TextBox.Name = "SPName4TextBox";
             this.SPName4TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName4TextBox.TabIndex = 13;
+            this.SPName4TextBox.TabIndex = 7;
             this.SPName4TextBox.TextChanged += new System.EventHandler(this.SPName4TextBox_TextChanged);
             // 
             // SPName5TextBox
@@ -189,7 +189,7 @@
             this.SPName5TextBox.Location = new System.Drawing.Point(344, 149);
             this.SPName5TextBox.Name = "SPName5TextBox";
             this.SPName5TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName5TextBox.TabIndex = 14;
+            this.SPName5TextBox.TabIndex = 9;
             this.SPName5TextBox.TextChanged += new System.EventHandler(this.SPName5TextBox_TextChanged);
             // 
             // SPName6TextBox
@@ -197,7 +197,7 @@
             this.SPName6TextBox.Location = new System.Drawing.Point(344, 176);
             this.SPName6TextBox.Name = "SPName6TextBox";
             this.SPName6TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName6TextBox.TabIndex = 15;
+            this.SPName6TextBox.TabIndex = 11;
             this.SPName6TextBox.TextChanged += new System.EventHandler(this.SPName6TextBox_TextChanged);
             // 
             // SPName7TextBox
@@ -205,7 +205,7 @@
             this.SPName7TextBox.Location = new System.Drawing.Point(344, 203);
             this.SPName7TextBox.Name = "SPName7TextBox";
             this.SPName7TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName7TextBox.TabIndex = 16;
+            this.SPName7TextBox.TabIndex = 13;
             this.SPName7TextBox.TextChanged += new System.EventHandler(this.SPName7TextBox_TextChanged);
             // 
             // SPName8TextBox
@@ -213,7 +213,7 @@
             this.SPName8TextBox.Location = new System.Drawing.Point(344, 230);
             this.SPName8TextBox.Name = "SPName8TextBox";
             this.SPName8TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName8TextBox.TabIndex = 17;
+            this.SPName8TextBox.TabIndex = 15;
             this.SPName8TextBox.TextChanged += new System.EventHandler(this.SPName8TextBox_TextChanged);
             // 
             // SPName9TextBox
@@ -221,7 +221,7 @@
             this.SPName9TextBox.Location = new System.Drawing.Point(344, 257);
             this.SPName9TextBox.Name = "SPName9TextBox";
             this.SPName9TextBox.Size = new System.Drawing.Size(324, 20);
-            this.SPName9TextBox.TabIndex = 18;
+            this.SPName9TextBox.TabIndex = 17;
             this.SPName9TextBox.TextChanged += new System.EventHandler(this.SPName9TextBox_TextChanged);
             // 
             // SPName10TextBox
