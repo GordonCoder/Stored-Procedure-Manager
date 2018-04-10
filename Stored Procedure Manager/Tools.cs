@@ -16,5 +16,10 @@ namespace Stored_Procedure_Manager
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

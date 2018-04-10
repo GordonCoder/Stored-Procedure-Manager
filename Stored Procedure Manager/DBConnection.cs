@@ -99,16 +99,73 @@ namespace Stored_Procedure_Manager
             Properties.Settings.Default.UserNameString = UserNameTextBox.Text;
             Properties.Settings.Default.PasswordString = PasswordTextBox.Text;
             Properties.Settings.Default.Save();
-            MessageBox.Show("Record updated");
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    //Properties.Settings.Default.ServerNameString = ServerNameTextBox.Text;
+                    //Properties.Settings.Default.InstanceString = InstanceTextBox.Text;
+                    //Properties.Settings.Default.DatabaseString = DatabaseTextBox.Text;
+                    //Properties.Settings.Default.UserNameString = UserNameTextBox.Text;
+                    //Properties.Settings.Default.PasswordString = PasswordTextBox.Text;
+                    Properties.Settings.Default.PassFailString = "Pass";
+                    Properties.Settings.Default.Save();
+                    MessageBox.Show("Connection information has been saved. Connection Successful!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Properties.Settings.Default.PassFailString = "Fail";
+                Properties.Settings.Default.Save();
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            }
+            finally
+            {
+                cn.Close();
+            }
+            
         }
 
         private void DBConnection_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void testbutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    MessageBox.Show("Connection Successful!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }

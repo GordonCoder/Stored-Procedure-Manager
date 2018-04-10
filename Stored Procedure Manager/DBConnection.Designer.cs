@@ -39,6 +39,7 @@
             this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.testbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ServerNameTextBox
@@ -137,12 +138,23 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // testbutton
+            // 
+            this.testbutton.Location = new System.Drawing.Point(346, 258);
+            this.testbutton.Name = "testbutton";
+            this.testbutton.Size = new System.Drawing.Size(94, 23);
+            this.testbutton.TabIndex = 11;
+            this.testbutton.Text = "Test Connection";
+            this.testbutton.UseVisualStyleBackColor = true;
+            this.testbutton.Click += new System.EventHandler(this.testbutton_Click);
+            // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(713, 383);
+            this.Controls.Add(this.testbutton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UserNameTextBox);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.TextBox UserNameTextBox;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button testbutton;
     }
 }

@@ -202,5 +202,17 @@ namespace Stored_Procedure_Manager.Properties {
                 this["SPName10String"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public string PassFailString {
+            get {
+                return ((string)(this["PassFailString"]));
+            }
+            set {
+                this["PassFailString"] = value;
+            }
+        }
     }
 }

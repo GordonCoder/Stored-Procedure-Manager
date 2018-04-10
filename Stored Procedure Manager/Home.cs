@@ -17,31 +17,12 @@ namespace Stored_Procedure_Manager
             InitializeComponent();
         }
 
-        private bool dragging = false;
-        private Point dragCursorPoint;
-        private Point dragFormPoint;
-
-        private void Home_MouseDown(object sender, MouseEventArgs e)
+        private void loadButtonConfig(object sender, EventArgs e)
         {
-            dragging = true;
-            dragCursorPoint = Cursor.Position;
-            dragFormPoint = this.Location;
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName1String))
+            { homebutton.Enabled = false; }
+            else { homebutton.Enabled = true; }
         }
-
-        private void Home_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                this.Location = Point.Add(dragFormPoint, new Size(dif));
-            }
-        }
-
-        private void Home_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
         private void homebutton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
@@ -81,6 +62,11 @@ namespace Stored_Procedure_Manager
             t.TopLevel = false;
             container.Controls.Add(t);
             t.Show();
+        }
+
+        private void container_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
