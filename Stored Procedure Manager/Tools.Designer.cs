@@ -33,8 +33,8 @@
             this.SQLUtilitiesButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CreateTableLabel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.CreateSPLabel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.TableButton.TabIndex = 0;
             this.TableButton.Text = "Create Table";
             this.TableButton.UseVisualStyleBackColor = true;
+            this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
             // 
             // SPButton
             // 
@@ -64,6 +65,7 @@
             this.SPButton.TabIndex = 1;
             this.SPButton.Text = " Create Stored Procedure";
             this.SPButton.UseVisualStyleBackColor = true;
+            this.SPButton.Click += new System.EventHandler(this.SPButton_Click);
             // 
             // SQLUtilitiesButton
             // 
@@ -73,6 +75,7 @@
             this.SQLUtilitiesButton.TabIndex = 6;
             this.SQLUtilitiesButton.Text = "Install SQL Utilities";
             this.SQLUtilitiesButton.UseVisualStyleBackColor = true;
+            this.SQLUtilitiesButton.Click += new System.EventHandler(this.SQLUtilitiesButton_Click);
             // 
             // panel1
             // 
@@ -93,20 +96,6 @@
             this.CreateTableLabel.Size = new System.Drawing.Size(523, 64);
             this.CreateTableLabel.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoEllipsis = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(523, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Create the table that is needed to stored the configuration for the application. " +
-    "This table will be created within the database that is populated in the Database" +
-    " Connection.";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label2
             // 
             this.label2.AutoEllipsis = true;
@@ -117,6 +106,19 @@
             this.label2.Size = new System.Drawing.Size(523, 64);
             this.label2.TabIndex = 1;
             this.label2.Text = "Create the table that is needed to stored the configuration for the application. " +
+    "This table will be created within the database that is populated in the Database" +
+    " Connection.";
+            // 
+            // label1
+            // 
+            this.label1.AutoEllipsis = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(523, 64);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Create the table that is needed to stored the configuration for the application. " +
     "This table will be created within the database that is populated in the Database" +
     " Connection.";
             // 
@@ -200,6 +202,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tools";
             this.Text = "Tools";
+            this.Load += new System.EventHandler(this.Tools_Load);
             this.panel1.ResumeLayout(false);
             this.CreateTableLabel.ResumeLayout(false);
             this.CreateSPLabel.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Stored_Procedure_Manager
 {
@@ -15,6 +16,57 @@ namespace Stored_Procedure_Manager
         public Home()
         {
             InitializeComponent();
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                {
+                    cn.Open();
+                    String PF = "Pass";
+                    if (PF.Contains("Pass") == true)
+                    {
+                        { homebutton.Enabled = true; }
+                        { buttonconfigbutton.Enabled = true; }
+                        { toolsButton.Enabled = true; }
+                    }
+                    else
+                    {
+                        { homebutton.Enabled = false; }
+                        { buttonconfigbutton.Enabled = false; }
+                        { toolsButton.Enabled = false; }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                String PF = "Fail";
+                if (PF.Contains("Pass") == true)
+                {
+                    { homebutton.Enabled = true; }
+                    { buttonconfigbutton.Enabled = true; }
+                    { toolsButton.Enabled = true; }
+                }
+                else
+                {
+                    { homebutton.Enabled = false; }
+                    { buttonconfigbutton.Enabled = false; }
+                    { toolsButton.Enabled = false; }
+                }
+                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            }
+            finally
+            {
+                
+            }
+
             loadButtonConfig();
         }
 
