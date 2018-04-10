@@ -15,13 +15,16 @@ namespace Stored_Procedure_Manager
         public Home()
         {
             InitializeComponent();
+            loadButtonConfig();
         }
 
-        private void loadButtonConfig(object sender, EventArgs e)
+        private void loadButtonConfig()
         {
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName1String))
-            { homebutton.Enabled = false; }
-            else { homebutton.Enabled = true; }
+            String var = Properties.Settings.Default.PassFailString;
+            if (var.Contains("Pass") == true)
+            { homebutton.Enabled = true; }
+            else { homebutton.Enabled = false; }
+
         }
         private void homebutton_Click(object sender, EventArgs e)
         {

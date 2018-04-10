@@ -137,7 +137,7 @@ namespace Stored_Procedure_Manager
 
         private void DBConnection_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void testbutton_Click(object sender, EventArgs e)
