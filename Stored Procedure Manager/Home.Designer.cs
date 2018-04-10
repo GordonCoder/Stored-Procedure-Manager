@@ -176,6 +176,7 @@
             this.logopanel.Name = "logopanel";
             this.logopanel.Size = new System.Drawing.Size(250, 83);
             this.logopanel.TabIndex = 0;
+            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.logopanel_Paint);
             // 
             // headerpanel
             // 
@@ -187,6 +188,7 @@
             this.headerpanel.Name = "headerpanel";
             this.headerpanel.Size = new System.Drawing.Size(713, 83);
             this.headerpanel.TabIndex = 1;
+            this.headerpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.headerpanel_Paint);
             // 
             // label1
             // 
