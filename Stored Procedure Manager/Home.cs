@@ -122,17 +122,22 @@ namespace Stored_Procedure_Manager
 
         private void container_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
+            ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
         private void headerpanel_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.headerpanel.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, this.headerpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
         private void logopanel_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.logopanel.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, this.logopanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void sidepanel_Paint(object sender, PaintEventArgs e)
+        {
+            //ControlPaint.DrawBorder(e.Graphics, this.sidepanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

@@ -87,17 +87,118 @@ namespace Stored_Procedure_Manager
 
         private void TableButton_Click(object sender, EventArgs e)
         {
-
+            using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                try
+                {
+                    cn.Open();
+                    using
+                        (SqlCommand command = new SqlCommand(
+                            // After testing, use this name for the table cust_SPManagerConfig
+                            "CREATE TABLE dbo.cust_Test" +
+                            "(ButtonName01 varchar(max) NULL" +
+                            ", SPName01 varchar(max) NULL" +
+                            ", ButtonName02 varchar(max) NULL" +
+                            ", SPName02 varchar(max) NULL" +
+                            ", ButtonName03 varchar(max) NULL" +
+                            ", SPName03 varchar(max) NULL" +
+                            ", ButtonName04 varchar(max) NULL" +
+                            ", SPName04 varchar(max) NULL" +
+                            ", ButtonName05 varchar(max) NULL" +
+                            ", SPName05 varchar(max) NULL" +
+                            ", ButtonName06 varchar(max) NULL" +
+                            ", SPName06 varchar(max) NULL" +
+                            ", ButtonName07 varchar(max) NULL" +
+                            ", SPName07 varchar(max) NULL" +
+                            ", ButtonName08 varchar(max) NULL" +
+                            ", SPName08 varchar(max) NULL" +
+                            ", ButtonName09 varchar(max) NULL" +
+                            ", SPName09 varchar(max) NULL" +
+                            ", ButtonName10 varchar(max) NULL" +
+                            ", SPName10 varchar(max) NULL);", cn))
+                        command.ExecuteNonQuery();
+                    MessageBox.Show("The table was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+                }
+                finally
+                {
+                    cn.Close();
+                }
         }
 
         private void SPButton_Click(object sender, EventArgs e)
         {
-
+            using (SqlConnection cn = new SqlConnection
+                        (
+                        "server="
+                        + Properties.Settings.Default.ServerNameString
+                        + "\\" + Properties.Settings.Default.InstanceString
+                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";uid=" + Properties.Settings.Default.UserNameString
+                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        ))
+                try
+                {
+                    cn.Open();
+                    using
+                        (SqlCommand command = new SqlCommand(
+                            
+                            "CREATE TABLE dbo.cust_Test" +
+                            "(ButtonName01 varchar(max) NULL" +
+                            ", SPName01 varchar(max) NULL" +
+                            ", ButtonName02 varchar(max) NULL" +
+                            ", SPName02 varchar(max) NULL" +
+                            ", ButtonName03 varchar(max) NULL" +
+                            ", SPName03 varchar(max) NULL" +
+                            ", ButtonName04 varchar(max) NULL" +
+                            ", SPName04 varchar(max) NULL" +
+                            ", ButtonName05 varchar(max) NULL" +
+                            ", SPName05 varchar(max) NULL" +
+                            ", ButtonName06 varchar(max) NULL" +
+                            ", SPName06 varchar(max) NULL" +
+                            ", ButtonName07 varchar(max) NULL" +
+                            ", SPName07 varchar(max) NULL" +
+                            ", ButtonName08 varchar(max) NULL" +
+                            ", SPName08 varchar(max) NULL" +
+                            ", ButtonName09 varchar(max) NULL" +
+                            ", SPName09 varchar(max) NULL" +
+                            ", ButtonName10 varchar(max) NULL" +
+                            ", SPName10 varchar(max) NULL);",cn))
+                            command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                }
         }
 
         private void SQLUtilitiesButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BorderPanel_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.BorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

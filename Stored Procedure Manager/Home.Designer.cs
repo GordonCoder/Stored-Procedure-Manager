@@ -34,7 +34,6 @@
             this.toolsButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
@@ -52,21 +51,21 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
+            this.sidepanel.Controls.Add(this.logopanel);
             this.sidepanel.Controls.Add(this.panel4);
             this.sidepanel.Controls.Add(this.panel3);
             this.sidepanel.Controls.Add(this.toolsButton);
             this.sidepanel.Controls.Add(this.panel2);
             this.sidepanel.Controls.Add(this.panel1);
-            this.sidepanel.Controls.Add(this.BottomPanel);
             this.sidepanel.Controls.Add(this.dbconnectbutton);
             this.sidepanel.Controls.Add(this.buttonconfigbutton);
             this.sidepanel.Controls.Add(this.homebutton);
-            this.sidepanel.Controls.Add(this.logopanel);
             this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidepanel.Location = new System.Drawing.Point(0, 0);
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(250, 466);
             this.sidepanel.TabIndex = 0;
+            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidepanel_Paint);
             // 
             // panel4
             // 
@@ -114,14 +113,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(60, 55);
             this.panel1.TabIndex = 7;
-            // 
-            // BottomPanel
-            // 
-            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(70)))), ((int)(((byte)(125)))));
-            this.BottomPanel.Location = new System.Drawing.Point(0, 383);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(250, 83);
-            this.BottomPanel.TabIndex = 6;
             // 
             // dbconnectbutton
             // 
@@ -264,7 +255,6 @@
         private System.Windows.Forms.Panel logopanel;
         private System.Windows.Forms.Panel headerpanel;
         private System.Windows.Forms.Button homebutton;
-        private System.Windows.Forms.Panel BottomPanel;
         private System.Windows.Forms.Button dbconnectbutton;
         private System.Windows.Forms.Button buttonconfigbutton;
         private System.Windows.Forms.Panel container;
