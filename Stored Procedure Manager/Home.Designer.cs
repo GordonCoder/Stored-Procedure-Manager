@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.sidepanel = new System.Windows.Forms.Panel();
+            this.logopanel = new System.Windows.Forms.Panel();
+            this.HomeBorderPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.toolsButton = new System.Windows.Forms.Button();
@@ -37,13 +39,13 @@
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
-            this.logopanel = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sidepanel.SuspendLayout();
+            this.logopanel.SuspendLayout();
             this.headerpanel.SuspendLayout();
             this.container.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,27 @@
             this.sidepanel.Size = new System.Drawing.Size(250, 466);
             this.sidepanel.TabIndex = 0;
             this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidepanel_Paint);
+            // 
+            // logopanel
+            // 
+            this.logopanel.BackColor = System.Drawing.Color.Transparent;
+            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
+            this.logopanel.Controls.Add(this.HomeBorderPanel);
+            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logopanel.Location = new System.Drawing.Point(0, 0);
+            this.logopanel.Name = "logopanel";
+            this.logopanel.Size = new System.Drawing.Size(250, 83);
+            this.logopanel.TabIndex = 0;
+            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.logopanel_Paint);
+            // 
+            // HomeBorderPanel
+            // 
+            this.HomeBorderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HomeBorderPanel.Location = new System.Drawing.Point(0, 0);
+            this.HomeBorderPanel.Name = "HomeBorderPanel";
+            this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
+            this.HomeBorderPanel.TabIndex = 0;
+            this.HomeBorderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomeBorderPanel_Paint);
             // 
             // panel4
             // 
@@ -159,16 +182,6 @@
             this.homebutton.UseVisualStyleBackColor = true;
             this.homebutton.Click += new System.EventHandler(this.homebutton_Click);
             // 
-            // logopanel
-            // 
-            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
-            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logopanel.Location = new System.Drawing.Point(0, 0);
-            this.logopanel.Name = "logopanel";
-            this.logopanel.Size = new System.Drawing.Size(250, 83);
-            this.logopanel.TabIndex = 0;
-            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.logopanel_Paint);
-            // 
             // headerpanel
             // 
             this.headerpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -241,6 +254,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.sidepanel.ResumeLayout(false);
+            this.logopanel.ResumeLayout(false);
             this.headerpanel.ResumeLayout(false);
             this.headerpanel.PerformLayout();
             this.container.ResumeLayout(false);
@@ -266,5 +280,6 @@
         private System.Windows.Forms.Button toolsButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel HomeBorderPanel;
     }
 }

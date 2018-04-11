@@ -101,8 +101,7 @@ namespace Stored_Procedure_Manager
                     cn.Open();
                     using
                         (SqlCommand command = new SqlCommand(
-                            // After testing, use this name for the table cust_SPManagerConfig
-                            "CREATE TABLE dbo.cust_Test" +
+                            "CREATE TABLE cust_SPManagerConfig" +
                             "(ButtonName01 varchar(max) NULL" +
                             ", SPName01 varchar(max) NULL" +
                             ", ButtonName02 varchar(max) NULL" +
@@ -128,7 +127,7 @@ namespace Stored_Procedure_Manager
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+                    MessageBox.Show(ex.Message);
                 }
                 finally
                 {
@@ -152,29 +151,15 @@ namespace Stored_Procedure_Manager
                     cn.Open();
                     using
                         (SqlCommand command = new SqlCommand(
-                            
-                            "CREATE TABLE dbo.cust_Test" +
-                            "(ButtonName01 varchar(max) NULL" +
-                            ", SPName01 varchar(max) NULL" +
-                            ", ButtonName02 varchar(max) NULL" +
-                            ", SPName02 varchar(max) NULL" +
-                            ", ButtonName03 varchar(max) NULL" +
-                            ", SPName03 varchar(max) NULL" +
-                            ", ButtonName04 varchar(max) NULL" +
-                            ", SPName04 varchar(max) NULL" +
-                            ", ButtonName05 varchar(max) NULL" +
-                            ", SPName05 varchar(max) NULL" +
-                            ", ButtonName06 varchar(max) NULL" +
-                            ", SPName06 varchar(max) NULL" +
-                            ", ButtonName07 varchar(max) NULL" +
-                            ", SPName07 varchar(max) NULL" +
-                            ", ButtonName08 varchar(max) NULL" +
-                            ", SPName08 varchar(max) NULL" +
-                            ", ButtonName09 varchar(max) NULL" +
-                            ", SPName09 varchar(max) NULL" +
-                            ", ButtonName10 varchar(max) NULL" +
-                            ", SPName10 varchar(max) NULL);",cn))
-                            command.ExecuteNonQuery();
+                            // After testing, use this name for the table cust_cust_SPManagerButtonConfig
+                            "CREATE Procedure cust_SPManagerTest " +
+                            "AS " +
+                            "UPDATE cust_SPManagerConfig " +
+                            "SET " +
+                            "ButtonName10 = 'TEST WORKED'" +
+                            ",SPName10 = 'TEST WORKED';", cn))
+                        command.ExecuteNonQuery();
+                    MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!");
                 }
                 catch (Exception ex)
                 {
@@ -193,7 +178,33 @@ namespace Stored_Procedure_Manager
 
         private void testButton_Click(object sender, EventArgs e)
         {
-
+            using (SqlConnection cn = new SqlConnection
+            (
+            "server="
+            + Properties.Settings.Default.ServerNameString
+            + "\\" + Properties.Settings.Default.InstanceString
+            + ";database=" + Properties.Settings.Default.DatabaseString
+            + ";uid=" + Properties.Settings.Default.UserNameString
+            + ";pwd=" + Properties.Settings.Default.PasswordString
+            ))
+                try
+                {
+                    cn.Open();
+                    SqlCommand cmd = new SqlCommand("cust_SPManagerTest", cn);
+                    cmd.Connection = cn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("The test was ran. Check the Button Configuration to see if the words TEST WORKED is present for button 10");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                }
         }
 
         private void BorderPanel_Paint(object sender, PaintEventArgs e)

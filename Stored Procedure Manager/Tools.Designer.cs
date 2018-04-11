@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TableButton = new System.Windows.Forms.Button();
-            this.SPButton = new System.Windows.Forms.Button();
-            this.SQLUtilitiesButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.testButton = new System.Windows.Forms.Button();
             this.CreateTableLabel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,79 +43,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.BorderPanel = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.SPButton = new System.Windows.Forms.Button();
+            this.SQLUtilitiesButton = new System.Windows.Forms.Button();
+            this.TableButton = new System.Windows.Forms.Button();
+            this.testButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CreateTableLabel.SuspendLayout();
             this.CreateSPLabel.SuspendLayout();
             this.SQLUtilitieslabel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TableButton
-            // 
-            this.TableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.TableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TableButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableButton.Location = new System.Drawing.Point(3, 27);
-            this.TableButton.Name = "TableButton";
-            this.TableButton.Size = new System.Drawing.Size(154, 53);
-            this.TableButton.TabIndex = 0;
-            this.TableButton.Text = "Create Table";
-            this.TableButton.UseVisualStyleBackColor = true;
-            this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
-            // 
-            // SPButton
-            // 
-            this.SPButton.FlatAppearance.BorderSize = 0;
-            this.SPButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.SPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SPButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SPButton.Location = new System.Drawing.Point(3, 104);
-            this.SPButton.Name = "SPButton";
-            this.SPButton.Size = new System.Drawing.Size(154, 53);
-            this.SPButton.TabIndex = 1;
-            this.SPButton.Text = " Create Stored Procedure";
-            this.SPButton.UseVisualStyleBackColor = true;
-            this.SPButton.Click += new System.EventHandler(this.SPButton_Click);
-            // 
-            // SQLUtilitiesButton
-            // 
-            this.SQLUtilitiesButton.FlatAppearance.BorderSize = 0;
-            this.SQLUtilitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.SQLUtilitiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SQLUtilitiesButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SQLUtilitiesButton.Location = new System.Drawing.Point(3, 258);
-            this.SQLUtilitiesButton.Name = "SQLUtilitiesButton";
-            this.SQLUtilitiesButton.Size = new System.Drawing.Size(154, 53);
-            this.SQLUtilitiesButton.TabIndex = 6;
-            this.SQLUtilitiesButton.Text = "Install SQL Utilities";
-            this.SQLUtilitiesButton.UseVisualStyleBackColor = true;
-            this.SQLUtilitiesButton.Click += new System.EventHandler(this.SQLUtilitiesButton_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.panel1.Controls.Add(this.testButton);
-            this.panel1.Controls.Add(this.TableButton);
-            this.panel1.Controls.Add(this.SQLUtilitiesButton);
-            this.panel1.Controls.Add(this.SPButton);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 359);
-            this.panel1.TabIndex = 7;
-            // 
-            // testButton
-            // 
-            this.testButton.FlatAppearance.BorderSize = 0;
-            this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testButton.Location = new System.Drawing.Point(3, 181);
-            this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(154, 53);
-            this.testButton.TabIndex = 7;
-            this.testButton.Text = "Test";
-            this.testButton.UseVisualStyleBackColor = true;
-            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // CreateTableLabel
             // 
@@ -297,6 +230,70 @@
             this.BorderPanel.TabIndex = 2;
             this.BorderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
+            // SPButton
+            // 
+            this.SPButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SPButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SPButton.Location = new System.Drawing.Point(3, 104);
+            this.SPButton.Name = "SPButton";
+            this.SPButton.Size = new System.Drawing.Size(154, 64);
+            this.SPButton.TabIndex = 1;
+            this.SPButton.Text = " Create Stored Procedure";
+            this.SPButton.UseVisualStyleBackColor = true;
+            this.SPButton.Click += new System.EventHandler(this.SPButton_Click);
+            // 
+            // SQLUtilitiesButton
+            // 
+            this.SQLUtilitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SQLUtilitiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SQLUtilitiesButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SQLUtilitiesButton.Location = new System.Drawing.Point(3, 258);
+            this.SQLUtilitiesButton.Name = "SQLUtilitiesButton";
+            this.SQLUtilitiesButton.Size = new System.Drawing.Size(154, 64);
+            this.SQLUtilitiesButton.TabIndex = 6;
+            this.SQLUtilitiesButton.Text = "Install SQL Utilities";
+            this.SQLUtilitiesButton.UseVisualStyleBackColor = true;
+            this.SQLUtilitiesButton.Click += new System.EventHandler(this.SQLUtilitiesButton_Click);
+            // 
+            // TableButton
+            // 
+            this.TableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.TableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TableButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableButton.Location = new System.Drawing.Point(3, 27);
+            this.TableButton.Name = "TableButton";
+            this.TableButton.Size = new System.Drawing.Size(154, 64);
+            this.TableButton.TabIndex = 0;
+            this.TableButton.Text = "Create Table";
+            this.TableButton.UseVisualStyleBackColor = true;
+            this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
+            // 
+            // testButton
+            // 
+            this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testButton.Location = new System.Drawing.Point(3, 181);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(154, 64);
+            this.testButton.TabIndex = 7;
+            this.testButton.Text = "Test";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.testButton);
+            this.panel1.Controls.Add(this.TableButton);
+            this.panel1.Controls.Add(this.SQLUtilitiesButton);
+            this.panel1.Controls.Add(this.SPButton);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(160, 359);
+            this.panel1.TabIndex = 7;
+            // 
             // Tools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,21 +309,16 @@
             this.Name = "Tools";
             this.Text = "Tools";
             this.Load += new System.EventHandler(this.Tools_Load);
-            this.panel1.ResumeLayout(false);
             this.CreateTableLabel.ResumeLayout(false);
             this.CreateSPLabel.ResumeLayout(false);
             this.SQLUtilitieslabel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button TableButton;
-        private System.Windows.Forms.Button SPButton;
-        private System.Windows.Forms.Button SQLUtilitiesButton;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel CreateTableLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -336,12 +328,16 @@
         private System.Windows.Forms.Panel SQLUtilitieslabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel BorderPanel;
+        private System.Windows.Forms.Button SPButton;
+        private System.Windows.Forms.Button SQLUtilitiesButton;
+        private System.Windows.Forms.Button TableButton;
+        private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

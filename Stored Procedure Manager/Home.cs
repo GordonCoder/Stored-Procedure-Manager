@@ -122,7 +122,7 @@ namespace Stored_Procedure_Manager
 
         private void container_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+            //ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
         private void headerpanel_Paint(object sender, PaintEventArgs e)
@@ -138,6 +138,16 @@ namespace Stored_Procedure_Manager
         private void sidepanel_Paint(object sender, PaintEventArgs e)
         {
             //ControlPaint.DrawBorder(e.Graphics, this.sidepanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void HomeBorderPanel_Paint(object sender, PaintEventArgs e)
+        {
+            //ControlPaint.DrawBorder(e.Graphics, this.HomeBorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void NewHeaderPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
