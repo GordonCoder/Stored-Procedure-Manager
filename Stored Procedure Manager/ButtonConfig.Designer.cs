@@ -61,6 +61,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.borderpanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // SaveButton
@@ -340,6 +341,15 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "Name of Stored Procedure";
             // 
+            // borderpanel
+            // 
+            this.borderpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.borderpanel.Location = new System.Drawing.Point(-1, -1);
+            this.borderpanel.Name = "borderpanel";
+            this.borderpanel.Size = new System.Drawing.Size(713, 383);
+            this.borderpanel.TabIndex = 33;
+            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.borderpanel_Paint);
+            // 
             // ButtonConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +389,7 @@
             this.Controls.Add(this.Button3NameText);
             this.Controls.Add(this.Button2NameText);
             this.Controls.Add(this.Button1NameText);
+            this.Controls.Add(this.borderpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ButtonConfig";
             this.Text = "ButtonConfig";
@@ -422,5 +433,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel borderpanel;
     }
 }

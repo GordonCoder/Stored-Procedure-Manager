@@ -223,6 +223,7 @@
             // 
             // BorderPanel
             // 
+            this.BorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BorderPanel.Location = new System.Drawing.Point(0, 0);
             this.BorderPanel.Name = "BorderPanel";

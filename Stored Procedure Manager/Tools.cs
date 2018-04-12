@@ -123,7 +123,7 @@ namespace Stored_Procedure_Manager
                             ", ButtonName10 varchar(max) NULL" +
                             ", SPName10 varchar(max) NULL);", cn))
                         command.ExecuteNonQuery();
-                    MessageBox.Show("The table was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!");
+                    MessageBox.Show("The table was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Table Created");
                 }
                 catch (Exception ex)
                 {
@@ -159,7 +159,7 @@ namespace Stored_Procedure_Manager
                             "ButtonName10 = 'TEST WORKED'" +
                             ",SPName10 = 'TEST WORKED';", cn))
                         command.ExecuteNonQuery();
-                    MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!");
+                    MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Stored Procedure Created");
                 }
                 catch (Exception ex)
                 {
@@ -195,7 +195,7 @@ namespace Stored_Procedure_Manager
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                     cn.Close();
-                    MessageBox.Show("The test was ran. Check the Button Configuration to see if the words TEST WORKED is present for button 10");
+                    MessageBox.Show("Check the Button Configuration to see if the words TEST WORKED is present for button 10", "Test Successful!");
                 }
                 catch (Exception ex)
                 {

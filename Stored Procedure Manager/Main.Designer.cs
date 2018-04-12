@@ -38,6 +38,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.borderpanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button1
@@ -130,6 +131,15 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // borderpanel
+            // 
+            this.borderpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.borderpanel.Location = new System.Drawing.Point(-1, -1);
+            this.borderpanel.Name = "borderpanel";
+            this.borderpanel.Size = new System.Drawing.Size(713, 383);
+            this.borderpanel.TabIndex = 10;
+            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.borderpanel_Paint);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +156,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.borderpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.RightToLeftLayout = true;
@@ -169,6 +180,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel borderpanel;
     }
 }
 

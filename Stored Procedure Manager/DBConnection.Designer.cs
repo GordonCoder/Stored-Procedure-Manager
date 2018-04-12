@@ -40,6 +40,7 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.testbutton = new System.Windows.Forms.Button();
+            this.borderpanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // ServerNameTextBox
@@ -148,6 +149,15 @@
             this.testbutton.UseVisualStyleBackColor = true;
             this.testbutton.Click += new System.EventHandler(this.testbutton_Click);
             // 
+            // borderpanel
+            // 
+            this.borderpanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.borderpanel.Location = new System.Drawing.Point(-1, -1);
+            this.borderpanel.Name = "borderpanel";
+            this.borderpanel.Size = new System.Drawing.Size(713, 383);
+            this.borderpanel.TabIndex = 12;
+            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.borderpanel_Paint);
+            // 
             // DBConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +176,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.InstanceTextBox);
             this.Controls.Add(this.ServerNameTextBox);
+            this.Controls.Add(this.borderpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DBConnection";
             this.Text = "DBConnection";
@@ -189,5 +200,6 @@
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button testbutton;
+        private System.Windows.Forms.Panel borderpanel;
     }
 }

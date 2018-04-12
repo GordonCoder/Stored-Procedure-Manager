@@ -167,5 +167,10 @@ namespace Stored_Procedure_Manager
                 cn.Close();
             }
         }
+
+        private void borderpanel_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }
