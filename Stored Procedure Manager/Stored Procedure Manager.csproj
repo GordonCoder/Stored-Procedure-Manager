@@ -23,7 +23,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -152,13 +152,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\msodbcsqlv11x64.msi" />
+    <None Include="Resources\msodbcsqlv11x86.msi" />
+    <None Include="Resources\MsSqlCmdLnUtilsV11x64.msi" />
+    <None Include="Resources\MsSqlCmdLnUtilsV14x64.msi" />
+    <None Include="Resources\MsSqlCmdLnUtilsV14x86.msi" />
     <None Include="Stored Procedure Manager_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background 690x550.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -186,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Favicon.ico" />
+    <None Include="Resources\Installer.bmp" />
     <None Include="Resources\Splash Page 713-383.png" />
     <None Include="Resources\Clocks 60-55.jpg" />
     <None Include="Resources\TerminalsConfiguration 60-53.jpg" />
@@ -193,7 +196,6 @@
     <None Include="Resources\TerminalsConfiguration 70-60.jpg" />
     <None Include="Resources\DBConnectionManager 60-55.jpg" />
     <None Include="Resources\ConfigurationCenter 60-55.jpg" />
-    <None Include="Resources\ConfigurationCenter.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

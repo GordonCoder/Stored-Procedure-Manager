@@ -214,5 +214,15 @@ namespace Stored_Procedure_Manager.Properties {
                 this["PassFailString"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Instal" +
+            "lers")]
+        public string InstallerFolderString {
+            get {
+                return ((string)(this["InstallerFolderString"]));
+            }
+        }
     }
 }

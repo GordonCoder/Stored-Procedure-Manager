@@ -5,16 +5,24 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stored Procedure Manager", "Stored Procedure Manager\Stored Procedure Manager.csproj", "{B9537756-3FD2-42FE-8667-AB8FA36E163E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{C7ED2950-608C-42DE-BA65-526DCC7F0E8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.All|Any CPU.Build.0 = Release|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7ED2950-608C-42DE-BA65-526DCC7F0E8C}.All|Any CPU.ActiveCfg = Release
+		{C7ED2950-608C-42DE-BA65-526DCC7F0E8C}.Debug|Any CPU.ActiveCfg = Debug
+		{C7ED2950-608C-42DE-BA65-526DCC7F0E8C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

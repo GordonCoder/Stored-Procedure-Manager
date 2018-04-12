@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Stored_Procedure_Manager
 {
@@ -178,7 +179,13 @@ namespace Stored_Procedure_Manager
 
         private void SQLUtilitiesButton_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog InstallerFileLocation = new OpenFileDialog();
+            InstallerFileLocation.InitialDirectory = Properties.Settings.Default.InstallerFolderString;
+            if (InstallerFileLocation.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                String FilePath = InstallerFileLocation.FileName;
+                Process.Start(FilePath);
+            }
         }
 
         private void testButton_Click(object sender, EventArgs e)
