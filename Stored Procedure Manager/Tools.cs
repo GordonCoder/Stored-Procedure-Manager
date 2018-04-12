@@ -154,9 +154,14 @@ namespace Stored_Procedure_Manager
                             // After testing, use this name for the table cust_cust_SPManagerButtonConfig
                             "CREATE Procedure cust_SPManagerTest " +
                             "AS " +
+                            "IF NOT EXISTS (Select * From cust_SPManagerConfig) " +
+                            "INSERT INTO cust_SPManagerConfig " +
+                            "(ButtonName10, SPName10) " +
+                            "VALUES " +
+                            "('TEST WORKED', 'TEST WORKED') " +
+                            "ELSE " +
                             "UPDATE cust_SPManagerConfig " +
-                            "SET " +
-                            "ButtonName10 = 'TEST WORKED'" +
+                            "SET ButtonName10 = 'TEST WORKED' " +
                             ",SPName10 = 'TEST WORKED';", cn))
                         command.ExecuteNonQuery();
                     MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Stored Procedure Created");
