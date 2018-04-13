@@ -41,13 +41,13 @@ namespace Stored_Procedure_Manager
                         ))
                 {
                     cn.Open();
-                    loadDBConfig();
+                    LoadDBConfig();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
-                loadDBConfig();
+                LoadDBConfig();
             }
             finally
             {
@@ -56,7 +56,7 @@ namespace Stored_Procedure_Manager
 
         }
 
-        private void loadDBConfig()
+        private void LoadDBConfig()
         {
 
             this.ServerNameTextBox.Text = Properties.Settings.Default.ServerNameString;
@@ -140,7 +140,7 @@ namespace Stored_Procedure_Manager
             
         }
 
-        private void testbutton_Click(object sender, EventArgs e)
+        private void TestButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -168,7 +168,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void borderpanel_Paint(object sender, PaintEventArgs e)
+        private void BorderPanel_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }

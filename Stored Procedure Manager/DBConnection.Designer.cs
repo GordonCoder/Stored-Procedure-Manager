@@ -171,7 +171,7 @@
             this.testbutton.TabIndex = 11;
             this.testbutton.Text = "Test Connection";
             this.testbutton.UseVisualStyleBackColor = false;
-            this.testbutton.Click += new System.EventHandler(this.testbutton_Click);
+            this.testbutton.Click += new System.EventHandler(this.TestButton_Click);
             // 
             // borderpanel
             // 
@@ -185,7 +185,7 @@
             this.borderpanel.Name = "borderpanel";
             this.borderpanel.Size = new System.Drawing.Size(713, 383);
             this.borderpanel.TabIndex = 12;
-            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.borderpanel_Paint);
+            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
             // DBConnection
             // 

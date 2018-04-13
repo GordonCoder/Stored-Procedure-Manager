@@ -67,10 +67,10 @@ namespace Stored_Procedure_Manager
                 
             }
 
-            loadButtonConfig();
+            LoadButtonConfig();
         }
 
-        private void loadButtonConfig()
+        private void LoadButtonConfig()
         {
             String var = Properties.Settings.Default.PassFailString;
             if (var.Contains("Pass") == true)
@@ -78,7 +78,7 @@ namespace Stored_Procedure_Manager
             else { homebutton.Enabled = false; }
 
         }
-        private void homebutton_Click(object sender, EventArgs e)
+        private void HomeButton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
             Main m = new Main();
@@ -88,7 +88,7 @@ namespace Stored_Procedure_Manager
             m.Show();
         }
 
-        private void buttonconfigbutton_Click(object sender, EventArgs e)
+        private void ButtonConfigButton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
             ButtonConfig b = new ButtonConfig();
@@ -97,7 +97,7 @@ namespace Stored_Procedure_Manager
             b.Show();
         }
 
-        private void dbconnectbutton_Click(object sender, EventArgs e)
+        private void DBConnectButton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
             DBConnection db = new DBConnection();
@@ -111,7 +111,7 @@ namespace Stored_Procedure_Manager
             Application.Exit();
         }
 
-        private void toolsButton_Click(object sender, EventArgs e)
+        private void ToolsButton_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
             Tools t = new Tools();
@@ -121,22 +121,22 @@ namespace Stored_Procedure_Manager
         }
 
 
-        private void container_Paint(object sender, PaintEventArgs e)
+        private void Container_Paint(object sender, PaintEventArgs e)
         {
             //ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
-        private void headerpanel_Paint(object sender, PaintEventArgs e)
+        private void HeaderPanel_Paint(object sender, PaintEventArgs e)
         {
             //ControlPaint.DrawBorder(e.Graphics, this.headerpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
-        private void logopanel_Paint(object sender, PaintEventArgs e)
+        private void LogoPanel_Paint(object sender, PaintEventArgs e)
         {
             //ControlPaint.DrawBorder(e.Graphics, this.logopanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
-        private void sidepanel_Paint(object sender, PaintEventArgs e)
+        private void SidePanel_Paint(object sender, PaintEventArgs e)
         {
             //ControlPaint.DrawBorder(e.Graphics, this.sidepanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }

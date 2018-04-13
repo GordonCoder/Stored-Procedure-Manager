@@ -296,7 +296,7 @@
             this.testButton.TabIndex = 7;
             this.testButton.Text = "Test";
             this.testButton.UseVisualStyleBackColor = false;
-            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            this.testButton.Click += new System.EventHandler(this.TestButton_Click);
             // 
             // panel1
             // 

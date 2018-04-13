@@ -44,7 +44,7 @@ namespace Stored_Procedure_Manager
                         ))
                 {
                     cn.Open();
-                    loadButtonConfig();
+                    LoadButtonConfig();
                 }
             }
             catch (Exception ex)
@@ -58,7 +58,7 @@ namespace Stored_Procedure_Manager
         }
 
         // Load all needed configuration
-        private void loadButtonConfig()
+        private void LoadButtonConfig()
         {
             // Clear Buttons for fresh data
             Button1NameText.Clear();
@@ -157,7 +157,7 @@ namespace Stored_Procedure_Manager
             Properties.Settings.Default.SPName10String = SPName10TextBox.Text;
             Properties.Settings.Default.Save();
 
-            loadButtonConfig();
+            LoadButtonConfig();
 
         }
 
@@ -268,7 +268,7 @@ namespace Stored_Procedure_Manager
 
         }
 
-        private void borderpanel_Paint(object sender, PaintEventArgs e)
+        private void BorderPanel_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }

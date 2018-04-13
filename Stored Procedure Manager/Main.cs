@@ -120,7 +120,7 @@ namespace Stored_Procedure_Manager
         // TO - DO Need to make each button do a TRY to see if the Stored Procedure exists before executing it.
         // Need to catch the exceptions also and present them to the user
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
             
         {
             try
@@ -143,7 +143,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -165,7 +165,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -187,7 +187,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             try
             {
@@ -209,7 +209,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             try
             {
@@ -231,7 +231,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             try
             {
@@ -253,7 +253,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             try
             {
@@ -275,7 +275,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Button8_Click(object sender, EventArgs e)
         {
             try
             {
@@ -297,7 +297,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
             try
             {
@@ -319,7 +319,7 @@ namespace Stored_Procedure_Manager
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void Button10_Click(object sender, EventArgs e)
         {
             try
             {
@@ -346,7 +346,7 @@ namespace Stored_Procedure_Manager
 
         }
 
-        private void borderpanel_Paint(object sender, PaintEventArgs e)
+        private void BorderPanel_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }

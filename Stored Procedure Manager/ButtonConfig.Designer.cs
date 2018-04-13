@@ -399,7 +399,7 @@
             this.borderpanel.Name = "borderpanel";
             this.borderpanel.Size = new System.Drawing.Size(713, 383);
             this.borderpanel.TabIndex = 33;
-            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.borderpanel_Paint);
+            this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
             // ButtonConfig
             // 

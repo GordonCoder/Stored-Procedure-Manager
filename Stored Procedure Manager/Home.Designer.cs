@@ -67,7 +67,7 @@
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(250, 466);
             this.sidepanel.TabIndex = 0;
-            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidepanel_Paint);
+            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // logopanel
             // 
@@ -79,7 +79,7 @@
             this.logopanel.Name = "logopanel";
             this.logopanel.Size = new System.Drawing.Size(250, 83);
             this.logopanel.TabIndex = 0;
-            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.logopanel_Paint);
+            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LogoPanel_Paint);
             // 
             // HomeBorderPanel
             // 
@@ -119,7 +119,7 @@
             this.toolsButton.Text = "Tools";
             this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolsButton.UseVisualStyleBackColor = true;
-            this.toolsButton.Click += new System.EventHandler(this.toolsButton_Click);
+            this.toolsButton.Click += new System.EventHandler(this.ToolsButton_Click);
             // 
             // panel2
             // 
@@ -150,7 +150,7 @@
             this.dbconnectbutton.Text = "Database Connection";
             this.dbconnectbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dbconnectbutton.UseVisualStyleBackColor = true;
-            this.dbconnectbutton.Click += new System.EventHandler(this.dbconnectbutton_Click);
+            this.dbconnectbutton.Click += new System.EventHandler(this.DBConnectButton_Click);
             // 
             // buttonconfigbutton
             // 
@@ -165,7 +165,7 @@
             this.buttonconfigbutton.Text = "Button Configuration";
             this.buttonconfigbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonconfigbutton.UseVisualStyleBackColor = true;
-            this.buttonconfigbutton.Click += new System.EventHandler(this.buttonconfigbutton_Click);
+            this.buttonconfigbutton.Click += new System.EventHandler(this.ButtonConfigButton_Click);
             // 
             // homebutton
             // 
@@ -180,7 +180,7 @@
             this.homebutton.Text = "Home";
             this.homebutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homebutton.UseVisualStyleBackColor = true;
-            this.homebutton.Click += new System.EventHandler(this.homebutton_Click);
+            this.homebutton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // headerpanel
             // 
@@ -192,7 +192,7 @@
             this.headerpanel.Name = "headerpanel";
             this.headerpanel.Size = new System.Drawing.Size(713, 83);
             this.headerpanel.TabIndex = 1;
-            this.headerpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.headerpanel_Paint);
+            this.headerpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderPanel_Paint);
             // 
             // label1
             // 
@@ -228,7 +228,7 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(713, 383);
             this.container.TabIndex = 2;
-            this.container.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Paint);
+            this.container.Paint += new System.Windows.Forms.PaintEventHandler(this.Container_Paint);
             // 
             // label2
             // 
