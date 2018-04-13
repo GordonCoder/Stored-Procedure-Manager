@@ -82,6 +82,7 @@ namespace Stored_Procedure_Manager
         {
             container.Controls.Clear();
             Main m = new Main();
+            m.LoadMainButtonConfig();
             m.TopLevel = false;
             container.Controls.Add(m);
             m.Show();

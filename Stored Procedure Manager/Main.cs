@@ -41,7 +41,7 @@ namespace Stored_Procedure_Manager
                         ))
                 {
                     cn.Open();
-                    loadButtonConfig();
+                    LoadMainButtonConfig();
                 }
             }
             catch (Exception ex)
@@ -55,7 +55,7 @@ namespace Stored_Procedure_Manager
         }
 
         // Load the names of the buttons
-        private void loadButtonConfig()
+        public void LoadMainButtonConfig()
         {
             DataTable dt = new DataTable();
             cn.Open();
@@ -77,168 +77,271 @@ namespace Stored_Procedure_Manager
             }
             cn.Close();
 
+            // This make the button Active only if there is a Stored Procedure filled in the Stored Procedure text box.
+            // If nothing is populated on the Stored Procedure text box, then the button is set to inactive
+
+            string buttoninactivetext = "Not Configured";
+
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName1String))
-            { button1.Enabled = false; } else { button1.Enabled = true; }
+            {button1.Enabled = false; button1.Text = buttoninactivetext; }
+            else {button1.Enabled = true;}
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName2String))
-            { button2.Enabled = false; } else { button2.Enabled = true; }
+            { button2.Enabled = false; button2.Text = buttoninactivetext; }
+            else { button2.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName3String))
-            { button3.Enabled = false; } else { button3.Enabled = true; }
+            { button3.Enabled = false; button3.Text = buttoninactivetext; }
+            else { button3.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName4String))
-            { button4.Enabled = false; } else { button4.Enabled = true; }
+            { button4.Enabled = false; button4.Text = buttoninactivetext; }
+            else { button4.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName5String))
-            { button5.Enabled = false; } else { button5.Enabled = true; }
+            { button5.Enabled = false; button5.Text = buttoninactivetext; }
+            else { button5.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName6String))
-            { button6.Enabled = false; } else { button6.Enabled = true; }
+            { button6.Enabled = false; button6.Text = buttoninactivetext; }
+            else { button6.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName7String))
-            { button7.Enabled = false; } else { button7.Enabled = true; }
+            { button7.Enabled = false; button7.Text = buttoninactivetext; }
+            else { button7.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName8String))
-            { button8.Enabled = false; } else { button8.Enabled = true; }
+            { button8.Enabled = false; button8.Text = buttoninactivetext; }
+            else { button8.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName9String))
-            { button9.Enabled = false; } else { button9.Enabled = true; }
+            { button9.Enabled = false; button9.Text = buttoninactivetext; }
+            else { button9.Enabled = true; }
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName10String))
-            { button10.Enabled = false; } else { button10.Enabled = true; }
+            { button10.Enabled = false; button10.Text = buttoninactivetext; }
+            else { button10.Enabled = true; }
         }
 
 
         // TO - DO I need to make this more secure by following the information in this link
         // https://msdn.microsoft.com/library/ms182310.aspx
+        // TO - DO Need to make each button do a TRY to see if the Stored Procedure exists before executing it.
+        // Need to catch the exceptions also and present them to the user
 
         private void button1_Click(object sender, EventArgs e)
+            
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName1String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName1String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName1String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName1String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cn.Open();
+            try
+            {
+                cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName2String, cn);
             cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
             MessageBox.Show("The " + Properties.Settings.Default.SPName2String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName3String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName3String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName4String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName4String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName4String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName4String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName5String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName5String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName5String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName5String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName6String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName6String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName6String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName6String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName7String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName7String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName7String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName7String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName8String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName8String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName8String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName8String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName9String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName9String + " Stored Procedure was ran.");
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName9String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName9String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName10String, cn);
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName10String + " Stored Procedure was ran.");
-        }
-
-        private void databaseConnectionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName10String, cn);
+                cmd.Connection = cn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                MessageBox.Show("The " + Properties.Settings.Default.SPName10String + " Stored Procedure was ran.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModernUI_Click(object sender, EventArgs e)
         {
 
         }

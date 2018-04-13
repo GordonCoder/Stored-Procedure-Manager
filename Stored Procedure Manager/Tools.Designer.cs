@@ -59,6 +59,7 @@
             // 
             this.CreateTableLabel.Controls.Add(this.label2);
             this.CreateTableLabel.Controls.Add(this.label1);
+            this.CreateTableLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateTableLabel.Location = new System.Drawing.Point(178, 39);
             this.CreateTableLabel.Name = "CreateTableLabel";
             this.CreateTableLabel.Size = new System.Drawing.Size(523, 64);
@@ -67,6 +68,7 @@
             // label2
             // 
             this.label2.AutoEllipsis = true;
+            this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
@@ -92,9 +94,11 @@
             // 
             // CreateSPLabel
             // 
+            this.CreateSPLabel.BackColor = System.Drawing.Color.White;
             this.CreateSPLabel.Controls.Add(this.label7);
             this.CreateSPLabel.Controls.Add(this.label3);
             this.CreateSPLabel.Controls.Add(this.label4);
+            this.CreateSPLabel.ForeColor = System.Drawing.Color.Black;
             this.CreateSPLabel.Location = new System.Drawing.Point(178, 116);
             this.CreateSPLabel.Name = "CreateSPLabel";
             this.CreateSPLabel.Size = new System.Drawing.Size(523, 64);
@@ -103,6 +107,7 @@
             // label7
             // 
             this.label7.AutoEllipsis = true;
+            this.label7.BackColor = System.Drawing.Color.DimGray;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(0, 0);
@@ -151,6 +156,7 @@
             // label5
             // 
             this.label5.AutoEllipsis = true;
+            this.label5.BackColor = System.Drawing.Color.DimGray;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(0, 0);
@@ -185,6 +191,7 @@
             // label8
             // 
             this.label8.AutoEllipsis = true;
+            this.label8.BackColor = System.Drawing.Color.DimGray;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(0, 0);
@@ -223,7 +230,7 @@
             // 
             // BorderPanel
             // 
-            this.BorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BorderPanel.BackColor = System.Drawing.Color.DimGray;
             this.BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BorderPanel.Location = new System.Drawing.Point(0, 0);
             this.BorderPanel.Name = "BorderPanel";
@@ -233,7 +240,9 @@
             // 
             // SPButton
             // 
-            this.SPButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SPButton.BackColor = System.Drawing.Color.White;
+            this.SPButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.SPButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SPButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SPButton.Location = new System.Drawing.Point(3, 104);
@@ -241,12 +250,14 @@
             this.SPButton.Size = new System.Drawing.Size(154, 64);
             this.SPButton.TabIndex = 1;
             this.SPButton.Text = " Create Stored Procedure";
-            this.SPButton.UseVisualStyleBackColor = true;
+            this.SPButton.UseVisualStyleBackColor = false;
             this.SPButton.Click += new System.EventHandler(this.SPButton_Click);
             // 
             // SQLUtilitiesButton
             // 
-            this.SQLUtilitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SQLUtilitiesButton.BackColor = System.Drawing.Color.White;
+            this.SQLUtilitiesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.SQLUtilitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SQLUtilitiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SQLUtilitiesButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SQLUtilitiesButton.Location = new System.Drawing.Point(3, 258);
@@ -254,12 +265,14 @@
             this.SQLUtilitiesButton.Size = new System.Drawing.Size(154, 64);
             this.SQLUtilitiesButton.TabIndex = 6;
             this.SQLUtilitiesButton.Text = "Install SQL Utilities";
-            this.SQLUtilitiesButton.UseVisualStyleBackColor = true;
+            this.SQLUtilitiesButton.UseVisualStyleBackColor = false;
             this.SQLUtilitiesButton.Click += new System.EventHandler(this.SQLUtilitiesButton_Click);
             // 
             // TableButton
             // 
-            this.TableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.TableButton.BackColor = System.Drawing.Color.White;
+            this.TableButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.TableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.TableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TableButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TableButton.Location = new System.Drawing.Point(3, 27);
@@ -267,12 +280,14 @@
             this.TableButton.Size = new System.Drawing.Size(154, 64);
             this.TableButton.TabIndex = 0;
             this.TableButton.Text = "Create Table";
-            this.TableButton.UseVisualStyleBackColor = true;
+            this.TableButton.UseVisualStyleBackColor = false;
             this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
             // 
             // testButton
             // 
-            this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.testButton.BackColor = System.Drawing.Color.White;
+            this.testButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testButton.Location = new System.Drawing.Point(3, 181);
@@ -280,12 +295,12 @@
             this.testButton.Size = new System.Drawing.Size(154, 64);
             this.testButton.TabIndex = 7;
             this.testButton.Text = "Test";
-            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.UseVisualStyleBackColor = false;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.testButton);
             this.panel1.Controls.Add(this.TableButton);
             this.panel1.Controls.Add(this.SQLUtilitiesButton);
