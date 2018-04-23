@@ -17,7 +17,7 @@ namespace Stored_Procedure_Manager
         public Home()
         {
             InitializeComponent();
-           
+
             try
             {
                 using (SqlConnection cn = new SqlConnection
@@ -65,7 +65,7 @@ namespace Stored_Procedure_Manager
             }
             finally
             {
-                
+
             }
 
             LoadButtonConfig();
@@ -96,6 +96,7 @@ namespace Stored_Procedure_Manager
             b.TopLevel = false;
             container.Controls.Add(b);
             b.Show();
+            b.Focus();
         }
 
         private void DBConnectButton_Click(object sender, EventArgs e)
@@ -121,12 +122,6 @@ namespace Stored_Procedure_Manager
             t.Show();
         }
 
-        public void Home_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.Alt && e.Control && e.KeyValue == 'W')
-            {
-                PasswordForm dlg = new PasswordForm();
-            }
-        }
     }
 }
+

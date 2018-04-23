@@ -161,7 +161,21 @@ namespace Stored_Procedure_Manager
 
         }
 
-
+        private void ButtonConfig_PreviewKeyDown_1(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.Alt && e.Control && e.KeyValue == 'W')
+            {
+                PasswordForm dlg = new PasswordForm();
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    if (Properties.Settings.Default.PasswordOk == dlg.PasswordtextBox.Text)
+                        MessageBox.Show("Good password");
+                    //enableControls(true);
+                    else
+                        MessageBox.Show("Invalid password");
+                }
+            }
+        }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -272,5 +286,7 @@ namespace Stored_Procedure_Manager
         {
             ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
+
+
     }
 }

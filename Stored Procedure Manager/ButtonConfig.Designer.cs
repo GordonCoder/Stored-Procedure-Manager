@@ -435,6 +435,7 @@
             this.Name = "ButtonConfig";
             this.Text = "ButtonConfig";
             this.Load += new System.EventHandler(this.ButtonConfig_Load);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ButtonConfig_PreviewKeyDown_1);
             this.borderpanel.ResumeLayout(false);
             this.borderpanel.PerformLayout();
             this.ResumeLayout(false);

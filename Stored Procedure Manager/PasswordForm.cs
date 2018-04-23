@@ -22,7 +22,7 @@ namespace Stored_Procedure_Manager
 
         }
 
-        private void PasswordtextBox_TextChanged(object sender, EventArgs e)
+        public void PasswordtextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -86,6 +86,6 @@
 
         private System.Windows.Forms.Button OKbutton;
         private System.Windows.Forms.Button Cancelbutton;
-        private System.Windows.Forms.TextBox PasswordtextBox;
+        public System.Windows.Forms.TextBox PasswordtextBox;
     }
 }
