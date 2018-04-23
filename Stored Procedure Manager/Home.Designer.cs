@@ -67,7 +67,6 @@
             this.sidepanel.Name = "sidepanel";
             this.sidepanel.Size = new System.Drawing.Size(250, 466);
             this.sidepanel.TabIndex = 0;
-            this.sidepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // logopanel
             // 
@@ -79,7 +78,6 @@
             this.logopanel.Name = "logopanel";
             this.logopanel.Size = new System.Drawing.Size(250, 83);
             this.logopanel.TabIndex = 0;
-            this.logopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LogoPanel_Paint);
             // 
             // HomeBorderPanel
             // 
@@ -88,7 +86,6 @@
             this.HomeBorderPanel.Name = "HomeBorderPanel";
             this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
             this.HomeBorderPanel.TabIndex = 0;
-            this.HomeBorderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HomeBorderPanel_Paint);
             // 
             // panel4
             // 
@@ -192,7 +189,6 @@
             this.headerpanel.Name = "headerpanel";
             this.headerpanel.Size = new System.Drawing.Size(713, 83);
             this.headerpanel.TabIndex = 1;
-            this.headerpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderPanel_Paint);
             // 
             // label1
             // 
@@ -228,7 +224,6 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(713, 383);
             this.container.TabIndex = 2;
-            this.container.Paint += new System.Windows.Forms.PaintEventHandler(this.Container_Paint);
             // 
             // label2
             // 
@@ -250,6 +245,7 @@
             this.Controls.Add(this.headerpanel);
             this.Controls.Add(this.sidepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

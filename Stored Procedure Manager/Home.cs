@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+//using System.Windows.Input;
 
 namespace Stored_Procedure_Manager
 {
@@ -16,7 +17,7 @@ namespace Stored_Procedure_Manager
         public Home()
         {
             InitializeComponent();
-
+           
             try
             {
                 using (SqlConnection cn = new SqlConnection
@@ -120,35 +121,12 @@ namespace Stored_Procedure_Manager
             t.Show();
         }
 
-
-        private void Container_Paint(object sender, PaintEventArgs e)
+        public void Home_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            //ControlPaint.DrawBorder(e.Graphics, this.container.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
-
-        private void HeaderPanel_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlPaint.DrawBorder(e.Graphics, this.headerpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
-
-        private void LogoPanel_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlPaint.DrawBorder(e.Graphics, this.logopanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
-
-        private void SidePanel_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlPaint.DrawBorder(e.Graphics, this.sidepanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
-
-        private void HomeBorderPanel_Paint(object sender, PaintEventArgs e)
-        {
-            //ControlPaint.DrawBorder(e.Graphics, this.HomeBorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
-
-        private void NewHeaderPanel_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (e.Alt && e.Control && e.KeyValue == 'W')
+            {
+                PasswordForm dlg = new PasswordForm();
+            }
         }
     }
 }

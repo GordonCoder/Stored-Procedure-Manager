@@ -224,5 +224,17 @@ namespace Stored_Procedure_Manager.Properties {
                 return ((string)(this["InstallerFolderString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("scsint")]
+        public string PasswordOk {
+            get {
+                return ((string)(this["PasswordOk"]));
+            }
+            set {
+                this["PasswordOk"] = value;
+            }
+        }
     }
 }
