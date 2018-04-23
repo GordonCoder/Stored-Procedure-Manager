@@ -57,6 +57,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_EF744A084A77408683374A404E3A62EE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B5D2A7794AF26E77F4C844868468DE28"
         "MsmSig" = "8:_UNDEFINED"
@@ -261,6 +267,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF744A084A77408683374A404E3A62EE"
+            {
+            "SourcePath" = "8:..\\Images\\Sierra Icon\\Favicon.ico"
+            "TargetName" = "8:Favicon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_2A89BDF42EEE498B8E41EF7C7D35093B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -332,6 +358,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_2FA3C1243E8E4869AFF46AAAE434A35F"
+                    {
+                    "Name" = "8:Sierra Workforce Solutions"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_E63E8BF9A56644AE9E2F453A63E90D48"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -351,7 +388,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Stored Procedure Manager"
         "ProductCode" = "8:{71CF2815-D3AD-4B3A-84C6-79399C2889D2}"
-        "PackageCode" = "8:{83D8A24C-3930-4FC4-B77B-D5E3BAA280F1}"
+        "PackageCode" = "8:{8653D278-5EB0-4127-9681-3783082472DE}"
         "UpgradeCode" = "8:{FD6DC4B7-DBC1-4E71-8412-E3BF01784AA5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -482,7 +519,7 @@
             "Target" = "8:_66BE7B85A70D44BCBFD0B20944525B0F"
             "Folder" = "8:_4E451B8E02CF43289C8924DA5674CA22"
             "WorkingFolder" = "8:_2A89BDF42EEE498B8E41EF7C7D35093B"
-            "Icon" = "8:"
+            "Icon" = "8:_EF744A084A77408683374A404E3A62EE"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_95E3FA0FBD77470DA5D23826949D0B4D"
@@ -494,9 +531,9 @@
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_66BE7B85A70D44BCBFD0B20944525B0F"
-            "Folder" = "8:_5B87B889BCEA48419B325CDD30F1A1EC"
+            "Folder" = "8:_2FA3C1243E8E4869AFF46AAAE434A35F"
             "WorkingFolder" = "8:_2A89BDF42EEE498B8E41EF7C7D35093B"
-            "Icon" = "8:"
+            "Icon" = "8:_EF744A084A77408683374A404E3A62EE"
             "Feature" = "8:"
             }
         }

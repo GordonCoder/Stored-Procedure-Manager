@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DBConnection));
             this.ServerNameTextBox = new System.Windows.Forms.TextBox();
             this.InstanceTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -202,6 +203,7 @@
             this.Controls.Add(this.ServerNameTextBox);
             this.Controls.Add(this.borderpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DBConnection";
             this.Text = "DBConnection";
             this.Load += new System.EventHandler(this.DBConnection_Load);

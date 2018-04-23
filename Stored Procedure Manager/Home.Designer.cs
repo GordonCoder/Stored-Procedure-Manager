@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.sidepanel = new System.Windows.Forms.Panel();
             this.logopanel = new System.Windows.Forms.Panel();
             this.HomeBorderPanel = new System.Windows.Forms.Panel();
@@ -245,6 +246,7 @@
             this.Controls.Add(this.headerpanel);
             this.Controls.Add(this.sidepanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

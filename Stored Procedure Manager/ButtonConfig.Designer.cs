@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ButtonConfig));
             this.SaveButton = new System.Windows.Forms.Button();
             this.Button1NameText = new System.Windows.Forms.TextBox();
             this.Button2NameText = new System.Windows.Forms.TextBox();
@@ -430,6 +431,7 @@
             this.Controls.Add(this.Button1NameText);
             this.Controls.Add(this.borderpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ButtonConfig";
             this.Text = "ButtonConfig";
             this.Load += new System.EventHandler(this.ButtonConfig_Load);
