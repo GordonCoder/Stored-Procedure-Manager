@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-//using System.Windows.Input;
 
 namespace Stored_Procedure_Manager
 {
     public partial class Home : Form
     {
+        public Point mouseLocation;
+
         public Home()
         {
             InitializeComponent();
@@ -62,10 +63,17 @@ namespace Stored_Procedure_Manager
                     { toolsButton.Enabled = false; }
                 }
                 MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+
+                container.Controls.Clear();
+                DBConnection db = new DBConnection();
+                db.TopLevel = false;
+                container.Controls.Add(db);
+                db.Show();
+                db.Focus();
             }
             finally
             {
-
+                
             }
 
             LoadButtonConfig();
@@ -125,6 +133,25 @@ namespace Stored_Procedure_Manager
             t.Focus();
         }
 
+        private void container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Home_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void Home_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
     }
 }
 

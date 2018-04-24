@@ -42,7 +42,6 @@
             this.homebutton = new System.Windows.Forms.Button();
             this.headerpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sidepanel.SuspendLayout();
@@ -184,7 +183,6 @@
             // 
             this.headerpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.headerpanel.Controls.Add(this.label1);
-            this.headerpanel.Controls.Add(this.CloseButton);
             this.headerpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerpanel.Location = new System.Drawing.Point(250, 0);
             this.headerpanel.Name = "headerpanel";
@@ -201,20 +199,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Stored Procedure Manager";
             // 
-            // CloseButton
-            // 
-            this.CloseButton.FlatAppearance.BorderSize = 0;
-            this.CloseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseButton.Location = new System.Drawing.Point(658, 16);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(43, 48);
-            this.CloseButton.TabIndex = 7;
-            this.CloseButton.Text = "X";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // container
             // 
             this.container.BackColor = System.Drawing.SystemColors.Control;
@@ -225,6 +209,7 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(713, 383);
             this.container.TabIndex = 2;
+            this.container.Paint += new System.Windows.Forms.PaintEventHandler(this.container_Paint);
             // 
             // label2
             // 
@@ -245,12 +230,14 @@
             this.Controls.Add(this.container);
             this.Controls.Add(this.headerpanel);
             this.Controls.Add(this.sidepanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Home_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Home_MouseMove);
             this.sidepanel.ResumeLayout(false);
             this.logopanel.ResumeLayout(false);
             this.headerpanel.ResumeLayout(false);
@@ -270,7 +257,6 @@
         private System.Windows.Forms.Button dbconnectbutton;
         private System.Windows.Forms.Button buttonconfigbutton;
         private System.Windows.Forms.Panel container;
-        private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
