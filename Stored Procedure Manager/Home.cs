@@ -87,6 +87,7 @@ namespace Stored_Procedure_Manager
             m.TopLevel = false;
             container.Controls.Add(m);
             m.Show();
+            m.Focus();
         }
 
         private void ButtonConfigButton_Click(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace Stored_Procedure_Manager
             db.TopLevel = false;
             container.Controls.Add(db);
             db.Show();
+            db.Focus();
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -120,6 +122,7 @@ namespace Stored_Procedure_Manager
             t.TopLevel = false;
             container.Controls.Add(t);
             t.Show();
+            t.Focus();
         }
 
     }
