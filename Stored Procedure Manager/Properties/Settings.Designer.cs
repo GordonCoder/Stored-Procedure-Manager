@@ -236,5 +236,17 @@ namespace Stored_Procedure_Manager.Properties {
                 this["PasswordOk"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Process1String {
+            get {
+                return ((string)(this["Process1String"]));
+            }
+            set {
+                this["Process1String"] = value;
+            }
+        }
     }
 }

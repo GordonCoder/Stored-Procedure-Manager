@@ -234,7 +234,7 @@
             this.BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BorderPanel.Location = new System.Drawing.Point(0, 0);
             this.BorderPanel.Name = "BorderPanel";
-            this.BorderPanel.Size = new System.Drawing.Size(713, 383);
+            this.BorderPanel.Size = new System.Drawing.Size(855, 385);
             this.BorderPanel.TabIndex = 2;
             this.BorderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 383);
+            this.ClientSize = new System.Drawing.Size(855, 385);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SQLUtilitieslabel);
             this.Controls.Add(this.CreateSPLabel);

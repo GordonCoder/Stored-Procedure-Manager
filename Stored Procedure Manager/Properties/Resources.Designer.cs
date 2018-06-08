@@ -63,6 +63,26 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Body_Graphic_2 {
+            get {
+                object obj = ResourceManager.GetObject("Body_Graphic_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Body_Graphic_855x385_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Body_Graphic_855x385_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clocks_60_55 {
             get {
                 object obj = ResourceManager.GetObject("Clocks 60-55", resourceCulture);
@@ -91,52 +111,22 @@ namespace Stored_Procedure_Manager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] msodbcsqlv11x64 {
+        internal static System.Drawing.Bitmap Header_Graphic {
             get {
-                object obj = ResourceManager.GetObject("msodbcsqlv11x64", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("Header_Graphic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] msodbcsqlv11x86 {
+        internal static System.Drawing.Bitmap Header_Graphic_855x83_v2 {
             get {
-                object obj = ResourceManager.GetObject("msodbcsqlv11x86", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] MsSqlCmdLnUtilsV11x64 {
-            get {
-                object obj = ResourceManager.GetObject("MsSqlCmdLnUtilsV11x64", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] MsSqlCmdLnUtilsV14x64 {
-            get {
-                object obj = ResourceManager.GetObject("MsSqlCmdLnUtilsV14x64", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] MsSqlCmdLnUtilsV14x86 {
-            get {
-                object obj = ResourceManager.GetObject("MsSqlCmdLnUtilsV14x86", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("Header_Graphic_855x83_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

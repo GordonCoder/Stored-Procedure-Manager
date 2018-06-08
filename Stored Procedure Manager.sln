@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stored Procedure Manager", "Stored Procedure Manager\Stored Procedure Manager.csproj", "{B9537756-3FD2-42FE-8667-AB8FA36E163E}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SPManagerSetup", "SPManagerSetup\SPManagerSetup.vdproj", "{2FB0FA82-1A28-4419-BFAB-E10DF81FAAC1}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SPManagerSetup", "SPManagerSetup\SPManagerSetup.vdproj", "{A401BD5A-F85D-468D-B940-77C58A5F1448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,12 @@ Global
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9537756-3FD2-42FE-8667-AB8FA36E163E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FB0FA82-1A28-4419-BFAB-E10DF81FAAC1}.All|Any CPU.ActiveCfg = Release
-		{2FB0FA82-1A28-4419-BFAB-E10DF81FAAC1}.Debug|Any CPU.ActiveCfg = Debug
-		{2FB0FA82-1A28-4419-BFAB-E10DF81FAAC1}.Release|Any CPU.ActiveCfg = Release
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.All|Any CPU.ActiveCfg = Release
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.All|Any CPU.Build.0 = Release
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.Debug|Any CPU.ActiveCfg = Debug
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.Debug|Any CPU.Build.0 = Debug
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.Release|Any CPU.ActiveCfg = Release
+		{A401BD5A-F85D-468D-B940-77C58A5F1448}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

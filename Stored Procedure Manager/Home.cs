@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Stored_Procedure_Manager
 {
     public partial class Home : Form
@@ -89,6 +90,8 @@ namespace Stored_Procedure_Manager
         }
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            panelSlice.Height = homebutton.Height;
+            panelSlice.Top = homebutton.Top;
             container.Controls.Clear();
             Main m = new Main();
             m.LoadMainButtonConfig();
@@ -100,6 +103,8 @@ namespace Stored_Procedure_Manager
 
         private void ButtonConfigButton_Click(object sender, EventArgs e)
         {
+            panelSlice.Height = buttonconfigbutton.Height;
+            panelSlice.Top = buttonconfigbutton.Top;
             container.Controls.Clear();
             ButtonConfig b = new ButtonConfig();
             b.TopLevel = false;
@@ -110,6 +115,8 @@ namespace Stored_Procedure_Manager
 
         private void DBConnectButton_Click(object sender, EventArgs e)
         {
+            panelSlice.Height = dbconnectbutton.Height;
+            panelSlice.Top = dbconnectbutton.Top;
             container.Controls.Clear();
             DBConnection db = new DBConnection();
             db.TopLevel = false;
@@ -125,6 +132,8 @@ namespace Stored_Procedure_Manager
 
         private void ToolsButton_Click(object sender, EventArgs e)
         {
+            panelSlice.Height = toolsButton.Height;
+            panelSlice.Top = toolsButton.Top;
             container.Controls.Clear();
             Tools t = new Tools();
             t.TopLevel = false;

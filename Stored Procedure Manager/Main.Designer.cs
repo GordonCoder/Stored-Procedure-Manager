@@ -197,7 +197,7 @@
             this.borderpanel.BackColor = System.Drawing.Color.DimGray;
             this.borderpanel.Location = new System.Drawing.Point(-1, -1);
             this.borderpanel.Name = "borderpanel";
-            this.borderpanel.Size = new System.Drawing.Size(713, 383);
+            this.borderpanel.Size = new System.Drawing.Size(855, 385);
             this.borderpanel.TabIndex = 10;
             this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
@@ -206,7 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(713, 383);
+            this.ClientSize = new System.Drawing.Size(855, 385);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);

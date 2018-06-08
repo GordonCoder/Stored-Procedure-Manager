@@ -131,7 +131,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName1String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName1String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -153,7 +153,7 @@ namespace Stored_Procedure_Manager
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             cn.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName2String + " Stored Procedure was ran.");
+            MessageBox.Show("The " + Properties.Settings.Default.SPName2String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -175,7 +175,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName3String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName3String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -197,7 +197,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName4String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName4String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -219,7 +219,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName5String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName5String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -241,7 +241,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName6String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName6String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -263,7 +263,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName7String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName7String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -285,7 +285,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName8String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName8String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -307,7 +307,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName9String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName9String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
@@ -329,7 +329,7 @@ namespace Stored_Procedure_Manager
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName10String + " Stored Procedure was ran.");
+                MessageBox.Show("The " + Properties.Settings.Default.SPName10String + " Stored Procedure was run.");
             }
             catch (Exception ex)
             {
