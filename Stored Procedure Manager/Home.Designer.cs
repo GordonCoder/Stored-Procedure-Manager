@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.sidepanel = new System.Windows.Forms.Panel();
             this.panelSlice = new System.Windows.Forms.Panel();
+            this.logopanel = new System.Windows.Forms.Panel();
+            this.HomeBorderPanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolsButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
-            this.logopanel = new System.Windows.Forms.Panel();
-            this.HomeBorderPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sidepanel.SuspendLayout();
             this.logopanel.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,41 @@
             this.panelSlice.Size = new System.Drawing.Size(11, 55);
             this.panelSlice.TabIndex = 12;
             // 
+            // logopanel
+            // 
+            this.logopanel.BackColor = System.Drawing.Color.Transparent;
+            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
+            this.logopanel.Controls.Add(this.HomeBorderPanel);
+            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logopanel.Location = new System.Drawing.Point(0, 0);
+            this.logopanel.Name = "logopanel";
+            this.logopanel.Size = new System.Drawing.Size(250, 83);
+            this.logopanel.TabIndex = 0;
+            // 
+            // HomeBorderPanel
+            // 
+            this.HomeBorderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HomeBorderPanel.Location = new System.Drawing.Point(0, 0);
+            this.HomeBorderPanel.Name = "HomeBorderPanel";
+            this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
+            this.HomeBorderPanel.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Clocks_60_55;
+            this.panel4.Location = new System.Drawing.Point(12, 99);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(60, 55);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.TerminalsConfiguration_60_53;
+            this.panel3.Location = new System.Drawing.Point(12, 305);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(60, 55);
+            this.panel3.TabIndex = 10;
+            // 
             // toolsButton
             // 
             this.toolsButton.FlatAppearance.BorderSize = 0;
@@ -88,6 +123,22 @@
             this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolsButton.UseVisualStyleBackColor = true;
             this.toolsButton.Click += new System.EventHandler(this.ToolsButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.DBConnectionManager_60_55;
+            this.panel2.Location = new System.Drawing.Point(12, 234);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 55);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.ConfigurationCenter_60_55;
+            this.panel1.Location = new System.Drawing.Point(12, 163);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(60, 55);
+            this.panel1.TabIndex = 7;
             // 
             // dbconnectbutton
             // 
@@ -148,63 +199,12 @@
             // headerpanel
             // 
             this.headerpanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.headerpanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Header_Graphic_855x83_v2;
+            this.headerpanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Header_Graphic_855x83_v3;
             this.headerpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerpanel.Location = new System.Drawing.Point(250, 0);
             this.headerpanel.Name = "headerpanel";
             this.headerpanel.Size = new System.Drawing.Size(855, 83);
             this.headerpanel.TabIndex = 1;
-            // 
-            // logopanel
-            // 
-            this.logopanel.BackColor = System.Drawing.Color.Transparent;
-            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
-            this.logopanel.Controls.Add(this.HomeBorderPanel);
-            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logopanel.Location = new System.Drawing.Point(0, 0);
-            this.logopanel.Name = "logopanel";
-            this.logopanel.Size = new System.Drawing.Size(250, 83);
-            this.logopanel.TabIndex = 0;
-            // 
-            // HomeBorderPanel
-            // 
-            this.HomeBorderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HomeBorderPanel.Location = new System.Drawing.Point(0, 0);
-            this.HomeBorderPanel.Name = "HomeBorderPanel";
-            this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
-            this.HomeBorderPanel.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Clocks_60_55;
-            this.panel4.Location = new System.Drawing.Point(12, 99);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(60, 55);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.TerminalsConfiguration_60_53;
-            this.panel3.Location = new System.Drawing.Point(12, 305);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 55);
-            this.panel3.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.DBConnectionManager_60_55;
-            this.panel2.Location = new System.Drawing.Point(12, 234);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 55);
-            this.panel2.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.ConfigurationCenter_60_55;
-            this.panel1.Location = new System.Drawing.Point(12, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 55);
-            this.panel1.TabIndex = 7;
             // 
             // Home
             // 

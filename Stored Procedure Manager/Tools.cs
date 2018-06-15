@@ -105,24 +105,34 @@ namespace Stored_Procedure_Manager
                             "CREATE TABLE cust_SPManagerConfig" +
                             "(ButtonName01 varchar(max) NULL" +
                             ", SPName01 varchar(max) NULL" +
+                            ", Param01 varchar(max) NULL" +
                             ", ButtonName02 varchar(max) NULL" +
                             ", SPName02 varchar(max) NULL" +
+                            ", Param02 varchar(max) NULL" +
                             ", ButtonName03 varchar(max) NULL" +
                             ", SPName03 varchar(max) NULL" +
+                            ", Param03 varchar(max) NULL" +
                             ", ButtonName04 varchar(max) NULL" +
                             ", SPName04 varchar(max) NULL" +
+                            ", Param04 varchar(max) NULL" +
                             ", ButtonName05 varchar(max) NULL" +
                             ", SPName05 varchar(max) NULL" +
+                            ", Param05 varchar(max) NULL" +
                             ", ButtonName06 varchar(max) NULL" +
                             ", SPName06 varchar(max) NULL" +
+                            ", Param06 varchar(max) NULL" +
                             ", ButtonName07 varchar(max) NULL" +
                             ", SPName07 varchar(max) NULL" +
+                            ", Param07 varchar(max) NULL" +
                             ", ButtonName08 varchar(max) NULL" +
                             ", SPName08 varchar(max) NULL" +
+                            ", Param08 varchar(max) NULL" +
                             ", ButtonName09 varchar(max) NULL" +
                             ", SPName09 varchar(max) NULL" +
+                            ", Param09 varchar(max) NULL" +
                             ", ButtonName10 varchar(max) NULL" +
-                            ", SPName10 varchar(max) NULL);", cn))
+                            ", SPName10 varchar(max) NULL" +
+                            ", Param10 varchar(max) NULL);", cn))
                         command.ExecuteNonQuery();
                     MessageBox.Show("The table was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Table Created");
                 }

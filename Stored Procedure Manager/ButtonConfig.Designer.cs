@@ -63,6 +63,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.borderpanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ParamName10TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName9TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName8TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName7TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName6TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName5TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName4TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName3TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName2TextBox = new System.Windows.Forms.TextBox();
+            this.ParamName1TextBox = new System.Windows.Forms.TextBox();
+            this.NewButtonConfig = new System.Windows.Forms.Button();
             this.borderpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +94,7 @@
             // 
             this.Button1NameText.Location = new System.Drawing.Point(93, 42);
             this.Button1NameText.Name = "Button1NameText";
-            this.Button1NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button1NameText.Size = new System.Drawing.Size(225, 20);
             this.Button1NameText.TabIndex = 0;
             this.Button1NameText.TextChanged += new System.EventHandler(this.Button1NameText_TextChanged);
             // 
@@ -90,7 +102,7 @@
             // 
             this.Button2NameText.Location = new System.Drawing.Point(93, 68);
             this.Button2NameText.Name = "Button2NameText";
-            this.Button2NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button2NameText.Size = new System.Drawing.Size(225, 20);
             this.Button2NameText.TabIndex = 2;
             this.Button2NameText.TextChanged += new System.EventHandler(this.Button2NameText_TextChanged);
             // 
@@ -98,14 +110,14 @@
             // 
             this.Button3NameText.Location = new System.Drawing.Point(93, 95);
             this.Button3NameText.Name = "Button3NameText";
-            this.Button3NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button3NameText.Size = new System.Drawing.Size(225, 20);
             this.Button3NameText.TabIndex = 4;
             // 
             // Button4NameText
             // 
             this.Button4NameText.Location = new System.Drawing.Point(93, 122);
             this.Button4NameText.Name = "Button4NameText";
-            this.Button4NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button4NameText.Size = new System.Drawing.Size(225, 20);
             this.Button4NameText.TabIndex = 6;
             this.Button4NameText.TextChanged += new System.EventHandler(this.Button4NameText_TextChanged);
             // 
@@ -113,7 +125,7 @@
             // 
             this.Button5NameText.Location = new System.Drawing.Point(93, 149);
             this.Button5NameText.Name = "Button5NameText";
-            this.Button5NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button5NameText.Size = new System.Drawing.Size(225, 20);
             this.Button5NameText.TabIndex = 8;
             this.Button5NameText.TextChanged += new System.EventHandler(this.Button5NameText_TextChanged);
             // 
@@ -121,7 +133,7 @@
             // 
             this.Button6NameText.Location = new System.Drawing.Point(93, 176);
             this.Button6NameText.Name = "Button6NameText";
-            this.Button6NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button6NameText.Size = new System.Drawing.Size(225, 20);
             this.Button6NameText.TabIndex = 10;
             this.Button6NameText.TextChanged += new System.EventHandler(this.Button6NameText_TextChanged);
             // 
@@ -129,7 +141,7 @@
             // 
             this.Button7NameText.Location = new System.Drawing.Point(93, 203);
             this.Button7NameText.Name = "Button7NameText";
-            this.Button7NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button7NameText.Size = new System.Drawing.Size(225, 20);
             this.Button7NameText.TabIndex = 12;
             this.Button7NameText.TextChanged += new System.EventHandler(this.Button7NameText_TextChanged);
             // 
@@ -137,7 +149,7 @@
             // 
             this.Button8NameText.Location = new System.Drawing.Point(93, 230);
             this.Button8NameText.Name = "Button8NameText";
-            this.Button8NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button8NameText.Size = new System.Drawing.Size(225, 20);
             this.Button8NameText.TabIndex = 14;
             this.Button8NameText.TextChanged += new System.EventHandler(this.Button8NameText_TextChanged);
             // 
@@ -145,7 +157,7 @@
             // 
             this.Button9NameText.Location = new System.Drawing.Point(93, 257);
             this.Button9NameText.Name = "Button9NameText";
-            this.Button9NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button9NameText.Size = new System.Drawing.Size(225, 20);
             this.Button9NameText.TabIndex = 16;
             this.Button9NameText.TextChanged += new System.EventHandler(this.Button9NameText_TextChanged);
             // 
@@ -153,87 +165,87 @@
             // 
             this.Button10NameText.Location = new System.Drawing.Point(93, 284);
             this.Button10NameText.Name = "Button10NameText";
-            this.Button10NameText.Size = new System.Drawing.Size(244, 20);
+            this.Button10NameText.Size = new System.Drawing.Size(225, 20);
             this.Button10NameText.TabIndex = 18;
             this.Button10NameText.TextChanged += new System.EventHandler(this.Button10NameText_TextChanged);
             // 
             // SPName1TextBox
             // 
-            this.SPName1TextBox.Location = new System.Drawing.Point(344, 42);
+            this.SPName1TextBox.Location = new System.Drawing.Point(323, 42);
             this.SPName1TextBox.Name = "SPName1TextBox";
-            this.SPName1TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName1TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName1TextBox.TabIndex = 1;
             this.SPName1TextBox.TextChanged += new System.EventHandler(this.SPName1TextBox_TextChanged);
             // 
             // SPName2TextBox
             // 
-            this.SPName2TextBox.Location = new System.Drawing.Point(344, 68);
+            this.SPName2TextBox.Location = new System.Drawing.Point(323, 68);
             this.SPName2TextBox.Name = "SPName2TextBox";
-            this.SPName2TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName2TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName2TextBox.TabIndex = 3;
             this.SPName2TextBox.TextChanged += new System.EventHandler(this.SPName2TextBox_TextChanged);
             // 
             // SPName3TextBox
             // 
-            this.SPName3TextBox.Location = new System.Drawing.Point(344, 95);
+            this.SPName3TextBox.Location = new System.Drawing.Point(323, 95);
             this.SPName3TextBox.Name = "SPName3TextBox";
-            this.SPName3TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName3TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName3TextBox.TabIndex = 5;
             this.SPName3TextBox.TextChanged += new System.EventHandler(this.SPName3TextBox_TextChanged);
             // 
             // SPName4TextBox
             // 
-            this.SPName4TextBox.Location = new System.Drawing.Point(344, 122);
+            this.SPName4TextBox.Location = new System.Drawing.Point(323, 122);
             this.SPName4TextBox.Name = "SPName4TextBox";
-            this.SPName4TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName4TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName4TextBox.TabIndex = 7;
             this.SPName4TextBox.TextChanged += new System.EventHandler(this.SPName4TextBox_TextChanged);
             // 
             // SPName5TextBox
             // 
-            this.SPName5TextBox.Location = new System.Drawing.Point(344, 149);
+            this.SPName5TextBox.Location = new System.Drawing.Point(323, 149);
             this.SPName5TextBox.Name = "SPName5TextBox";
-            this.SPName5TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName5TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName5TextBox.TabIndex = 9;
             this.SPName5TextBox.TextChanged += new System.EventHandler(this.SPName5TextBox_TextChanged);
             // 
             // SPName6TextBox
             // 
-            this.SPName6TextBox.Location = new System.Drawing.Point(344, 176);
+            this.SPName6TextBox.Location = new System.Drawing.Point(324, 177);
             this.SPName6TextBox.Name = "SPName6TextBox";
-            this.SPName6TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName6TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName6TextBox.TabIndex = 11;
             this.SPName6TextBox.TextChanged += new System.EventHandler(this.SPName6TextBox_TextChanged);
             // 
             // SPName7TextBox
             // 
-            this.SPName7TextBox.Location = new System.Drawing.Point(344, 203);
+            this.SPName7TextBox.Location = new System.Drawing.Point(323, 203);
             this.SPName7TextBox.Name = "SPName7TextBox";
-            this.SPName7TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName7TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName7TextBox.TabIndex = 13;
             this.SPName7TextBox.TextChanged += new System.EventHandler(this.SPName7TextBox_TextChanged);
             // 
             // SPName8TextBox
             // 
-            this.SPName8TextBox.Location = new System.Drawing.Point(344, 230);
+            this.SPName8TextBox.Location = new System.Drawing.Point(323, 230);
             this.SPName8TextBox.Name = "SPName8TextBox";
-            this.SPName8TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName8TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName8TextBox.TabIndex = 15;
             this.SPName8TextBox.TextChanged += new System.EventHandler(this.SPName8TextBox_TextChanged);
             // 
             // SPName9TextBox
             // 
-            this.SPName9TextBox.Location = new System.Drawing.Point(344, 257);
+            this.SPName9TextBox.Location = new System.Drawing.Point(323, 257);
             this.SPName9TextBox.Name = "SPName9TextBox";
-            this.SPName9TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName9TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName9TextBox.TabIndex = 17;
             this.SPName9TextBox.TextChanged += new System.EventHandler(this.SPName9TextBox_TextChanged);
             // 
             // SPName10TextBox
             // 
-            this.SPName10TextBox.Location = new System.Drawing.Point(344, 284);
+            this.SPName10TextBox.Location = new System.Drawing.Point(323, 284);
             this.SPName10TextBox.Name = "SPName10TextBox";
-            this.SPName10TextBox.Size = new System.Drawing.Size(324, 20);
+            this.SPName10TextBox.Size = new System.Drawing.Size(225, 20);
             this.SPName10TextBox.TabIndex = 19;
             this.SPName10TextBox.TextChanged += new System.EventHandler(this.SPName10TextBox_TextChanged);
             // 
@@ -375,7 +387,7 @@
             this.label12.BackColor = System.Drawing.Color.DimGray;
             this.label12.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(409, 19);
+            this.label12.Location = new System.Drawing.Point(340, 19);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(194, 19);
             this.label12.TabIndex = 32;
@@ -384,6 +396,19 @@
             // borderpanel
             // 
             this.borderpanel.BackColor = System.Drawing.Color.DimGray;
+            this.borderpanel.Controls.Add(this.NewButtonConfig);
+            this.borderpanel.Controls.Add(this.label13);
+            this.borderpanel.Controls.Add(this.ParamName10TextBox);
+            this.borderpanel.Controls.Add(this.ParamName9TextBox);
+            this.borderpanel.Controls.Add(this.ParamName8TextBox);
+            this.borderpanel.Controls.Add(this.ParamName7TextBox);
+            this.borderpanel.Controls.Add(this.SPName6TextBox);
+            this.borderpanel.Controls.Add(this.ParamName6TextBox);
+            this.borderpanel.Controls.Add(this.ParamName5TextBox);
+            this.borderpanel.Controls.Add(this.ParamName4TextBox);
+            this.borderpanel.Controls.Add(this.ParamName3TextBox);
+            this.borderpanel.Controls.Add(this.ParamName2TextBox);
+            this.borderpanel.Controls.Add(this.ParamName1TextBox);
             this.borderpanel.Controls.Add(this.label11);
             this.borderpanel.Controls.Add(this.label1);
             this.borderpanel.Controls.Add(this.label2);
@@ -402,6 +427,99 @@
             this.borderpanel.TabIndex = 33;
             this.borderpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.BorderPanel_Paint);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DimGray;
+            this.label13.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(619, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 19);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Parameter";
+            // 
+            // ParamName10TextBox
+            // 
+            this.ParamName10TextBox.Location = new System.Drawing.Point(556, 285);
+            this.ParamName10TextBox.Name = "ParamName10TextBox";
+            this.ParamName10TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName10TextBox.TabIndex = 42;
+            // 
+            // ParamName9TextBox
+            // 
+            this.ParamName9TextBox.Location = new System.Drawing.Point(556, 258);
+            this.ParamName9TextBox.Name = "ParamName9TextBox";
+            this.ParamName9TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName9TextBox.TabIndex = 41;
+            // 
+            // ParamName8TextBox
+            // 
+            this.ParamName8TextBox.Location = new System.Drawing.Point(556, 231);
+            this.ParamName8TextBox.Name = "ParamName8TextBox";
+            this.ParamName8TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName8TextBox.TabIndex = 40;
+            // 
+            // ParamName7TextBox
+            // 
+            this.ParamName7TextBox.Location = new System.Drawing.Point(556, 204);
+            this.ParamName7TextBox.Name = "ParamName7TextBox";
+            this.ParamName7TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName7TextBox.TabIndex = 39;
+            this.ParamName7TextBox.TextChanged += new System.EventHandler(this.ParamName7TextBox_TextChanged);
+            // 
+            // ParamName6TextBox
+            // 
+            this.ParamName6TextBox.Location = new System.Drawing.Point(556, 177);
+            this.ParamName6TextBox.Name = "ParamName6TextBox";
+            this.ParamName6TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName6TextBox.TabIndex = 38;
+            // 
+            // ParamName5TextBox
+            // 
+            this.ParamName5TextBox.Location = new System.Drawing.Point(556, 150);
+            this.ParamName5TextBox.Name = "ParamName5TextBox";
+            this.ParamName5TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName5TextBox.TabIndex = 37;
+            // 
+            // ParamName4TextBox
+            // 
+            this.ParamName4TextBox.Location = new System.Drawing.Point(556, 123);
+            this.ParamName4TextBox.Name = "ParamName4TextBox";
+            this.ParamName4TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName4TextBox.TabIndex = 36;
+            // 
+            // ParamName3TextBox
+            // 
+            this.ParamName3TextBox.Location = new System.Drawing.Point(556, 96);
+            this.ParamName3TextBox.Name = "ParamName3TextBox";
+            this.ParamName3TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName3TextBox.TabIndex = 35;
+            // 
+            // ParamName2TextBox
+            // 
+            this.ParamName2TextBox.Location = new System.Drawing.Point(556, 69);
+            this.ParamName2TextBox.Name = "ParamName2TextBox";
+            this.ParamName2TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName2TextBox.TabIndex = 34;
+            // 
+            // ParamName1TextBox
+            // 
+            this.ParamName1TextBox.Location = new System.Drawing.Point(556, 43);
+            this.ParamName1TextBox.Name = "ParamName1TextBox";
+            this.ParamName1TextBox.Size = new System.Drawing.Size(225, 20);
+            this.ParamName1TextBox.TabIndex = 33;
+            // 
+            // NewButtonConfig
+            // 
+            this.NewButtonConfig.Location = new System.Drawing.Point(687, 323);
+            this.NewButtonConfig.Name = "NewButtonConfig";
+            this.NewButtonConfig.Size = new System.Drawing.Size(124, 23);
+            this.NewButtonConfig.TabIndex = 44;
+            this.NewButtonConfig.Text = "New Button Config";
+            this.NewButtonConfig.UseVisualStyleBackColor = true;
+            this.NewButtonConfig.Click += new System.EventHandler(this.NewButtonConfig_Click);
+            // 
             // ButtonConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,7 +531,6 @@
             this.Controls.Add(this.SPName9TextBox);
             this.Controls.Add(this.SPName8TextBox);
             this.Controls.Add(this.SPName7TextBox);
-            this.Controls.Add(this.SPName6TextBox);
             this.Controls.Add(this.SPName5TextBox);
             this.Controls.Add(this.SPName4TextBox);
             this.Controls.Add(this.SPName3TextBox);
@@ -478,5 +595,17 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel borderpanel;
+        private System.Windows.Forms.TextBox ParamName10TextBox;
+        private System.Windows.Forms.TextBox ParamName9TextBox;
+        private System.Windows.Forms.TextBox ParamName8TextBox;
+        private System.Windows.Forms.TextBox ParamName7TextBox;
+        private System.Windows.Forms.TextBox ParamName6TextBox;
+        private System.Windows.Forms.TextBox ParamName5TextBox;
+        private System.Windows.Forms.TextBox ParamName4TextBox;
+        private System.Windows.Forms.TextBox ParamName3TextBox;
+        private System.Windows.Forms.TextBox ParamName2TextBox;
+        private System.Windows.Forms.TextBox ParamName1TextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button NewButtonConfig;
     }
 }

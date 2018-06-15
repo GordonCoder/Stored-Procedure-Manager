@@ -72,6 +72,28 @@ namespace Stored_Procedure_Manager
             Button9NameText.Clear();
             Button10NameText.Clear();
 
+            SPName1TextBox.Clear();
+            SPName2TextBox.Clear();
+            SPName3TextBox.Clear();
+            SPName4TextBox.Clear();
+            SPName5TextBox.Clear();
+            SPName6TextBox.Clear();
+            SPName7TextBox.Clear();
+            SPName8TextBox.Clear();
+            SPName9TextBox.Clear();
+            SPName10TextBox.Clear();
+
+            ParamName1TextBox.Clear();
+            ParamName2TextBox.Clear();
+            ParamName3TextBox.Clear();
+            ParamName4TextBox.Clear();
+            ParamName5TextBox.Clear();
+            ParamName6TextBox.Clear();
+            ParamName7TextBox.Clear();
+            ParamName8TextBox.Clear();
+            ParamName9TextBox.Clear();
+            ParamName10TextBox.Clear();
+
             // Open the connection to the database and select the data within the table
             cn.Open();
             SqlCommand cmd = new SqlCommand("Select * from cust_SPManagerConfig", cn);
@@ -104,6 +126,18 @@ namespace Stored_Procedure_Manager
                     this.SPName8TextBox.Text = (dr["SPName08"].ToString());
                     this.SPName9TextBox.Text = (dr["SPName09"].ToString());
                     this.SPName10TextBox.Text = (dr["SPName10"].ToString());
+
+                    // Load Parameters from the database
+                    this.ParamName1TextBox.Text = (dr["Param01"].ToString());
+                    this.ParamName2TextBox.Text = (dr["Param02"].ToString());
+                    this.ParamName3TextBox.Text = (dr["Param03"].ToString());
+                    this.ParamName4TextBox.Text = (dr["Param04"].ToString());
+                    this.ParamName5TextBox.Text = (dr["Param05"].ToString());
+                    this.ParamName6TextBox.Text = (dr["Param06"].ToString());
+                    this.ParamName7TextBox.Text = (dr["Param07"].ToString());
+                    this.ParamName8TextBox.Text = (dr["Param08"].ToString());
+                    this.ParamName9TextBox.Text = (dr["Param09"].ToString());
+                    this.ParamName10TextBox.Text = (dr["Param10"].ToString());
                 }
             }
             cn.Close();
@@ -139,7 +173,17 @@ namespace Stored_Procedure_Manager
                     "SPName07 = '" + SPName7TextBox.Text + "'," +
                     "SPName08 = '" + SPName8TextBox.Text + "'," +
                     "SPName09 = '" + SPName9TextBox.Text + "'," +
-                    "SPName10 = '" + SPName10TextBox.Text + "'", cn);
+                    "SPName10 = '" + SPName10TextBox.Text + "'," +
+                    "Param01 = '" + ParamName1TextBox.Text + "', " +
+                    "Param02 = '" + ParamName2TextBox.Text + "'," +
+                    "Param03 = '" + ParamName3TextBox.Text + "'," +
+                    "Param04 = '" + ParamName4TextBox.Text + "'," +
+                    "Param05 = '" + ParamName5TextBox.Text + "'," +
+                    "Param06 = '" + ParamName6TextBox.Text + "'," +
+                    "Param07 = '" + ParamName7TextBox.Text + "'," +
+                    "Param08 = '" + ParamName8TextBox.Text + "'," +
+                    "Param09 = '" + ParamName9TextBox.Text + "'," +
+                    "Param10 = '" + ParamName10TextBox.Text + "'", cn);
             cn.Open();
             cmd.ExecuteNonQuery();
             cn.Close();
@@ -155,7 +199,20 @@ namespace Stored_Procedure_Manager
             Properties.Settings.Default.SPName8String = SPName8TextBox.Text;
             Properties.Settings.Default.SPName9String = SPName9TextBox.Text;
             Properties.Settings.Default.SPName10String = SPName10TextBox.Text;
+
+            Properties.Settings.Default.ParamName1String = ParamName1TextBox.Text;
+            Properties.Settings.Default.ParamName2String = ParamName2TextBox.Text;
+            Properties.Settings.Default.ParamName3String = ParamName3TextBox.Text;
+            Properties.Settings.Default.ParamName4String = ParamName4TextBox.Text;
+            Properties.Settings.Default.ParamName5String = ParamName5TextBox.Text;
+            Properties.Settings.Default.ParamName6String = ParamName6TextBox.Text;
+            Properties.Settings.Default.ParamName7String = ParamName7TextBox.Text;
+            Properties.Settings.Default.ParamName8String = ParamName8TextBox.Text;
+            Properties.Settings.Default.ParamName9String = ParamName9TextBox.Text;
+            Properties.Settings.Default.ParamName10String = ParamName10TextBox.Text;
             Properties.Settings.Default.Save();
+
+
 
             LoadButtonConfig();
 
@@ -287,6 +344,16 @@ namespace Stored_Procedure_Manager
             ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
+        private void ParamName7TextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void NewButtonConfig_Click(object sender, EventArgs e)
+        {
+            ButtonSetup b = new ButtonSetup();
+            b.Show();
+            b.Focus();
+        }
     }
 }

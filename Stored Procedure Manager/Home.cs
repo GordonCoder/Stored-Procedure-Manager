@@ -106,7 +106,7 @@ namespace Stored_Procedure_Manager
             panelSlice.Height = buttonconfigbutton.Height;
             panelSlice.Top = buttonconfigbutton.Top;
             container.Controls.Clear();
-            ButtonConfig b = new ButtonConfig();
+            ButtonSetup b = new ButtonSetup();
             b.TopLevel = false;
             container.Controls.Add(b);
             b.Show();

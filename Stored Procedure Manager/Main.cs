@@ -123,14 +123,23 @@ namespace Stored_Procedure_Manager
         private void Button1_Click(object sender, EventArgs e)
             
         {
+
             try
             {
                 cn.Open();
+
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName1String, cn);
+
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName1String;
+
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
                 cn.Close();
+
+                System.Diagnostics.Process.Start(Properties.Settings.Default.EXE1String);
+
                 MessageBox.Show("The " + Properties.Settings.Default.SPName1String + " Stored Procedure was run.");
             }
             catch (Exception ex)
@@ -147,8 +156,12 @@ namespace Stored_Procedure_Manager
         {
             try
             {
-                cn.Open();
+            cn.Open();
             SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName2String, cn);
+
+            cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+            cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName2String;
+
             cmd.Connection = cn;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
@@ -165,12 +178,15 @@ namespace Stored_Procedure_Manager
             }
         }
 
+
         private void Button3_Click(object sender, EventArgs e)
         {
             try
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName3String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -185,6 +201,47 @@ namespace Stored_Procedure_Manager
             {
                 cn.Close();
             }
+
+            //https://www.c-sharpcorner.com/blogs/passing-multiple-parameters-in-sql-in-clause-with-sqlcommand
+            //try
+            //{ 
+            //    cn.Open();
+            //    DataSet ds = new DataSet();
+            //    String strAppend = "";
+            //    String strNames = "";
+            //    int index = 1;
+            //    String paramName = "";
+            //    String[] strArrayNames;
+            //    strNames = "Hourly,Hourly2";
+            //    strArrayNames = strNames.Split(',');
+            //    //SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
+            //    SqlCommand cmd = new SqlCommand();
+            //    cmd.Connection = cn;
+            //    cmd.CommandType = CommandType.StoredProcedure;
+            //    foreach (String item in strArrayNames)
+            //    {
+            //        paramName = "@idParam" + index;
+            //        cmd.Parameters.AddWithValue(paramName, item); //Making individual parameters for every name  
+            //        strAppend += paramName + ",";
+            //        index += 1;
+            //    }
+            //    strAppend = strAppend.ToString().Remove(strAppend.LastIndexOf(","), 1); //Remove the last comma  
+            //    cmd.CommandText = "EXEC " + Properties.Settings.Default.SPName3String + " (" + strAppend + ")";
+
+            //    //SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName3String, cn);
+            //    //cmd.Parameters.AddWithValue(strAppend, SqlDbType.VarChar);
+            //    //cmd.Parameters[strAppend].Value = Properties.Settings.Default.ParamName3String;
+
+            //    cmd.ExecuteNonQuery();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    cn.Close();
+            //}
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -193,6 +250,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName4String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName4String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -215,6 +274,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName5String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName5String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -237,6 +298,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName6String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName6String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -259,6 +322,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName7String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName7String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -281,6 +346,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName8String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName8String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -303,6 +370,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName9String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName9String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -325,6 +394,8 @@ namespace Stored_Procedure_Manager
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName10String, cn);
+                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
+                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName10String;
                 cmd.Connection = cn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.ExecuteNonQuery();
@@ -353,3 +424,5 @@ namespace Stored_Procedure_Manager
 
     }
 }
+
+

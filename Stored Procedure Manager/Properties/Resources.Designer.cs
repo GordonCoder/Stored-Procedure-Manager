@@ -133,6 +133,16 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Header_Graphic_855x83_v3 {
+            get {
+                object obj = ResourceManager.GetObject("Header_Graphic_855x83_v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sierra_WS_250_83 {
             get {
                 object obj = ResourceManager.GetObject("Sierra WS 250-83", resourceCulture);

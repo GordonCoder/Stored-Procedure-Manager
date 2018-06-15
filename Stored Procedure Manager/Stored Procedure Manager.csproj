@@ -97,6 +97,12 @@
     <Compile Include="ButtonConfig.Designer.cs">
       <DependentUpon>ButtonConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="ButtonSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonSetup.Designer.cs">
+      <DependentUpon>ButtonSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="ButtonConfig.resx">
       <DependentUpon>ButtonConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonSetup.resx">
+      <DependentUpon>ButtonSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
@@ -204,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Favicon.ico" />
+    <None Include="Resources\Header_Graphic_855x83_v3.jpg" />
     <None Include="Resources\Body_Graphic_855x385_v2.jpg" />
     <None Include="Resources\Header_Graphic_855x83_v2.jpg" />
     <None Include="Resources\Body_Graphic_2.jpg" />
