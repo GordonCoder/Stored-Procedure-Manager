@@ -52,7 +52,7 @@
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Button1Tab = new System.Windows.Forms.TabPage();
             this.Notes1Button = new System.Windows.Forms.Button();
-            this.Save1Button1 = new System.Windows.Forms.Button();
+            this.SaveButton1 = new System.Windows.Forms.Button();
             this.Info1TextBox = new System.Windows.Forms.RichTextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label52 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.Button2Tab = new System.Windows.Forms.TabPage();
-            this.Save2Button2 = new System.Windows.Forms.Button();
+            this.SaveButton2 = new System.Windows.Forms.Button();
             this.Notes2Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -107,7 +107,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.Button3Tab = new System.Windows.Forms.TabPage();
-            this.Save3Button3 = new System.Windows.Forms.Button();
+            this.SaveButton3 = new System.Windows.Forms.Button();
             this.Notes3Button = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -135,7 +135,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.Button4Tab = new System.Windows.Forms.TabPage();
-            this.Save4Button4 = new System.Windows.Forms.Button();
+            this.SaveButton4 = new System.Windows.Forms.Button();
             this.Notes4Button = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -163,7 +163,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.Button5Tab = new System.Windows.Forms.TabPage();
-            this.Save5Button5 = new System.Windows.Forms.Button();
+            this.SaveButton5 = new System.Windows.Forms.Button();
             this.Notes5Button = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -191,7 +191,7 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.Button6Tab = new System.Windows.Forms.TabPage();
-            this.Save6Button6 = new System.Windows.Forms.Button();
+            this.SaveButton6 = new System.Windows.Forms.Button();
             this.Notes6Button = new System.Windows.Forms.Button();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -219,7 +219,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.Button7Tab = new System.Windows.Forms.TabPage();
-            this.Save7Button7 = new System.Windows.Forms.Button();
+            this.SaveButton7 = new System.Windows.Forms.Button();
             this.Notes7Button = new System.Windows.Forms.Button();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
@@ -247,7 +247,7 @@
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.Button8Tab = new System.Windows.Forms.TabPage();
-            this.Save8Button8 = new System.Windows.Forms.Button();
+            this.SaveButton8 = new System.Windows.Forms.Button();
             this.Notes8Button = new System.Windows.Forms.Button();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
@@ -275,7 +275,7 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.Button9Tab = new System.Windows.Forms.TabPage();
-            this.Save9Button9 = new System.Windows.Forms.Button();
+            this.SaveButton9 = new System.Windows.Forms.Button();
             this.Notes9Button = new System.Windows.Forms.Button();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
@@ -303,7 +303,7 @@
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.Button10Tab = new System.Windows.Forms.TabPage();
-            this.Save10Button10 = new System.Windows.Forms.Button();
+            this.SaveButton10 = new System.Windows.Forms.Button();
             this.Notes10Button = new System.Windows.Forms.Button();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -367,7 +367,7 @@
             // 
             this.Button1Tab.BackColor = System.Drawing.Color.DimGray;
             this.Button1Tab.Controls.Add(this.Notes1Button);
-            this.Button1Tab.Controls.Add(this.Save1Button1);
+            this.Button1Tab.Controls.Add(this.SaveButton1);
             this.Button1Tab.Controls.Add(this.Info1TextBox);
             this.Button1Tab.Controls.Add(this.checkBox2);
             this.Button1Tab.Controls.Add(this.label52);
@@ -410,17 +410,17 @@
             this.Notes1Button.UseVisualStyleBackColor = true;
             this.Notes1Button.Click += new System.EventHandler(this.Notes1Button_Click);
             // 
-            // Save1Button1
+            // SaveButton1
             // 
-            this.Save1Button1.BackColor = System.Drawing.Color.White;
-            this.Save1Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save1Button1.Location = new System.Drawing.Point(614, 303);
-            this.Save1Button1.Name = "Save1Button1";
-            this.Save1Button1.Size = new System.Drawing.Size(75, 23);
-            this.Save1Button1.TabIndex = 66;
-            this.Save1Button1.Text = "Save";
-            this.Save1Button1.UseVisualStyleBackColor = false;
-            this.Save1Button1.Click += new System.EventHandler(this.Save1Button1_Click);
+            this.SaveButton1.BackColor = System.Drawing.Color.White;
+            this.SaveButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton1.Location = new System.Drawing.Point(614, 303);
+            this.SaveButton1.Name = "SaveButton1";
+            this.SaveButton1.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton1.TabIndex = 66;
+            this.SaveButton1.Text = "Save";
+            this.SaveButton1.UseVisualStyleBackColor = false;
+            this.SaveButton1.Click += new System.EventHandler(this.SaveButton1_Click);
             // 
             // Info1TextBox
             // 
@@ -645,7 +645,7 @@
             // Button2Tab
             // 
             this.Button2Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button2Tab.Controls.Add(this.Save2Button2);
+            this.Button2Tab.Controls.Add(this.SaveButton2);
             this.Button2Tab.Controls.Add(this.Notes2Button);
             this.Button2Tab.Controls.Add(this.richTextBox1);
             this.Button2Tab.Controls.Add(this.checkBox3);
@@ -679,17 +679,17 @@
             this.Button2Tab.TabIndex = 1;
             this.Button2Tab.Text = "Button2Tab";
             // 
-            // Save2Button2
+            // SaveButton2
             // 
-            this.Save2Button2.BackColor = System.Drawing.Color.White;
-            this.Save2Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save2Button2.Location = new System.Drawing.Point(614, 306);
-            this.Save2Button2.Name = "Save2Button2";
-            this.Save2Button2.Size = new System.Drawing.Size(75, 23);
-            this.Save2Button2.TabIndex = 101;
-            this.Save2Button2.Text = "Save";
-            this.Save2Button2.UseVisualStyleBackColor = false;
-            this.Save2Button2.Click += new System.EventHandler(this.Save2Button2_Click);
+            this.SaveButton2.BackColor = System.Drawing.Color.White;
+            this.SaveButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton2.Location = new System.Drawing.Point(614, 306);
+            this.SaveButton2.Name = "SaveButton2";
+            this.SaveButton2.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton2.TabIndex = 101;
+            this.SaveButton2.Text = "Save";
+            this.SaveButton2.UseVisualStyleBackColor = false;
+            this.SaveButton2.Click += new System.EventHandler(this.SaveButton2_Click);
             // 
             // Notes2Button
             // 
@@ -918,7 +918,7 @@
             // Button3Tab
             // 
             this.Button3Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button3Tab.Controls.Add(this.Save3Button3);
+            this.Button3Tab.Controls.Add(this.SaveButton3);
             this.Button3Tab.Controls.Add(this.Notes3Button);
             this.Button3Tab.Controls.Add(this.richTextBox2);
             this.Button3Tab.Controls.Add(this.checkBox5);
@@ -952,17 +952,17 @@
             this.Button3Tab.TabIndex = 2;
             this.Button3Tab.Text = "Button3Tab";
             // 
-            // Save3Button3
+            // SaveButton3
             // 
-            this.Save3Button3.BackColor = System.Drawing.Color.White;
-            this.Save3Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save3Button3.Location = new System.Drawing.Point(615, 302);
-            this.Save3Button3.Name = "Save3Button3";
-            this.Save3Button3.Size = new System.Drawing.Size(75, 23);
-            this.Save3Button3.TabIndex = 101;
-            this.Save3Button3.Text = "Save";
-            this.Save3Button3.UseVisualStyleBackColor = false;
-            this.Save3Button3.Click += new System.EventHandler(this.Save3Button3_Click);
+            this.SaveButton3.BackColor = System.Drawing.Color.White;
+            this.SaveButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton3.Location = new System.Drawing.Point(615, 302);
+            this.SaveButton3.Name = "SaveButton3";
+            this.SaveButton3.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton3.TabIndex = 101;
+            this.SaveButton3.Text = "Save";
+            this.SaveButton3.UseVisualStyleBackColor = false;
+            this.SaveButton3.Click += new System.EventHandler(this.SaveButton3_Click);
             // 
             // Notes3Button
             // 
@@ -1191,7 +1191,7 @@
             // Button4Tab
             // 
             this.Button4Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button4Tab.Controls.Add(this.Save4Button4);
+            this.Button4Tab.Controls.Add(this.SaveButton4);
             this.Button4Tab.Controls.Add(this.Notes4Button);
             this.Button4Tab.Controls.Add(this.richTextBox3);
             this.Button4Tab.Controls.Add(this.checkBox7);
@@ -1225,17 +1225,17 @@
             this.Button4Tab.TabIndex = 3;
             this.Button4Tab.Text = "Button4Tab";
             // 
-            // Save4Button4
+            // SaveButton4
             // 
-            this.Save4Button4.BackColor = System.Drawing.Color.White;
-            this.Save4Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save4Button4.Location = new System.Drawing.Point(614, 305);
-            this.Save4Button4.Name = "Save4Button4";
-            this.Save4Button4.Size = new System.Drawing.Size(75, 23);
-            this.Save4Button4.TabIndex = 101;
-            this.Save4Button4.Text = "Save";
-            this.Save4Button4.UseVisualStyleBackColor = false;
-            this.Save4Button4.Click += new System.EventHandler(this.Save4Button4_Click);
+            this.SaveButton4.BackColor = System.Drawing.Color.White;
+            this.SaveButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton4.Location = new System.Drawing.Point(614, 305);
+            this.SaveButton4.Name = "SaveButton4";
+            this.SaveButton4.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton4.TabIndex = 101;
+            this.SaveButton4.Text = "Save";
+            this.SaveButton4.UseVisualStyleBackColor = false;
+            this.SaveButton4.Click += new System.EventHandler(this.SaveButton4_Click);
             // 
             // Notes4Button
             // 
@@ -1464,7 +1464,7 @@
             // Button5Tab
             // 
             this.Button5Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button5Tab.Controls.Add(this.Save5Button5);
+            this.Button5Tab.Controls.Add(this.SaveButton5);
             this.Button5Tab.Controls.Add(this.Notes5Button);
             this.Button5Tab.Controls.Add(this.richTextBox4);
             this.Button5Tab.Controls.Add(this.checkBox9);
@@ -1498,17 +1498,17 @@
             this.Button5Tab.TabIndex = 4;
             this.Button5Tab.Text = "Button5Tab";
             // 
-            // Save5Button5
+            // SaveButton5
             // 
-            this.Save5Button5.BackColor = System.Drawing.Color.White;
-            this.Save5Button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save5Button5.Location = new System.Drawing.Point(614, 305);
-            this.Save5Button5.Name = "Save5Button5";
-            this.Save5Button5.Size = new System.Drawing.Size(75, 23);
-            this.Save5Button5.TabIndex = 101;
-            this.Save5Button5.Text = "Save";
-            this.Save5Button5.UseVisualStyleBackColor = false;
-            this.Save5Button5.Click += new System.EventHandler(this.Save5Button5_Click);
+            this.SaveButton5.BackColor = System.Drawing.Color.White;
+            this.SaveButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton5.Location = new System.Drawing.Point(614, 305);
+            this.SaveButton5.Name = "SaveButton5";
+            this.SaveButton5.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton5.TabIndex = 101;
+            this.SaveButton5.Text = "Save";
+            this.SaveButton5.UseVisualStyleBackColor = false;
+            this.SaveButton5.Click += new System.EventHandler(this.SaveButton5_Click);
             // 
             // Notes5Button
             // 
@@ -1737,7 +1737,7 @@
             // Button6Tab
             // 
             this.Button6Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button6Tab.Controls.Add(this.Save6Button6);
+            this.Button6Tab.Controls.Add(this.SaveButton6);
             this.Button6Tab.Controls.Add(this.Notes6Button);
             this.Button6Tab.Controls.Add(this.richTextBox5);
             this.Button6Tab.Controls.Add(this.checkBox11);
@@ -1771,17 +1771,17 @@
             this.Button6Tab.TabIndex = 5;
             this.Button6Tab.Text = "Button6Tab";
             // 
-            // Save6Button6
+            // SaveButton6
             // 
-            this.Save6Button6.BackColor = System.Drawing.Color.White;
-            this.Save6Button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save6Button6.Location = new System.Drawing.Point(615, 306);
-            this.Save6Button6.Name = "Save6Button6";
-            this.Save6Button6.Size = new System.Drawing.Size(75, 23);
-            this.Save6Button6.TabIndex = 101;
-            this.Save6Button6.Text = "Save";
-            this.Save6Button6.UseVisualStyleBackColor = false;
-            this.Save6Button6.Click += new System.EventHandler(this.Save6Button6_Click);
+            this.SaveButton6.BackColor = System.Drawing.Color.White;
+            this.SaveButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton6.Location = new System.Drawing.Point(615, 306);
+            this.SaveButton6.Name = "SaveButton6";
+            this.SaveButton6.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton6.TabIndex = 101;
+            this.SaveButton6.Text = "Save";
+            this.SaveButton6.UseVisualStyleBackColor = false;
+            this.SaveButton6.Click += new System.EventHandler(this.SaveButton6_Click);
             // 
             // Notes6Button
             // 
@@ -2010,7 +2010,7 @@
             // Button7Tab
             // 
             this.Button7Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button7Tab.Controls.Add(this.Save7Button7);
+            this.Button7Tab.Controls.Add(this.SaveButton7);
             this.Button7Tab.Controls.Add(this.Notes7Button);
             this.Button7Tab.Controls.Add(this.richTextBox6);
             this.Button7Tab.Controls.Add(this.checkBox13);
@@ -2044,17 +2044,17 @@
             this.Button7Tab.TabIndex = 6;
             this.Button7Tab.Text = "Button7Tab";
             // 
-            // Save7Button7
+            // SaveButton7
             // 
-            this.Save7Button7.BackColor = System.Drawing.Color.White;
-            this.Save7Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save7Button7.Location = new System.Drawing.Point(615, 306);
-            this.Save7Button7.Name = "Save7Button7";
-            this.Save7Button7.Size = new System.Drawing.Size(75, 23);
-            this.Save7Button7.TabIndex = 101;
-            this.Save7Button7.Text = "Save";
-            this.Save7Button7.UseVisualStyleBackColor = false;
-            this.Save7Button7.Click += new System.EventHandler(this.Save7Button7_Click);
+            this.SaveButton7.BackColor = System.Drawing.Color.White;
+            this.SaveButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton7.Location = new System.Drawing.Point(615, 306);
+            this.SaveButton7.Name = "SaveButton7";
+            this.SaveButton7.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton7.TabIndex = 101;
+            this.SaveButton7.Text = "Save";
+            this.SaveButton7.UseVisualStyleBackColor = false;
+            this.SaveButton7.Click += new System.EventHandler(this.SaveButton7_Click);
             // 
             // Notes7Button
             // 
@@ -2283,7 +2283,7 @@
             // Button8Tab
             // 
             this.Button8Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button8Tab.Controls.Add(this.Save8Button8);
+            this.Button8Tab.Controls.Add(this.SaveButton8);
             this.Button8Tab.Controls.Add(this.Notes8Button);
             this.Button8Tab.Controls.Add(this.richTextBox7);
             this.Button8Tab.Controls.Add(this.checkBox15);
@@ -2317,16 +2317,17 @@
             this.Button8Tab.TabIndex = 7;
             this.Button8Tab.Text = "Button8Tab";
             // 
-            // Save8Button8
+            // SaveButton8
             // 
-            this.Save8Button8.BackColor = System.Drawing.Color.White;
-            this.Save8Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save8Button8.Location = new System.Drawing.Point(615, 305);
-            this.Save8Button8.Name = "Save8Button8";
-            this.Save8Button8.Size = new System.Drawing.Size(75, 23);
-            this.Save8Button8.TabIndex = 101;
-            this.Save8Button8.Text = "Save";
-            this.Save8Button8.UseVisualStyleBackColor = false;
+            this.SaveButton8.BackColor = System.Drawing.Color.White;
+            this.SaveButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton8.Location = new System.Drawing.Point(615, 305);
+            this.SaveButton8.Name = "SaveButton8";
+            this.SaveButton8.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton8.TabIndex = 101;
+            this.SaveButton8.Text = "Save";
+            this.SaveButton8.UseVisualStyleBackColor = false;
+            this.SaveButton8.Click += new System.EventHandler(this.SaveButton8_Click);
             // 
             // Notes8Button
             // 
@@ -2555,7 +2556,7 @@
             // Button9Tab
             // 
             this.Button9Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button9Tab.Controls.Add(this.Save9Button9);
+            this.Button9Tab.Controls.Add(this.SaveButton9);
             this.Button9Tab.Controls.Add(this.Notes9Button);
             this.Button9Tab.Controls.Add(this.richTextBox8);
             this.Button9Tab.Controls.Add(this.checkBox17);
@@ -2589,16 +2590,17 @@
             this.Button9Tab.TabIndex = 8;
             this.Button9Tab.Text = "Button9Tab";
             // 
-            // Save9Button9
+            // SaveButton9
             // 
-            this.Save9Button9.BackColor = System.Drawing.Color.White;
-            this.Save9Button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save9Button9.Location = new System.Drawing.Point(615, 305);
-            this.Save9Button9.Name = "Save9Button9";
-            this.Save9Button9.Size = new System.Drawing.Size(75, 23);
-            this.Save9Button9.TabIndex = 101;
-            this.Save9Button9.Text = "Save";
-            this.Save9Button9.UseVisualStyleBackColor = false;
+            this.SaveButton9.BackColor = System.Drawing.Color.White;
+            this.SaveButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton9.Location = new System.Drawing.Point(615, 305);
+            this.SaveButton9.Name = "SaveButton9";
+            this.SaveButton9.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton9.TabIndex = 101;
+            this.SaveButton9.Text = "Save";
+            this.SaveButton9.UseVisualStyleBackColor = false;
+            this.SaveButton9.Click += new System.EventHandler(this.SaveButton9_Click);
             // 
             // Notes9Button
             // 
@@ -2827,7 +2829,7 @@
             // Button10Tab
             // 
             this.Button10Tab.BackColor = System.Drawing.Color.DimGray;
-            this.Button10Tab.Controls.Add(this.Save10Button10);
+            this.Button10Tab.Controls.Add(this.SaveButton10);
             this.Button10Tab.Controls.Add(this.Notes10Button);
             this.Button10Tab.Controls.Add(this.richTextBox9);
             this.Button10Tab.Controls.Add(this.checkBox1);
@@ -2861,17 +2863,17 @@
             this.Button10Tab.TabIndex = 9;
             this.Button10Tab.Text = "Button10Tab";
             // 
-            // Save10Button10
+            // SaveButton10
             // 
-            this.Save10Button10.BackColor = System.Drawing.Color.White;
-            this.Save10Button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save10Button10.Location = new System.Drawing.Point(615, 302);
-            this.Save10Button10.Name = "Save10Button10";
-            this.Save10Button10.Size = new System.Drawing.Size(75, 23);
-            this.Save10Button10.TabIndex = 101;
-            this.Save10Button10.Text = "Save";
-            this.Save10Button10.UseVisualStyleBackColor = false;
-            this.Save10Button10.Click += new System.EventHandler(this.Save10Button10_Click);
+            this.SaveButton10.BackColor = System.Drawing.Color.White;
+            this.SaveButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton10.Location = new System.Drawing.Point(615, 302);
+            this.SaveButton10.Name = "SaveButton10";
+            this.SaveButton10.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton10.TabIndex = 101;
+            this.SaveButton10.Text = "Save";
+            this.SaveButton10.UseVisualStyleBackColor = false;
+            this.SaveButton10.Click += new System.EventHandler(this.SaveButton10_Click);
             // 
             // Notes10Button
             // 
@@ -3193,7 +3195,7 @@
         private System.Windows.Forms.TabPage Button9Tab;
         private System.Windows.Forms.TabPage Button10Tab;
 
-        private System.Windows.Forms.Button Save1Button1;
+        private System.Windows.Forms.Button SaveButton1;
         private System.Windows.Forms.Button ImportTestButton;
 
         private System.Windows.Forms.Label label46;
@@ -3466,14 +3468,14 @@
         private System.Windows.Forms.TextBox ParamValue1Button2TextBox;
         private System.Windows.Forms.TextBox ParamValue1Button3TextBox;
         private System.Windows.Forms.TextBox ParamValue1Button4TextBox;
-        private System.Windows.Forms.Button Save2Button2;
-        private System.Windows.Forms.Button Save3Button3;
-        private System.Windows.Forms.Button Save4Button4;
-        private System.Windows.Forms.Button Save5Button5;
-        private System.Windows.Forms.Button Save6Button6;
-        private System.Windows.Forms.Button Save7Button7;
-        private System.Windows.Forms.Button Save8Button8;
-        private System.Windows.Forms.Button Save9Button9;
-        private System.Windows.Forms.Button Save10Button10;
+        private System.Windows.Forms.Button SaveButton2;
+        private System.Windows.Forms.Button SaveButton3;
+        private System.Windows.Forms.Button SaveButton4;
+        private System.Windows.Forms.Button SaveButton5;
+        private System.Windows.Forms.Button SaveButton6;
+        private System.Windows.Forms.Button SaveButton7;
+        private System.Windows.Forms.Button SaveButton8;
+        private System.Windows.Forms.Button SaveButton9;
+        private System.Windows.Forms.Button SaveButton10;
     }
 }

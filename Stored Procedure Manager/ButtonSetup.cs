@@ -538,22 +538,16 @@ namespace Stored_Procedure_Manager
         //=======================================================================================
         // Save Button for Tab 1
         //=======================================================================================
-        private void Save1Button1_Click(object sender, EventArgs e) // Save Button Tab 1
+        private void SaveButton1_Click(object sender, EventArgs e) // Save Button Tab 1
         {
-            SqlCommand Button1NameCMD = new SqlCommand
+            SqlCommand SaveButton1CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button1NameText.Text + "', " +
                 "SPName = '" + SPName1TextBox.Text + "'" +
-                "WHERE ButtonID = '1'", cn
-                );
-            cn.Open();
-            Button1NameCMD.ExecuteNonQuery();
-            cn.Close();
+                "WHERE ButtonID = '1'" +
 
-            SqlCommand Button1ParamsCMD = new SqlCommand
-                (
                 "update dbo.AM_ButtonParam " +
                 "set " +
                 "ParamName = '" + ParamName1Button1TextBox.Text + "', " +
@@ -597,16 +591,8 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '5' " +
                 "AND " +
-                "ButtonID = '1' "
+                "ButtonID = '1' " +
 
-                , cn
-                 );
-            cn.Open();
-            Button1ParamsCMD.ExecuteNonQuery();
-            cn.Close();
-
-            SqlCommand Button1ExecutableCMD = new SqlCommand
-                (
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath1Button1TextBox.Text + "', " +
@@ -614,16 +600,8 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ExecutableID = '1' " +
                 "AND " +
-                "ButtonID = '1'"
+                "ButtonID = '1'" +
 
-                , cn
-                 );
-            cn.Open();
-            Button1ExecutableCMD.ExecuteNonQuery();
-            cn.Close();
-
-            SqlCommand Button1FileCMD = new SqlCommand
-                (
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath1Button1TextBox.Text + "'" +
@@ -635,160 +613,772 @@ namespace Stored_Procedure_Manager
                 , cn
                  );
             cn.Open();
-            Button1FileCMD.ExecuteNonQuery();
+            SaveButton1CMD.ExecuteNonQuery();
             cn.Close();
 
             MessageBox.Show("Record updated");
         }
 
-        private void Save2Button2_Click(object sender, EventArgs e) // Save Button Tab 2
+        //=======================================================================================
+        // Save Button for Tab 2
+        //=======================================================================================
+        private void SaveButton2_Click(object sender, EventArgs e) // Save Button Tab 2
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton2CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button2NameText.Text + "', " +
                 "SPName = '" + SPName2TextBox.Text + "'" +
-                "WHERE ButtonID = '2'", cn
-                );
+                "WHERE ButtonID = '2'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button2TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '2' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button2TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '2' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button2TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '2' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button2TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '2' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button2TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '2' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath2Button2TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam2Button2TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '2' " +
+                "AND " +
+                "ButtonID = '2'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath2Button2TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '2' " +
+                "AND " +
+                "ButtonID = '2'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton2CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save3Button3_Click(object sender, EventArgs e) // Save Button Tab 3
+        //=======================================================================================
+        // Save Button for Tab 3
+        //=======================================================================================
+        private void SaveButton3_Click(object sender, EventArgs e) // Save Button Tab 3
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton3CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button3NameText.Text + "', " +
                 "SPName = '" + SPName3TextBox.Text + "'" +
-                "WHERE ButtonID = '3'", cn
-                );
+                "WHERE ButtonID = '3'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button3TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '3' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button3TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '3' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button3TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '3' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button3TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '3' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button3TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '3' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath3Button3TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam3Button3TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '3' " +
+                "AND " +
+                "ButtonID = '3'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath3Button3TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '3' " +
+                "AND " +
+                "ButtonID = '3'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton3CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save4Button4_Click(object sender, EventArgs e) // Save Button Tab 4
+        //=======================================================================================
+        // Save Button for Tab 4
+        //=======================================================================================
+        private void SaveButton4_Click(object sender, EventArgs e) // Save Button Tab 4
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton4CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button4NameText.Text + "', " +
                 "SPName = '" + SPName4TextBox.Text + "'" +
-                "WHERE ButtonID = '4'", cn
-                );
+                "WHERE ButtonID = '4'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button4TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '4' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button4TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '4' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button4TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '4' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button4TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '4' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button4TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '4' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath4Button4TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam4Button4TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '4' " +
+                "AND " +
+                "ButtonID = '4'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath4Button4TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '4' " +
+                "AND " +
+                "ButtonID = '4'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton4CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save5Button5_Click(object sender, EventArgs e) // Save Button Tab 5
+        //=======================================================================================
+        // Save Button for Tab 5
+        //=======================================================================================
+        private void SaveButton5_Click(object sender, EventArgs e) // Save Button Tab 5
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton5CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button5NameText.Text + "', " +
                 "SPName = '" + SPName5TextBox.Text + "'" +
-                "WHERE ButtonID = '5'", cn
-                );
+                "WHERE ButtonID = '5'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button5TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '5' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button5TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '5' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button5TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '5' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button5TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '5' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button5TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '5' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath5Button5TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam5Button5TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '5' " +
+                "AND " +
+                "ButtonID = '5'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath5Button5TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '5' " +
+                "AND " +
+                "ButtonID = '5'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton5CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save6Button6_Click(object sender, EventArgs e) // Save Button Tab 6
+        //=======================================================================================
+        // Save Button for Tab 6
+        //=======================================================================================
+        private void SaveButton6_Click(object sender, EventArgs e) // Save Button Tab 6
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton6CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button6NameText.Text + "', " +
                 "SPName = '" + SPName6TextBox.Text + "'" +
-                "WHERE ButtonID = '6'", cn
-                );
+                "WHERE ButtonID = '6'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button6TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '6' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button6TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '6' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button6TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '6' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button6TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '6' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button6TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '6' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath6Button6TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam6Button6TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '6' " +
+                "AND " +
+                "ButtonID = '6'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath6Button6TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '6' " +
+                "AND " +
+                "ButtonID = '6'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton6CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save7Button7_Click(object sender, EventArgs e) // Save Button Tab 7
+        //=======================================================================================
+        // Save Button for Tab 7
+        //=======================================================================================
+        private void SaveButton7_Click(object sender, EventArgs e) // Save Button Tab 7
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton7CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button7NameText.Text + "', " +
                 "SPName = '" + SPName7TextBox.Text + "'" +
-                "WHERE ButtonID = '7'", cn
-                );
+                "WHERE ButtonID = '7'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button7TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '7' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button7TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '7' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button7TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '7' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button7TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '7' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button7TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '7' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath7Button7TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam7Button7TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '7' " +
+                "AND " +
+                "ButtonID = '7'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath7Button7TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '7' " +
+                "AND " +
+                "ButtonID = '7'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton7CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save8Button8_Click(object sender, EventArgs e) // Save Button Tab 8
+        //=======================================================================================
+        // Save Button for Tab 8
+        //=======================================================================================
+        private void SaveButton8_Click(object sender, EventArgs e) // Save Button Tab 8
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton8CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button8NameText.Text + "', " +
                 "SPName = '" + SPName8TextBox.Text + "'" +
-                "WHERE ButtonID = '8'", cn
-                );
+                "WHERE ButtonID = '8'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button8TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '8' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button8TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '8' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button8TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '8' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button8TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '8' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button8TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '8' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath8Button8TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam8Button8TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '8' " +
+                "AND " +
+                "ButtonID = '8'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath8Button8TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '8' " +
+                "AND " +
+                "ButtonID = '8'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton8CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save9Button9_Click(object sender, EventArgs e) // Save Button Tab 9
+        //=======================================================================================
+        // Save Button for Tab 9
+        //=======================================================================================
+        private void SaveButton9_Click(object sender, EventArgs e) // Save Button Tab 9
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton9CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button9NameText.Text + "', " +
                 "SPName = '" + SPName9TextBox.Text + "'" +
-                "WHERE ButtonID = '9'", cn
-                );
+                "WHERE ButtonID = '9'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button9TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '9' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button9TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '9' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button9TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '9' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button9TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '9' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button9TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '9' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath9Button9TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam9Button9TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '9' " +
+                "AND " +
+                "ButtonID = '9'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath9Button9TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '9' " +
+                "AND " +
+                "ButtonID = '9'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton9CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
-        private void Save10Button10_Click(object sender, EventArgs e) // Save Button Tab 10
+        //=======================================================================================
+        // Save Button for Tab 10
+        //=======================================================================================
+        private void SaveButton10_Click(object sender, EventArgs e) // Save Button Tab 10
         {
-            SqlCommand cmd = new SqlCommand
+            SqlCommand SaveButton10CMD = new SqlCommand
                 (
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + Button10NameText.Text + "', " +
                 "SPName = '" + SPName10TextBox.Text + "'" +
-                "WHERE ButtonID = '10'", cn
-                );
+                "WHERE ButtonID = '10'" +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName1Button10TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue1Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '1' " +
+                "AND " +
+                "ButtonID = '10' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName2Button10TextBox.Text + "', " +
+                "ParamValue = '" + ParamValue2Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '2' " +
+                "AND " +
+                "ButtonID = '10' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName3Button10TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue3Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '3' " +
+                "AND " +
+                "ButtonID = '10' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button10TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '4' " +
+                "AND " +
+                "ButtonID = '10' " +
+
+                "update dbo.AM_ButtonParam " +
+                "set " +
+                "ParamName = '" + ParamName4Button10TextBox.Text + "', " +
+                "ParamValue= '" + ParamValue4Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ParamID = '5' " +
+                "AND " +
+                "ButtonID = '10' " +
+
+                "update dbo.AM_Executable " +
+                "set " +
+                "ExecutablePath = '" + ExecutePath10Button10TextBox.Text + "', " +
+                "ExecutableParam = '" + ExecuteParam10Button10TextBox.Text + "'" +
+                "WHERE " +
+                "ExecutableID = '10' " +
+                "AND " +
+                "ButtonID = '10'" +
+
+                "update dbo.AM_FileImport " +
+                "set " +
+                "FilePath = '" + FilePath10Button10TextBox.Text + "'" +
+                "WHERE " +
+                "FileID = '10' " +
+                "AND " +
+                "ButtonID = '10'"
+
+                , cn
+                 );
             cn.Open();
-            cmd.ExecuteNonQuery();
+            SaveButton10CMD.ExecuteNonQuery();
             cn.Close();
+
             MessageBox.Show("Record updated");
         }
 
 
 
 
-// No code needed
+        // No code needed
 
         private void EXE1TextBox_TextChanged(object sender, EventArgs e)
         {
@@ -809,5 +1399,6 @@ namespace Stored_Procedure_Manager
         {
 
         }
+
     }
 }
