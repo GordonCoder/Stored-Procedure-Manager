@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tools));
             this.CreateTableLabel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,9 +78,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(523, 64);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Create the table that is needed to stored the configuration for the application. " +
-    "This table will be created within the database that is populated in the Database" +
-    " Connection.";
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // label1
             // 
@@ -116,9 +115,8 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(523, 64);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Create the Stored Procedure that is needed to process data for the application. T" +
-    "his table will be created within the database that is populated in the Database " +
-    "Connection.";
+            this.label7.Text = "Create the Stored Procedure that is needed to process data for the application.";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -202,7 +200,7 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Test to make sure you are able to execute the Stored Procedure as well as enter d" +
     "ata into the table. This test wont run until it can see that you have created th" +
-    "e table and stored procedure first.";
+    "e database and stored procedure first.";
             // 
             // label9
             // 
@@ -281,7 +279,7 @@
             this.TableButton.Name = "TableButton";
             this.TableButton.Size = new System.Drawing.Size(154, 64);
             this.TableButton.TabIndex = 0;
-            this.TableButton.Text = "Create Table";
+            this.TableButton.Text = "Create Database";
             this.TableButton.UseVisualStyleBackColor = false;
             this.TableButton.Click += new System.EventHandler(this.TableButton_Click);
             // 

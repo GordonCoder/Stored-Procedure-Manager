@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
 
 namespace Stored_Procedure_Manager
 {
@@ -115,7 +116,7 @@ namespace Stored_Procedure_Manager
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.ToString(), "Database Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -168,14 +169,14 @@ namespace Stored_Procedure_Manager
                 cmdTables.ExecuteNonQuery();
                 //t.CreateDBProgressBarTimer.Stop();
                 if (MessageBox.Show
-                    ("The tables were successfully created!", "Tables Created", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
+                    ("The Automation Manager Database and Tables were successfully created!", "Tables Created", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     //t.Hide();
                 }
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.ToString(), "Table Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -184,6 +185,87 @@ namespace Stored_Procedure_Manager
                     cnTables.Close();
                 }
             }
+
+            String strV1;
+            String strV2;
+            String strV3;
+            String strV4;
+            String strV5;
+            String strV6;
+            String strV7;
+            String strV8;
+            String strV9;
+            String strV10;
+
+            SqlConnection cnV = new SqlConnection
+                (
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString
+                );
+
+            FileInfo file1 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo1.sql");
+            FileInfo file2 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo2.sql");
+            FileInfo file3 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo3.sql");
+            FileInfo file4 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo4.sql");
+            FileInfo file5 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo5.sql");
+            FileInfo file6 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo6.sql");
+            FileInfo file7 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo7.sql");
+            FileInfo file8 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo8.sql");
+            FileInfo file9 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo9.sql");
+            FileInfo file10 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo10.sql");
+
+            strV1 = file1.OpenText().ReadToEnd();
+            strV2 = file2.OpenText().ReadToEnd();
+            strV3 = file3.OpenText().ReadToEnd();
+            strV4 = file4.OpenText().ReadToEnd();
+            strV5 = file5.OpenText().ReadToEnd();
+            strV6 = file6.OpenText().ReadToEnd();
+            strV7 = file7.OpenText().ReadToEnd();
+            strV8 = file8.OpenText().ReadToEnd();
+            strV9 = file9.OpenText().ReadToEnd();
+            strV10 = file10.OpenText().ReadToEnd();
+
+            SqlCommand cmdV1 = new SqlCommand(strV1, cnV);
+            SqlCommand cmdV2 = new SqlCommand(strV2, cnV);
+            SqlCommand cmdV3 = new SqlCommand(strV3, cnV);
+            SqlCommand cmdV4 = new SqlCommand(strV4, cnV);
+            SqlCommand cmdV5 = new SqlCommand(strV5, cnV);
+            SqlCommand cmdV6 = new SqlCommand(strV6, cnV);
+            SqlCommand cmdV7 = new SqlCommand(strV7, cnV);
+            SqlCommand cmdV8 = new SqlCommand(strV8, cnV);
+            SqlCommand cmdV9 = new SqlCommand(strV9, cnV);
+            SqlCommand cmdV10 = new SqlCommand(strV10, cnV);
+
+            try
+            {
+                cnV.Open();
+                cmdV1.ExecuteNonQuery();
+                cmdV2.ExecuteNonQuery();
+                cmdV3.ExecuteNonQuery();
+                cmdV4.ExecuteNonQuery();
+                cmdV5.ExecuteNonQuery();
+                cmdV6.ExecuteNonQuery();
+                cmdV7.ExecuteNonQuery();
+                cmdV8.ExecuteNonQuery();
+                cmdV9.ExecuteNonQuery();
+                cmdV10.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "View Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (cnV.State == ConnectionState.Open)
+                {
+                    cnV.Close();
+                }
+            }
+
         }
 
         private void SPButton_Click(object sender, EventArgs e)
@@ -193,7 +275,7 @@ namespace Stored_Procedure_Manager
                         "server="
                         + Properties.Settings.Default.ServerNameString
                         + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database=" + Properties.Settings.Default.DatabaseString
+                        + ";database= AutomationManager"
                         + ";uid=" + Properties.Settings.Default.UserNameString
                         + ";pwd=" + Properties.Settings.Default.PasswordString
                         ))
@@ -202,18 +284,22 @@ namespace Stored_Procedure_Manager
                     cn.Open();
                     using
                         (SqlCommand command = new SqlCommand(
-                            // After testing, use this name for the table cust_cust_SPManagerButtonConfig
-                            "CREATE Procedure cust_SPManagerTest " +
+                            // After testing, use this name for the table cust_SPManagerButtonConfig
+                            "CREATE Procedure ButtonTest " +
                             "AS " +
-                            "IF NOT EXISTS (Select * From cust_SPManagerConfig) " +
-                            "INSERT INTO cust_SPManagerConfig " +
-                            "(ButtonName10, SPName10) " +
-                            "VALUES " +
-                            "('TEST WORKED', 'TEST WORKED') " +
-                            "ELSE " +
-                            "UPDATE cust_SPManagerConfig " +
-                            "SET ButtonName10 = 'TEST WORKED' " +
-                            ",SPName10 = 'TEST WORKED';", cn))
+                            //"IF NOT EXISTS (SELECT * FROM AM_Buttons WHERE ButtonID = 10) " +
+                            "INSERT INTO dbo.AM_Buttons (ButtonName,SPName) VALUES ('Button Name Test','SP Name Test') WHERE ButtonID = 10"
+                            //"ELSE UPDATE cust_SPManagerConfig " +
+                            //"SET ButtonName10 = 'TEST WORKED' " +
+                            //",SPName10 = 'TEST WORKED';" +
+
+
+//"INSERT INTO dbo.AM_Buttons (ButtonID,ButtonName,SPName) VALUES ('10','Button Name Test','SP Name Test')" +
+//"INSERT INTO dbo.AM_ButtonParam (ParamID,ButtonID,ParamName,ParamValue) VALUES ('1','10','Param 1 Name Test','Param 1 Value Test'),('2','10','Param 2 Name Test','Param 2 Value Test'),('3','10','Param 3 Name Test','Param 3 Value Test'),('4','10','Param 4  Name Test','Param 4 Value Test'),('5','10','Param 5  Name Test','Param 5 Value Test')" +
+//"INSERT INTO dbo.AM_Executable (ExecutableID,ButtonID,ExecutablePath,ExecutableParam) VALUES ('10','10','Executable Path Test','Executable Param Test')" +
+//"INSERT INTO dbo.AM_FileImport (FileID,ButtonID,FilePath) VALUES ('10','10','File Path Test')" +
+//"INSERT INTO dbo.AM_Notes (NoteID,ButtonID,NoteText) VALUES ('10','10','Note Text Test')"
+                            , cn))
                         command.ExecuteNonQuery();
                     MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Stored Procedure Created");
                 }
@@ -245,14 +331,14 @@ namespace Stored_Procedure_Manager
             "server="
             + Properties.Settings.Default.ServerNameString
             + "\\" + Properties.Settings.Default.InstanceString
-            + ";database=" + Properties.Settings.Default.DatabaseString
+            + ";database= AutomationManager"
             + ";uid=" + Properties.Settings.Default.UserNameString
             + ";pwd=" + Properties.Settings.Default.PasswordString
             ))
                 try
                 {
                     cn.Open();
-                    SqlCommand cmd = new SqlCommand("cust_SPManagerTest", cn);
+                    SqlCommand cmd = new SqlCommand("ButtonTest", cn);
                     cmd.Connection = cn;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
@@ -280,6 +366,11 @@ namespace Stored_Procedure_Manager
         }
 
         private void WaitTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
