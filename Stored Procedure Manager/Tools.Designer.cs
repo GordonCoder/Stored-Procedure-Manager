@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CreateTableLabel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.TableButton = new System.Windows.Forms.Button();
             this.testButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.WaitTimer = new System.Windows.Forms.Timer(this.components);
             this.CreateTableLabel.SuspendLayout();
             this.CreateSPLabel.SuspendLayout();
             this.SQLUtilitieslabel.SuspendLayout();
@@ -310,6 +312,11 @@
             this.panel1.Size = new System.Drawing.Size(160, 359);
             this.panel1.TabIndex = 7;
             // 
+            // WaitTimer
+            // 
+            this.WaitTimer.Enabled = true;
+            this.WaitTimer.Tick += new System.EventHandler(this.WaitTimer_Tick);
+            // 
             // Tools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,5 +362,6 @@
         private System.Windows.Forms.Button TableButton;
         private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer WaitTimer;
     }
 }

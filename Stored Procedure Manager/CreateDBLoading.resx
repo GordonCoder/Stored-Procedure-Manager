@@ -117,7 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="WaitTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="CreateDBProgressBarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
+        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
+        AAAA//8A/wAAAP8A/wD//wAA////AP/2Zv///////4//b///////b///j/////+P////////9o//f/j/
+        //////hI/4///2/29PT/////b2+P/2//+P/0/4//9//4/2SI+I//f/f/9P9v9HdP9vj///b///9/hv//
+        /2j//2/4////+GZm/2/////////2f///////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
+        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD/
+        /wD/AAAA/wD/AP//AAD///8A////hmZmj////////////////2aIhmb///////////////hv///2b///
+        ///////////2j////4aP////////////9v//////aP////////////j///////b////////////4////
+        ////b//////////4+P////////b/////////hvj///93///4j////////2f4////RH///2////////9v
+        j3//+ERI///4///////2b39///RoRI//+P//////ho9/9v+E/4RP//+P/////2b/9/iPaP//RP//j///
+        //9m//b/aG////ZP/4//+P//b/j/b/T/////ZP+P//j//29Eb2/4T/////dPf//4///3REj2/4T/////
+        hn//iP//9kRI+G/4SP////dv/4f///dESP9o//Ro///0eP93//j/RG//9o//dEd3RP+PZv/4//j///9o
+        //90RG//+HeP9///////hn////////eP+Pb///////hm///////2j/+H////////9mj/////Zv//eP//
+        //////9mZo/4dmj//2j/////////+GZmZmZ///Zv///////////4dmZo//dmj//////////////////2
+        Z///////////////////9o////////////////////////////////////////////8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

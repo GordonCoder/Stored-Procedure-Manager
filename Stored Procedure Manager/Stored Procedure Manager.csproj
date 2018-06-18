@@ -103,6 +103,12 @@
     <Compile Include="ButtonSetup.Designer.cs">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateDBLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDBLoading.Designer.cs">
+      <DependentUpon>CreateDBLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ButtonSetup.resx">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateDBLoading.resx">
+      <DependentUpon>CreateDBLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>

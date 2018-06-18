@@ -88,62 +88,102 @@ namespace Stored_Procedure_Manager
 
         private void TableButton_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection
-                        (
-                        "server="
-                        + Properties.Settings.Default.ServerNameString
-                        + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database=" + Properties.Settings.Default.DatabaseString
-                        + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
-                        ))
-                try
+            
+        //CreateDBLoading t = new CreateDBLoading();
+        //t.Show();
+        //t.Focus();
+        //t.CreateDBProgressBarTimer.Start();
+
+        String strDB;
+        SqlConnection cnDB = new SqlConnection
+            (
+            "server="
+            + Properties.Settings.Default.ServerNameString
+            + "\\" + Properties.Settings.Default.InstanceString
+            + ";database= master" 
+            + ";uid=" + Properties.Settings.Default.UserNameString
+            + ";pwd=" + Properties.Settings.Default.PasswordString
+            );
+
+        strDB = "CREATE DATABASE [AutomationManager]";
+
+        SqlCommand cmdDB = new SqlCommand(strDB, cnDB);
+            try
+            {
+                cnDB.Open();
+                cmdDB.ExecuteNonQuery();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (cnDB.State == ConnectionState.Open)
                 {
-                    cn.Open();
-                    using
-                        (SqlCommand command = new SqlCommand(
-                            "CREATE TABLE cust_SPManagerConfig" +
-                            "(ButtonName01 varchar(max) NULL" +
-                            ", SPName01 varchar(max) NULL" +
-                            ", Param01 varchar(max) NULL" +
-                            ", ButtonName02 varchar(max) NULL" +
-                            ", SPName02 varchar(max) NULL" +
-                            ", Param02 varchar(max) NULL" +
-                            ", ButtonName03 varchar(max) NULL" +
-                            ", SPName03 varchar(max) NULL" +
-                            ", Param03 varchar(max) NULL" +
-                            ", ButtonName04 varchar(max) NULL" +
-                            ", SPName04 varchar(max) NULL" +
-                            ", Param04 varchar(max) NULL" +
-                            ", ButtonName05 varchar(max) NULL" +
-                            ", SPName05 varchar(max) NULL" +
-                            ", Param05 varchar(max) NULL" +
-                            ", ButtonName06 varchar(max) NULL" +
-                            ", SPName06 varchar(max) NULL" +
-                            ", Param06 varchar(max) NULL" +
-                            ", ButtonName07 varchar(max) NULL" +
-                            ", SPName07 varchar(max) NULL" +
-                            ", Param07 varchar(max) NULL" +
-                            ", ButtonName08 varchar(max) NULL" +
-                            ", SPName08 varchar(max) NULL" +
-                            ", Param08 varchar(max) NULL" +
-                            ", ButtonName09 varchar(max) NULL" +
-                            ", SPName09 varchar(max) NULL" +
-                            ", Param09 varchar(max) NULL" +
-                            ", ButtonName10 varchar(max) NULL" +
-                            ", SPName10 varchar(max) NULL" +
-                            ", Param10 varchar(max) NULL);", cn))
-                        command.ExecuteNonQuery();
-                    MessageBox.Show("The table was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Table Created");
+                    cnDB.Close();
                 }
-                catch (Exception ex)
+            }
+
+
+            String strTables;
+            SqlConnection cnTables = new SqlConnection
+                (
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString
+                );
+
+            strTables =
+                " CREATE TABLE dbo.AM_Buttons " +
+                "(ButtonID INT NOT NULL ,ButtonName VARCHAR(50) NULL ,SPName VARCHAR(50) NULL ,CONSTRAINT PK_AM_Buttons PRIMARY KEY CLUSTERED(ButtonID ASC))" +
+
+                " WAITFOR DELAY '00:00:01'" +
+
+                " CREATE TABLE dbo.AM_Notes " +
+                "(NoteID INT NOT NULL ,ButtonID INT NOT NULL ,NoteText VARCHAR(50) NULL ,CONSTRAINT PK_AM_Notes PRIMARY KEY CLUSTERED(NoteID ASC, ButtonID ASC),CONSTRAINT FK_49 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
+
+                " WAITFOR DELAY '00:00:01'" +
+
+                " CREATE TABLE dbo.AM_FileImport " +
+                "(FileID INT NOT NULL ,ButtonID INT NOT NULL ,FilePath VARCHAR(50) NULL ,CONSTRAINT PK_FileImport PRIMARY KEY CLUSTERED(FileID ASC, ButtonID ASC),CONSTRAINT FK_45 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
+
+                " WAITFOR DELAY '00:00:01'" +
+
+                " CREATE TABLE dbo.AM_Executable " +
+                "(ExecutableID INT NOT NULL ,ButtonID INT NOT NULL ,ExecutablePath VARCHAR(50) NULL ,ExecutableParam VARCHAR(50) NULL ,CONSTRAINT PK_AM_Executable PRIMARY KEY CLUSTERED(ExecutableID ASC, ButtonID ASC),CONSTRAINT FK_41 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
+
+                " WAITFOR DELAY '00:00:01'" +
+
+                " CREATE TABLE dbo.AM_ButtonParam " +
+                "(ParamID INT NOT NULL ,ButtonID INT NOT NULL ,ParamName VARCHAR(50) NULL ,ParamValue VARCHAR(50) NULL ,CONSTRAINT PK_AM_ButtonParam PRIMARY KEY CLUSTERED(ParamID ASC, ButtonID ASC),CONSTRAINT FK_21 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))";
+
+            SqlCommand cmdTables = new SqlCommand(strTables, cnTables);
+            try
+            {
+                cnTables.Open();
+                cmdTables.ExecuteNonQuery();
+                //t.CreateDBProgressBarTimer.Stop();
+                if (MessageBox.Show
+                    ("The tables were successfully created!", "Tables Created", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
-                    MessageBox.Show(ex.Message);
+                    //t.Hide();
                 }
-                finally
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "MyProgram", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (cnTables.State == ConnectionState.Open)
                 {
-                    cn.Close();
+                    cnTables.Close();
                 }
+            }
         }
 
         private void SPButton_Click(object sender, EventArgs e)
@@ -232,6 +272,16 @@ namespace Stored_Procedure_Manager
         private void BorderPanel_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.BorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
+
+        private void CreateDBProgressBar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WaitTimer_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
