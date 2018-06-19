@@ -14,12 +14,12 @@ namespace Stored_Procedure_Manager
     public partial class ButtonSetup : Form
     {
         // SQL Connection that can be used throughout the Form
-        SqlConnection cn = new SqlConnection
+        SqlConnection cnAMDB = new SqlConnection
             (
                 "server="
                 + Properties.Settings.Default.ServerNameString
                 + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database= AutomationManager"
+                + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
                 + ";pwd=" + Properties.Settings.Default.PasswordString
             );
@@ -28,7 +28,7 @@ namespace Stored_Procedure_Manager
             InitializeComponent();
             try
             {
-                using (SqlConnection cn = new SqlConnection
+                using (SqlConnection cnAMDB = new SqlConnection
                         (
                         "server="
                         + Properties.Settings.Default.ServerNameString
@@ -38,7 +38,7 @@ namespace Stored_Procedure_Manager
                         + ";pwd=" + Properties.Settings.Default.PasswordString
                         ))
                 {
-                    cn.Open();
+                    cnAMDB.Open();
                 }
             }
             catch (Exception ex)
@@ -48,7 +48,7 @@ namespace Stored_Procedure_Manager
             finally
             {
                 LoadButtonConfig();
-                cn.Close();
+                cnAMDB.Close();
             }
                       
         }
@@ -61,8 +61,8 @@ namespace Stored_Procedure_Manager
             // Load Button 1 Data
             //=======================================================================================
             DataTable dtb1 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb1 = new SqlCommand("SELECT * FROM AM_Button1Info", cn); 
+            cnAMDB.Open();
+            SqlCommand sqlcmdb1 = new SqlCommand("SELECT * FROM AM_Button1Info", cnAMDB); 
             SqlDataAdapter sqlDab1 = new SqlDataAdapter(sqlcmdb1);
             sqlDab1.Fill(dtb1);
             if (dtb1.Rows.Count > 0)
@@ -82,16 +82,18 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath1Button1TextBox.Text = dtb1.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam1Button1TextBox.Text = dtb1.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton1.Checked = (bool)dtb1.Rows[0]["EPCheckBox"];
                 this.FilePath1Button1TextBox.Text = dtb1.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton1.Checked = (bool)dtb1.Rows[0]["FPCheckBox"];
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 2 Data
             //=======================================================================================
             DataTable dtb2 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb2 = new SqlCommand("SELECT * FROM AM_Button2Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb2 = new SqlCommand("SELECT * FROM AM_Button2Info", cnAMDB);
             SqlDataAdapter sqlDab2 = new SqlDataAdapter(sqlcmdb2);
             sqlDab2.Fill(dtb2);
             if (dtb2.Rows.Count > 0)
@@ -113,14 +115,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam2Button2TextBox.Text = dtb2.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath2Button2TextBox.Text = dtb2.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 3 Data
             //=======================================================================================
             DataTable dtb3 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb3 = new SqlCommand("SELECT * FROM AM_Button3Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb3 = new SqlCommand("SELECT * FROM AM_Button3Info", cnAMDB);
             SqlDataAdapter sqlDab3 = new SqlDataAdapter(sqlcmdb3);
             sqlDab3.Fill(dtb3);
             if (dtb3.Rows.Count > 0)
@@ -142,14 +144,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam3Button3TextBox.Text = dtb3.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath3Button3TextBox.Text = dtb3.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 4 Data
             //=======================================================================================
             DataTable dtb4 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb4 = new SqlCommand("SELECT * FROM AM_Button4Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb4 = new SqlCommand("SELECT * FROM AM_Button4Info", cnAMDB);
             SqlDataAdapter sqlDab4 = new SqlDataAdapter(sqlcmdb4);
             sqlDab4.Fill(dtb4);
             if (dtb4.Rows.Count > 0)
@@ -171,14 +173,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam4Button4TextBox.Text = dtb4.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath4Button4TextBox.Text = dtb4.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 5 Data
             //=======================================================================================
             DataTable dtb5 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb5 = new SqlCommand("SELECT * FROM AM_Button5Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb5 = new SqlCommand("SELECT * FROM AM_Button5Info", cnAMDB);
             SqlDataAdapter sqlDab5 = new SqlDataAdapter(sqlcmdb5);
             sqlDab5.Fill(dtb5);
             if (dtb5.Rows.Count > 0)
@@ -200,14 +202,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam5Button5TextBox.Text = dtb5.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath5Button5TextBox.Text = dtb5.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 5 Data
             //=======================================================================================
             DataTable dtb6 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb6 = new SqlCommand("SELECT * FROM AM_Button6Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb6 = new SqlCommand("SELECT * FROM AM_Button6Info", cnAMDB);
             SqlDataAdapter sqlDab6 = new SqlDataAdapter(sqlcmdb6);
             sqlDab6.Fill(dtb6);
             if (dtb6.Rows.Count > 0)
@@ -229,14 +231,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam6Button6TextBox.Text = dtb6.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath6Button6TextBox.Text = dtb6.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 7 Data
             //=======================================================================================
             DataTable dtb7 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb7 = new SqlCommand("SELECT * FROM AM_Button7Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb7 = new SqlCommand("SELECT * FROM AM_Button7Info", cnAMDB);
             SqlDataAdapter sqlDab7 = new SqlDataAdapter(sqlcmdb7);
             sqlDab7.Fill(dtb7);
             if (dtb7.Rows.Count > 0)
@@ -258,14 +260,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam7Button7TextBox.Text = dtb7.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath7Button7TextBox.Text = dtb7.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 8 Data
             //=======================================================================================
             DataTable dtb8 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb8 = new SqlCommand("SELECT * FROM AM_Button8Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb8 = new SqlCommand("SELECT * FROM AM_Button8Info", cnAMDB);
             SqlDataAdapter sqlDab8 = new SqlDataAdapter(sqlcmdb8);
             sqlDab8.Fill(dtb8);
             if (dtb8.Rows.Count > 0)
@@ -287,14 +289,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam8Button8TextBox.Text = dtb8.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath8Button8TextBox.Text = dtb8.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 9 Data
             //=======================================================================================
             DataTable dtb9 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb9 = new SqlCommand("SELECT * FROM AM_Button9Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb9 = new SqlCommand("SELECT * FROM AM_Button9Info", cnAMDB);
             SqlDataAdapter sqlDab9 = new SqlDataAdapter(sqlcmdb9);
             sqlDab9.Fill(dtb9);
             if (dtb9.Rows.Count > 0)
@@ -316,14 +318,14 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam9Button9TextBox.Text = dtb9.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath9Button9TextBox.Text = dtb9.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
 
             //=======================================================================================
             // Load Button 10 Data
             //=======================================================================================
             DataTable dtb10 = new DataTable();
-            cn.Open();
-            SqlCommand sqlcmdb10 = new SqlCommand("SELECT * FROM AM_Button10Info", cn);
+            cnAMDB.Open();
+            SqlCommand sqlcmdb10 = new SqlCommand("SELECT * FROM AM_Button10Info", cnAMDB);
             SqlDataAdapter sqlDab10 = new SqlDataAdapter(sqlcmdb10);
             sqlDab10.Fill(dtb10);
             if (dtb10.Rows.Count > 0)
@@ -345,7 +347,7 @@ namespace Stored_Procedure_Manager
                 this.ExecuteParam10Button10TextBox.Text = dtb10.Rows[0]["ExecutableParam"].ToString();
                 this.FilePath10Button10TextBox.Text = dtb10.Rows[0]["FilePath"].ToString();
             }
-            cn.Close();
+            cnAMDB.Close();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -387,7 +389,7 @@ namespace Stored_Procedure_Manager
         //=======================================================================================
         // Execute Check Box for each Tab
         //=======================================================================================
-        private void EXEcheckBox1_CheckedChanged(object sender, EventArgs e) // Execute Check Box Tab 1
+        private void ExecuteCheckBoxButton1_CheckedChanged(object sender, EventArgs e) // Execute Check Box Tab 1
         {
             // If checked then run exe
         }
@@ -406,83 +408,95 @@ namespace Stored_Procedure_Manager
         //=======================================================================================
         private void SaveButton1_Click(object sender, EventArgs e) // Save Button Tab 1
         {
-            SqlCommand SaveButton1CMD = new SqlCommand
-                (
-                "update dbo.AM_Buttons " +
-                "set " +
-                "ButtonName = '" + Button1NameText.Text + "', " +
-                "SPName = '" + SPName1TextBox.Text + "'" +
-                "WHERE ButtonID = '1'" +
+            try
+            {
+                cnAMDB.Open();
+                SqlCommand SaveButton1CMD = new SqlCommand
+                    (
+                    "update dbo.AM_Buttons " +
+                    "set " +
+                    "ButtonName = '" + Button1NameText.Text + "', " +
+                    "SPName = '" + SPName1TextBox.Text + "'" +
+                    "WHERE ButtonID = '1'" +
 
-                "update dbo.AM_ButtonParam " +
-                "set " +
-                "ParamName = '" + ParamName1Button1TextBox.Text + "', " +
-                "ParamValue = '" + ParamValue1Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ParamID = '1' " +
-                "AND " +
-                "ButtonID = '1' " +
+                    "update dbo.AM_ButtonParam " +
+                    "set " +
+                    "ParamName = '" + ParamName1Button1TextBox.Text + "', " +
+                    "ParamValue = '" + ParamValue1Button1TextBox.Text + "'" +
+                    "WHERE " +
+                    "ParamID = '1' " +
+                    "AND " +
+                    "ButtonID = '1' " +
 
-                "update dbo.AM_ButtonParam " +
-                "set " +
-                "ParamName = '" + ParamName2Button1TextBox.Text + "', " +
-                "ParamValue = '" + ParamValue2Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ParamID = '2' " +
-                "AND " +
-                "ButtonID = '1' " +
+                    "update dbo.AM_ButtonParam " +
+                    "set " +
+                    "ParamName = '" + ParamName2Button1TextBox.Text + "', " +
+                    "ParamValue = '" + ParamValue2Button1TextBox.Text + "'" +
+                    "WHERE " +
+                    "ParamID = '2' " +
+                    "AND " +
+                    "ButtonID = '1' " +
 
-                "update dbo.AM_ButtonParam " +
-                "set " +
-                "ParamName = '" + ParamName3Button1TextBox.Text + "', " +
-                "ParamValue= '" + ParamValue3Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ParamID = '3' " +
-                "AND " +
-                "ButtonID = '1' " +
+                    "update dbo.AM_ButtonParam " +
+                    "set " +
+                    "ParamName = '" + ParamName3Button1TextBox.Text + "', " +
+                    "ParamValue= '" + ParamValue3Button1TextBox.Text + "'" +
+                    "WHERE " +
+                    "ParamID = '3' " +
+                    "AND " +
+                    "ButtonID = '1' " +
 
-                "update dbo.AM_ButtonParam " +
-                "set " +
-                "ParamName = '" + ParamName4Button1TextBox.Text + "', " +
-                "ParamValue= '" + ParamValue4Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ParamID = '4' " +
-                "AND " +
-                "ButtonID = '1' " +
+                    "update dbo.AM_ButtonParam " +
+                    "set " +
+                    "ParamName = '" + ParamName4Button1TextBox.Text + "', " +
+                    "ParamValue= '" + ParamValue4Button1TextBox.Text + "'" +
+                    "WHERE " +
+                    "ParamID = '4' " +
+                    "AND " +
+                    "ButtonID = '1' " +
 
-                "update dbo.AM_ButtonParam " +
-                "set " +
-                "ParamName = '" + ParamName4Button1TextBox.Text + "', " +
-                "ParamValue= '" + ParamValue4Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ParamID = '5' " +
-                "AND " +
-                "ButtonID = '1' " +
+                    "update dbo.AM_ButtonParam " +
+                    "set " +
+                    "ParamName = '" + ParamName4Button1TextBox.Text + "', " +
+                    "ParamValue= '" + ParamValue4Button1TextBox.Text + "'" +
+                    "WHERE " +
+                    "ParamID = '5' " +
+                    "AND " +
+                    "ButtonID = '1' " +
 
-                "update dbo.AM_Executable " +
-                "set " +
-                "ExecutablePath = '" + ExecutePath1Button1TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam1Button1TextBox.Text + "'" +
-                "WHERE " +
-                "ExecutableID = '1' " +
-                "AND " +
-                "ButtonID = '1'" +
+                    "update dbo.AM_Executable " +
+                    "set " +
+                    "ExecutablePath = '" + ExecutePath1Button1TextBox.Text + "', " +
+                    "ExecutableParam = '" + ExecuteParam1Button1TextBox.Text + "', " +
+                    "EPCheckBox = '" + ExecuteCheckBoxButton1.CheckState + "'" +
+                    "WHERE " +
+                    "ExecutableID = '1' " +
+                    "AND " +
+                    "ButtonID = '1'" +
 
-                "update dbo.AM_FileImport " +
-                "set " +
-                "FilePath = '" + FilePath1Button1TextBox.Text + "'" +
-                "WHERE " +
-                "FileID = '1' " +
-                "AND " +
-                "ButtonID = '1'"
+                    "update dbo.AM_FileImport " +
+                    "set " +
+                    "FilePath = '" + FilePath1Button1TextBox.Text + "', " +
+                    "FPCheckBox = '" + FilePathCheckBoxButton1.Checked + "'" +
+                    "WHERE " +
+                    "FileID = '1' " +
+                    "AND " +
+                    "ButtonID = '1'"
 
-                , cn
-                 );
-            cn.Open();
-            SaveButton1CMD.ExecuteNonQuery();
-            cn.Close();
-
-            MessageBox.Show("Record updated");
+                    , cnAMDB
+                     );
+                
+                SaveButton1CMD.ExecuteNonQuery();
+                MessageBox.Show("Record updated");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
+            }
+            finally
+            {
+                cnAMDB.Close();
+            }
         }
 
         //=======================================================================================
@@ -560,11 +574,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '2'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton2CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -644,11 +658,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '3'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton3CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -728,11 +742,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '4'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton4CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -812,11 +826,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '5'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton5CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -896,11 +910,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '6'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton6CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -980,11 +994,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '7'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton7CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -1064,11 +1078,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '8'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton8CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -1148,11 +1162,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '9'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton9CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -1232,11 +1246,11 @@ namespace Stored_Procedure_Manager
                 "AND " +
                 "ButtonID = '10'"
 
-                , cn
+                , cnAMDB
                  );
-            cn.Open();
+            cnAMDB.Open();
             SaveButton10CMD.ExecuteNonQuery();
-            cn.Close();
+            cnAMDB.Close();
 
             MessageBox.Show("Record updated");
         }
@@ -1263,5 +1277,9 @@ namespace Stored_Procedure_Manager
 
         }
 
+        private void FilePathCheckBoxButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

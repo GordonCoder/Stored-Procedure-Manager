@@ -54,7 +54,7 @@
             this.Notes1Button = new System.Windows.Forms.Button();
             this.SaveButton1 = new System.Windows.Forms.Button();
             this.Info1TextBox = new System.Windows.Forms.RichTextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton1 = new System.Windows.Forms.CheckBox();
             this.label52 = new System.Windows.Forms.Label();
             this.FilePath1Button1TextBox = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.ParamName3Button1TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button1TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button1TextBox = new System.Windows.Forms.TextBox();
-            this.EXE1checkBox = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton1 = new System.Windows.Forms.CheckBox();
             this.SPName1TextBox = new System.Windows.Forms.TextBox();
             this.Button1NameText = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.SaveButton2 = new System.Windows.Forms.Button();
             this.Notes2Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton2 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.FilePath2Button2TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -98,7 +98,7 @@
             this.ParamName3Button2TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button2TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button2TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox4ExecuteCheckBoxButton2 = new System.Windows.Forms.CheckBox();
             this.SPName2TextBox = new System.Windows.Forms.TextBox();
             this.Button2NameText = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@
             this.SaveButton3 = new System.Windows.Forms.Button();
             this.Notes3Button = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton3 = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.FilePath3Button3TextBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             this.ParamName3Button3TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button3TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button3TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton3 = new System.Windows.Forms.CheckBox();
             this.SPName3TextBox = new System.Windows.Forms.TextBox();
             this.Button3NameText = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@
             this.SaveButton4 = new System.Windows.Forms.Button();
             this.Notes4Button = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton4 = new System.Windows.Forms.CheckBox();
             this.label25 = new System.Windows.Forms.Label();
             this.FilePath4Button4TextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -154,7 +154,7 @@
             this.ParamName3Button4TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button4TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button4TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton4 = new System.Windows.Forms.CheckBox();
             this.SPName4TextBox = new System.Windows.Forms.TextBox();
             this.Button4NameText = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -166,7 +166,7 @@
             this.SaveButton5 = new System.Windows.Forms.Button();
             this.Notes5Button = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton5 = new System.Windows.Forms.CheckBox();
             this.label32 = new System.Windows.Forms.Label();
             this.FilePath5Button5TextBox = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -182,7 +182,7 @@
             this.ParamName3Button5TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button5TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button5TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton5 = new System.Windows.Forms.CheckBox();
             this.SPName5TextBox = new System.Windows.Forms.TextBox();
             this.Button5NameText = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -194,7 +194,7 @@
             this.SaveButton6 = new System.Windows.Forms.Button();
             this.Notes6Button = new System.Windows.Forms.Button();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton6 = new System.Windows.Forms.CheckBox();
             this.label39 = new System.Windows.Forms.Label();
             this.FilePath6Button6TextBox = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
@@ -210,7 +210,7 @@
             this.ParamName3Button6TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button6TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button6TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton6 = new System.Windows.Forms.CheckBox();
             this.SPName6TextBox = new System.Windows.Forms.TextBox();
             this.Button6NameText = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -222,7 +222,7 @@
             this.SaveButton7 = new System.Windows.Forms.Button();
             this.Notes7Button = new System.Windows.Forms.Button();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton7 = new System.Windows.Forms.CheckBox();
             this.label53 = new System.Windows.Forms.Label();
             this.FilePath7Button7TextBox = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -238,7 +238,7 @@
             this.ParamName3Button7TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button7TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button7TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton7 = new System.Windows.Forms.CheckBox();
             this.SPName7TextBox = new System.Windows.Forms.TextBox();
             this.Button7NameText = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
@@ -250,7 +250,7 @@
             this.SaveButton8 = new System.Windows.Forms.Button();
             this.Notes8Button = new System.Windows.Forms.Button();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton8 = new System.Windows.Forms.CheckBox();
             this.label60 = new System.Windows.Forms.Label();
             this.FilePath8Button8TextBox = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
@@ -266,7 +266,7 @@
             this.ParamName3Button8TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button8TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button8TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton8 = new System.Windows.Forms.CheckBox();
             this.SPName8TextBox = new System.Windows.Forms.TextBox();
             this.Button8NameText = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
@@ -278,7 +278,7 @@
             this.SaveButton9 = new System.Windows.Forms.Button();
             this.Notes9Button = new System.Windows.Forms.Button();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton9 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.FilePath9Button9TextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -294,7 +294,7 @@
             this.ParamName3Button9TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button9TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button9TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton9 = new System.Windows.Forms.CheckBox();
             this.SPName9TextBox = new System.Windows.Forms.TextBox();
             this.Button9NameText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -306,7 +306,7 @@
             this.SaveButton10 = new System.Windows.Forms.Button();
             this.Notes10Button = new System.Windows.Forms.Button();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.FilePathCheckBoxButton10 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FilePath10Button10TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -322,7 +322,7 @@
             this.ParamName3Button10TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button10TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button10TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton10 = new System.Windows.Forms.CheckBox();
             this.SPName10TextBox = new System.Windows.Forms.TextBox();
             this.Button10NameText = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -369,7 +369,7 @@
             this.Button1Tab.Controls.Add(this.Notes1Button);
             this.Button1Tab.Controls.Add(this.SaveButton1);
             this.Button1Tab.Controls.Add(this.Info1TextBox);
-            this.Button1Tab.Controls.Add(this.checkBox2);
+            this.Button1Tab.Controls.Add(this.FilePathCheckBoxButton1);
             this.Button1Tab.Controls.Add(this.label52);
             this.Button1Tab.Controls.Add(this.FilePath1Button1TextBox);
             this.Button1Tab.Controls.Add(this.label51);
@@ -385,7 +385,7 @@
             this.Button1Tab.Controls.Add(this.ParamName3Button1TextBox);
             this.Button1Tab.Controls.Add(this.ParamName2Button1TextBox);
             this.Button1Tab.Controls.Add(this.ParamName1Button1TextBox);
-            this.Button1Tab.Controls.Add(this.EXE1checkBox);
+            this.Button1Tab.Controls.Add(this.ExecuteCheckBoxButton1);
             this.Button1Tab.Controls.Add(this.SPName1TextBox);
             this.Button1Tab.Controls.Add(this.Button1NameText);
             this.Button1Tab.Controls.Add(this.label46);
@@ -430,14 +430,15 @@
             this.Info1TextBox.TabIndex = 73;
             this.Info1TextBox.Text = "";
             // 
-            // checkBox2
+            // FilePathCheckBoxButton1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(22, 309);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 72;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton1.AutoSize = true;
+            this.FilePathCheckBoxButton1.Location = new System.Drawing.Point(22, 309);
+            this.FilePathCheckBoxButton1.Name = "FilePathCheckBoxButton1";
+            this.FilePathCheckBoxButton1.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton1.TabIndex = 72;
+            this.FilePathCheckBoxButton1.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton1.CheckedChanged += new System.EventHandler(this.FilePathCheckBoxButton1_CheckedChanged);
             // 
             // label52
             // 
@@ -556,15 +557,15 @@
             this.ParamName1Button1TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button1TextBox.TabIndex = 55;
             // 
-            // EXE1checkBox
+            // ExecuteCheckBoxButton1
             // 
-            this.EXE1checkBox.AutoSize = true;
-            this.EXE1checkBox.Location = new System.Drawing.Point(22, 240);
-            this.EXE1checkBox.Name = "EXE1checkBox";
-            this.EXE1checkBox.Size = new System.Drawing.Size(15, 14);
-            this.EXE1checkBox.TabIndex = 54;
-            this.EXE1checkBox.UseVisualStyleBackColor = true;
-            this.EXE1checkBox.CheckedChanged += new System.EventHandler(this.EXEcheckBox1_CheckedChanged);
+            this.ExecuteCheckBoxButton1.AutoSize = true;
+            this.ExecuteCheckBoxButton1.Location = new System.Drawing.Point(22, 240);
+            this.ExecuteCheckBoxButton1.Name = "ExecuteCheckBoxButton1";
+            this.ExecuteCheckBoxButton1.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton1.TabIndex = 54;
+            this.ExecuteCheckBoxButton1.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton1.CheckedChanged += new System.EventHandler(this.ExecuteCheckBoxButton1_CheckedChanged);
             // 
             // SPName1TextBox
             // 
@@ -648,7 +649,7 @@
             this.Button2Tab.Controls.Add(this.SaveButton2);
             this.Button2Tab.Controls.Add(this.Notes2Button);
             this.Button2Tab.Controls.Add(this.richTextBox1);
-            this.Button2Tab.Controls.Add(this.checkBox3);
+            this.Button2Tab.Controls.Add(this.FilePathCheckBoxButton2);
             this.Button2Tab.Controls.Add(this.label8);
             this.Button2Tab.Controls.Add(this.FilePath2Button2TextBox);
             this.Button2Tab.Controls.Add(this.label9);
@@ -664,7 +665,7 @@
             this.Button2Tab.Controls.Add(this.ParamName3Button2TextBox);
             this.Button2Tab.Controls.Add(this.ParamName2Button2TextBox);
             this.Button2Tab.Controls.Add(this.ParamName1Button2TextBox);
-            this.Button2Tab.Controls.Add(this.checkBox4);
+            this.Button2Tab.Controls.Add(this.checkBox4ExecuteCheckBoxButton2);
             this.Button2Tab.Controls.Add(this.SPName2TextBox);
             this.Button2Tab.Controls.Add(this.Button2NameText);
             this.Button2Tab.Controls.Add(this.label10);
@@ -708,14 +709,14 @@
             this.richTextBox1.TabIndex = 99;
             this.richTextBox1.Text = "";
             // 
-            // checkBox3
+            // FilePathCheckBoxButton2
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(22, 311);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 98;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton2.AutoSize = true;
+            this.FilePathCheckBoxButton2.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton2.Name = "FilePathCheckBoxButton2";
+            this.FilePathCheckBoxButton2.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton2.TabIndex = 98;
+            this.FilePathCheckBoxButton2.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -832,14 +833,14 @@
             this.ParamName1Button2TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button2TextBox.TabIndex = 83;
             // 
-            // checkBox4
+            // checkBox4ExecuteCheckBoxButton2
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(22, 242);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 82;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4ExecuteCheckBoxButton2.AutoSize = true;
+            this.checkBox4ExecuteCheckBoxButton2.Location = new System.Drawing.Point(22, 242);
+            this.checkBox4ExecuteCheckBoxButton2.Name = "checkBox4ExecuteCheckBoxButton2";
+            this.checkBox4ExecuteCheckBoxButton2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4ExecuteCheckBoxButton2.TabIndex = 82;
+            this.checkBox4ExecuteCheckBoxButton2.UseVisualStyleBackColor = true;
             // 
             // SPName2TextBox
             // 
@@ -921,7 +922,7 @@
             this.Button3Tab.Controls.Add(this.SaveButton3);
             this.Button3Tab.Controls.Add(this.Notes3Button);
             this.Button3Tab.Controls.Add(this.richTextBox2);
-            this.Button3Tab.Controls.Add(this.checkBox5);
+            this.Button3Tab.Controls.Add(this.FilePathCheckBoxButton3);
             this.Button3Tab.Controls.Add(this.label18);
             this.Button3Tab.Controls.Add(this.FilePath3Button3TextBox);
             this.Button3Tab.Controls.Add(this.label19);
@@ -937,7 +938,7 @@
             this.Button3Tab.Controls.Add(this.ParamName3Button3TextBox);
             this.Button3Tab.Controls.Add(this.ParamName2Button3TextBox);
             this.Button3Tab.Controls.Add(this.ParamName1Button3TextBox);
-            this.Button3Tab.Controls.Add(this.checkBox6);
+            this.Button3Tab.Controls.Add(this.ExecuteCheckBoxButton3);
             this.Button3Tab.Controls.Add(this.SPName3TextBox);
             this.Button3Tab.Controls.Add(this.Button3NameText);
             this.Button3Tab.Controls.Add(this.label20);
@@ -981,14 +982,14 @@
             this.richTextBox2.TabIndex = 99;
             this.richTextBox2.Text = "";
             // 
-            // checkBox5
+            // FilePathCheckBoxButton3
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(22, 311);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 98;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton3.AutoSize = true;
+            this.FilePathCheckBoxButton3.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton3.Name = "FilePathCheckBoxButton3";
+            this.FilePathCheckBoxButton3.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton3.TabIndex = 98;
+            this.FilePathCheckBoxButton3.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -1105,14 +1106,14 @@
             this.ParamName1Button3TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button3TextBox.TabIndex = 83;
             // 
-            // checkBox6
+            // ExecuteCheckBoxButton3
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(22, 242);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 82;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton3.AutoSize = true;
+            this.ExecuteCheckBoxButton3.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton3.Name = "ExecuteCheckBoxButton3";
+            this.ExecuteCheckBoxButton3.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton3.TabIndex = 82;
+            this.ExecuteCheckBoxButton3.UseVisualStyleBackColor = true;
             // 
             // SPName3TextBox
             // 
@@ -1194,7 +1195,7 @@
             this.Button4Tab.Controls.Add(this.SaveButton4);
             this.Button4Tab.Controls.Add(this.Notes4Button);
             this.Button4Tab.Controls.Add(this.richTextBox3);
-            this.Button4Tab.Controls.Add(this.checkBox7);
+            this.Button4Tab.Controls.Add(this.FilePathCheckBoxButton4);
             this.Button4Tab.Controls.Add(this.label25);
             this.Button4Tab.Controls.Add(this.FilePath4Button4TextBox);
             this.Button4Tab.Controls.Add(this.label26);
@@ -1210,7 +1211,7 @@
             this.Button4Tab.Controls.Add(this.ParamName3Button4TextBox);
             this.Button4Tab.Controls.Add(this.ParamName2Button4TextBox);
             this.Button4Tab.Controls.Add(this.ParamName1Button4TextBox);
-            this.Button4Tab.Controls.Add(this.checkBox8);
+            this.Button4Tab.Controls.Add(this.ExecuteCheckBoxButton4);
             this.Button4Tab.Controls.Add(this.SPName4TextBox);
             this.Button4Tab.Controls.Add(this.Button4NameText);
             this.Button4Tab.Controls.Add(this.label27);
@@ -1254,14 +1255,14 @@
             this.richTextBox3.TabIndex = 99;
             this.richTextBox3.Text = "";
             // 
-            // checkBox7
+            // FilePathCheckBoxButton4
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(22, 311);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 98;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton4.AutoSize = true;
+            this.FilePathCheckBoxButton4.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton4.Name = "FilePathCheckBoxButton4";
+            this.FilePathCheckBoxButton4.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton4.TabIndex = 98;
+            this.FilePathCheckBoxButton4.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
@@ -1378,14 +1379,14 @@
             this.ParamName1Button4TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button4TextBox.TabIndex = 83;
             // 
-            // checkBox8
+            // ExecuteCheckBoxButton4
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(22, 242);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 82;
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton4.AutoSize = true;
+            this.ExecuteCheckBoxButton4.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton4.Name = "ExecuteCheckBoxButton4";
+            this.ExecuteCheckBoxButton4.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton4.TabIndex = 82;
+            this.ExecuteCheckBoxButton4.UseVisualStyleBackColor = true;
             // 
             // SPName4TextBox
             // 
@@ -1467,7 +1468,7 @@
             this.Button5Tab.Controls.Add(this.SaveButton5);
             this.Button5Tab.Controls.Add(this.Notes5Button);
             this.Button5Tab.Controls.Add(this.richTextBox4);
-            this.Button5Tab.Controls.Add(this.checkBox9);
+            this.Button5Tab.Controls.Add(this.FilePathCheckBoxButton5);
             this.Button5Tab.Controls.Add(this.label32);
             this.Button5Tab.Controls.Add(this.FilePath5Button5TextBox);
             this.Button5Tab.Controls.Add(this.label33);
@@ -1483,7 +1484,7 @@
             this.Button5Tab.Controls.Add(this.ParamName3Button5TextBox);
             this.Button5Tab.Controls.Add(this.ParamName2Button5TextBox);
             this.Button5Tab.Controls.Add(this.ParamName1Button5TextBox);
-            this.Button5Tab.Controls.Add(this.checkBox10);
+            this.Button5Tab.Controls.Add(this.ExecuteCheckBoxButton5);
             this.Button5Tab.Controls.Add(this.SPName5TextBox);
             this.Button5Tab.Controls.Add(this.Button5NameText);
             this.Button5Tab.Controls.Add(this.label34);
@@ -1527,14 +1528,14 @@
             this.richTextBox4.TabIndex = 99;
             this.richTextBox4.Text = "";
             // 
-            // checkBox9
+            // FilePathCheckBoxButton5
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(22, 311);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(15, 14);
-            this.checkBox9.TabIndex = 98;
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton5.AutoSize = true;
+            this.FilePathCheckBoxButton5.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton5.Name = "FilePathCheckBoxButton5";
+            this.FilePathCheckBoxButton5.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton5.TabIndex = 98;
+            this.FilePathCheckBoxButton5.UseVisualStyleBackColor = true;
             // 
             // label32
             // 
@@ -1651,14 +1652,14 @@
             this.ParamName1Button5TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button5TextBox.TabIndex = 83;
             // 
-            // checkBox10
+            // ExecuteCheckBoxButton5
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(22, 242);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 82;
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton5.AutoSize = true;
+            this.ExecuteCheckBoxButton5.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton5.Name = "ExecuteCheckBoxButton5";
+            this.ExecuteCheckBoxButton5.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton5.TabIndex = 82;
+            this.ExecuteCheckBoxButton5.UseVisualStyleBackColor = true;
             // 
             // SPName5TextBox
             // 
@@ -1740,7 +1741,7 @@
             this.Button6Tab.Controls.Add(this.SaveButton6);
             this.Button6Tab.Controls.Add(this.Notes6Button);
             this.Button6Tab.Controls.Add(this.richTextBox5);
-            this.Button6Tab.Controls.Add(this.checkBox11);
+            this.Button6Tab.Controls.Add(this.FilePathCheckBoxButton6);
             this.Button6Tab.Controls.Add(this.label39);
             this.Button6Tab.Controls.Add(this.FilePath6Button6TextBox);
             this.Button6Tab.Controls.Add(this.label40);
@@ -1756,7 +1757,7 @@
             this.Button6Tab.Controls.Add(this.ParamName3Button6TextBox);
             this.Button6Tab.Controls.Add(this.ParamName2Button6TextBox);
             this.Button6Tab.Controls.Add(this.ParamName1Button6TextBox);
-            this.Button6Tab.Controls.Add(this.checkBox12);
+            this.Button6Tab.Controls.Add(this.ExecuteCheckBoxButton6);
             this.Button6Tab.Controls.Add(this.SPName6TextBox);
             this.Button6Tab.Controls.Add(this.Button6NameText);
             this.Button6Tab.Controls.Add(this.label41);
@@ -1800,14 +1801,14 @@
             this.richTextBox5.TabIndex = 99;
             this.richTextBox5.Text = "";
             // 
-            // checkBox11
+            // FilePathCheckBoxButton6
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(22, 311);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 98;
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton6.AutoSize = true;
+            this.FilePathCheckBoxButton6.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton6.Name = "FilePathCheckBoxButton6";
+            this.FilePathCheckBoxButton6.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton6.TabIndex = 98;
+            this.FilePathCheckBoxButton6.UseVisualStyleBackColor = true;
             // 
             // label39
             // 
@@ -1924,14 +1925,14 @@
             this.ParamName1Button6TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button6TextBox.TabIndex = 83;
             // 
-            // checkBox12
+            // ExecuteCheckBoxButton6
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(22, 242);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 82;
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton6.AutoSize = true;
+            this.ExecuteCheckBoxButton6.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton6.Name = "ExecuteCheckBoxButton6";
+            this.ExecuteCheckBoxButton6.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton6.TabIndex = 82;
+            this.ExecuteCheckBoxButton6.UseVisualStyleBackColor = true;
             // 
             // SPName6TextBox
             // 
@@ -2013,7 +2014,7 @@
             this.Button7Tab.Controls.Add(this.SaveButton7);
             this.Button7Tab.Controls.Add(this.Notes7Button);
             this.Button7Tab.Controls.Add(this.richTextBox6);
-            this.Button7Tab.Controls.Add(this.checkBox13);
+            this.Button7Tab.Controls.Add(this.FilePathCheckBoxButton7);
             this.Button7Tab.Controls.Add(this.label53);
             this.Button7Tab.Controls.Add(this.FilePath7Button7TextBox);
             this.Button7Tab.Controls.Add(this.label54);
@@ -2029,7 +2030,7 @@
             this.Button7Tab.Controls.Add(this.ParamName3Button7TextBox);
             this.Button7Tab.Controls.Add(this.ParamName2Button7TextBox);
             this.Button7Tab.Controls.Add(this.ParamName1Button7TextBox);
-            this.Button7Tab.Controls.Add(this.checkBox14);
+            this.Button7Tab.Controls.Add(this.ExecuteCheckBoxButton7);
             this.Button7Tab.Controls.Add(this.SPName7TextBox);
             this.Button7Tab.Controls.Add(this.Button7NameText);
             this.Button7Tab.Controls.Add(this.label55);
@@ -2073,14 +2074,14 @@
             this.richTextBox6.TabIndex = 99;
             this.richTextBox6.Text = "";
             // 
-            // checkBox13
+            // FilePathCheckBoxButton7
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(22, 311);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(15, 14);
-            this.checkBox13.TabIndex = 98;
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton7.AutoSize = true;
+            this.FilePathCheckBoxButton7.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton7.Name = "FilePathCheckBoxButton7";
+            this.FilePathCheckBoxButton7.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton7.TabIndex = 98;
+            this.FilePathCheckBoxButton7.UseVisualStyleBackColor = true;
             // 
             // label53
             // 
@@ -2197,14 +2198,14 @@
             this.ParamName1Button7TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button7TextBox.TabIndex = 83;
             // 
-            // checkBox14
+            // ExecuteCheckBoxButton7
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(22, 242);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 82;
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton7.AutoSize = true;
+            this.ExecuteCheckBoxButton7.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton7.Name = "ExecuteCheckBoxButton7";
+            this.ExecuteCheckBoxButton7.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton7.TabIndex = 82;
+            this.ExecuteCheckBoxButton7.UseVisualStyleBackColor = true;
             // 
             // SPName7TextBox
             // 
@@ -2286,7 +2287,7 @@
             this.Button8Tab.Controls.Add(this.SaveButton8);
             this.Button8Tab.Controls.Add(this.Notes8Button);
             this.Button8Tab.Controls.Add(this.richTextBox7);
-            this.Button8Tab.Controls.Add(this.checkBox15);
+            this.Button8Tab.Controls.Add(this.FilePathCheckBoxButton8);
             this.Button8Tab.Controls.Add(this.label60);
             this.Button8Tab.Controls.Add(this.FilePath8Button8TextBox);
             this.Button8Tab.Controls.Add(this.label61);
@@ -2302,7 +2303,7 @@
             this.Button8Tab.Controls.Add(this.ParamName3Button8TextBox);
             this.Button8Tab.Controls.Add(this.ParamName2Button8TextBox);
             this.Button8Tab.Controls.Add(this.ParamName1Button8TextBox);
-            this.Button8Tab.Controls.Add(this.checkBox16);
+            this.Button8Tab.Controls.Add(this.ExecuteCheckBoxButton8);
             this.Button8Tab.Controls.Add(this.SPName8TextBox);
             this.Button8Tab.Controls.Add(this.Button8NameText);
             this.Button8Tab.Controls.Add(this.label62);
@@ -2346,14 +2347,14 @@
             this.richTextBox7.TabIndex = 99;
             this.richTextBox7.Text = "";
             // 
-            // checkBox15
+            // FilePathCheckBoxButton8
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(22, 311);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(15, 14);
-            this.checkBox15.TabIndex = 98;
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton8.AutoSize = true;
+            this.FilePathCheckBoxButton8.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton8.Name = "FilePathCheckBoxButton8";
+            this.FilePathCheckBoxButton8.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton8.TabIndex = 98;
+            this.FilePathCheckBoxButton8.UseVisualStyleBackColor = true;
             // 
             // label60
             // 
@@ -2470,14 +2471,14 @@
             this.ParamName1Button8TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button8TextBox.TabIndex = 83;
             // 
-            // checkBox16
+            // ExecuteCheckBoxButton8
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(22, 242);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(15, 14);
-            this.checkBox16.TabIndex = 82;
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton8.AutoSize = true;
+            this.ExecuteCheckBoxButton8.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton8.Name = "ExecuteCheckBoxButton8";
+            this.ExecuteCheckBoxButton8.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton8.TabIndex = 82;
+            this.ExecuteCheckBoxButton8.UseVisualStyleBackColor = true;
             // 
             // SPName8TextBox
             // 
@@ -2559,7 +2560,7 @@
             this.Button9Tab.Controls.Add(this.SaveButton9);
             this.Button9Tab.Controls.Add(this.Notes9Button);
             this.Button9Tab.Controls.Add(this.richTextBox8);
-            this.Button9Tab.Controls.Add(this.checkBox17);
+            this.Button9Tab.Controls.Add(this.FilePathCheckBoxButton9);
             this.Button9Tab.Controls.Add(this.label3);
             this.Button9Tab.Controls.Add(this.FilePath9Button9TextBox);
             this.Button9Tab.Controls.Add(this.label4);
@@ -2575,7 +2576,7 @@
             this.Button9Tab.Controls.Add(this.ParamName3Button9TextBox);
             this.Button9Tab.Controls.Add(this.ParamName2Button9TextBox);
             this.Button9Tab.Controls.Add(this.ParamName1Button9TextBox);
-            this.Button9Tab.Controls.Add(this.checkBox18);
+            this.Button9Tab.Controls.Add(this.ExecuteCheckBoxButton9);
             this.Button9Tab.Controls.Add(this.SPName9TextBox);
             this.Button9Tab.Controls.Add(this.Button9NameText);
             this.Button9Tab.Controls.Add(this.label5);
@@ -2619,14 +2620,14 @@
             this.richTextBox8.TabIndex = 99;
             this.richTextBox8.Text = "";
             // 
-            // checkBox17
+            // FilePathCheckBoxButton9
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(22, 311);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(15, 14);
-            this.checkBox17.TabIndex = 98;
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton9.AutoSize = true;
+            this.FilePathCheckBoxButton9.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton9.Name = "FilePathCheckBoxButton9";
+            this.FilePathCheckBoxButton9.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton9.TabIndex = 98;
+            this.FilePathCheckBoxButton9.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -2743,14 +2744,14 @@
             this.ParamName1Button9TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button9TextBox.TabIndex = 83;
             // 
-            // checkBox18
+            // ExecuteCheckBoxButton9
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(22, 242);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(15, 14);
-            this.checkBox18.TabIndex = 82;
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton9.AutoSize = true;
+            this.ExecuteCheckBoxButton9.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton9.Name = "ExecuteCheckBoxButton9";
+            this.ExecuteCheckBoxButton9.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton9.TabIndex = 82;
+            this.ExecuteCheckBoxButton9.UseVisualStyleBackColor = true;
             // 
             // SPName9TextBox
             // 
@@ -2832,7 +2833,7 @@
             this.Button10Tab.Controls.Add(this.SaveButton10);
             this.Button10Tab.Controls.Add(this.Notes10Button);
             this.Button10Tab.Controls.Add(this.richTextBox9);
-            this.Button10Tab.Controls.Add(this.checkBox1);
+            this.Button10Tab.Controls.Add(this.FilePathCheckBoxButton10);
             this.Button10Tab.Controls.Add(this.label1);
             this.Button10Tab.Controls.Add(this.FilePath10Button10TextBox);
             this.Button10Tab.Controls.Add(this.label2);
@@ -2848,7 +2849,7 @@
             this.Button10Tab.Controls.Add(this.ParamName3Button10TextBox);
             this.Button10Tab.Controls.Add(this.ParamName2Button10TextBox);
             this.Button10Tab.Controls.Add(this.ParamName1Button10TextBox);
-            this.Button10Tab.Controls.Add(this.checkBox19);
+            this.Button10Tab.Controls.Add(this.ExecuteCheckBoxButton10);
             this.Button10Tab.Controls.Add(this.SPName10TextBox);
             this.Button10Tab.Controls.Add(this.Button10NameText);
             this.Button10Tab.Controls.Add(this.label11);
@@ -2892,14 +2893,14 @@
             this.richTextBox9.TabIndex = 99;
             this.richTextBox9.Text = "";
             // 
-            // checkBox1
+            // FilePathCheckBoxButton10
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(22, 311);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 98;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.FilePathCheckBoxButton10.AutoSize = true;
+            this.FilePathCheckBoxButton10.Location = new System.Drawing.Point(22, 311);
+            this.FilePathCheckBoxButton10.Name = "FilePathCheckBoxButton10";
+            this.FilePathCheckBoxButton10.Size = new System.Drawing.Size(15, 14);
+            this.FilePathCheckBoxButton10.TabIndex = 98;
+            this.FilePathCheckBoxButton10.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -3016,14 +3017,14 @@
             this.ParamName1Button10TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button10TextBox.TabIndex = 83;
             // 
-            // checkBox19
+            // ExecuteCheckBoxButton10
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(22, 242);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(15, 14);
-            this.checkBox19.TabIndex = 82;
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton10.AutoSize = true;
+            this.ExecuteCheckBoxButton10.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton10.Name = "ExecuteCheckBoxButton10";
+            this.ExecuteCheckBoxButton10.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton10.TabIndex = 82;
+            this.ExecuteCheckBoxButton10.UseVisualStyleBackColor = true;
             // 
             // SPName10TextBox
             // 
@@ -3219,7 +3220,7 @@
         private System.Windows.Forms.TextBox ParamName4Button1TextBox;
         private System.Windows.Forms.TextBox ParamName5Button1TextBox;
 
-        private System.Windows.Forms.CheckBox EXE1checkBox;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton1;
         private System.Windows.Forms.TextBox ExecutePath1Button1TextBox;
         private System.Windows.Forms.TextBox ExecuteParam1Button1TextBox;
 
@@ -3230,13 +3231,13 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
 
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton1;
         private System.Windows.Forms.Label label52;
 
 
         private System.Windows.Forms.Button Notes2Button;
 
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ExecuteParam2Button2TextBox;
@@ -3250,7 +3251,7 @@
         private System.Windows.Forms.TextBox ParamName3Button2TextBox;
         private System.Windows.Forms.TextBox ParamName2Button2TextBox;
         private System.Windows.Forms.TextBox ParamName1Button2TextBox;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox4ExecuteCheckBoxButton2;
         private System.Windows.Forms.TextBox Button2NameText;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
@@ -3259,7 +3260,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Notes3Button;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox FilePath3Button3TextBox;
         private System.Windows.Forms.Label label19;
@@ -3273,7 +3274,7 @@
         private System.Windows.Forms.TextBox ParamName4Button3TextBox;
         private System.Windows.Forms.TextBox ParamName3Button3TextBox;
         private System.Windows.Forms.TextBox ParamName1Button3TextBox;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton3;
         private System.Windows.Forms.TextBox SPName3TextBox;
         private System.Windows.Forms.TextBox Button3NameText;
         private System.Windows.Forms.Label label20;
@@ -3283,7 +3284,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button Notes4Button;
         private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton4;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox FilePath4Button4TextBox;
         private System.Windows.Forms.Label label26;
@@ -3297,7 +3298,7 @@
         private System.Windows.Forms.TextBox ParamName4Button4TextBox;
         private System.Windows.Forms.TextBox ParamName3Button4TextBox;
         private System.Windows.Forms.TextBox ParamName1Button4TextBox;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton4;
         private System.Windows.Forms.TextBox SPName4TextBox;
         private System.Windows.Forms.TextBox Button4NameText;
         private System.Windows.Forms.Label label27;
@@ -3307,7 +3308,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button Notes5Button;
         private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton5;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox FilePath5Button5TextBox;
         private System.Windows.Forms.Label label33;
@@ -3322,7 +3323,7 @@
         private System.Windows.Forms.TextBox ParamName4Button5TextBox;
         private System.Windows.Forms.TextBox ParamName3Button5TextBox;
         private System.Windows.Forms.TextBox ParamName2Button5TextBox;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton5;
         private System.Windows.Forms.TextBox SPName5TextBox;
         private System.Windows.Forms.TextBox Button5NameText;
         private System.Windows.Forms.Label label34;
@@ -3332,7 +3333,7 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button Notes6Button;
         private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton6;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox FilePath6Button6TextBox;
         private System.Windows.Forms.Label label40;
@@ -3347,7 +3348,7 @@
         private System.Windows.Forms.TextBox ParamName4Button6TextBox;
         private System.Windows.Forms.TextBox ParamName3Button6TextBox;
         private System.Windows.Forms.TextBox ParamName1Button6TextBox;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton6;
         private System.Windows.Forms.TextBox SPName6TextBox;
         private System.Windows.Forms.TextBox Button6NameText;
         private System.Windows.Forms.Label label41;
@@ -3357,7 +3358,7 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button Notes7Button;
         private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton7;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox FilePath7Button7TextBox;
         private System.Windows.Forms.Label label54;
@@ -3372,7 +3373,7 @@
         private System.Windows.Forms.TextBox ParamName4Button7TextBox;
         private System.Windows.Forms.TextBox ParamName3Button7TextBox;
         private System.Windows.Forms.TextBox ParamName2Button7TextBox;
-        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton7;
         private System.Windows.Forms.TextBox SPName7TextBox;
         private System.Windows.Forms.TextBox Button7NameText;
         private System.Windows.Forms.Label label55;
@@ -3382,7 +3383,7 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Button Notes8Button;
         private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton8;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TextBox FilePath8Button8TextBox;
         private System.Windows.Forms.Label label61;
@@ -3397,7 +3398,7 @@
         private System.Windows.Forms.TextBox ParamName4Button8TextBox;
         private System.Windows.Forms.TextBox ParamName3Button8TextBox;
         private System.Windows.Forms.TextBox ParamName2Button8TextBox;
-        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton8;
         private System.Windows.Forms.TextBox SPName8TextBox;
         private System.Windows.Forms.TextBox Button8NameText;
         private System.Windows.Forms.Label label62;
@@ -3407,7 +3408,7 @@
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button Notes9Button;
         private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox FilePath9Button9TextBox;
         private System.Windows.Forms.Label label4;
@@ -3422,7 +3423,7 @@
         private System.Windows.Forms.TextBox ParamName4Button9TextBox;
         private System.Windows.Forms.TextBox ParamName3Button9TextBox;
         private System.Windows.Forms.TextBox ParamName2Button9TextBox;
-        private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton9;
         private System.Windows.Forms.TextBox SPName9TextBox;
         private System.Windows.Forms.TextBox Button9NameText;
         private System.Windows.Forms.Label label5;
@@ -3432,7 +3433,7 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Button Notes10Button;
         private System.Windows.Forms.RichTextBox richTextBox9;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox FilePathCheckBoxButton10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox FilePath10Button10TextBox;
         private System.Windows.Forms.Label label2;
@@ -3447,7 +3448,7 @@
         private System.Windows.Forms.TextBox ParamName4Button10TextBox;
         private System.Windows.Forms.TextBox ParamName3Button10TextBox;
         private System.Windows.Forms.TextBox ParamName2Button10TextBox;
-        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton10;
         private System.Windows.Forms.TextBox SPName10TextBox;
         private System.Windows.Forms.TextBox Button10NameText;
         private System.Windows.Forms.Label label11;

@@ -22,7 +22,9 @@ b.ButtonID AS ButtonID
 ,p5.ParamValue5
 ,e.ExecutablePath AS ExecutablePath
 ,e.ExecutableParam AS ExecutableParam
+,e.EPCheckBox AS EPCheckBox
 ,f.FilePath AS FilePath
+,f.FPCheckBox AS FPCheckBox
 ,n.NoteText AS NoteText
 FROM 
 dbo.AM_Buttons b
