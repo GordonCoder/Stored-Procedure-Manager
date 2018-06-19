@@ -57,23 +57,113 @@ namespace Stored_Procedure_Manager
         // Load the names of the buttons
         public void LoadMainButtonConfig()
         {
-            DataTable dt = new DataTable();
+            DataTable dtb1 = new DataTable();
             cn.Open();
-            SqlCommand sqlcmd = new SqlCommand("SELECT * FROM cust_SPManagerConfig", cn);
-            SqlDataAdapter sqlDa = new SqlDataAdapter(sqlcmd);
-            sqlDa.Fill(dt);
-            if (dt.Rows.Count > 0)
+            SqlCommand sqlcmdb1 = new SqlCommand("SELECT * FROM AM_Button1Info", cn);
+            SqlDataAdapter sqlDab1 = new SqlDataAdapter(sqlcmdb1);
+            sqlDab1.Fill(dtb1);
+            if (dtb1.Rows.Count > 0)
             {
-                this.button1.Text = dt.Rows[0]["ButtonName01"].ToString();
-                this.button2.Text = dt.Rows[0]["ButtonName02"].ToString();
-                this.button3.Text = dt.Rows[0]["ButtonName03"].ToString();
-                this.button4.Text = dt.Rows[0]["ButtonName04"].ToString();
-                this.button5.Text = dt.Rows[0]["ButtonName05"].ToString();
-                this.button6.Text = dt.Rows[0]["ButtonName06"].ToString();
-                this.button7.Text = dt.Rows[0]["ButtonName07"].ToString();
-                this.button8.Text = dt.Rows[0]["ButtonName08"].ToString();
-                this.button9.Text = dt.Rows[0]["ButtonName09"].ToString();
-                this.button10.Text = dt.Rows[0]["ButtonName10"].ToString();
+                this.button1.Text = dtb1.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb2 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb2 = new SqlCommand("SELECT * FROM AM_Button2Info", cn);
+            SqlDataAdapter sqlDab2 = new SqlDataAdapter(sqlcmdb2);
+            sqlDab2.Fill(dtb2);
+            if (dtb2.Rows.Count > 0)
+            {
+                this.button2.Text = dtb2.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb3 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb3 = new SqlCommand("SELECT * FROM AM_Button3Info", cn);
+            SqlDataAdapter sqlDab3 = new SqlDataAdapter(sqlcmdb3);
+            sqlDab3.Fill(dtb3);
+            if (dtb3.Rows.Count > 0)
+            {
+                this.button3.Text = dtb3.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb4 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb4 = new SqlCommand("SELECT * FROM AM_Button4Info", cn);
+            SqlDataAdapter sqlDab4 = new SqlDataAdapter(sqlcmdb4);
+            sqlDab4.Fill(dtb4);
+            if (dtb4.Rows.Count > 0)
+            {
+                this.button4.Text = dtb4.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb5 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb5 = new SqlCommand("SELECT * FROM AM_Button5Info", cn);
+            SqlDataAdapter sqlDab5 = new SqlDataAdapter(sqlcmdb5);
+            sqlDab5.Fill(dtb5);
+            if (dtb5.Rows.Count > 0)
+            {
+                this.button5.Text = dtb5.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb6 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb6 = new SqlCommand("SELECT * FROM AM_Button6Info", cn);
+            SqlDataAdapter sqlDab6 = new SqlDataAdapter(sqlcmdb6);
+            sqlDab6.Fill(dtb6);
+            if (dtb6.Rows.Count > 0)
+            {
+                this.button6.Text = dtb6.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb7 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb7 = new SqlCommand("SELECT * FROM AM_Button7Info", cn);
+            SqlDataAdapter sqlDab7 = new SqlDataAdapter(sqlcmdb7);
+            sqlDab7.Fill(dtb7);
+            if (dtb7.Rows.Count > 0)
+            {
+                this.button7.Text = dtb7.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb8 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb8 = new SqlCommand("SELECT * FROM AM_Button8Info", cn);
+            SqlDataAdapter sqlDab8 = new SqlDataAdapter(sqlcmdb8);
+            sqlDab8.Fill(dtb8);
+            if (dtb8.Rows.Count > 0)
+            {
+                this.button8.Text = dtb8.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb9 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb9 = new SqlCommand("SELECT * FROM AM_Button9Info", cn);
+            SqlDataAdapter sqlDab9 = new SqlDataAdapter(sqlcmdb9);
+            sqlDab9.Fill(dtb9);
+            if (dtb9.Rows.Count > 0)
+            {
+                this.button9.Text = dtb9.Rows[0]["ButtonName"].ToString();
+            }
+            cn.Close();
+
+            DataTable dtb10 = new DataTable();
+            cn.Open();
+            SqlCommand sqlcmdb10 = new SqlCommand("SELECT * FROM AM_Button10Info", cn);
+            SqlDataAdapter sqlDab10 = new SqlDataAdapter(sqlcmdb10);
+            sqlDab10.Fill(dtb10);
+            if (dtb10.Rows.Count > 0)
+            {
+                this.button10.Text = dtb10.Rows[0]["ButtonName"].ToString();
             }
             cn.Close();
 

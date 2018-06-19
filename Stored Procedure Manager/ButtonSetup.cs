@@ -1241,9 +1241,6 @@ namespace Stored_Procedure_Manager
             MessageBox.Show("Record updated");
         }
 
-
-
-
         // No code needed
 
         private void EXE1TextBox_TextChanged(object sender, EventArgs e)
