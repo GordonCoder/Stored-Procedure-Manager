@@ -436,12 +436,14 @@ namespace Stored_Procedure_Manager
                     string ParamValue5 = sdr["ParamValue5"].ToString();
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    string EPCheckBox = sdr["EPCheckBox"].ToString();
                     string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"])); 
 
-                    //if (FilePathCheckBoxButton1)
-                    //{
-
-                    //}
+                    if (FPCheckBox == true)
+                    {
+                        // Run the file path
+                    }
 
                     SqlConnection cnSPDB_B1 = new SqlConnection(SPDBconnectionString);
                     cnSPDB_B1.Open();

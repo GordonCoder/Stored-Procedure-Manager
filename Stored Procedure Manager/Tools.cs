@@ -126,7 +126,9 @@ namespace Stored_Procedure_Manager
                 }
             }
 
-
+            //=====================================================================================================================
+            // Create Tables in the database
+            //=====================================================================================================================
             String strTables;
             SqlConnection cnTables = new SqlConnection
                 (
@@ -187,6 +189,9 @@ namespace Stored_Procedure_Manager
                 }
             }
 
+            //=====================================================================================================================
+            // Create Views in the database
+            //=====================================================================================================================
             String strV1;
             String strV2;
             String strV3;
@@ -264,6 +269,45 @@ namespace Stored_Procedure_Manager
                 if (cnV.State == ConnectionState.Open)
                 {
                     cnV.Close();
+                }
+            }
+
+            //=====================================================================================================================
+            // Load Default data into tables
+            //=====================================================================================================================
+            String strdd;
+
+            SqlConnection cndd = new SqlConnection
+                (
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString
+                );
+
+            FileInfo filedd = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo1.sql");
+
+            strdd = filedd.OpenText().ReadToEnd();
+
+            SqlCommand cmddd = new SqlCommand(strdd, cndd);
+
+            try
+            {
+                cndd.Open();
+                cmddd.ExecuteNonQuery();
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "View Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (cndd.State == ConnectionState.Open)
+                {
+                    cndd.Close();
                 }
             }
 

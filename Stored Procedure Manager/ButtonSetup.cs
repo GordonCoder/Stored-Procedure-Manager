@@ -468,7 +468,7 @@ namespace Stored_Procedure_Manager
                     "set " +
                     "ExecutablePath = '" + ExecutePath1Button1TextBox.Text + "', " +
                     "ExecutableParam = '" + ExecuteParam1Button1TextBox.Text + "', " +
-                    "EPCheckBox = '" + ExecuteCheckBoxButton1.CheckState + "'" +
+                    "EPCheckBox = '" + ExecuteCheckBoxButton1.Checked + "'" +
                     "WHERE " +
                     "ExecutableID = '1' " +
                     "AND " +
