@@ -113,7 +113,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath2Button2TextBox.Text = dtb2.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam2Button2TextBox.Text = dtb2.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton2.Checked = (bool)dtb2.Rows[0]["EPCheckBox"];
                 this.FilePath2Button2TextBox.Text = dtb2.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton2.Checked = (bool)dtb2.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -142,7 +144,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath3Button3TextBox.Text = dtb3.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam3Button3TextBox.Text = dtb3.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton3.Checked = (bool)dtb3.Rows[0]["EPCheckBox"];
                 this.FilePath3Button3TextBox.Text = dtb3.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton3.Checked = (bool)dtb3.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -171,7 +175,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath4Button4TextBox.Text = dtb4.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam4Button4TextBox.Text = dtb4.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton4.Checked = (bool)dtb4.Rows[0]["EPCheckBox"];
                 this.FilePath4Button4TextBox.Text = dtb4.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton4.Checked = (bool)dtb4.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -200,7 +206,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath5Button5TextBox.Text = dtb5.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam5Button5TextBox.Text = dtb5.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton5.Checked = (bool)dtb5.Rows[0]["EPCheckBox"];
                 this.FilePath5Button5TextBox.Text = dtb5.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton5.Checked = (bool)dtb5.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -229,7 +237,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath6Button6TextBox.Text = dtb6.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam6Button6TextBox.Text = dtb6.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton6.Checked = (bool)dtb6.Rows[0]["EPCheckBox"];
                 this.FilePath6Button6TextBox.Text = dtb6.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton6.Checked = (bool)dtb6.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -258,7 +268,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath7Button7TextBox.Text = dtb7.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam7Button7TextBox.Text = dtb7.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton7.Checked = (bool)dtb7.Rows[0]["EPCheckBox"];
                 this.FilePath7Button7TextBox.Text = dtb7.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton7.Checked = (bool)dtb7.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -287,7 +299,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath8Button8TextBox.Text = dtb8.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam8Button8TextBox.Text = dtb8.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton8.Checked = (bool)dtb8.Rows[0]["EPCheckBox"];
                 this.FilePath8Button8TextBox.Text = dtb8.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton8.Checked = (bool)dtb8.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -316,7 +330,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath9Button9TextBox.Text = dtb9.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam9Button9TextBox.Text = dtb9.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton9.Checked = (bool)dtb9.Rows[0]["EPCheckBox"];
                 this.FilePath9Button9TextBox.Text = dtb9.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton9.Checked = (bool)dtb9.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
 
@@ -345,7 +361,9 @@ namespace Stored_Procedure_Manager
 
                 this.ExecutePath10Button10TextBox.Text = dtb10.Rows[0]["ExecutablePath"].ToString();
                 this.ExecuteParam10Button10TextBox.Text = dtb10.Rows[0]["ExecutableParam"].ToString();
+                this.ExecuteCheckBoxButton10.Checked = (bool)dtb10.Rows[0]["EPCheckBox"];
                 this.FilePath10Button10TextBox.Text = dtb10.Rows[0]["FilePath"].ToString();
+                this.FilePathCheckBoxButton10.Checked = (bool)dtb10.Rows[0]["FPCheckBox"];
             }
             cnAMDB.Close();
         }
@@ -560,7 +578,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath2Button2TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam2Button2TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam2Button2TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton2.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '2' " +
@@ -569,7 +587,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath2Button2TextBox.Text + "'" +
+                "FilePath = '" + FilePath2Button2TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton2.Checked + "'" +
                 "WHERE " +
                 "FileID = '2' " +
@@ -646,7 +664,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath3Button3TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam3Button3TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam3Button3TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton3.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '3' " +
@@ -655,7 +673,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath3Button3TextBox.Text + "'" +
+                "FilePath = '" + FilePath3Button3TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton3.Checked + "'" +
                 "WHERE " +
                 "FileID = '3' " +
@@ -732,7 +750,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath4Button4TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam4Button4TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam4Button4TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton4.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '4' " +
@@ -741,7 +759,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath4Button4TextBox.Text + "'" +
+                "FilePath = '" + FilePath4Button4TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton4.Checked + "'" +
                 "WHERE " +
                 "FileID = '4' " +
@@ -818,7 +836,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath5Button5TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam5Button5TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam5Button5TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton5.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '5' " +
@@ -827,7 +845,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath5Button5TextBox.Text + "'" +
+                "FilePath = '" + FilePath5Button5TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton5.Checked + "'" +
                 "WHERE " +
                 "FileID = '5' " +
@@ -904,7 +922,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath6Button6TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam6Button6TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam6Button6TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton6.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '6' " +
@@ -913,7 +931,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath6Button6TextBox.Text + "'" +
+                "FilePath = '" + FilePath6Button6TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton6.Checked + "'" +
                 "WHERE " +
                 "FileID = '6' " +
@@ -990,7 +1008,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath7Button7TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam7Button7TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam7Button7TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton7.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '7' " +
@@ -999,7 +1017,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath7Button7TextBox.Text + "'" +
+                "FilePath = '" + FilePath7Button7TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton7.Checked + "'" +
                 "WHERE " +
                 "FileID = '7' " +
@@ -1076,7 +1094,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath8Button8TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam8Button8TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam8Button8TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton8.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '8' " +
@@ -1085,7 +1103,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath8Button8TextBox.Text + "'" +
+                "FilePath = '" + FilePath8Button8TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton8.Checked + "'" +
                 "WHERE " +
                 "FileID = '8' " +
@@ -1162,7 +1180,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath9Button9TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam9Button9TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam9Button9TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton9.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '9' " +
@@ -1171,7 +1189,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath9Button9TextBox.Text + "'" +
+                "FilePath = '" + FilePath9Button9TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton9.Checked + "'" +
                 "WHERE " +
                 "FileID = '9' " +
@@ -1248,7 +1266,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Executable " +
                 "set " +
                 "ExecutablePath = '" + ExecutePath10Button10TextBox.Text + "', " +
-                "ExecutableParam = '" + ExecuteParam10Button10TextBox.Text + "'" +
+                "ExecutableParam = '" + ExecuteParam10Button10TextBox.Text + "', " +
                 "EPCheckBox = '" + ExecuteCheckBoxButton10.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '10' " +
@@ -1257,7 +1275,7 @@ namespace Stored_Procedure_Manager
 
                 "update dbo.AM_FileImport " +
                 "set " +
-                "FilePath = '" + FilePath10Button10TextBox.Text + "'" +
+                "FilePath = '" + FilePath10Button10TextBox.Text + "', " +
                 "FPCheckBox = '" + FilePathCheckBoxButton10.Checked + "'" +
                 "WHERE " +
                 "FileID = '10' " +

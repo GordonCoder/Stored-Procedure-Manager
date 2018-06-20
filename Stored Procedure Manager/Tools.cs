@@ -213,16 +213,16 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo file1 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo1.sql");
-            FileInfo file2 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo2.sql");
-            FileInfo file3 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo3.sql");
-            FileInfo file4 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo4.sql");
-            FileInfo file5 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo5.sql");
-            FileInfo file6 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo6.sql");
-            FileInfo file7 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo7.sql");
-            FileInfo file8 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo8.sql");
-            FileInfo file9 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo9.sql");
-            FileInfo file10 = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo10.sql");
+            FileInfo file1 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo1.sql");
+            FileInfo file2 = new FileInfo("C:\\Program Files(x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo2.sql");
+            FileInfo file3 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo3.sql");
+            FileInfo file4 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo4.sql");
+            FileInfo file5 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo5.sql");
+            FileInfo file6 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo6.sql");
+            FileInfo file7 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo7.sql");
+            FileInfo file8 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo8.sql");
+            FileInfo file9 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo9.sql");
+            FileInfo file10 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo10.sql");
 
             strV1 = file1.OpenText().ReadToEnd();
             strV2 = file2.OpenText().ReadToEnd();
@@ -287,7 +287,7 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo filedd = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Default Data\\Default Data.sql");
+            FileInfo filedd = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Default Data\\Default Data.sql");
 
             strdd = filedd.OpenText().ReadToEnd();
 
@@ -315,47 +315,41 @@ namespace Stored_Procedure_Manager
 
         private void SPButton_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection
-                        (
-                        "server="
-                        + Properties.Settings.Default.ServerNameString
-                        + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database= AutomationManager"
-                        + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
-                        ))
-                try
-                {
-                    cn.Open();
-                    using
-                        (SqlCommand command = new SqlCommand(
-                            // After testing, use this name for the table cust_SPManagerButtonConfig
-                            "CREATE Procedure ButtonTest " +
-                            "AS " +
-                            //"IF NOT EXISTS (SELECT * FROM AM_Buttons WHERE ButtonID = 10) " +
-                            "INSERT INTO dbo.AM_Buttons (ButtonName,SPName) VALUES ('Button Name Test','SP Name Test') WHERE ButtonID = 10"
-                            //"ELSE UPDATE cust_SPManagerConfig " +
-                            //"SET ButtonName10 = 'TEST WORKED' " +
-                            //",SPName10 = 'TEST WORKED';" +
+            String strspb;
 
+            SqlConnection cnspb = new SqlConnection
+                (
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString
+                );
 
-//"INSERT INTO dbo.AM_Buttons (ButtonID,ButtonName,SPName) VALUES ('10','Button Name Test','SP Name Test')" +
-//"INSERT INTO dbo.AM_ButtonParam (ParamID,ButtonID,ParamName,ParamValue) VALUES ('1','10','Param 1 Name Test','Param 1 Value Test'),('2','10','Param 2 Name Test','Param 2 Value Test'),('3','10','Param 3 Name Test','Param 3 Value Test'),('4','10','Param 4  Name Test','Param 4 Value Test'),('5','10','Param 5  Name Test','Param 5 Value Test')" +
-//"INSERT INTO dbo.AM_Executable (ExecutableID,ButtonID,ExecutablePath,ExecutableParam) VALUES ('10','10','Executable Path Test','Executable Param Test')" +
-//"INSERT INTO dbo.AM_FileImport (FileID,ButtonID,FilePath) VALUES ('10','10','File Path Test')" +
-//"INSERT INTO dbo.AM_Notes (NoteID,ButtonID,NoteText) VALUES ('10','10','Note Text Test')"
-                            , cn))
-                        command.ExecuteNonQuery();
-                    MessageBox.Show("The Stored Procedure was successfully created in the " + Properties.Settings.Default.DatabaseString + " database!", "Stored Procedure Created");
-                }
-                catch (Exception ex)
+            FileInfo filespb = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Stored Procedures\\Button Test.sql");
+
+            strspb = filespb.OpenText().ReadToEnd();
+
+            SqlCommand cmddd = new SqlCommand(strspb, cnspb);
+
+            try
+            {
+                cnspb.Open();
+                cmddd.ExecuteNonQuery();
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Stored Procedure Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (cnspb.State == ConnectionState.Open)
                 {
-                    MessageBox.Show(ex.Message);
+                    cnspb.Close();
                 }
-                finally
-                {
-                    cn.Close();
-                }
+            }
         }
 
         private void SQLUtilitiesButton_Click(object sender, EventArgs e)
