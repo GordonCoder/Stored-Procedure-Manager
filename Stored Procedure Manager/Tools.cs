@@ -162,8 +162,12 @@ namespace Stored_Procedure_Manager
                 " WAITFOR DELAY '00:00:01'" +
 
                 " CREATE TABLE dbo.AM_Notes " +
-                "(NoteID INT NOT NULL ,ButtonID INT NOT NULL ,NoteText VARCHAR(MAX) NULL ,CONSTRAINT PK_AM_Notes PRIMARY KEY CLUSTERED(NoteID ASC, ButtonID ASC),CONSTRAINT FK_49 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))";
+                "(NoteID INT NOT NULL ,ButtonID INT NOT NULL ,NoteText VARCHAR(MAX) NULL ,CONSTRAINT PK_AM_Notes PRIMARY KEY CLUSTERED(NoteID ASC, ButtonID ASC),CONSTRAINT FK_49 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
 
+                " WAITFOR DELAY '00:00:01'" +
+
+                "CREATE TABLE dbo.AM_FileImportStaging" +
+                "(Column0 varchar(50) NULL, Column1 varchar(50) NULL, Column2 varchar(50) NULL, Column3 varchar(50) NULL, Column4 varchar(50) NULL, Column5 varchar(50) NULL, Column6 varchar(50) NULL, Column7 varchar(50) NULL, Column8 varchar(50) NULL, Column9 varchar(50) NULL, Column10 varchar(50) NULL, Column11 varchar(50) NULL, Column12 varchar(50) NULL, Column13 varchar(50) NULL, Column14 varchar(50) NULL, Column15 varchar(50) NULL, Column16 varchar(50) NULL, Column17 varchar(50) NULL, Column18 varchar(50) NULL, Column19 varchar(50) NULL, Column20 varchar(50) NULL)";
 
             SqlCommand cmdTables = new SqlCommand(strTables, cnTables);
             try
