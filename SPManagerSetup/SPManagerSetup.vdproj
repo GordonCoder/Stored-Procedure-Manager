@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_420D9E8A1B5E4D47AABB69708E3C26D7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5B877ED91E7742A99E0DA41FA9AB0BEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -306,6 +312,26 @@
             "TargetName" = "8:ButtonInfo9.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_420D9E8A1B5E4D47AABB69708E3C26D7"
+            {
+            "SourcePath" = "8:..\\SQL\\Default Data\\Default Data.sql"
+            "TargetName" = "8:Default Data.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_C62B6CD4C1614664932B76008DADB3C5"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -667,6 +693,17 @@
                                         {
                                         }
                                     }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C62B6CD4C1614664932B76008DADB3C5"
+                                    {
+                                    "Name" = "8:Default Data"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_3CB78E907AEA4FCD8F2A04BE82011723"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
                                 }
                             }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_AADCA23B8DB34E3BBAE0287A8D55015A"
@@ -756,7 +793,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Stored Procedure Manager"
         "ProductCode" = "8:{71CF2815-D3AD-4B3A-84C6-79399C2889D2}"
-        "PackageCode" = "8:{E277A39A-1F20-47DA-8E92-2306696FEBD9}"
+        "PackageCode" = "8:{C1333928-E945-473B-9D08-3C848D808429}"
         "UpgradeCode" = "8:{FD6DC4B7-DBC1-4E71-8412-E3BF01784AA5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

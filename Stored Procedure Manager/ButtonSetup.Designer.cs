@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Button 1");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Button 2");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Button 3");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Button 4");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Button 5");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Button 6");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Button 7");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Button 8");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Button 9");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Button 10");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Buttons", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
-            treeNode13,
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Button 1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Button 2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Button 3");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Button 4");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Button 5");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Button 6");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Button 7");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Button 8");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Button 9");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Button 10");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Buttons", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10});
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Button1Tab = new System.Windows.Forms.TabPage();
             this.Notes1Button = new System.Windows.Forms.Button();
@@ -98,7 +98,7 @@
             this.ParamName3Button2TextBox = new System.Windows.Forms.TextBox();
             this.ParamName2Button2TextBox = new System.Windows.Forms.TextBox();
             this.ParamName1Button2TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox4ExecuteCheckBoxButton2 = new System.Windows.Forms.CheckBox();
+            this.ExecuteCheckBoxButton2 = new System.Windows.Forms.CheckBox();
             this.SPName2TextBox = new System.Windows.Forms.TextBox();
             this.Button2NameText = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -665,7 +665,7 @@
             this.Button2Tab.Controls.Add(this.ParamName3Button2TextBox);
             this.Button2Tab.Controls.Add(this.ParamName2Button2TextBox);
             this.Button2Tab.Controls.Add(this.ParamName1Button2TextBox);
-            this.Button2Tab.Controls.Add(this.checkBox4ExecuteCheckBoxButton2);
+            this.Button2Tab.Controls.Add(this.ExecuteCheckBoxButton2);
             this.Button2Tab.Controls.Add(this.SPName2TextBox);
             this.Button2Tab.Controls.Add(this.Button2NameText);
             this.Button2Tab.Controls.Add(this.label10);
@@ -833,14 +833,14 @@
             this.ParamName1Button2TextBox.Size = new System.Drawing.Size(221, 20);
             this.ParamName1Button2TextBox.TabIndex = 83;
             // 
-            // checkBox4ExecuteCheckBoxButton2
+            // ExecuteCheckBoxButton2
             // 
-            this.checkBox4ExecuteCheckBoxButton2.AutoSize = true;
-            this.checkBox4ExecuteCheckBoxButton2.Location = new System.Drawing.Point(22, 242);
-            this.checkBox4ExecuteCheckBoxButton2.Name = "checkBox4ExecuteCheckBoxButton2";
-            this.checkBox4ExecuteCheckBoxButton2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4ExecuteCheckBoxButton2.TabIndex = 82;
-            this.checkBox4ExecuteCheckBoxButton2.UseVisualStyleBackColor = true;
+            this.ExecuteCheckBoxButton2.AutoSize = true;
+            this.ExecuteCheckBoxButton2.Location = new System.Drawing.Point(22, 242);
+            this.ExecuteCheckBoxButton2.Name = "ExecuteCheckBoxButton2";
+            this.ExecuteCheckBoxButton2.Size = new System.Drawing.Size(15, 14);
+            this.ExecuteCheckBoxButton2.TabIndex = 82;
+            this.ExecuteCheckBoxButton2.UseVisualStyleBackColor = true;
             // 
             // SPName2TextBox
             // 
@@ -3115,31 +3115,31 @@
             this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
             this.treeView1.Location = new System.Drawing.Point(12, 12);
             this.treeView1.Name = "treeView1";
-            treeNode12.Name = "Button1Node";
-            treeNode12.Text = "Button 1";
-            treeNode13.Name = "Button2Node";
-            treeNode13.Text = "Button 2";
-            treeNode14.Name = "Button3Node";
-            treeNode14.Text = "Button 3";
-            treeNode15.Name = "Button4Node";
-            treeNode15.Text = "Button 4";
-            treeNode16.Name = "Button5Node";
-            treeNode16.Text = "Button 5";
-            treeNode17.Name = "Button6Node";
-            treeNode17.Text = "Button 6";
-            treeNode18.Name = "Button7Node";
-            treeNode18.Text = "Button 7";
-            treeNode19.Name = "Button8Node";
-            treeNode19.Text = "Button 8";
-            treeNode20.Name = "Button9Node";
-            treeNode20.Text = "Button 9";
-            treeNode21.Name = "Button10Node";
-            treeNode21.Text = "Button 10";
-            treeNode22.Checked = true;
-            treeNode22.Name = "ButtonTreeNode";
-            treeNode22.Text = "Buttons";
+            treeNode1.Name = "Button1Node";
+            treeNode1.Text = "Button 1";
+            treeNode2.Name = "Button2Node";
+            treeNode2.Text = "Button 2";
+            treeNode3.Name = "Button3Node";
+            treeNode3.Text = "Button 3";
+            treeNode4.Name = "Button4Node";
+            treeNode4.Text = "Button 4";
+            treeNode5.Name = "Button5Node";
+            treeNode5.Text = "Button 5";
+            treeNode6.Name = "Button6Node";
+            treeNode6.Text = "Button 6";
+            treeNode7.Name = "Button7Node";
+            treeNode7.Text = "Button 7";
+            treeNode8.Name = "Button8Node";
+            treeNode8.Text = "Button 8";
+            treeNode9.Name = "Button9Node";
+            treeNode9.Text = "Button 9";
+            treeNode10.Name = "Button10Node";
+            treeNode10.Text = "Button 10";
+            treeNode11.Checked = true;
+            treeNode11.Name = "ButtonTreeNode";
+            treeNode11.Text = "Buttons";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode22});
+            treeNode11});
             this.treeView1.Size = new System.Drawing.Size(121, 361);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -3251,7 +3251,7 @@
         private System.Windows.Forms.TextBox ParamName3Button2TextBox;
         private System.Windows.Forms.TextBox ParamName2Button2TextBox;
         private System.Windows.Forms.TextBox ParamName1Button2TextBox;
-        private System.Windows.Forms.CheckBox checkBox4ExecuteCheckBoxButton2;
+        private System.Windows.Forms.CheckBox ExecuteCheckBoxButton2;
         private System.Windows.Forms.TextBox Button2NameText;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;

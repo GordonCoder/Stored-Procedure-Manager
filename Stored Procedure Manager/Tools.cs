@@ -287,7 +287,7 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo filedd = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Views\\ButtonInfo1.sql");
+            FileInfo filedd = new FileInfo("C:\\Users\\sean\\source\\repos\\Stored Procedure Manager\\SQL\\Default Data\\Default Data.sql");
 
             strdd = filedd.OpenText().ReadToEnd();
 

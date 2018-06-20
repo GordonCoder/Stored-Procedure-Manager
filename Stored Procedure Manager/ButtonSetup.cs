@@ -53,7 +53,7 @@ namespace Stored_Procedure_Manager
                       
         }
 
-        private void LoadButtonConfig()
+        private void LoadButtonConfig() // Need to Try statements
         {
             treeView1.ExpandAll();
 
@@ -561,6 +561,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath2Button2TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam2Button2TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton2.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '2' " +
                 "AND " +
@@ -569,6 +570,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath2Button2TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton2.Checked + "'" +
                 "WHERE " +
                 "FileID = '2' " +
                 "AND " +
@@ -645,6 +647,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath3Button3TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam3Button3TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton3.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '3' " +
                 "AND " +
@@ -653,6 +656,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath3Button3TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton3.Checked + "'" +
                 "WHERE " +
                 "FileID = '3' " +
                 "AND " +
@@ -729,6 +733,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath4Button4TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam4Button4TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton4.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '4' " +
                 "AND " +
@@ -737,6 +742,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath4Button4TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton4.Checked + "'" +
                 "WHERE " +
                 "FileID = '4' " +
                 "AND " +
@@ -813,6 +819,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath5Button5TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam5Button5TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton5.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '5' " +
                 "AND " +
@@ -821,6 +828,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath5Button5TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton5.Checked + "'" +
                 "WHERE " +
                 "FileID = '5' " +
                 "AND " +
@@ -897,6 +905,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath6Button6TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam6Button6TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton6.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '6' " +
                 "AND " +
@@ -905,6 +914,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath6Button6TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton6.Checked + "'" +
                 "WHERE " +
                 "FileID = '6' " +
                 "AND " +
@@ -981,6 +991,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath7Button7TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam7Button7TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton7.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '7' " +
                 "AND " +
@@ -989,6 +1000,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath7Button7TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton7.Checked + "'" +
                 "WHERE " +
                 "FileID = '7' " +
                 "AND " +
@@ -1065,6 +1077,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath8Button8TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam8Button8TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton8.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '8' " +
                 "AND " +
@@ -1073,6 +1086,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath8Button8TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton8.Checked + "'" +
                 "WHERE " +
                 "FileID = '8' " +
                 "AND " +
@@ -1149,6 +1163,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath9Button9TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam9Button9TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton9.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '9' " +
                 "AND " +
@@ -1157,6 +1172,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath9Button9TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton9.Checked + "'" +
                 "WHERE " +
                 "FileID = '9' " +
                 "AND " +
@@ -1233,6 +1249,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ExecutablePath = '" + ExecutePath10Button10TextBox.Text + "', " +
                 "ExecutableParam = '" + ExecuteParam10Button10TextBox.Text + "'" +
+                "EPCheckBox = '" + ExecuteCheckBoxButton10.Checked + "'" +
                 "WHERE " +
                 "ExecutableID = '10' " +
                 "AND " +
@@ -1241,6 +1258,7 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_FileImport " +
                 "set " +
                 "FilePath = '" + FilePath10Button10TextBox.Text + "'" +
+                "FPCheckBox = '" + FilePathCheckBoxButton10.Checked + "'" +
                 "WHERE " +
                 "FileID = '10' " +
                 "AND " +
