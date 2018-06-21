@@ -40,23 +40,20 @@ namespace Stored_Procedure_Manager
         public Main()
         {
             InitializeComponent();
+
+        }
+
+        public void AMDBconnectionString()
+        {
             try
             {
-                using
-                    (SqlConnection cnAMDB = new SqlConnection
-                        (
-                        "server="
-                        + Properties.Settings.Default.ServerNameString
-                        + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database= AutomationManager"
-                        + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
-                        )
-                    )
-                {
-                    cnAMDB.Open();
-                    LoadMainButtonConfig();
-                }
+                string AMDBconnectionString = 
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             }
             catch (Exception ex)
             {
@@ -64,20 +61,7 @@ namespace Stored_Procedure_Manager
             }
             finally
             {
-                cnsp.Close();
             }
-        }
-
-        public void AMDBconnectionString()
-        {
-            string AMDBconnectionString = 
-                "server="
-                + Properties.Settings.Default.ServerNameString
-                + "\\" + Properties.Settings.Default.InstanceString
-                + ";database= AutomationManager"
-                + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
-
 
         }
 
@@ -216,42 +200,6 @@ namespace Stored_Procedure_Manager
                 this.button10.Text = dtb10.Rows[0]["ButtonName"].ToString();
             }
             cnAMDB.Close();
-
-            // This make the button Active only if there is a Stored Procedure filled in the Stored Procedure text box.
-            // If nothing is populated on the Stored Procedure text box, then the button is set to inactive
-
-            string buttoninactivetext = "Not Configured";
-
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName1String))
-            {button1.Enabled = false; button1.Text = buttoninactivetext; }
-            else {button1.Enabled = true;}
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName2String))
-            { button2.Enabled = false; button2.Text = buttoninactivetext; }
-            else { button2.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName3String))
-            { button3.Enabled = false; button3.Text = buttoninactivetext; }
-            else { button3.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName4String))
-            { button4.Enabled = false; button4.Text = buttoninactivetext; }
-            else { button4.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName5String))
-            { button5.Enabled = false; button5.Text = buttoninactivetext; }
-            else { button5.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName6String))
-            { button6.Enabled = false; button6.Text = buttoninactivetext; }
-            else { button6.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName7String))
-            { button7.Enabled = false; button7.Text = buttoninactivetext; }
-            else { button7.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName8String))
-            { button8.Enabled = false; button8.Text = buttoninactivetext; }
-            else { button8.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName9String))
-            { button9.Enabled = false; button9.Text = buttoninactivetext; }
-            else { button9.Enabled = true; }
-            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.SPName10String))
-            { button10.Enabled = false; button10.Text = buttoninactivetext; }
-            else { button10.Enabled = true; }
         }
 
         // TO - DO I need to make this more secure by following the information in this link
@@ -259,6 +207,9 @@ namespace Stored_Procedure_Manager
         // TO - DO Need to make each button do a TRY to see if the Stored Procedure exists before executing it.
         // Need to catch the exceptions also and present them to the user
 
+        //===========================================================================================================
+        // Button 1 Click
+        //===========================================================================================================
         private void Button1_Click(object sender, EventArgs e)
         {
             string AMDBconnectionString =
@@ -276,12 +227,11 @@ namespace Stored_Procedure_Manager
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
                 + ";pwd=" + Properties.Settings.Default.PasswordString;
-
             try
             {
-                SqlConnection cnAMDB_B1 = new SqlConnection(AMDBconnectionString);
-                cnAMDB_B1.Open();
-                SqlCommand cmdAMDB_B1 = new SqlCommand("SELECT * FROM AM_Button1Info", cnAMDB_B1);
+                SqlConnection AMDBconnectionString_B1 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B1.Open();
+                SqlCommand cmdAMDB_B1 = new SqlCommand("SELECT * FROM AM_Button1Info", AMDBconnectionString_B1);
                 SqlDataReader sdr = cmdAMDB_B1.ExecuteReader();
                 while (sdr.Read())
                 {
@@ -299,62 +249,217 @@ namespace Stored_Procedure_Manager
                     string ParamValue5 = sdr["ParamValue5"].ToString();
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
                     string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B1 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B1.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 1.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB1 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B1 = new SqlCommand(cmdfpTxtB1, SPDBconnectionStringfp_B1))
+                                        {
+                                            cmdSPDBfp_B1.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
-                        MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        SqlConnection cnSPDB_B1 = new SqlConnection(SPDBconnectionString);
-                        cnSPDB_B1.Open();
-                        SqlCommand cmdSPDB_B1 = new SqlCommand(SPName, cnSPDB_B1);
+                        SqlConnection SPDBconnectionString_B1 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B1.Open();
+                        SqlCommand cmdSPDB_B1 = new SqlCommand(SPName, SPDBconnectionString_B1);
 
                         cmdSPDB_B1.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
                         cmdSPDB_B1.Parameters[ParamName1].Value = ParamValue1;
 
-                        cmdSPDB_B1.Connection = cnSPDB_B1;
+                        cmdSPDB_B1.Connection = SPDBconnectionString_B1;
                         cmdSPDB_B1.CommandType = CommandType.StoredProcedure;
                         cmdSPDB_B1.ExecuteNonQuery();
                         MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B1.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B1.Close();
+                        }
                     }
 
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                
+
             }
         }
 
+        //===========================================================================================================
+        // Button 2 Click
+        //===========================================================================================================
         private void Button2_Click(object sender, EventArgs e)
         {
+            string AMDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
+
+            string SPDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             try
             {
-            cnsp.Open();
-            SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName2String, cnsp);
+                SqlConnection AMDBconnectionString_B2 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B2.Open();
+                SqlCommand cmdAMDB_B2 = new SqlCommand("SELECT * FROM AM_Button2Info", AMDBconnectionString_B2);
+                SqlDataReader sdr = cmdAMDB_B2.ExecuteReader();
+                while (sdr.Read())
+                {
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
 
-            cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
-            cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName2String;
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B2 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B2.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
 
-            cmd.Connection = cnsp;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
-            cnsp.Close();
-            MessageBox.Show("The " + Properties.Settings.Default.SPName2String + " Stored Procedure was run.");
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 2.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB2 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B2 = new SqlCommand(cmdfpTxtB2, SPDBconnectionStringfp_B2))
+                                        {
+                                            cmdSPDBfp_B2.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B2 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B2.Open();
+                        SqlCommand cmdSPDB_B2 = new SqlCommand(SPName, SPDBconnectionString_B2);
+
+                        cmdSPDB_B2.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B2.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B2.Connection = SPDBconnectionString_B2;
+                        cmdSPDB_B2.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B2.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B2.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B2.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                cnsp.Close();
+
             }
         }
 
@@ -378,32 +483,111 @@ namespace Stored_Procedure_Manager
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
                 + ";pwd=" + Properties.Settings.Default.PasswordString;
-
-            string strInsert;
-
-            using (StreamReader sr = new StreamReader(File.Open("C:\\Users\\sean\\Desktop\\BulkInsertTest\\PayrollExportSQL.csv", FileMode.Open)))
+            try
             {
-                using (SqlConnection cnSPDB_B3 = new SqlConnection(SPDBconnectionString))
+                SqlConnection AMDBconnectionString_B3 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B3.Open();
+                SqlCommand cmdAMDB_B3 = new SqlCommand("SELECT * FROM AM_Button3Info", AMDBconnectionString_B3);
+                SqlDataReader sdr = cmdAMDB_B3.ExecuteReader();
+                while (sdr.Read())
                 {
-                    cnSPDB_B3.Open();
-                    string line = "";
-                    while ((line = sr.ReadLine()) != "")
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
                     {
-                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                        FileInfo fileinfoInsert = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 3.sql");
-
-                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                        string cmdTxt = String.Format
-                            (strInsert
-                            , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]);
-                        using (SqlCommand cmdSPDB_B3 = new SqlCommand(cmdTxt, cnSPDB_B3))
+                        try
                         {
-                            cmdSPDB_B3.ExecuteNonQuery();
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B3 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B3.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 3.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB3 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B3 = new SqlCommand(cmdfpTxtB3, SPDBconnectionStringfp_B3))
+                                        {
+                                            cmdSPDBfp_B3.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
                         }
                     }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B3 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B3.Open();
+                        SqlCommand cmdSPDB_B3 = new SqlCommand(SPName, SPDBconnectionString_B3);
+
+                        cmdSPDB_B3.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B3.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B3.Connection = SPDBconnectionString_B3;
+                        cmdSPDB_B3.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B3.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B3.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B3.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
+            }
+            finally
+            {
+
             }
         }
 
@@ -455,37 +639,48 @@ namespace Stored_Procedure_Manager
 
                     if (FPCheckBox == true)
                     {
-                    string strInsert;
-                        using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                        try
                         {
-                            using (SqlConnection SPDBconnectionStringfp_B4 = new SqlConnection(SPDBconnectionString))
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
                             {
-                                SPDBconnectionStringfp_B4.Open();
-                                string line = "";
-                                while ((line = sr.ReadLine()) != "")
+                                using (SqlConnection SPDBconnectionStringfp_B4 = new SqlConnection(SPDBconnectionString))
                                 {
-                                    string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                    FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 4.sql");
-
-                                    strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                    string cmdfpTxtB4 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                    using (SqlCommand cmdSPDBfp_B4 = new SqlCommand(cmdfpTxtB4, SPDBconnectionStringfp_B4))
+                                    SPDBconnectionStringfp_B4.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
                                     {
-                                        cmdSPDBfp_B4.ExecuteNonQuery();
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                            ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 4.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB4 = String.Format
+                                            (strInsert
+                                            , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                            , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B4 = new SqlCommand(cmdfpTxtB4, SPDBconnectionStringfp_B4))
+                                        {
+                                            cmdSPDBfp_B4.ExecuteNonQuery();
+                                        }
+                                    }
+                                    if (SPDBconnectionStringfp_B4.State == ConnectionState.Open)
+                                    {
+                                        SPDBconnectionStringfp_B4.Close();
+                                        MessageBox.Show("The file was uploaded.");
                                     }
                                 }
-                                if (SPDBconnectionStringfp_B4.State == ConnectionState.Open)
-                                {
-                                    SPDBconnectionStringfp_B4.Close();
-                                    MessageBox.Show("The file was uploaded.");
-                                }
                             }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
                         }
                     }
 
@@ -520,7 +715,7 @@ namespace Stored_Procedure_Manager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "1");
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
@@ -576,37 +771,43 @@ namespace Stored_Procedure_Manager
 
                     if (FPCheckBox == true)
                     {
-                        string strInsert;
-                        using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                        try
                         {
-                            using (SqlConnection SPDBconnectionStringfp_B5 = new SqlConnection(SPDBconnectionString))
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
                             {
-                                SPDBconnectionStringfp_B5.Open();
-                                string line = "";
-                                while ((line = sr.ReadLine()) != "")
+                                using (SqlConnection SPDBconnectionStringfp_B5 = new SqlConnection(SPDBconnectionString))
                                 {
-                                    string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                                    SPDBconnectionStringfp_B5.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
 
-                                    FileInfo fileinfoInsert = new FileInfo
+                                        FileInfo fileinfoInsert = new FileInfo
                                         ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 5.sql");
 
-                                    strInsert = fileinfoInsert.OpenText().ReadToEnd();
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
 
-                                    string cmdfpTxtB5 = String.Format
+                                        string cmdfpTxtB5 = String.Format
                                         (strInsert
                                         , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
                                         , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                    using (SqlCommand cmdSPDBfp_B5 = new SqlCommand(cmdfpTxtB5, SPDBconnectionStringfp_B5))
-                                    {
-                                        cmdSPDBfp_B5.ExecuteNonQuery();
+                                        using (SqlCommand cmdSPDBfp_B5 = new SqlCommand(cmdfpTxtB5, SPDBconnectionStringfp_B5))
+                                        {
+                                            cmdSPDBfp_B5.ExecuteNonQuery();
+                                        }
                                     }
                                 }
-                                if (SPDBconnectionStringfp_B5.State == ConnectionState.Open)
-                                {
-                                    SPDBconnectionStringfp_B5.Close();
-                                    MessageBox.Show("The file was uploaded.");
-                                }
                             }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
                         }
                     }
 
@@ -641,7 +842,8 @@ namespace Stored_Procedure_Manager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "1");
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
@@ -697,37 +899,43 @@ namespace Stored_Procedure_Manager
 
                     if (FPCheckBox == true)
                     {
-                        string strInsert;
-                        using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                        try
                         {
-                            using (SqlConnection SPDBconnectionStringfp_B6 = new SqlConnection(SPDBconnectionString))
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
                             {
-                                SPDBconnectionStringfp_B6.Open();
-                                string line = "";
-                                while ((line = sr.ReadLine()) != "")
+                                using (SqlConnection SPDBconnectionStringfp_B6 = new SqlConnection(SPDBconnectionString))
                                 {
-                                    string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                                    SPDBconnectionStringfp_B6.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
 
-                                    FileInfo fileinfoInsert = new FileInfo
+                                        FileInfo fileinfoInsert = new FileInfo
                                         ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 6.sql");
 
-                                    strInsert = fileinfoInsert.OpenText().ReadToEnd();
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
 
-                                    string cmdfpTxtB6 = String.Format
+                                        string cmdfpTxtB6 = String.Format
                                         (strInsert
                                         , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
                                         , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                    using (SqlCommand cmdSPDBfp_B6 = new SqlCommand(cmdfpTxtB6, SPDBconnectionStringfp_B6))
-                                    {
-                                        cmdSPDBfp_B6.ExecuteNonQuery();
+                                        using (SqlCommand cmdSPDBfp_B6 = new SqlCommand(cmdfpTxtB6, SPDBconnectionStringfp_B6))
+                                        {
+                                            cmdSPDBfp_B6.ExecuteNonQuery();
+                                        }
                                     }
                                 }
-                                if (SPDBconnectionStringfp_B6.State == ConnectionState.Open)
-                                {
-                                    SPDBconnectionStringfp_B6.Close();
-                                    MessageBox.Show("The file was uploaded.");
-                                }
                             }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
                         }
                     }
 
@@ -762,7 +970,8 @@ namespace Stored_Procedure_Manager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "1");
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
@@ -770,99 +979,514 @@ namespace Stored_Procedure_Manager
             }
         }
 
+        //=======================================================================================
+        // Button 7 Click
+        //=======================================================================================
         private void Button7_Click(object sender, EventArgs e)
         {
+            string AMDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
+
+            string SPDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             try
             {
-                cnsp.Open();
-                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName7String, cnsp);
-                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
-                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName7String;
-                cmd.Connection = cnsp;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
-                cnsp.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName7String + " Stored Procedure was run.");
+                SqlConnection AMDBconnectionString_B7 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B7.Open();
+                SqlCommand cmdAMDB_B7 = new SqlCommand("SELECT * FROM AM_Button7Info", AMDBconnectionString_B7);
+                SqlDataReader sdr = cmdAMDB_B7.ExecuteReader();
+                while (sdr.Read())
+                {
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B7 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B7.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 7.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB7 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B7 = new SqlCommand(cmdfpTxtB7, SPDBconnectionStringfp_B7))
+                                        {
+                                            cmdSPDBfp_B7.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B7 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B7.Open();
+                        SqlCommand cmdSPDB_B7 = new SqlCommand(SPName, SPDBconnectionString_B7);
+
+                        cmdSPDB_B7.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B7.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B7.Connection = SPDBconnectionString_B7;
+                        cmdSPDB_B7.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B7.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B7.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B7.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                cnsp.Close();
+
             }
         }
-
+        //=======================================================================================
+        // Button 8 Click
+        //=======================================================================================
         private void Button8_Click(object sender, EventArgs e)
         {
+            string AMDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
+
+            string SPDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             try
             {
-                cnsp.Open();
-                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName8String, cnsp);
-                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
-                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName8String;
-                cmd.Connection = cnsp;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
-                cnsp.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName8String + " Stored Procedure was run.");
+                SqlConnection AMDBconnectionString_B8 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B8.Open();
+                SqlCommand cmdAMDB_B8 = new SqlCommand("SELECT * FROM AM_Button8Info", AMDBconnectionString_B8);
+                SqlDataReader sdr = cmdAMDB_B8.ExecuteReader();
+                while (sdr.Read())
+                {
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B8 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B8.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 8.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB8 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B8 = new SqlCommand(cmdfpTxtB8, SPDBconnectionStringfp_B8))
+                                        {
+                                            cmdSPDBfp_B8.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B8 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B8.Open();
+                        SqlCommand cmdSPDB_B8 = new SqlCommand(SPName, SPDBconnectionString_B8);
+
+                        cmdSPDB_B8.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B8.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B8.Connection = SPDBconnectionString_B8;
+                        cmdSPDB_B8.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B8.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B8.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B8.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                cnsp.Close();
+
             }
         }
 
+        //=======================================================================================
+        // Button 9 Click
+        //=======================================================================================
         private void Button9_Click(object sender, EventArgs e)
         {
+            string AMDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
+
+            string SPDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             try
             {
-                cnsp.Open();
-                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName9String, cnsp);
-                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
-                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName9String;
-                cmd.Connection = cnsp;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
-                cnsp.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName9String + " Stored Procedure was run.");
+                SqlConnection AMDBconnectionString_B9 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B9.Open();
+                SqlCommand cmdAMDB_B9 = new SqlCommand("SELECT * FROM AM_Button9Info", AMDBconnectionString_B9);
+                SqlDataReader sdr = cmdAMDB_B9.ExecuteReader();
+                while (sdr.Read())
+                {
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B9 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B9.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 9.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB9 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B9 = new SqlCommand(cmdfpTxtB9, SPDBconnectionStringfp_B9))
+                                        {
+                                            cmdSPDBfp_B9.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B9 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B9.Open();
+                        SqlCommand cmdSPDB_B9 = new SqlCommand(SPName, SPDBconnectionString_B9);
+
+                        cmdSPDB_B9.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B9.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B9.Connection = SPDBconnectionString_B9;
+                        cmdSPDB_B9.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B9.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B9.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B9.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                cnsp.Close();
+
             }
         }
 
+        //=======================================================================================
+        // Button 10 Click
+        //=======================================================================================
         private void Button10_Click(object sender, EventArgs e)
         {
+            string AMDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database= AutomationManager"
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
+
+            string SPDBconnectionString =
+                "server="
+                + Properties.Settings.Default.ServerNameString
+                + "\\" + Properties.Settings.Default.InstanceString
+                + ";database=" + Properties.Settings.Default.DatabaseString
+                + ";uid=" + Properties.Settings.Default.UserNameString
+                + ";pwd=" + Properties.Settings.Default.PasswordString;
             try
             {
-                cnsp.Open();
-                SqlCommand cmd = new SqlCommand(Properties.Settings.Default.SPName10String, cnsp);
-                cmd.Parameters.AddWithValue("@param1", SqlDbType.VarChar);
-                cmd.Parameters["@param1"].Value = Properties.Settings.Default.ParamName10String;
-                cmd.Connection = cnsp;
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
-                cnsp.Close();
-                MessageBox.Show("The " + Properties.Settings.Default.SPName10String + " Stored Procedure was run.");
+                SqlConnection AMDBconnectionString_B10 = new SqlConnection(AMDBconnectionString);
+                AMDBconnectionString_B10.Open();
+                SqlCommand cmdAMDB_B10 = new SqlCommand("SELECT * FROM AM_Button10Info", AMDBconnectionString_B10);
+                SqlDataReader sdr = cmdAMDB_B10.ExecuteReader();
+                while (sdr.Read())
+                {
+                    string ButtonName = sdr["ButtonName"].ToString();
+                    string SPName = sdr["SPName"].ToString();
+                    string ParamName1 = sdr["ParamName1"].ToString();
+                    string ParamName2 = sdr["ParamName2"].ToString();
+                    string ParamName3 = sdr["ParamName3"].ToString();
+                    string ParamName4 = sdr["ParamName4"].ToString();
+                    string ParamName5 = sdr["ParamName5"].ToString();
+                    string ParamValue1 = sdr["ParamValue1"].ToString();
+                    string ParamValue2 = sdr["ParamValue2"].ToString();
+                    string ParamValue3 = sdr["ParamValue3"].ToString();
+                    string ParamValue4 = sdr["ParamValue4"].ToString();
+                    string ParamValue5 = sdr["ParamValue5"].ToString();
+                    string ExecutablePath = sdr["ExecutablePath"].ToString();
+                    string ExecutableParam = sdr["ExecutableParam"].ToString();
+                    bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
+                    string FilePath = sdr["FilePath"].ToString();
+                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+
+                    if (FPCheckBox == true)
+                    {
+                        try
+                        {
+                            string strInsert;
+                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
+                            {
+                                using (SqlConnection SPDBconnectionStringfp_B10 = new SqlConnection(SPDBconnectionString))
+                                {
+                                    SPDBconnectionStringfp_B10.Open();
+                                    string line = "";
+                                    while ((line = sr.ReadLine()) != "")
+                                    {
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+
+                                        FileInfo fileinfoInsert = new FileInfo
+                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 10.sql");
+
+                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
+
+                                        string cmdfpTxtB10 = String.Format
+                                        (strInsert
+                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
+                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
+                                        using (SqlCommand cmdSPDBfp_B10 = new SqlCommand(cmdfpTxtB10, SPDBconnectionStringfp_B10))
+                                        {
+                                            cmdSPDBfp_B10.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            MessageBox.Show("The file was uploaded");
+                        }
+                    }
+
+                    if (string.IsNullOrWhiteSpace(SPName))
+                    {
+                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        SqlConnection SPDBconnectionString_B10 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B10.Open();
+                        SqlCommand cmdSPDB_B10 = new SqlCommand(SPName, SPDBconnectionString_B10);
+
+                        cmdSPDB_B10.Parameters.AddWithValue(ParamName1, SqlDbType.VarChar);
+                        cmdSPDB_B10.Parameters[ParamName1].Value = ParamValue1;
+
+                        cmdSPDB_B10.Connection = SPDBconnectionString_B10;
+                        cmdSPDB_B10.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B10.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B10.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B10.Close();
+                        }
+                    }
+
+                    if (EPCheckBox == true)
+                    {
+                        System.Diagnostics.Process.Start(ExecutablePath, ExecutableParam);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //Possibly say something about not being able to find the view that loads the data
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {
-                cnsp.Close();
+
             }
         }
 
