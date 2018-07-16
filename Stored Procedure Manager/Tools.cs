@@ -217,16 +217,16 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo file1 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo1.sql");
-            FileInfo file2 = new FileInfo("C:\\Program Files(x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo2.sql");
-            FileInfo file3 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo3.sql");
-            FileInfo file4 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo4.sql");
-            FileInfo file5 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo5.sql");
-            FileInfo file6 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo6.sql");
-            FileInfo file7 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo7.sql");
-            FileInfo file8 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo8.sql");
-            FileInfo file9 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo9.sql");
-            FileInfo file10 = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Views\\ButtonInfo10.sql");
+            FileInfo file1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo1.sql");
+            FileInfo file2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo2.sql");
+            FileInfo file3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo3.sql");
+            FileInfo file4 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo4.sql");
+            FileInfo file5 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo5.sql");
+            FileInfo file6 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo6.sql");
+            FileInfo file7 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo7.sql");
+            FileInfo file8 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo8.sql");
+            FileInfo file9 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo9.sql");
+            FileInfo file10 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo10.sql");
 
             strV1 = file1.OpenText().ReadToEnd();
             strV2 = file2.OpenText().ReadToEnd();
@@ -291,7 +291,7 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo filedd = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Installers\\SQL Scripts\\Default Data\\Default Data.sql");
+            FileInfo filedd = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Default Data\\Default Data.sql");
 
             strdd = filedd.OpenText().ReadToEnd();
 
@@ -331,7 +331,7 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo filespb = new FileInfo("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Stored Procedures\\Button Test.sql");
+            FileInfo filespb = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Stored Procedures\\Button Test.sql");
 
             strspb = filespb.OpenText().ReadToEnd();
 

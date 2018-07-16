@@ -328,7 +328,7 @@
             this.Controls.Add(this.BorderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Tools";
-            this.Text = "Tools";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.Tools_Load);
             this.CreateTableLabel.ResumeLayout(false);
             this.CreateSPLabel.ResumeLayout(false);

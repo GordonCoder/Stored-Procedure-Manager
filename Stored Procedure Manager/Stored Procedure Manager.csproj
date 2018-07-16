@@ -7,7 +7,7 @@
     <ProjectGuid>{B9537756-3FD2-42FE-8667-AB8FA36E163E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Stored_Procedure_Manager</RootNamespace>
-    <AssemblyName>Stored Procedure Manager</AssemblyName>
+    <AssemblyName>Automation Manager</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -93,6 +93,12 @@
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.IntegrationServices, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Management.IntegrationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
@@ -254,6 +260,9 @@
     <None Include="Resources\TerminalsConfiguration 70-60.jpg" />
     <None Include="Resources\DBConnectionManager 60-55.jpg" />
     <None Include="Resources\ConfigurationCenter 60-55.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

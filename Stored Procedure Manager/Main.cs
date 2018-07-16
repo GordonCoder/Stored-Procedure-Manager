@@ -266,7 +266,7 @@ namespace Stored_Procedure_Manager
                                     string line = "";
                                     while ((line = sr.ReadLine()) != "")
                                     {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
+                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None); //Need to create a textfield to enter delimiter
 
                                         FileInfo fileinfoInsert = new FileInfo
                                         ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 1.sql");
@@ -287,7 +287,7 @@ namespace Stored_Procedure_Manager
                         }
                         catch (Exception ex)
                         {
-                            //MessageBox.Show(ex.Message);
+                            MessageBox.Show(ex.Message);
                         }
                         finally
                         {

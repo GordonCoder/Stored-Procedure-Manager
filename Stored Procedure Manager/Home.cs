@@ -20,64 +20,64 @@ namespace Stored_Procedure_Manager
         {
             InitializeComponent();
 
-            try
-            {
-                using (SqlConnection cn = new SqlConnection
-                        (
-                        "server="
-                        + Properties.Settings.Default.ServerNameString
-                        + "\\" + Properties.Settings.Default.InstanceString
-                        + ";database=" + Properties.Settings.Default.DatabaseString
-                        + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
-                        ))
-                {
-                    cn.Open();
-                    String PF = "Pass";
-                    if (PF.Contains("Pass") == true)
-                    {
-                        { homebutton.Enabled = true; }
-                        { buttonconfigbutton.Enabled = true; }
-                        { toolsButton.Enabled = true; }
-                    }
-                    else
-                    {
-                        { homebutton.Enabled = false; }
-                        { buttonconfigbutton.Enabled = false; }
-                        { toolsButton.Enabled = false; }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                String PF = "Fail";
-                if (PF.Contains("Pass") == true)
-                {
-                    { homebutton.Enabled = true; }
-                    { buttonconfigbutton.Enabled = true; }
-                    { toolsButton.Enabled = true; }
-                }
-                else
-                {
-                    { homebutton.Enabled = false; }
-                    { buttonconfigbutton.Enabled = false; }
-                    { toolsButton.Enabled = false; }
-                }
-                MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+        //    try
+        //    {
+        //        using (SqlConnection cn = new SqlConnection
+        //                (
+        //                "server="
+        //                + Properties.Settings.Default.ServerNameString
+        //                + "\\" + Properties.Settings.Default.InstanceString
+        //                + ";database=" + Properties.Settings.Default.DatabaseString
+        //                + ";uid=" + Properties.Settings.Default.UserNameString
+        //                + ";pwd=" + Properties.Settings.Default.PasswordString
+        //                ))
+        //        {
+        //            cn.Open();
+        //            String PF = "Pass";
+        //            if (PF.Contains("Pass") == true)
+        //            {
+        //                { homebutton.Enabled = true; }
+        //                { buttonconfigbutton.Enabled = true; }
+        //                { toolsButton.Enabled = true; }
+        //            }
+        //            else
+        //            {
+        //                { homebutton.Enabled = false; }
+        //                { buttonconfigbutton.Enabled = false; }
+        //                { toolsButton.Enabled = false; }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        String PF = "Fail";
+        //        if (PF.Contains("Pass") == true)
+        //        {
+        //            { homebutton.Enabled = true; }
+        //            { buttonconfigbutton.Enabled = true; }
+        //            { toolsButton.Enabled = true; }
+        //        }
+        //        else
+        //        {
+        //            { homebutton.Enabled = false; }
+        //            { buttonconfigbutton.Enabled = false; }
+        //            { toolsButton.Enabled = false; }
+        //        }
+        //        MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
 
-                container.Controls.Clear();
-                DBConnection db = new DBConnection();
-                db.TopLevel = false;
-                container.Controls.Add(db);
-                db.Show();
-                db.Focus();
-            }
-            finally
-            {
+        //        container.Controls.Clear();
+        //        DBConnection db = new DBConnection();
+        //        db.TopLevel = false;
+        //        container.Controls.Add(db);
+        //        db.Show();
+        //        db.Focus();
+        //    }
+        //    finally
+        //    {
                 
-            }
+        //    }
 
-            LoadButtonConfig();
+        //    LoadButtonConfig();
         }
 
         private void LoadButtonConfig()
