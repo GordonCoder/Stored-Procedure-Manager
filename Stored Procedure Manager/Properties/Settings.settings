@@ -17,36 +17,6 @@
     <Setting Name="PasswordString" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SPName1String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName2String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName3String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName4String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName5String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName6String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName7String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName8String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName9String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="SPName10String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="PassFailString" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -56,131 +26,44 @@
     <Setting Name="PasswordOk" Type="System.String" Scope="User">
       <Value Profile="(Default)">scsint</Value>
     </Setting>
-    <Setting Name="ParamName1String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName2String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName3String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName4String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName5String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName6String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName7String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName8String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName9String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ParamName10String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE1String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE2String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE3String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE4String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE5String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE6String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE7String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE8String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE9String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="EXE10String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param1String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param2String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param3String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param4String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param5String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param6String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param7String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param8String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param9String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Param10String" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="EXE1checkBoxString" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE2checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE2checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE3checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE3checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE4checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE4checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE5checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE5checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE6checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE6checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE7checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE7checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE8checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE8checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE9checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE9checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="EXE10checkBoxString" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="EXE10checkBoxString" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="InfoTextBoxButtonNameString" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Enter the name you would like this button to have.</Value>
     </Setting>
     <Setting Name="InfoTextBoxSPNameString" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Enter the name of the Stored Procedure that you want the button to execute.</Value>
+    </Setting>
+    <Setting Name="ActivationPass" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">!620190@sws!</Value>
     </Setting>
   </Settings>
 </SettingsFile>

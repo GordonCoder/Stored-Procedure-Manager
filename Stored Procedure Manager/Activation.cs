@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace Stored_Procedure_Manager
 {
-    public partial class CreateDBLoading : Form
+    public partial class Activation : Form
     {
-        public CreateDBLoading()
+        public Activation()
         {
             InitializeComponent();
         }
 
-        public void CreateDBProgressBarTimer_Tick(object sender, EventArgs e)
+        private void ActivationTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.CreateDBProgressBar.Increment(7);
+
         }
 
-        private void CreateDBProgressBar_Click(object sender, EventArgs e)
+        private void OKButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
         {
 
         }

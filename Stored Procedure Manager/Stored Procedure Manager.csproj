@@ -116,6 +116,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activation.Designer.cs">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ButtonConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,12 +133,6 @@
     </Compile>
     <Compile Include="ButtonSetup.Designer.cs">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateDBLoading.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateDBLoading.Designer.cs">
-      <DependentUpon>CreateDBLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnection.cs">
       <SubType>Form</SubType>
@@ -166,14 +166,14 @@
     <Compile Include="Tools.Designer.cs">
       <DependentUpon>Tools.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Activation.resx">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ButtonConfig.resx">
       <DependentUpon>ButtonConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ButtonSetup.resx">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateDBLoading.resx">
-      <DependentUpon>CreateDBLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>

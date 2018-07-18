@@ -189,30 +189,28 @@ namespace Stored_Procedure_Manager
             cn.Close();
             MessageBox.Show("Record updated");
 
-            Properties.Settings.Default.SPName1String = SPName1TextBox.Text;
-            Properties.Settings.Default.SPName2String = SPName2TextBox.Text;
-            Properties.Settings.Default.SPName3String = SPName3TextBox.Text;
-            Properties.Settings.Default.SPName4String = SPName4TextBox.Text;
-            Properties.Settings.Default.SPName5String = SPName5TextBox.Text;
-            Properties.Settings.Default.SPName6String = SPName6TextBox.Text;
-            Properties.Settings.Default.SPName7String = SPName7TextBox.Text;
-            Properties.Settings.Default.SPName8String = SPName8TextBox.Text;
-            Properties.Settings.Default.SPName9String = SPName9TextBox.Text;
-            Properties.Settings.Default.SPName10String = SPName10TextBox.Text;
+            //Properties.Settings.Default.SPName1String = SPName1TextBox.Text;
+            //Properties.Settings.Default.SPName2String = SPName2TextBox.Text;
+            //Properties.Settings.Default.SPName3String = SPName3TextBox.Text;
+            //Properties.Settings.Default.SPName4String = SPName4TextBox.Text;
+            //Properties.Settings.Default.SPName5String = SPName5TextBox.Text;
+            //Properties.Settings.Default.SPName6String = SPName6TextBox.Text;
+            //Properties.Settings.Default.SPName7String = SPName7TextBox.Text;
+            //Properties.Settings.Default.SPName8String = SPName8TextBox.Text;
+            //Properties.Settings.Default.SPName9String = SPName9TextBox.Text;
+            //Properties.Settings.Default.SPName10String = SPName10TextBox.Text;
 
-            Properties.Settings.Default.ParamName1String = ParamName1TextBox.Text;
-            Properties.Settings.Default.ParamName2String = ParamName2TextBox.Text;
-            Properties.Settings.Default.ParamName3String = ParamName3TextBox.Text;
-            Properties.Settings.Default.ParamName4String = ParamName4TextBox.Text;
-            Properties.Settings.Default.ParamName5String = ParamName5TextBox.Text;
-            Properties.Settings.Default.ParamName6String = ParamName6TextBox.Text;
-            Properties.Settings.Default.ParamName7String = ParamName7TextBox.Text;
-            Properties.Settings.Default.ParamName8String = ParamName8TextBox.Text;
-            Properties.Settings.Default.ParamName9String = ParamName9TextBox.Text;
-            Properties.Settings.Default.ParamName10String = ParamName10TextBox.Text;
-            Properties.Settings.Default.Save();
-
-
+            //Properties.Settings.Default.ParamName1String = ParamName1TextBox.Text;
+            //Properties.Settings.Default.ParamName2String = ParamName2TextBox.Text;
+            //Properties.Settings.Default.ParamName3String = ParamName3TextBox.Text;
+            //Properties.Settings.Default.ParamName4String = ParamName4TextBox.Text;
+            //Properties.Settings.Default.ParamName5String = ParamName5TextBox.Text;
+            //Properties.Settings.Default.ParamName6String = ParamName6TextBox.Text;
+            //Properties.Settings.Default.ParamName7String = ParamName7TextBox.Text;
+            //Properties.Settings.Default.ParamName8String = ParamName8TextBox.Text;
+            //Properties.Settings.Default.ParamName9String = ParamName9TextBox.Text;
+            //Properties.Settings.Default.ParamName10String = ParamName10TextBox.Text;
+            //Properties.Settings.Default.Save();
 
             LoadButtonConfig();
 

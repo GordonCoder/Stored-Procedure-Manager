@@ -350,9 +350,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B2 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B2.Open();
+                        SqlCommand cmdSPDB_B2 = new SqlCommand(SPName, SPDBconnectionString_B2);
+
+                        cmdSPDB_B2.Connection = SPDBconnectionString_B2;
+                        cmdSPDB_B2.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B2.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B2.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B2.Close();
+                        }
                     }
                     else
                     {
@@ -434,9 +445,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B3 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B3.Open();
+                        SqlCommand cmdSPDB_B3 = new SqlCommand(SPName, SPDBconnectionString_B3);
+
+                        cmdSPDB_B3.Connection = SPDBconnectionString_B3;
+                        cmdSPDB_B3.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B3.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B3.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B3.Close();
+                        }
                     }
                     else
                     {
@@ -518,9 +540,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B4 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B4.Open();
+                        SqlCommand cmdSPDB_B4 = new SqlCommand(SPName, SPDBconnectionString_B4);
+
+                        cmdSPDB_B4.Connection = SPDBconnectionString_B4;
+                        cmdSPDB_B4.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B4.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B4.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B4.Close();
+                        }
                     }
                     else
                     {
@@ -601,9 +634,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B5 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B5.Open();
+                        SqlCommand cmdSPDB_B5 = new SqlCommand(SPName, SPDBconnectionString_B5);
+
+                        cmdSPDB_B5.Connection = SPDBconnectionString_B5;
+                        cmdSPDB_B5.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B5.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B5.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B5.Close();
+                        }
                     }
                     else
                     {
@@ -685,9 +729,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B6 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B6.Open();
+                        SqlCommand cmdSPDB_B6 = new SqlCommand(SPName, SPDBconnectionString_B6);
+
+                        cmdSPDB_B6.Connection = SPDBconnectionString_B6;
+                        cmdSPDB_B6.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B6.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B6.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B6.Close();
+                        }
                     }
                     else
                     {
@@ -769,9 +824,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B7 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B7.Open();
+                        SqlCommand cmdSPDB_B7 = new SqlCommand(SPName, SPDBconnectionString_B7);
+
+                        cmdSPDB_B7.Connection = SPDBconnectionString_B7;
+                        cmdSPDB_B7.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B7.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B7.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B7.Close();
+                        }
                     }
                     else
                     {
@@ -852,9 +918,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B8 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B8.Open();
+                        SqlCommand cmdSPDB_B8 = new SqlCommand(SPName, SPDBconnectionString_B8);
+
+                        cmdSPDB_B8.Connection = SPDBconnectionString_B8;
+                        cmdSPDB_B8.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B8.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B8.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B8.Close();
+                        }
                     }
                     else
                     {
@@ -936,9 +1013,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B9 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B9.Open();
+                        SqlCommand cmdSPDB_B9 = new SqlCommand(SPName, SPDBconnectionString_B9);
+
+                        cmdSPDB_B9.Connection = SPDBconnectionString_B9;
+                        cmdSPDB_B9.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B9.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B9.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B9.Close();
+                        }
                     }
                     else
                     {
@@ -1020,9 +1108,20 @@ namespace Stored_Procedure_Manager
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
 
-                    if (string.IsNullOrWhiteSpace(SPName))
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        SqlConnection SPDBconnectionString_B10 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B10.Open();
+                        SqlCommand cmdSPDB_B10 = new SqlCommand(SPName, SPDBconnectionString_B10);
+
+                        cmdSPDB_B10.Connection = SPDBconnectionString_B10;
+                        cmdSPDB_B10.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B10.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B10.State == ConnectionState.Open)
+                        {
+                            SPDBconnectionString_B10.Close();
+                        }
                     }
                     else
                     {

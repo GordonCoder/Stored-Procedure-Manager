@@ -85,126 +85,6 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName1String {
-            get {
-                return ((string)(this["SPName1String"]));
-            }
-            set {
-                this["SPName1String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName2String {
-            get {
-                return ((string)(this["SPName2String"]));
-            }
-            set {
-                this["SPName2String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName3String {
-            get {
-                return ((string)(this["SPName3String"]));
-            }
-            set {
-                this["SPName3String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName4String {
-            get {
-                return ((string)(this["SPName4String"]));
-            }
-            set {
-                this["SPName4String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName5String {
-            get {
-                return ((string)(this["SPName5String"]));
-            }
-            set {
-                this["SPName5String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName6String {
-            get {
-                return ((string)(this["SPName6String"]));
-            }
-            set {
-                this["SPName6String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName7String {
-            get {
-                return ((string)(this["SPName7String"]));
-            }
-            set {
-                this["SPName7String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName8String {
-            get {
-                return ((string)(this["SPName8String"]));
-            }
-            set {
-                this["SPName8String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName9String {
-            get {
-                return ((string)(this["SPName9String"]));
-            }
-            set {
-                this["SPName9String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SPName10String {
-            get {
-                return ((string)(this["SPName10String"]));
-            }
-            set {
-                this["SPName10String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public string PassFailString {
             get {
@@ -239,366 +119,6 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName1String {
-            get {
-                return ((string)(this["ParamName1String"]));
-            }
-            set {
-                this["ParamName1String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName2String {
-            get {
-                return ((string)(this["ParamName2String"]));
-            }
-            set {
-                this["ParamName2String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName3String {
-            get {
-                return ((string)(this["ParamName3String"]));
-            }
-            set {
-                this["ParamName3String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName4String {
-            get {
-                return ((string)(this["ParamName4String"]));
-            }
-            set {
-                this["ParamName4String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName5String {
-            get {
-                return ((string)(this["ParamName5String"]));
-            }
-            set {
-                this["ParamName5String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName6String {
-            get {
-                return ((string)(this["ParamName6String"]));
-            }
-            set {
-                this["ParamName6String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName7String {
-            get {
-                return ((string)(this["ParamName7String"]));
-            }
-            set {
-                this["ParamName7String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName8String {
-            get {
-                return ((string)(this["ParamName8String"]));
-            }
-            set {
-                this["ParamName8String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName9String {
-            get {
-                return ((string)(this["ParamName9String"]));
-            }
-            set {
-                this["ParamName9String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ParamName10String {
-            get {
-                return ((string)(this["ParamName10String"]));
-            }
-            set {
-                this["ParamName10String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE1String {
-            get {
-                return ((string)(this["EXE1String"]));
-            }
-            set {
-                this["EXE1String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE2String {
-            get {
-                return ((string)(this["EXE2String"]));
-            }
-            set {
-                this["EXE2String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE3String {
-            get {
-                return ((string)(this["EXE3String"]));
-            }
-            set {
-                this["EXE3String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE4String {
-            get {
-                return ((string)(this["EXE4String"]));
-            }
-            set {
-                this["EXE4String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE5String {
-            get {
-                return ((string)(this["EXE5String"]));
-            }
-            set {
-                this["EXE5String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE6String {
-            get {
-                return ((string)(this["EXE6String"]));
-            }
-            set {
-                this["EXE6String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE7String {
-            get {
-                return ((string)(this["EXE7String"]));
-            }
-            set {
-                this["EXE7String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE8String {
-            get {
-                return ((string)(this["EXE8String"]));
-            }
-            set {
-                this["EXE8String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE9String {
-            get {
-                return ((string)(this["EXE9String"]));
-            }
-            set {
-                this["EXE9String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE10String {
-            get {
-                return ((string)(this["EXE10String"]));
-            }
-            set {
-                this["EXE10String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param1String {
-            get {
-                return ((string)(this["Param1String"]));
-            }
-            set {
-                this["Param1String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param2String {
-            get {
-                return ((string)(this["Param2String"]));
-            }
-            set {
-                this["Param2String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param3String {
-            get {
-                return ((string)(this["Param3String"]));
-            }
-            set {
-                this["Param3String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param4String {
-            get {
-                return ((string)(this["Param4String"]));
-            }
-            set {
-                this["Param4String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param5String {
-            get {
-                return ((string)(this["Param5String"]));
-            }
-            set {
-                this["Param5String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param6String {
-            get {
-                return ((string)(this["Param6String"]));
-            }
-            set {
-                this["Param6String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param7String {
-            get {
-                return ((string)(this["Param7String"]));
-            }
-            set {
-                this["Param7String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param8String {
-            get {
-                return ((string)(this["Param8String"]));
-            }
-            set {
-                this["Param8String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param9String {
-            get {
-                return ((string)(this["Param9String"]));
-            }
-            set {
-                this["Param9String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Param10String {
-            get {
-                return ((string)(this["Param10String"]));
-            }
-            set {
-                this["Param10String"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool EXE1checkBoxString {
             get {
@@ -611,10 +131,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE2checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE2checkBoxString {
             get {
-                return ((string)(this["EXE2checkBoxString"]));
+                return ((bool)(this["EXE2checkBoxString"]));
             }
             set {
                 this["EXE2checkBoxString"] = value;
@@ -623,10 +143,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE3checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE3checkBoxString {
             get {
-                return ((string)(this["EXE3checkBoxString"]));
+                return ((bool)(this["EXE3checkBoxString"]));
             }
             set {
                 this["EXE3checkBoxString"] = value;
@@ -635,10 +155,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE4checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE4checkBoxString {
             get {
-                return ((string)(this["EXE4checkBoxString"]));
+                return ((bool)(this["EXE4checkBoxString"]));
             }
             set {
                 this["EXE4checkBoxString"] = value;
@@ -647,10 +167,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE5checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE5checkBoxString {
             get {
-                return ((string)(this["EXE5checkBoxString"]));
+                return ((bool)(this["EXE5checkBoxString"]));
             }
             set {
                 this["EXE5checkBoxString"] = value;
@@ -659,10 +179,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE6checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE6checkBoxString {
             get {
-                return ((string)(this["EXE6checkBoxString"]));
+                return ((bool)(this["EXE6checkBoxString"]));
             }
             set {
                 this["EXE6checkBoxString"] = value;
@@ -671,10 +191,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE7checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE7checkBoxString {
             get {
-                return ((string)(this["EXE7checkBoxString"]));
+                return ((bool)(this["EXE7checkBoxString"]));
             }
             set {
                 this["EXE7checkBoxString"] = value;
@@ -683,10 +203,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE8checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE8checkBoxString {
             get {
-                return ((string)(this["EXE8checkBoxString"]));
+                return ((bool)(this["EXE8checkBoxString"]));
             }
             set {
                 this["EXE8checkBoxString"] = value;
@@ -695,10 +215,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE9checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE9checkBoxString {
             get {
-                return ((string)(this["EXE9checkBoxString"]));
+                return ((bool)(this["EXE9checkBoxString"]));
             }
             set {
                 this["EXE9checkBoxString"] = value;
@@ -707,10 +227,10 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string EXE10checkBoxString {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool EXE10checkBoxString {
             get {
-                return ((string)(this["EXE10checkBoxString"]));
+                return ((bool)(this["EXE10checkBoxString"]));
             }
             set {
                 this["EXE10checkBoxString"] = value;
@@ -732,6 +252,15 @@ namespace Stored_Procedure_Manager.Properties {
         public string InfoTextBoxSPNameString {
             get {
                 return ((string)(this["InfoTextBoxSPNameString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("!620190@sws!")]
+        public string ActivationPass {
+            get {
+                return ((string)(this["ActivationPass"]));
             }
         }
     }
