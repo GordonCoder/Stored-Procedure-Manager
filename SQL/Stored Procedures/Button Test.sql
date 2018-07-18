@@ -29,16 +29,6 @@ AND
 ButtonID = '10'
 
 
-UPDATE dbo.AM_FileImport 
-
-SET 
-FilePath = 'File Path Test'
-WHERE
-FileID = '10'
-AND
-ButtonID = '10'
-
-
 UPDATE dbo.AM_Notes 
 SET 
 NoteText = 'Note Text Test'

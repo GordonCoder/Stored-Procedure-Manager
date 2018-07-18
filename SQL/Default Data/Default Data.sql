@@ -99,23 +99,6 @@ INSERT INTO [dbo].[AM_Executable]
 	 ,('9','9',NULL,NULL,'False')
 	 ,('10','10',NULL,NULL,'False')
 
-INSERT INTO [dbo].[AM_FileImport]
-           ([FileID]
-           ,[ButtonID]
-           ,[FilePath]
-		   ,[FPCheckBox])
-     VALUES
-			('1','1',NULL,'False')
-			,('2','2',NULL,'False')
-			,('3','3',NULL,'False')
-			,('4','4',NULL,'False')
-			,('5','5',NULL,'False')
-			,('6','6',NULL,'False')
-			,('7','7',NULL,'False')
-			,('8','8',NULL,'False')
-			,('9','9',NULL,'False')
-			,('10','10',NULL,'False')
-
 INSERT INTO [dbo].[AM_Notes]
            ([NoteID]
            ,[ButtonID]

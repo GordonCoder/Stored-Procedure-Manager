@@ -23,13 +23,10 @@ b.ButtonID AS ButtonID
 ,e.ExecutablePath AS ExecutablePath
 ,e.ExecutableParam AS ExecutableParam
 ,e.EPCheckBox AS EPCheckBox
-,f.FilePath AS FilePath
-,f.FPCheckBox AS FPCheckBox
 ,n.NoteText AS NoteText
 FROM 
 dbo.AM_Buttons b
 LEFT JOIN dbo.AM_Executable e ON b.ButtonID = e.ButtonID 
-LEFT JOIN dbo.AM_FileImport f ON b.ButtonID = f.ButtonID 
 LEFT JOIN dbo.AM_Notes n ON b.ButtonID = n.ButtonID
 LEFT JOIN Param1 p1 ON b.ButtonID = p1.ButtonID
 LEFT JOIN Param2 p2 ON b.ButtonID = p2.ButtonID

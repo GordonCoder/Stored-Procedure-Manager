@@ -156,11 +156,6 @@ namespace Stored_Procedure_Manager
 
                 " WAITFOR DELAY '00:00:01'" +
 
-                " CREATE TABLE dbo.AM_FileImport " +
-                "(FileID INT NOT NULL ,ButtonID INT NOT NULL ,FilePath VARCHAR(MAX) NULL ,FPCheckBox [bit] NULL ,CONSTRAINT PK_FileImport PRIMARY KEY CLUSTERED(FileID ASC, ButtonID ASC),CONSTRAINT FK_45 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
-
-                " WAITFOR DELAY '00:00:01'" +
-
                 " CREATE TABLE dbo.AM_Notes " +
                 "(NoteID INT NOT NULL ,ButtonID INT NOT NULL ,NoteText VARCHAR(MAX) NULL ,CONSTRAINT PK_AM_Notes PRIMARY KEY CLUSTERED(NoteID ASC, ButtonID ASC),CONSTRAINT FK_49 FOREIGN KEY(ButtonID)REFERENCES dbo.AM_Buttons (ButtonID))" +
 

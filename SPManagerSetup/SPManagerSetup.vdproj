@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_06DE8089E9244CC48E7A1ACF2C5B2EDA"
+        "MsmKey" = "8:_04067DE31E66414CBDD556F6C3390FD9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,7 +39,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0F17608B51FC48D291FA44847F031C35"
+        "MsmKey" = "8:_185A74CAF5874297818C87487FA36E94"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -76,13 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
-        "OwnerKey" = "8:_5D847549FB163E5C060604E5EC47A384"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
-        "OwnerKey" = "8:_DD6C0707C7604380371E10E86815337F"
+        "OwnerKey" = "8:_7FE799305C106EDE06A66F088B152D6B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,24 +88,30 @@
         "Entry"
         {
         "MsmKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
-        "OwnerKey" = "8:_7FE799305C106EDE06A66F088B152D6B"
+        "OwnerKey" = "8:_DD6C0707C7604380371E10E86815337F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2F05675D35A14636AB442AC01AE34F92"
+        "MsmKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
+        "OwnerKey" = "8:_5D847549FB163E5C060604E5EC47A384"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2CFFE453C0484A7B9F0B0F82C2761783"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3DE8A03938434B70940068F77CEA28DA"
+        "MsmKey" = "8:_339650599AFD4CA98EAD4FEBC3DF8BE7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_420D9E8A1B5E4D47AABB69708E3C26D7"
+        "MsmKey" = "8:_3BEBD85FC5F7496CB546F9B6ECE9035F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -123,8 +123,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_56EEDE9AAC67D29D8802F2BFED500DA4"
-        "OwnerKey" = "8:_DD6C0707C7604380371E10E86815337F"
+        "MsmKey" = "8:_4B12ECF59A87403FB925EC03FD669B65"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -143,6 +143,12 @@
         {
         "MsmKey" = "8:_56EEDE9AAC67D29D8802F2BFED500DA4"
         "OwnerKey" = "8:_FBAB85FB031AC28AA39CD81DBAA878B8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_56EEDE9AAC67D29D8802F2BFED500DA4"
+        "OwnerKey" = "8:_DD6C0707C7604380371E10E86815337F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -201,13 +207,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9E989C9115A7461095065D6BD46D156A"
+        "MsmKey" = "8:_82479CEE45D34E2CB3D3DE6DE891CA78"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ADFECFDEEAF641889A761E24F2DEDF7A"
+        "MsmKey" = "8:_939B805169344483A3C0BB5865457B25"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9E989C9115A7461095065D6BD46D156A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -255,6 +267,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C0BB82C83FF247D8B60CD768F1C699B8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C2A509395A3CE4F2C73C4423D591FC35"
         "OwnerKey" = "8:_0BEDF8F2418B4F7D8525EA6980B932A3"
         "MsmSig" = "8:_UNDEFINED"
@@ -263,6 +281,12 @@
         {
         "MsmKey" = "8:_C2A509395A3CE4F2C73C4423D591FC35"
         "OwnerKey" = "8:_7FE799305C106EDE06A66F088B152D6B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C6D0F2E616D54527ADDAC3F8029711E8"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -279,13 +303,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D97698B9295E41A58F6C833C0362CA31"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DBCD727017734A27BFBEC6853D7E6AC8"
+        "MsmKey" = "8:_CF3CA4FBBF6F40088FC327360E7AE3CE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -321,19 +339,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DE28E62F66A54002866543D574F4AD66"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E4C61A6AE8C5467AA203C433AFA2F544"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E7C3412C7774454988EE86C2227D1914"
+        "MsmKey" = "8:_E4E1A584A1934E7EAFF26DE8155A2609"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -363,12 +369,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FA50B1759EF24DB1BB7FB5396C9DEB8E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FBAB85FB031AC28AA39CD81DBAA878B8"
         "OwnerKey" = "8:_C2A509395A3CE4F2C73C4423D591FC35"
         "MsmSig" = "8:_UNDEFINED"
@@ -394,13 +394,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0BEDF8F2418B4F7D8525EA6980B932A3"
+        "OwnerKey" = "8:_FA22C3D1777C4E7DD87DBF4DC532998E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -412,7 +406,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FA22C3D1777C4E7DD87DBF4DC532998E"
+        "OwnerKey" = "8:_0BEDF8F2418B4F7D8525EA6980B932A3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -454,12 +448,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_56EEDE9AAC67D29D8802F2BFED500DA4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5D847549FB163E5C060604E5EC47A384"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -467,6 +455,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_B6E2A46FD2A1F8469AEF4FD16149E440"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_56EEDE9AAC67D29D8802F2BFED500DA4"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -584,10 +584,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06DE8089E9244CC48E7A1ACF2C5B2EDA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04067DE31E66414CBDD556F6C3390FD9"
             {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo8.sql"
-            "TargetName" = "8:ButtonInfo8.sql"
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo5.sql"
+            "TargetName" = "8:ButtonInfo5.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
@@ -624,10 +624,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F17608B51FC48D291FA44847F031C35"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_185A74CAF5874297818C87487FA36E94"
             {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo5.sql"
-            "TargetName" = "8:ButtonInfo5.sql"
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo1.sql"
+            "TargetName" = "8:ButtonInfo1.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
@@ -715,7 +715,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2F05675D35A14636AB442AC01AE34F92"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2CFFE453C0484A7B9F0B0F82C2761783"
             {
             "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo2.sql"
             "TargetName" = "8:ButtonInfo2.sql"
@@ -735,10 +735,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3DE8A03938434B70940068F77CEA28DA"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_339650599AFD4CA98EAD4FEBC3DF8BE7"
             {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo9.sql"
-            "TargetName" = "8:ButtonInfo9.sql"
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo6.sql"
+            "TargetName" = "8:ButtonInfo6.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
@@ -755,12 +755,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_420D9E8A1B5E4D47AABB69708E3C26D7"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3BEBD85FC5F7496CB546F9B6ECE9035F"
             {
-            "SourcePath" = "8:..\\SQL\\Default Data\\Default Data.sql"
-            "TargetName" = "8:Default Data.sql"
+            "SourcePath" = "8:..\\SQL\\Stored Procedures\\Button Test.sql"
+            "TargetName" = "8:Button Test.sql"
             "Tag" = "8:"
-            "Folder" = "8:_C62B6CD4C1614664932B76008DADB3C5"
+            "Folder" = "8:_2F73733444B34A06BA67DA2809AABA2D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -781,6 +781,26 @@
             "TargetName" = "8:Button 3.sql"
             "Tag" = "8:"
             "Folder" = "8:_E0A2CE798BEB40F797D9C77235A0A2F0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4B12ECF59A87403FB925EC03FD669B65"
+            {
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo9.sql"
+            "TargetName" = "8:ButtonInfo9.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -999,12 +1019,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E989C9115A7461095065D6BD46D156A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82479CEE45D34E2CB3D3DE6DE891CA78"
             {
-            "SourcePath" = "8:..\\SQL\\Custom Tables\\Button 9.sql"
-            "TargetName" = "8:Button 9.sql"
+            "SourcePath" = "8:..\\SQL\\Default Data\\Default Data.sql"
+            "TargetName" = "8:Default Data.sql"
             "Tag" = "8:"
-            "Folder" = "8:_E0A2CE798BEB40F797D9C77235A0A2F0"
+            "Folder" = "8:_C62B6CD4C1614664932B76008DADB3C5"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1019,12 +1039,32 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ADFECFDEEAF641889A761E24F2DEDF7A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_939B805169344483A3C0BB5865457B25"
             {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo4.sql"
-            "TargetName" = "8:ButtonInfo4.sql"
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo8.sql"
+            "TargetName" = "8:ButtonInfo8.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E989C9115A7461095065D6BD46D156A"
+            {
+            "SourcePath" = "8:..\\SQL\\Custom Tables\\Button 9.sql"
+            "TargetName" = "8:Button 9.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_E0A2CE798BEB40F797D9C77235A0A2F0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1141,6 +1181,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C0BB82C83FF247D8B60CD768F1C699B8"
+            {
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo10.sql"
+            "TargetName" = "8:ButtonInfo10.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C2A509395A3CE4F2C73C4423D591FC35"
             {
             "AssemblyRegister" = "3:1"
@@ -1170,6 +1230,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6D0F2E616D54527ADDAC3F8029711E8"
+            {
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo3.sql"
+            "TargetName" = "8:ButtonInfo3.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C877254FBEBC46D4BE0368FF50E94E30"
@@ -1223,30 +1303,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D97698B9295E41A58F6C833C0362CA31"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF3CA4FBBF6F40088FC327360E7AE3CE"
             {
-            "SourcePath" = "8:..\\SQL\\Stored Procedures\\Button Test.sql"
-            "TargetName" = "8:Button Test.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_2F73733444B34A06BA67DA2809AABA2D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DBCD727017734A27BFBEC6853D7E6AC8"
-            {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo1.sql"
-            "TargetName" = "8:ButtonInfo1.sql"
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo4.sql"
+            "TargetName" = "8:ButtonInfo4.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
@@ -1294,50 +1354,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE28E62F66A54002866543D574F4AD66"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4E1A584A1934E7EAFF26DE8155A2609"
             {
             "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo7.sql"
             "TargetName" = "8:ButtonInfo7.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E4C61A6AE8C5467AA203C433AFA2F544"
-            {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo3.sql"
-            "TargetName" = "8:ButtonInfo3.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E7C3412C7774454988EE86C2227D1914"
-            {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo6.sql"
-            "TargetName" = "8:ButtonInfo6.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
             "Condition" = "8:"
@@ -1423,26 +1443,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FA50B1759EF24DB1BB7FB5396C9DEB8E"
-            {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo10.sql"
-            "TargetName" = "8:ButtonInfo10.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FBAB85FB031AC28AA39CD81DBAA878B8"
@@ -1675,7 +1675,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Automation Manager"
         "ProductCode" = "8:{71CF2815-D3AD-4B3A-84C6-79399C2889D2}"
-        "PackageCode" = "8:{C464CC8D-2C2E-4949-AB9E-6CA85D9EFCA3}"
+        "PackageCode" = "8:{7B4D405B-8004-4148-8803-659D4C0631A3}"
         "UpgradeCode" = "8:{FD6DC4B7-DBC1-4E71-8412-E3BF01784AA5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

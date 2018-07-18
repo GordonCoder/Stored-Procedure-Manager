@@ -54,9 +54,6 @@
             this.Notes1Button = new System.Windows.Forms.Button();
             this.SaveButton1 = new System.Windows.Forms.Button();
             this.Info1TextBox = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton1 = new System.Windows.Forms.CheckBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.FilePath1Button1TextBox = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.ExecuteParam1Button1TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath1Button1TextBox = new System.Windows.Forms.TextBox();
@@ -82,9 +79,6 @@
             this.SaveButton2 = new System.Windows.Forms.Button();
             this.Notes2Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton2 = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.FilePath2Button2TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ExecuteParam2Button2TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath2Button2TextBox = new System.Windows.Forms.TextBox();
@@ -110,9 +104,6 @@
             this.SaveButton3 = new System.Windows.Forms.Button();
             this.Notes3Button = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton3 = new System.Windows.Forms.CheckBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.FilePath3Button3TextBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.ExecuteParam3Button3TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath3Button3TextBox = new System.Windows.Forms.TextBox();
@@ -138,9 +129,6 @@
             this.SaveButton4 = new System.Windows.Forms.Button();
             this.Notes4Button = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton4 = new System.Windows.Forms.CheckBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.FilePath4Button4TextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.ExecuteParam4Button4TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath4Button4TextBox = new System.Windows.Forms.TextBox();
@@ -166,9 +154,6 @@
             this.SaveButton5 = new System.Windows.Forms.Button();
             this.Notes5Button = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton5 = new System.Windows.Forms.CheckBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.FilePath5Button5TextBox = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.ExecuteParam5Button5TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath5Button5TextBox = new System.Windows.Forms.TextBox();
@@ -194,9 +179,6 @@
             this.SaveButton6 = new System.Windows.Forms.Button();
             this.Notes6Button = new System.Windows.Forms.Button();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton6 = new System.Windows.Forms.CheckBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.FilePath6Button6TextBox = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.ExecuteParam6Button6TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath6Button6TextBox = new System.Windows.Forms.TextBox();
@@ -222,9 +204,6 @@
             this.SaveButton7 = new System.Windows.Forms.Button();
             this.Notes7Button = new System.Windows.Forms.Button();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton7 = new System.Windows.Forms.CheckBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.FilePath7Button7TextBox = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.ExecuteParam7Button7TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath7Button7TextBox = new System.Windows.Forms.TextBox();
@@ -250,9 +229,6 @@
             this.SaveButton8 = new System.Windows.Forms.Button();
             this.Notes8Button = new System.Windows.Forms.Button();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton8 = new System.Windows.Forms.CheckBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.FilePath8Button8TextBox = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.ExecuteParam8Button8TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath8Button8TextBox = new System.Windows.Forms.TextBox();
@@ -278,9 +254,6 @@
             this.SaveButton9 = new System.Windows.Forms.Button();
             this.Notes9Button = new System.Windows.Forms.Button();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton9 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.FilePath9Button9TextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ExecuteParam9Button9TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath9Button9TextBox = new System.Windows.Forms.TextBox();
@@ -306,9 +279,6 @@
             this.SaveButton10 = new System.Windows.Forms.Button();
             this.Notes10Button = new System.Windows.Forms.Button();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.FilePathCheckBoxButton10 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FilePath10Button10TextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ExecuteParam10Button10TextBox = new System.Windows.Forms.TextBox();
             this.ExecutePath10Button10TextBox = new System.Windows.Forms.TextBox();
@@ -369,9 +339,6 @@
             this.Button1Tab.Controls.Add(this.Notes1Button);
             this.Button1Tab.Controls.Add(this.SaveButton1);
             this.Button1Tab.Controls.Add(this.Info1TextBox);
-            this.Button1Tab.Controls.Add(this.FilePathCheckBoxButton1);
-            this.Button1Tab.Controls.Add(this.label52);
-            this.Button1Tab.Controls.Add(this.FilePath1Button1TextBox);
             this.Button1Tab.Controls.Add(this.label51);
             this.Button1Tab.Controls.Add(this.ExecuteParam1Button1TextBox);
             this.Button1Tab.Controls.Add(this.ExecutePath1Button1TextBox);
@@ -429,35 +396,6 @@
             this.Info1TextBox.Size = new System.Drawing.Size(142, 194);
             this.Info1TextBox.TabIndex = 73;
             this.Info1TextBox.Text = "";
-            // 
-            // FilePathCheckBoxButton1
-            // 
-            this.FilePathCheckBoxButton1.AutoSize = true;
-            this.FilePathCheckBoxButton1.Location = new System.Drawing.Point(22, 309);
-            this.FilePathCheckBoxButton1.Name = "FilePathCheckBoxButton1";
-            this.FilePathCheckBoxButton1.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton1.TabIndex = 72;
-            this.FilePathCheckBoxButton1.UseVisualStyleBackColor = true;
-            this.FilePathCheckBoxButton1.CheckedChanged += new System.EventHandler(this.FilePathCheckBoxButton1_CheckedChanged);
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.DimGray;
-            this.label52.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.Transparent;
-            this.label52.Location = new System.Drawing.Point(39, 284);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(442, 19);
-            this.label52.TabIndex = 71;
-            this.label52.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath1Button1TextBox
-            // 
-            this.FilePath1Button1TextBox.Location = new System.Drawing.Point(43, 306);
-            this.FilePath1Button1TextBox.Name = "FilePath1Button1TextBox";
-            this.FilePath1Button1TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath1Button1TextBox.TabIndex = 70;
             // 
             // label51
             // 
@@ -649,9 +587,6 @@
             this.Button2Tab.Controls.Add(this.SaveButton2);
             this.Button2Tab.Controls.Add(this.Notes2Button);
             this.Button2Tab.Controls.Add(this.richTextBox1);
-            this.Button2Tab.Controls.Add(this.FilePathCheckBoxButton2);
-            this.Button2Tab.Controls.Add(this.label8);
-            this.Button2Tab.Controls.Add(this.FilePath2Button2TextBox);
             this.Button2Tab.Controls.Add(this.label9);
             this.Button2Tab.Controls.Add(this.ExecuteParam2Button2TextBox);
             this.Button2Tab.Controls.Add(this.ExecutePath2Button2TextBox);
@@ -708,34 +643,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(142, 194);
             this.richTextBox1.TabIndex = 99;
             this.richTextBox1.Text = "";
-            // 
-            // FilePathCheckBoxButton2
-            // 
-            this.FilePathCheckBoxButton2.AutoSize = true;
-            this.FilePathCheckBoxButton2.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton2.Name = "FilePathCheckBoxButton2";
-            this.FilePathCheckBoxButton2.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton2.TabIndex = 98;
-            this.FilePathCheckBoxButton2.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.DimGray;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(39, 286);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(442, 19);
-            this.label8.TabIndex = 97;
-            this.label8.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath2Button2TextBox
-            // 
-            this.FilePath2Button2TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath2Button2TextBox.Name = "FilePath2Button2TextBox";
-            this.FilePath2Button2TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath2Button2TextBox.TabIndex = 96;
             // 
             // label9
             // 
@@ -922,9 +829,6 @@
             this.Button3Tab.Controls.Add(this.SaveButton3);
             this.Button3Tab.Controls.Add(this.Notes3Button);
             this.Button3Tab.Controls.Add(this.richTextBox2);
-            this.Button3Tab.Controls.Add(this.FilePathCheckBoxButton3);
-            this.Button3Tab.Controls.Add(this.label18);
-            this.Button3Tab.Controls.Add(this.FilePath3Button3TextBox);
             this.Button3Tab.Controls.Add(this.label19);
             this.Button3Tab.Controls.Add(this.ExecuteParam3Button3TextBox);
             this.Button3Tab.Controls.Add(this.ExecutePath3Button3TextBox);
@@ -981,34 +885,6 @@
             this.richTextBox2.Size = new System.Drawing.Size(142, 194);
             this.richTextBox2.TabIndex = 99;
             this.richTextBox2.Text = "";
-            // 
-            // FilePathCheckBoxButton3
-            // 
-            this.FilePathCheckBoxButton3.AutoSize = true;
-            this.FilePathCheckBoxButton3.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton3.Name = "FilePathCheckBoxButton3";
-            this.FilePathCheckBoxButton3.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton3.TabIndex = 98;
-            this.FilePathCheckBoxButton3.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.DimGray;
-            this.label18.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(39, 286);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(442, 19);
-            this.label18.TabIndex = 97;
-            this.label18.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath3Button3TextBox
-            // 
-            this.FilePath3Button3TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath3Button3TextBox.Name = "FilePath3Button3TextBox";
-            this.FilePath3Button3TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath3Button3TextBox.TabIndex = 96;
             // 
             // label19
             // 
@@ -1195,9 +1071,6 @@
             this.Button4Tab.Controls.Add(this.SaveButton4);
             this.Button4Tab.Controls.Add(this.Notes4Button);
             this.Button4Tab.Controls.Add(this.richTextBox3);
-            this.Button4Tab.Controls.Add(this.FilePathCheckBoxButton4);
-            this.Button4Tab.Controls.Add(this.label25);
-            this.Button4Tab.Controls.Add(this.FilePath4Button4TextBox);
             this.Button4Tab.Controls.Add(this.label26);
             this.Button4Tab.Controls.Add(this.ExecuteParam4Button4TextBox);
             this.Button4Tab.Controls.Add(this.ExecutePath4Button4TextBox);
@@ -1254,34 +1127,6 @@
             this.richTextBox3.Size = new System.Drawing.Size(142, 194);
             this.richTextBox3.TabIndex = 99;
             this.richTextBox3.Text = "";
-            // 
-            // FilePathCheckBoxButton4
-            // 
-            this.FilePathCheckBoxButton4.AutoSize = true;
-            this.FilePathCheckBoxButton4.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton4.Name = "FilePathCheckBoxButton4";
-            this.FilePathCheckBoxButton4.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton4.TabIndex = 98;
-            this.FilePathCheckBoxButton4.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.DimGray;
-            this.label25.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(39, 286);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(442, 19);
-            this.label25.TabIndex = 97;
-            this.label25.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath4Button4TextBox
-            // 
-            this.FilePath4Button4TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath4Button4TextBox.Name = "FilePath4Button4TextBox";
-            this.FilePath4Button4TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath4Button4TextBox.TabIndex = 96;
             // 
             // label26
             // 
@@ -1468,9 +1313,6 @@
             this.Button5Tab.Controls.Add(this.SaveButton5);
             this.Button5Tab.Controls.Add(this.Notes5Button);
             this.Button5Tab.Controls.Add(this.richTextBox4);
-            this.Button5Tab.Controls.Add(this.FilePathCheckBoxButton5);
-            this.Button5Tab.Controls.Add(this.label32);
-            this.Button5Tab.Controls.Add(this.FilePath5Button5TextBox);
             this.Button5Tab.Controls.Add(this.label33);
             this.Button5Tab.Controls.Add(this.ExecuteParam5Button5TextBox);
             this.Button5Tab.Controls.Add(this.ExecutePath5Button5TextBox);
@@ -1527,34 +1369,6 @@
             this.richTextBox4.Size = new System.Drawing.Size(142, 194);
             this.richTextBox4.TabIndex = 99;
             this.richTextBox4.Text = "";
-            // 
-            // FilePathCheckBoxButton5
-            // 
-            this.FilePathCheckBoxButton5.AutoSize = true;
-            this.FilePathCheckBoxButton5.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton5.Name = "FilePathCheckBoxButton5";
-            this.FilePathCheckBoxButton5.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton5.TabIndex = 98;
-            this.FilePathCheckBoxButton5.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.DimGray;
-            this.label32.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Transparent;
-            this.label32.Location = new System.Drawing.Point(39, 286);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(442, 19);
-            this.label32.TabIndex = 97;
-            this.label32.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath5Button5TextBox
-            // 
-            this.FilePath5Button5TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath5Button5TextBox.Name = "FilePath5Button5TextBox";
-            this.FilePath5Button5TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath5Button5TextBox.TabIndex = 96;
             // 
             // label33
             // 
@@ -1741,9 +1555,6 @@
             this.Button6Tab.Controls.Add(this.SaveButton6);
             this.Button6Tab.Controls.Add(this.Notes6Button);
             this.Button6Tab.Controls.Add(this.richTextBox5);
-            this.Button6Tab.Controls.Add(this.FilePathCheckBoxButton6);
-            this.Button6Tab.Controls.Add(this.label39);
-            this.Button6Tab.Controls.Add(this.FilePath6Button6TextBox);
             this.Button6Tab.Controls.Add(this.label40);
             this.Button6Tab.Controls.Add(this.ExecuteParam6Button6TextBox);
             this.Button6Tab.Controls.Add(this.ExecutePath6Button6TextBox);
@@ -1800,34 +1611,6 @@
             this.richTextBox5.Size = new System.Drawing.Size(142, 194);
             this.richTextBox5.TabIndex = 99;
             this.richTextBox5.Text = "";
-            // 
-            // FilePathCheckBoxButton6
-            // 
-            this.FilePathCheckBoxButton6.AutoSize = true;
-            this.FilePathCheckBoxButton6.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton6.Name = "FilePathCheckBoxButton6";
-            this.FilePathCheckBoxButton6.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton6.TabIndex = 98;
-            this.FilePathCheckBoxButton6.UseVisualStyleBackColor = true;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.DimGray;
-            this.label39.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Transparent;
-            this.label39.Location = new System.Drawing.Point(39, 286);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(442, 19);
-            this.label39.TabIndex = 97;
-            this.label39.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath6Button6TextBox
-            // 
-            this.FilePath6Button6TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath6Button6TextBox.Name = "FilePath6Button6TextBox";
-            this.FilePath6Button6TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath6Button6TextBox.TabIndex = 96;
             // 
             // label40
             // 
@@ -2014,9 +1797,6 @@
             this.Button7Tab.Controls.Add(this.SaveButton7);
             this.Button7Tab.Controls.Add(this.Notes7Button);
             this.Button7Tab.Controls.Add(this.richTextBox6);
-            this.Button7Tab.Controls.Add(this.FilePathCheckBoxButton7);
-            this.Button7Tab.Controls.Add(this.label53);
-            this.Button7Tab.Controls.Add(this.FilePath7Button7TextBox);
             this.Button7Tab.Controls.Add(this.label54);
             this.Button7Tab.Controls.Add(this.ExecuteParam7Button7TextBox);
             this.Button7Tab.Controls.Add(this.ExecutePath7Button7TextBox);
@@ -2073,34 +1853,6 @@
             this.richTextBox6.Size = new System.Drawing.Size(142, 194);
             this.richTextBox6.TabIndex = 99;
             this.richTextBox6.Text = "";
-            // 
-            // FilePathCheckBoxButton7
-            // 
-            this.FilePathCheckBoxButton7.AutoSize = true;
-            this.FilePathCheckBoxButton7.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton7.Name = "FilePathCheckBoxButton7";
-            this.FilePathCheckBoxButton7.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton7.TabIndex = 98;
-            this.FilePathCheckBoxButton7.UseVisualStyleBackColor = true;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.DimGray;
-            this.label53.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.Transparent;
-            this.label53.Location = new System.Drawing.Point(39, 286);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(442, 19);
-            this.label53.TabIndex = 97;
-            this.label53.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath7Button7TextBox
-            // 
-            this.FilePath7Button7TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath7Button7TextBox.Name = "FilePath7Button7TextBox";
-            this.FilePath7Button7TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath7Button7TextBox.TabIndex = 96;
             // 
             // label54
             // 
@@ -2287,9 +2039,6 @@
             this.Button8Tab.Controls.Add(this.SaveButton8);
             this.Button8Tab.Controls.Add(this.Notes8Button);
             this.Button8Tab.Controls.Add(this.richTextBox7);
-            this.Button8Tab.Controls.Add(this.FilePathCheckBoxButton8);
-            this.Button8Tab.Controls.Add(this.label60);
-            this.Button8Tab.Controls.Add(this.FilePath8Button8TextBox);
             this.Button8Tab.Controls.Add(this.label61);
             this.Button8Tab.Controls.Add(this.ExecuteParam8Button8TextBox);
             this.Button8Tab.Controls.Add(this.ExecutePath8Button8TextBox);
@@ -2346,34 +2095,6 @@
             this.richTextBox7.Size = new System.Drawing.Size(142, 194);
             this.richTextBox7.TabIndex = 99;
             this.richTextBox7.Text = "";
-            // 
-            // FilePathCheckBoxButton8
-            // 
-            this.FilePathCheckBoxButton8.AutoSize = true;
-            this.FilePathCheckBoxButton8.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton8.Name = "FilePathCheckBoxButton8";
-            this.FilePathCheckBoxButton8.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton8.TabIndex = 98;
-            this.FilePathCheckBoxButton8.UseVisualStyleBackColor = true;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.DimGray;
-            this.label60.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.Transparent;
-            this.label60.Location = new System.Drawing.Point(39, 286);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(442, 19);
-            this.label60.TabIndex = 97;
-            this.label60.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath8Button8TextBox
-            // 
-            this.FilePath8Button8TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath8Button8TextBox.Name = "FilePath8Button8TextBox";
-            this.FilePath8Button8TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath8Button8TextBox.TabIndex = 96;
             // 
             // label61
             // 
@@ -2560,9 +2281,6 @@
             this.Button9Tab.Controls.Add(this.SaveButton9);
             this.Button9Tab.Controls.Add(this.Notes9Button);
             this.Button9Tab.Controls.Add(this.richTextBox8);
-            this.Button9Tab.Controls.Add(this.FilePathCheckBoxButton9);
-            this.Button9Tab.Controls.Add(this.label3);
-            this.Button9Tab.Controls.Add(this.FilePath9Button9TextBox);
             this.Button9Tab.Controls.Add(this.label4);
             this.Button9Tab.Controls.Add(this.ExecuteParam9Button9TextBox);
             this.Button9Tab.Controls.Add(this.ExecutePath9Button9TextBox);
@@ -2619,34 +2337,6 @@
             this.richTextBox8.Size = new System.Drawing.Size(142, 194);
             this.richTextBox8.TabIndex = 99;
             this.richTextBox8.Text = "";
-            // 
-            // FilePathCheckBoxButton9
-            // 
-            this.FilePathCheckBoxButton9.AutoSize = true;
-            this.FilePathCheckBoxButton9.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton9.Name = "FilePathCheckBoxButton9";
-            this.FilePathCheckBoxButton9.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton9.TabIndex = 98;
-            this.FilePathCheckBoxButton9.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DimGray;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(39, 286);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(442, 19);
-            this.label3.TabIndex = 97;
-            this.label3.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath9Button9TextBox
-            // 
-            this.FilePath9Button9TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath9Button9TextBox.Name = "FilePath9Button9TextBox";
-            this.FilePath9Button9TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath9Button9TextBox.TabIndex = 96;
             // 
             // label4
             // 
@@ -2833,9 +2523,6 @@
             this.Button10Tab.Controls.Add(this.SaveButton10);
             this.Button10Tab.Controls.Add(this.Notes10Button);
             this.Button10Tab.Controls.Add(this.richTextBox9);
-            this.Button10Tab.Controls.Add(this.FilePathCheckBoxButton10);
-            this.Button10Tab.Controls.Add(this.label1);
-            this.Button10Tab.Controls.Add(this.FilePath10Button10TextBox);
             this.Button10Tab.Controls.Add(this.label2);
             this.Button10Tab.Controls.Add(this.ExecuteParam10Button10TextBox);
             this.Button10Tab.Controls.Add(this.ExecutePath10Button10TextBox);
@@ -2892,34 +2579,6 @@
             this.richTextBox9.Size = new System.Drawing.Size(142, 194);
             this.richTextBox9.TabIndex = 99;
             this.richTextBox9.Text = "";
-            // 
-            // FilePathCheckBoxButton10
-            // 
-            this.FilePathCheckBoxButton10.AutoSize = true;
-            this.FilePathCheckBoxButton10.Location = new System.Drawing.Point(22, 311);
-            this.FilePathCheckBoxButton10.Name = "FilePathCheckBoxButton10";
-            this.FilePathCheckBoxButton10.Size = new System.Drawing.Size(15, 14);
-            this.FilePathCheckBoxButton10.TabIndex = 98;
-            this.FilePathCheckBoxButton10.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(39, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(442, 19);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "File location for the file that will be imported into the Database";
-            // 
-            // FilePath10Button10TextBox
-            // 
-            this.FilePath10Button10TextBox.Location = new System.Drawing.Point(43, 308);
-            this.FilePath10Button10TextBox.Name = "FilePath10Button10TextBox";
-            this.FilePath10Button10TextBox.Size = new System.Drawing.Size(498, 20);
-            this.FilePath10Button10TextBox.TabIndex = 96;
             // 
             // label2
             // 
@@ -3224,21 +2883,14 @@
         private System.Windows.Forms.TextBox ExecutePath1Button1TextBox;
         private System.Windows.Forms.TextBox ExecuteParam1Button1TextBox;
 
-        private System.Windows.Forms.TextBox FilePath1Button1TextBox;
-
         private System.Windows.Forms.RichTextBox Info1TextBox;
         private System.Windows.Forms.Button Notes1Button;
         private System.Windows.Forms.RichTextBox richTextBox1;
 
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton1;
-        private System.Windows.Forms.Label label52;
 
 
         private System.Windows.Forms.Button Notes2Button;
-
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ExecuteParam2Button2TextBox;
         private System.Windows.Forms.TextBox ExecutePath2Button2TextBox;
@@ -3260,9 +2912,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Notes3Button;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton3;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox FilePath3Button3TextBox;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox ExecuteParam3Button3TextBox;
         private System.Windows.Forms.TextBox ExecutePath3Button3TextBox;
@@ -3284,9 +2933,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button Notes4Button;
         private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton4;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox FilePath4Button4TextBox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox ExecuteParam4Button4TextBox;
         private System.Windows.Forms.TextBox ExecutePath4Button4TextBox;
@@ -3308,9 +2954,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button Notes5Button;
         private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton5;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox FilePath5Button5TextBox;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox ExecuteParam5Button5TextBox;
         private System.Windows.Forms.TextBox ExecutePath5Button5TextBox;
@@ -3333,9 +2976,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button Notes6Button;
         private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton6;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox FilePath6Button6TextBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox ExecuteParam6Button6TextBox;
         private System.Windows.Forms.TextBox ExecutePath6Button6TextBox;
@@ -3358,9 +2998,6 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button Notes7Button;
         private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton7;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox FilePath7Button7TextBox;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.TextBox ExecuteParam7Button7TextBox;
         private System.Windows.Forms.TextBox ExecutePath7Button7TextBox;
@@ -3383,9 +3020,6 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Button Notes8Button;
         private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton8;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox FilePath8Button8TextBox;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TextBox ExecuteParam8Button8TextBox;
         private System.Windows.Forms.TextBox ExecutePath8Button8TextBox;
@@ -3408,9 +3042,6 @@
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button Notes9Button;
         private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox FilePath9Button9TextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox ExecuteParam9Button9TextBox;
         private System.Windows.Forms.TextBox ExecutePath9Button9TextBox;
@@ -3433,9 +3064,6 @@
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Button Notes10Button;
         private System.Windows.Forms.RichTextBox richTextBox9;
-        private System.Windows.Forms.CheckBox FilePathCheckBoxButton10;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FilePath10Button10TextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ExecuteParam10Button10TextBox;
         private System.Windows.Forms.TextBox ExecutePath10Button10TextBox;
@@ -3457,7 +3085,6 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.TextBox SPName2TextBox;
-        private System.Windows.Forms.TextBox FilePath2Button2TextBox;
         private System.Windows.Forms.TextBox ParamName2Button3TextBox;
         private System.Windows.Forms.TextBox ParamName2Button4TextBox;
         private System.Windows.Forms.TextBox ParamName1Button5TextBox;

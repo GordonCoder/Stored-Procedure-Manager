@@ -250,54 +250,23 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
+                    
+// Stored Procedure Execution Setting
 
-                    if (FPCheckBox == true)
+                    if (string.IsNullOrWhiteSpace(ParamName1))
                     {
-                        try
+                        SqlConnection SPDBconnectionString_B1 = new SqlConnection(SPDBconnectionString);
+                        SPDBconnectionString_B1.Open();
+                        SqlCommand cmdSPDB_B1 = new SqlCommand(SPName, SPDBconnectionString_B1);
+
+                        cmdSPDB_B1.Connection = SPDBconnectionString_B1;
+                        cmdSPDB_B1.CommandType = CommandType.StoredProcedure;
+                        cmdSPDB_B1.ExecuteNonQuery();
+                        MessageBox.Show("The " + SPName + " Stored Procedure was run.");
+                        if (SPDBconnectionString_B1.State == ConnectionState.Open)
                         {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B1 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B1.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None); //Need to create a textfield to enter delimiter
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 1.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB1 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B1 = new SqlCommand(cmdfpTxtB1, SPDBconnectionStringfp_B1))
-                                        {
-                                            cmdSPDBfp_B1.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
+                            SPDBconnectionString_B1.Close();
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
-
-                    if (string.IsNullOrWhiteSpace(SPName))
-                    {
-                        //MessageBox.Show("No Stored Procedure set on the button configuration. Please update the button configuration", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -317,6 +286,8 @@ namespace Stored_Procedure_Manager
                             SPDBconnectionString_B1.Close();
                         }
                     }
+
+// Execution Path Settings
 
                     if (EPCheckBox == true)
                     {
@@ -378,50 +349,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B2 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B2.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 2.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB2 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B2 = new SqlCommand(cmdfpTxtB2, SPDBconnectionStringfp_B2))
-                                        {
-                                            cmdSPDBfp_B2.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -506,50 +433,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B3 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B3.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 3.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB3 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B3 = new SqlCommand(cmdfpTxtB3, SPDBconnectionStringfp_B3))
-                                        {
-                                            cmdSPDBfp_B3.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -634,55 +517,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B4 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B4.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                            ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 4.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB4 = String.Format
-                                            (strInsert
-                                            , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                            , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B4 = new SqlCommand(cmdfpTxtB4, SPDBconnectionStringfp_B4))
-                                        {
-                                            cmdSPDBfp_B4.ExecuteNonQuery();
-                                        }
-                                    }
-                                    if (SPDBconnectionStringfp_B4.State == ConnectionState.Open)
-                                    {
-                                        SPDBconnectionStringfp_B4.Close();
-                                        MessageBox.Show("The file was uploaded.");
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -766,50 +600,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B5 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B5.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 5.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB5 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B5 = new SqlCommand(cmdfpTxtB5, SPDBconnectionStringfp_B5))
-                                        {
-                                            cmdSPDBfp_B5.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -894,50 +684,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B6 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B6.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 6.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB6 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B6 = new SqlCommand(cmdfpTxtB6, SPDBconnectionStringfp_B6))
-                                        {
-                                            cmdSPDBfp_B6.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -1022,50 +768,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B7 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B7.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 7.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB7 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B7 = new SqlCommand(cmdfpTxtB7, SPDBconnectionStringfp_B7))
-                                        {
-                                            cmdSPDBfp_B7.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -1149,50 +851,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B8 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B8.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 8.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB8 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B8 = new SqlCommand(cmdfpTxtB8, SPDBconnectionStringfp_B8))
-                                        {
-                                            cmdSPDBfp_B8.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -1277,50 +935,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B9 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B9.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 9.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB9 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B9 = new SqlCommand(cmdfpTxtB9, SPDBconnectionStringfp_B9))
-                                        {
-                                            cmdSPDBfp_B9.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
@@ -1405,50 +1019,6 @@ namespace Stored_Procedure_Manager
                     string ExecutablePath = sdr["ExecutablePath"].ToString();
                     string ExecutableParam = sdr["ExecutableParam"].ToString();
                     bool EPCheckBox = (Convert.ToBoolean(sdr["EPCheckBox"]));
-                    string FilePath = sdr["FilePath"].ToString();
-                    bool FPCheckBox = (Convert.ToBoolean(sdr["FPCheckBox"]));
-
-                    if (FPCheckBox == true)
-                    {
-                        try
-                        {
-                            string strInsert;
-                            using (StreamReader sr = new StreamReader(File.Open(FilePath, FileMode.Open)))
-                            {
-                                using (SqlConnection SPDBconnectionStringfp_B10 = new SqlConnection(SPDBconnectionString))
-                                {
-                                    SPDBconnectionStringfp_B10.Open();
-                                    string line = "";
-                                    while ((line = sr.ReadLine()) != "")
-                                    {
-                                        string[] parts = line.Split(new string[] { "," }, StringSplitOptions.None);
-
-                                        FileInfo fileinfoInsert = new FileInfo
-                                        ("C:\\ProgramData\\Sierra Workforce Solutions\\Stored Procedure Manager\\SQL Scripts\\Custom Tables\\Button 10.sql");
-
-                                        strInsert = fileinfoInsert.OpenText().ReadToEnd();
-
-                                        string cmdfpTxtB10 = String.Format
-                                        (strInsert
-                                        , parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8], parts[9], parts[10]
-                                        , parts[11], parts[12], parts[13], parts[14], parts[15], parts[16], parts[17], parts[18], parts[19], parts[20]);
-                                        using (SqlCommand cmdSPDBfp_B10 = new SqlCommand(cmdfpTxtB10, SPDBconnectionStringfp_B10))
-                                        {
-                                            cmdSPDBfp_B10.ExecuteNonQuery();
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            //MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            MessageBox.Show("The file was uploaded");
-                        }
-                    }
 
                     if (string.IsNullOrWhiteSpace(SPName))
                     {
