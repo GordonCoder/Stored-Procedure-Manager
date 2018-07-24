@@ -20,64 +20,34 @@ namespace Stored_Procedure_Manager
         {
             InitializeComponent();
 
-        //    try
-        //    {
-        //        using (SqlConnection cn = new SqlConnection
-        //                (
-        //                "server="
-        //                + Properties.Settings.Default.ServerNameString
-        //                + "\\" + Properties.Settings.Default.InstanceString
-        //                + ";database=" + Properties.Settings.Default.DatabaseString
-        //                + ";uid=" + Properties.Settings.Default.UserNameString
-        //                + ";pwd=" + Properties.Settings.Default.PasswordString
-        //                ))
-        //        {
-        //            cn.Open();
-        //            String PF = "Pass";
-        //            if (PF.Contains("Pass") == true)
-        //            {
-        //                { homebutton.Enabled = true; }
-        //                { buttonconfigbutton.Enabled = true; }
-        //                { toolsButton.Enabled = true; }
-        //            }
-        //            else
-        //            {
-        //                { homebutton.Enabled = false; }
-        //                { buttonconfigbutton.Enabled = false; }
-        //                { toolsButton.Enabled = false; }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        String PF = "Fail";
-        //        if (PF.Contains("Pass") == true)
-        //        {
-        //            { homebutton.Enabled = true; }
-        //            { buttonconfigbutton.Enabled = true; }
-        //            { toolsButton.Enabled = true; }
-        //        }
-        //        else
-        //        {
-        //            { homebutton.Enabled = false; }
-        //            { buttonconfigbutton.Enabled = false; }
-        //            { toolsButton.Enabled = false; }
-        //        }
-        //        MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
+            String var = Properties.Settings.Default.ActivationPass;
 
-        //        container.Controls.Clear();
-        //        DBConnection db = new DBConnection();
-        //        db.TopLevel = false;
-        //        container.Controls.Add(db);
-        //        db.Show();
-        //        db.Focus();
-        //    }
-        //    finally
-        //    {
-                
-        //    }
+            if (var.Equals("620190") == true)
+            {
+                homebutton.Enabled = true;
+                buttonconfigbutton.Enabled = true;
+                dbconnectbutton.Enabled = true;
+                toolsButton.Enabled = true;
+            }
+            else
+            {
+                homebutton.Enabled = false;
+                buttonconfigbutton.Enabled = false;
+                dbconnectbutton.Enabled = false;
+                toolsButton.Enabled = false;
 
-        //    LoadButtonConfig();
+                if
+                (MessageBox.Show("Invalid Activation Password - Please enter an Activation Password", "Activation Invalid" ,MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    Activation a = new Activation();
+                    a.Show();
+                    a.Focus();
+                }
+                else
+                {
+
+                }
+            }
         }
 
         private void LoadButtonConfig()

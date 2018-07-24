@@ -97,8 +97,7 @@ namespace Stored_Procedure_Manager.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Stored Procedure Manager\\Instal" +
-            "lers")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files (x86)\\Sierra Workforce Solutions\\Automation Manager\\Installers")]
         public string InstallerFolderString {
             get {
                 return ((string)(this["InstallerFolderString"]));
@@ -255,12 +254,15 @@ namespace Stored_Procedure_Manager.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("!620190@sws!")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string ActivationPass {
             get {
                 return ((string)(this["ActivationPass"]));
+            }
+            set {
+                this["ActivationPass"] = value;
             }
         }
     }

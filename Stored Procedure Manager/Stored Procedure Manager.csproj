@@ -23,8 +23,8 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>7</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -122,12 +122,6 @@
     <Compile Include="Activation.Designer.cs">
       <DependentUpon>Activation.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButtonConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ButtonConfig.Designer.cs">
-      <DependentUpon>ButtonConfig.cs</DependentUpon>
-    </Compile>
     <Compile Include="ButtonSetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </Compile>
     <EmbeddedResource Include="Activation.resx">
       <DependentUpon>Activation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ButtonConfig.resx">
-      <DependentUpon>ButtonConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ButtonSetup.resx">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
@@ -260,9 +251,6 @@
     <None Include="Resources\TerminalsConfiguration 70-60.jpg" />
     <None Include="Resources\DBConnectionManager 60-55.jpg" />
     <None Include="Resources\ConfigurationCenter 60-55.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

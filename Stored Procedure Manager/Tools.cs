@@ -336,7 +336,7 @@ namespace Stored_Procedure_Manager
             {
                 cnspb.Open();
                 cmddd.ExecuteNonQuery();
-
+                MessageBox.Show("Check the Button Configuration to see if the words TEST WORKED is present for button 10", "Test Successful!");
             }
             catch (System.Exception ex)
             {

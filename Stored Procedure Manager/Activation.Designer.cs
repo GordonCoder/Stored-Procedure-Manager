@@ -59,8 +59,10 @@
             // 
             this.ActivationTextBox.Location = new System.Drawing.Point(12, 66);
             this.ActivationTextBox.Name = "ActivationTextBox";
+            this.ActivationTextBox.PasswordChar = '*';
             this.ActivationTextBox.Size = new System.Drawing.Size(275, 20);
             this.ActivationTextBox.TabIndex = 2;
+            this.ActivationTextBox.UseSystemPasswordChar = true;
             this.ActivationTextBox.TextChanged += new System.EventHandler(this.ActivationTextBox_TextChanged);
             // 
             // ActivationLabel

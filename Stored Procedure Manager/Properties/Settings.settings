@@ -21,7 +21,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="InstallerFolderString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Program Files (x86)\Sierra Workforce Solutions\Stored Procedure Manager\Installers</Value>
+      <Value Profile="(Default)">C:\Program Files (x86)\Sierra Workforce Solutions\Automation Manager\Installers</Value>
     </Setting>
     <Setting Name="PasswordOk" Type="System.String" Scope="User">
       <Value Profile="(Default)">scsint</Value>
@@ -62,8 +62,8 @@
     <Setting Name="InfoTextBoxSPNameString" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Enter the name of the Stored Procedure that you want the button to execute.</Value>
     </Setting>
-    <Setting Name="ActivationPass" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">!620190@sws!</Value>
+    <Setting Name="ActivationPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
