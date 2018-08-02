@@ -104,6 +104,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -128,11 +129,18 @@
     <Compile Include="ButtonSetup.Designer.cs">
       <DependentUpon>ButtonSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cipher.cs" />
     <Compile Include="DBConnection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBConnection.Designer.cs">
       <DependentUpon>DBConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HolidayEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HolidayEngine.Designer.cs">
+      <DependentUpon>HolidayEngine.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DBConnection.resx">
       <DependentUpon>DBConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HolidayEngine.resx">
+      <DependentUpon>HolidayEngine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

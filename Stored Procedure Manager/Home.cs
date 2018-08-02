@@ -131,6 +131,18 @@ namespace Stored_Procedure_Manager
                 Location = mousePose;
             }
         }
+
+        private void HolidayEngineButton_Click(object sender, EventArgs e)
+        {
+            panelSlice.Height = HolidayEngineButton.Height;
+            panelSlice.Top = HolidayEngineButton.Top;
+            container.Controls.Clear();
+            HolidayEngine h = new HolidayEngine();
+            h.TopLevel = false;
+            container.Controls.Add(h);
+            h.Show();
+            h.Focus();
+        }
     }
 }
 

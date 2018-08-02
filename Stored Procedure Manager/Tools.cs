@@ -162,7 +162,12 @@ namespace Stored_Procedure_Manager
                 " WAITFOR DELAY '00:00:01'" +
 
                 "CREATE TABLE dbo.AM_FileImportStaging" +
-                "(Column0 varchar(50) NULL, Column1 varchar(50) NULL, Column2 varchar(50) NULL, Column3 varchar(50) NULL, Column4 varchar(50) NULL, Column5 varchar(50) NULL, Column6 varchar(50) NULL, Column7 varchar(50) NULL, Column8 varchar(50) NULL, Column9 varchar(50) NULL, Column10 varchar(50) NULL, Column11 varchar(50) NULL, Column12 varchar(50) NULL, Column13 varchar(50) NULL, Column14 varchar(50) NULL, Column15 varchar(50) NULL, Column16 varchar(50) NULL, Column17 varchar(50) NULL, Column18 varchar(50) NULL, Column19 varchar(50) NULL, Column20 varchar(50) NULL)";
+                "(Column0 varchar(50) NULL, Column1 varchar(50) NULL, Column2 varchar(50) NULL, Column3 varchar(50) NULL, Column4 varchar(50) NULL, Column5 varchar(50) NULL, Column6 varchar(50) NULL, Column7 varchar(50) NULL, Column8 varchar(50) NULL, Column9 varchar(50) NULL, Column10 varchar(50) NULL, Column11 varchar(50) NULL, Column12 varchar(50) NULL, Column13 varchar(50) NULL, Column14 varchar(50) NULL, Column15 varchar(50) NULL, Column16 varchar(50) NULL, Column17 varchar(50) NULL, Column18 varchar(50) NULL, Column19 varchar(50) NULL, Column20 varchar(50) NULL)" +
+
+                "CREATE TABLE [dbo].[CT_HolidayEngine] " +
+                "([HolidayEngineID] [int] IDENTITY(1,1) NOT NULL,[PayPolicyName] [varchar](50) NULL,[HolidayPayCode] [varchar](50) NULL,[Amount] [int] NULL,[FutureDays] [int] NULL,[HolidayComment] [varchar](50) NULL,[ProbationDays] [int] NULL,[ProbationMths] [int] NULL,[DayBefore] [bit] NULL,[DayAfter] [bit] NULL,[ApplyExpRate] [bit] NULL,[CountOT] [bit] NULL,[CountHoliday] [bit] NULL,[Exception] [varchar](50) NULL,CONSTRAINT [PK_CT_HolidayEngine] PRIMARY KEY CLUSTERED ([HolidayEngineID] ASC)"
+
+                ;
 
             SqlCommand cmdTables = new SqlCommand(strTables, cnTables);
             try

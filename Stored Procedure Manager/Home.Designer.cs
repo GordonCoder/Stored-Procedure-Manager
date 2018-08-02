@@ -43,6 +43,7 @@
             this.homebutton = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
+            this.HolidayEngineButton = new System.Windows.Forms.Button();
             this.sidepanel.SuspendLayout();
             this.logopanel.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
+            this.sidepanel.Controls.Add(this.HolidayEngineButton);
             this.sidepanel.Controls.Add(this.panelSlice);
             this.sidepanel.Controls.Add(this.logopanel);
             this.sidepanel.Controls.Add(this.panel4);
@@ -206,6 +208,21 @@
             this.headerpanel.Size = new System.Drawing.Size(855, 83);
             this.headerpanel.TabIndex = 1;
             // 
+            // HolidayEngineButton
+            // 
+            this.HolidayEngineButton.FlatAppearance.BorderSize = 0;
+            this.HolidayEngineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
+            this.HolidayEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HolidayEngineButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HolidayEngineButton.Location = new System.Drawing.Point(78, 378);
+            this.HolidayEngineButton.Name = "HolidayEngineButton";
+            this.HolidayEngineButton.Size = new System.Drawing.Size(166, 55);
+            this.HolidayEngineButton.TabIndex = 13;
+            this.HolidayEngineButton.Text = "Holiday Engine";
+            this.HolidayEngineButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HolidayEngineButton.UseVisualStyleBackColor = true;
+            this.HolidayEngineButton.Click += new System.EventHandler(this.HolidayEngineButton_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +262,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel HomeBorderPanel;
         private System.Windows.Forms.Panel panelSlice;
+        private System.Windows.Forms.Button HolidayEngineButton;
     }
 }
