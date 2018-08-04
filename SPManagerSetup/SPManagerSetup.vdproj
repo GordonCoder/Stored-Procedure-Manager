@@ -57,6 +57,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_28A657A0A7B840ACB33DAD62EF8B2743"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2A2C1E39A57E408F85AAD52A24F219D6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2BAEF422549C657C162E7B8D0381904E"
         "OwnerKey" = "8:_0BEDF8F2418B4F7D8525EA6980B932A3"
         "MsmSig" = "8:_UNDEFINED"
@@ -171,6 +183,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5FE1026B6AC74647AA33EC44FBF2E2E5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6592179AD2164A2B8CBC605732385296"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6A90CD5252644B04A3C67C9CFD50435E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -207,19 +231,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_82479CEE45D34E2CB3D3DE6DE891CA78"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_939B805169344483A3C0BB5865457B25"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_9456F7432AD34E59A11F8E73F0D0B595"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9E989C9115A7461095065D6BD46D156A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A7E57BA73E24414C815B9A97A8269B33"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -268,6 +298,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C0BB82C83FF247D8B60CD768F1C699B8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C2578512B31F4F0682C648159E7D96B4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -352,6 +388,12 @@
         "Entry"
         {
         "MsmKey" = "8:_EF744A084A77408683374A404E3A62EE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F22E511D92094A07BA10D177582F5ABA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -684,6 +726,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_28A657A0A7B840ACB33DAD62EF8B2743"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\GetLineUpToValue.sql"
+            "TargetName" = "8:GetLineUpToValue.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A2C1E39A57E408F85AAD52A24F219D6"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\GetButtonData.sql"
+            "TargetName" = "8:GetButtonData.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2BAEF422549C657C162E7B8D0381904E"
             {
             "AssemblyRegister" = "3:1"
@@ -897,6 +979,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FE1026B6AC74647AA33EC44FBF2E2E5"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\GetLineBeforeLast.sql"
+            "TargetName" = "8:GetLineBeforeLast.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6592179AD2164A2B8CBC605732385296"
+            {
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfoAllButtons.sql"
+            "TargetName" = "8:ButtonInfoAllButtons.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A90CD5252644B04A3C67C9CFD50435E"
             {
             "SourcePath" = "8:..\\MS SQL cmd line installers\\MsSqlCmdLnUtilsV11x64.msi"
@@ -1019,26 +1141,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82479CEE45D34E2CB3D3DE6DE891CA78"
-            {
-            "SourcePath" = "8:..\\SQL\\Default Data\\Default Data.sql"
-            "TargetName" = "8:Default Data.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_C62B6CD4C1614664932B76008DADB3C5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_939B805169344483A3C0BB5865457B25"
             {
             "SourcePath" = "8:..\\SQL\\Views\\ButtonInfo8.sql"
@@ -1059,12 +1161,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9456F7432AD34E59A11F8E73F0D0B595"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\GetRestOfLineAfterLast.sql"
+            "TargetName" = "8:GetRestOfLineAfterLast.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E989C9115A7461095065D6BD46D156A"
             {
             "SourcePath" = "8:..\\SQL\\Custom Tables\\Button 9.sql"
             "TargetName" = "8:Button 9.sql"
             "Tag" = "8:"
             "Folder" = "8:_E0A2CE798BEB40F797D9C77235A0A2F0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7E57BA73E24414C815B9A97A8269B33"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\CombineButtonIDandName.SQL"
+            "TargetName" = "8:CombineButtonIDandName.SQL"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1187,6 +1329,26 @@
             "TargetName" = "8:ButtonInfo10.sql"
             "Tag" = "8:"
             "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2578512B31F4F0682C648159E7D96B4"
+            {
+            "SourcePath" = "8:..\\SQL\\Functions\\GetLineThroughLast.sql"
+            "TargetName" = "8:GetLineThroughLast.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_9ED6F129D19546F6861452486883C7F7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1414,6 +1576,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F22E511D92094A07BA10D177582F5ABA"
+            {
+            "SourcePath" = "8:..\\SQL\\Default Data\\Default Data.sql"
+            "TargetName" = "8:Default Data.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_C62B6CD4C1614664932B76008DADB3C5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FA22C3D1777C4E7DD87DBF4DC532998E"
             {
             "AssemblyRegister" = "3:1"
@@ -1528,6 +1710,17 @@
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
                             "Property" = "8:_5DCA23770BC74A889E52F5FED348C503"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_9ED6F129D19546F6861452486883C7F7"
+                            {
+                            "Name" = "8:Functions"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_D76F7D2AA0DF4E89A53A7ACDA6F56D79"
                                 "Folders"
                                 {
                                 }

@@ -265,5 +265,16 @@ namespace Stored_Procedure_Manager.Properties {
                 this["ActivationPass"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SGDT-CTV6-2016\\CELERITIMEV6;Initial Catalog=AutomationManager;Integra" +
+            "ted Security=True")]
+        public string AutomationManagerConnectionString {
+            get {
+                return ((string)(this["AutomationManagerConnectionString"]));
+            }
+        }
     }
 }

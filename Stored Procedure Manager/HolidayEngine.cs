@@ -166,9 +166,19 @@ namespace Stored_Procedure_Manager
 
             using (SqlCommand SaveButtonCMD = new SqlCommand(InsertStatement, cnAMDB))
             {
-                cnAMDB.Open();
-                SaveButtonCMD.ExecuteNonQuery();
-                MessageBox.Show("Record updated");
+                try
+                {
+                    cnAMDB.Open();
+                    SaveButtonCMD.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "?");
+                }
+                finally
+                {
+                    MessageBox.Show("Record updated");
+                }
             }
             cnAMDB.Close();
         }

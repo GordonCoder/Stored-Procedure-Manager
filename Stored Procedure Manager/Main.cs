@@ -1164,10 +1164,10 @@ namespace Stored_Procedure_Manager
 
         }
 
-        private void BorderPanel_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
+        //private void BorderPanel_Paint(object sender, PaintEventArgs e)
+        //{
+        //    ControlPaint.DrawBorder(e.Graphics, this.borderpanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        //}
 
     }
 }

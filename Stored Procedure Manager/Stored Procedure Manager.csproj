@@ -123,6 +123,12 @@
     <Compile Include="Activation.Designer.cs">
       <DependentUpon>Activation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ButtonConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonConfig.Designer.cs">
+      <DependentUpon>ButtonConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="ButtonSetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Activation.resx">
       <DependentUpon>Activation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonConfig.resx">
+      <DependentUpon>ButtonConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ButtonSetup.resx">
       <DependentUpon>ButtonSetup.cs</DependentUpon>

@@ -30,6 +30,9 @@
         {
             this.HolidayEngineComboBox = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ExceptionsTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.ApplyRateCheckBox = new System.Windows.Forms.CheckBox();
             this.TowardHolidayCheckBox = new System.Windows.Forms.CheckBox();
@@ -55,9 +58,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PayPolicyNameTextBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.ExceptionsTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(554, 334);
             this.panel1.TabIndex = 1;
+            // 
+            // ExceptionsTextBox
+            // 
+            this.ExceptionsTextBox.Location = new System.Drawing.Point(120, 202);
+            this.ExceptionsTextBox.Name = "ExceptionsTextBox";
+            this.ExceptionsTextBox.Size = new System.Drawing.Size(114, 20);
+            this.ExceptionsTextBox.TabIndex = 33;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(55, 205);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.TabIndex = 32;
+            this.label14.Text = "Exceptions";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(47, 100);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Hours (Mins)";
             // 
             // SaveButton
             // 
@@ -317,36 +342,11 @@
             this.PayPolicyNameTextBox.Size = new System.Drawing.Size(255, 20);
             this.PayPolicyNameTextBox.TabIndex = 0;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(47, 100);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Hours (Mins)";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(55, 205);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
-            this.label14.TabIndex = 32;
-            this.label14.Text = "Exceptions";
-            // 
-            // ExceptionsTextBox
-            // 
-            this.ExceptionsTextBox.Location = new System.Drawing.Point(120, 202);
-            this.ExceptionsTextBox.Name = "ExceptionsTextBox";
-            this.ExceptionsTextBox.Size = new System.Drawing.Size(114, 20);
-            this.ExceptionsTextBox.TabIndex = 33;
-            // 
             // HolidayEngine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(855, 385);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.HolidayEngineComboBox);

@@ -142,7 +142,7 @@ namespace Stored_Procedure_Manager
 
             strTables =
                 " CREATE TABLE dbo.AM_Buttons " +
-                "(ButtonID INT NOT NULL ,ButtonName VARCHAR(50) NULL ,SPName VARCHAR(50) NULL ,CONSTRAINT PK_AM_Buttons PRIMARY KEY CLUSTERED(ButtonID ASC))" +
+                "(ButtonID INT NOT NULL ,ButtonName VARCHAR(50) NULL ,SPName VARCHAR(50) NULL ,IDandName NVARCHAR(50) NULL ,CONSTRAINT PK_AM_Buttons PRIMARY KEY CLUSTERED(ButtonID ASC))" +
 
                 " WAITFOR DELAY '00:00:01'" +
 
@@ -196,16 +196,24 @@ namespace Stored_Procedure_Manager
             //=====================================================================================================================
             // Create Views in the database
             //=====================================================================================================================
-            String strV1;
-            String strV2;
-            String strV3;
-            String strV4;
-            String strV5;
-            String strV6;
-            String strV7;
-            String strV8;
-            String strV9;
-            String strV10;
+            string strV1;
+            string strV2;
+            string strV3;
+            string strV4;
+            string strV5;
+            string strV6;
+            string strV7;
+            string strV8;
+            string strV9;
+            string strV10;
+            string strAll;
+
+            string strF1;
+            string strF2;
+            string strF3;
+            string strF4;
+            string strF5;
+            string strF6;
 
             SqlConnection cnV = new SqlConnection
                 (
@@ -217,27 +225,44 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Properties.Settings.Default.PasswordString
                 );
 
-            FileInfo file1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo1.sql");
-            FileInfo file2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo2.sql");
-            FileInfo file3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo3.sql");
-            FileInfo file4 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo4.sql");
-            FileInfo file5 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo5.sql");
-            FileInfo file6 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo6.sql");
-            FileInfo file7 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo7.sql");
-            FileInfo file8 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo8.sql");
-            FileInfo file9 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo9.sql");
-            FileInfo file10 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo10.sql");
+            FileInfo fileV1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo1.sql");
+            FileInfo fileV2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo2.sql");
+            FileInfo fileV3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo3.sql");
+            FileInfo fileV4 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo4.sql");
+            FileInfo fileV5 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo5.sql");
+            FileInfo fileV6 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo6.sql");
+            FileInfo fileV7 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo7.sql");
+            FileInfo fileV8 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo8.sql");
+            FileInfo fileV9 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo9.sql");
+            FileInfo fileV10 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo10.sql");
+            FileInfo fileVall = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfoAllButtons.sql");
 
-            strV1 = file1.OpenText().ReadToEnd();
-            strV2 = file2.OpenText().ReadToEnd();
-            strV3 = file3.OpenText().ReadToEnd();
-            strV4 = file4.OpenText().ReadToEnd();
-            strV5 = file5.OpenText().ReadToEnd();
-            strV6 = file6.OpenText().ReadToEnd();
-            strV7 = file7.OpenText().ReadToEnd();
-            strV8 = file8.OpenText().ReadToEnd();
-            strV9 = file9.OpenText().ReadToEnd();
-            strV10 = file10.OpenText().ReadToEnd();
+            FileInfo fileF1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineBeforeLast.sql");
+            FileInfo fileF2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineThroughLast.sql");
+            FileInfo fileF3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineUpToValue.sql");
+            FileInfo fileF4 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetRestOfLineAfterLast.sql");
+            FileInfo fileF5 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetButtonData.sql");
+            FileInfo fileF6 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\CombineButtonIDandName.sql");
+
+
+            strV1 = fileV1.OpenText().ReadToEnd();
+            strV2 = fileV2.OpenText().ReadToEnd();
+            strV3 = fileV3.OpenText().ReadToEnd();
+            strV4 = fileV4.OpenText().ReadToEnd();
+            strV5 = fileV5.OpenText().ReadToEnd();
+            strV6 = fileV6.OpenText().ReadToEnd();
+            strV7 = fileV7.OpenText().ReadToEnd();
+            strV8 = fileV8.OpenText().ReadToEnd();
+            strV9 = fileV9.OpenText().ReadToEnd();
+            strV10 = fileV10.OpenText().ReadToEnd();
+            strAll = fileVall.OpenText().ReadToEnd();
+
+            strF1 = fileF1.OpenText().ReadToEnd();
+            strF2 = fileF2.OpenText().ReadToEnd();
+            strF3 = fileF3.OpenText().ReadToEnd();
+            strF4 = fileF4.OpenText().ReadToEnd();
+            strF5 = fileF4.OpenText().ReadToEnd();
+            strF6 = fileF4.OpenText().ReadToEnd();
 
             SqlCommand cmdV1 = new SqlCommand(strV1, cnV);
             SqlCommand cmdV2 = new SqlCommand(strV2, cnV);
@@ -249,6 +274,14 @@ namespace Stored_Procedure_Manager
             SqlCommand cmdV8 = new SqlCommand(strV8, cnV);
             SqlCommand cmdV9 = new SqlCommand(strV9, cnV);
             SqlCommand cmdV10 = new SqlCommand(strV10, cnV);
+            SqlCommand cmdAll = new SqlCommand(strAll, cnV);
+
+            SqlCommand cmdF1 = new SqlCommand(strF1, cnV);
+            SqlCommand cmdF2 = new SqlCommand(strF2, cnV);
+            SqlCommand cmdF3 = new SqlCommand(strF3, cnV);
+            SqlCommand cmdF4 = new SqlCommand(strF4, cnV);
+            SqlCommand cmdF5 = new SqlCommand(strF5, cnV);
+            SqlCommand cmdF6 = new SqlCommand(strF5, cnV);
 
             try
             {
@@ -263,6 +296,14 @@ namespace Stored_Procedure_Manager
                 cmdV8.ExecuteNonQuery();
                 cmdV9.ExecuteNonQuery();
                 cmdV10.ExecuteNonQuery();
+                cmdAll.ExecuteNonQuery();
+
+                cmdF1.ExecuteNonQuery();
+                cmdF2.ExecuteNonQuery();
+                cmdF3.ExecuteNonQuery();
+                cmdF4.ExecuteNonQuery();
+                cmdF5.ExecuteNonQuery();
+                cmdF6.ExecuteNonQuery();
             }
             catch (System.Exception ex)
             {
@@ -398,10 +439,10 @@ namespace Stored_Procedure_Manager
                 }
         }
 
-        private void BorderPanel_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, this.BorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-        }
+        //private void BorderPanel_Paint(object sender, PaintEventArgs e)
+        //{
+        //    ControlPaint.DrawBorder(e.Graphics, this.BorderPanel.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        //}
 
         private void CreateDBProgressBar_Click(object sender, EventArgs e)
         {
