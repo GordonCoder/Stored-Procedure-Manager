@@ -7,8 +7,17 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 /*
-SELECT '>' + dbo.fn_GetLineBeforeLast(' -ER-ERROR','-') + '<'
-SELECT '>' + dbo.fn_GetLineBeforeLast(' oskiekf-lwidjoke-kasdofkjeoijIOIJlkdjafOIS-asdfkj','-') + '<'
+SELECT dbo.fn_GetLineThroughLast(' -12-3456','-')
+SELECT dbo.fn_GetLineThroughLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetLineBeforeLast(' -12-3456','-')
+SELECT dbo.fn_GetLineBeforeLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetRestOfLineAfterLast(' -12-3456','-')
+SELECT dbo.fn_GetRestOfLineAfterLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetLineUpToValue(' 12-3456','-')
+SELECT dbo.fn_GetLineUpToValue(' 123-456-789-000','-')
 */
 /* ====================================================================== */
 /* Gets what is in the line before the input string occurance (any length) */

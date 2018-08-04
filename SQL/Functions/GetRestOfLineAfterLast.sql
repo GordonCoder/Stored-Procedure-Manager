@@ -5,6 +5,20 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+/*
+SELECT dbo.fn_GetLineThroughLast(' -12-3456','-')
+SELECT dbo.fn_GetLineThroughLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetLineBeforeLast(' -12-3456','-')
+SELECT dbo.fn_GetLineBeforeLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetRestOfLineAfterLast(' -12-3456','-')
+SELECT dbo.fn_GetRestOfLineAfterLast(' 123-456-789-000','-')
+
+SELECT dbo.fn_GetLineUpToValue(' 12-3456','-')
+SELECT dbo.fn_GetLineUpToValue(' 123-456-789-000','-')
+
+*/
 /* ====================================================================== */
 /* Gets the rest of the line after the last input string occurance (any length) */
 CREATE FUNCTION [dbo].[fn_GetRestOfLineAfterLast](@tmval2 varchar(2000),@vlsf varchar(2000))

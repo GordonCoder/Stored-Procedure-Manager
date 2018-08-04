@@ -147,6 +147,7 @@
             this.NotesButton.TabIndex = 8;
             this.NotesButton.Text = "Notes";
             this.NotesButton.UseVisualStyleBackColor = true;
+            this.NotesButton.Click += new System.EventHandler(this.NotesButton_Click);
             // 
             // SaveButton
             // 
@@ -348,8 +349,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox ButtonConfigComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -378,5 +377,6 @@
         private System.Windows.Forms.Button NotesButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.CheckBox ExeCheckBox;
+        public System.Windows.Forms.ComboBox ButtonConfigComboBox;
     }
 }

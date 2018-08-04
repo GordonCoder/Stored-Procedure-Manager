@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Stored_Procedure_Manager
 {
@@ -50,6 +51,10 @@ namespace Stored_Procedure_Manager
             {
                 LoadButtonNames();
             }
+            if (cnAMDB.State == ConnectionState.Open)
+            {
+                cnAMDB.Close();
+            }
         }
 
         private void LoadButtonNames() // Need Try statements
@@ -59,13 +64,22 @@ namespace Stored_Procedure_Manager
             SqlCommand sqlcmdb1 = new SqlCommand("SELECT DISTINCT CONCAT('Button ', CONVERT(varchar(10), ButtonId) , ' - ', ButtonName) AS ButtonName FROM AM_ButtonInfo_AllButtons ", cnAMDB);
             SqlDataAdapter sqlDab1 = new SqlDataAdapter(sqlcmdb1);
             sqlDab1.Fill(dtb1);
+            this.ButtonConfigComboBox.Items.Clear();
             for (int i = 0; i < dtb1.Rows.Count; i++)
             {
-                this.ButtonConfigComboBox.Text = "Select ButtonName";
+                this.ButtonConfigComboBox.Text = "Select Button Name";
                 this.ButtonConfigComboBox.Items.Add(dtb1.Rows[i]["ButtonName"]);
 
             }
-            cnAMDB.Close();
+            if (cnAMDB.State == ConnectionState.Open)
+            {
+                cnAMDB.Close();
+            }
+        }
+
+        public string strComboBox
+        {
+            get => ButtonConfigComboBox.Text;
         }
 
         private void ButtonConfigComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,7 +151,10 @@ namespace Stored_Procedure_Manager
             {
                 
             }
-        cnAMDB.Close();
+            if (cnAMDB.State == ConnectionState.Open)
+            {
+                cnAMDB.Close();
+            }
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -165,8 +182,8 @@ namespace Stored_Procedure_Manager
                 "update dbo.AM_Buttons " +
                 "set " +
                 "ButtonName = '" + ButtonName + "', " +
-                "SPName = '" + SPName + "'" +
-                "WHERE ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "')" +
+                "SPName = '" + SPName + "' " +
+                "WHERE ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -175,7 +192,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '1' " +
                 "AND " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "') " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -184,7 +201,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '2' " +
                 "AND " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "') " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -193,7 +210,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '3' " +
                 "AND " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "') " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -202,7 +219,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '4' " +
                 "AND " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "') " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -211,7 +228,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '5' " +
                 "AND " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "') " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
 
                 "update dbo.AM_Executable " +
                 "set " +
@@ -219,7 +236,13 @@ namespace Stored_Procedure_Manager
                 "ExecutableParam = '" + ExecutableParam + "', " +
                 "EPCheckBox = '" + EPCheckBox + "'" +
                 "WHERE " +
-                "ButtonID = (SELECT ButtonID FROM AM_Buttons WHERE IDandName = '" + ButtonConfigComboBox.Text + "')"
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+
+                "update dbo.AM_Buttons " +
+                "set " +
+                "IDandName = (SELECT CONCAT('Button ', CONVERT(varchar(10), ButtonId) , ' - ', ButtonName)  FROM [dbo].[AM_Buttons] WHERE ButtonId = (SELECT ButtonID FROM AM_Buttons WHERE ButtonId = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))))" +
+                "WHERE " +
+                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))"
                 ;
 
             using (SqlCommand SaveButtonCMD = new SqlCommand(InsertStatement, cnAMDB))
@@ -231,14 +254,29 @@ namespace Stored_Procedure_Manager
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "?");
+                    MessageBox.Show(ex.Message, "Button Update Issue");
                 }
                 finally
                 {
-                    MessageBox.Show("Record updated");
+                    Thread.Sleep(2000);
+                    cnAMDB.Close();
+                    LoadButtonNames();
+                    MessageBox.Show("Button data updated");
                 }
             }
-            cnAMDB.Close();
+            if (cnAMDB.State == ConnectionState.Open)
+            {
+                cnAMDB.Close();
+            }         
         }
+
+        private void NotesButton_Click(object sender, EventArgs e)
+        {
+            Notes n = new Notes(ButtonConfigComboBox.SelectedItem.ToString());
+            n.Show();
+            n.Focus();
+        }
+
+
     }
 }
