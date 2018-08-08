@@ -13,16 +13,18 @@ namespace Stored_Procedure_Manager
 {
     public partial class DBConnection : Form
     {
-        // SQL Connection that can be used throughout the Form
-        SqlConnection cn = new SqlConnection
-            (
-                "server="
-                + Properties.Settings.Default.ServerNameString
-                + "\\" + Properties.Settings.Default.InstanceString
-                + ";database=" + Properties.Settings.Default.DatabaseString
-                + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
-            );
+
+        //// SQL Connection that can be used throughout the Form
+        //SqlConnection cn = new SqlConnection
+        //    (
+        //        "server="
+        //        + Properties.Settings.Default.ServerNameString
+        //        + "\\" + Properties.Settings.Default.InstanceString
+        //        + ";database=" + Properties.Settings.Default.DatabaseString
+        //        + ";uid=" + Properties.Settings.Default.UserNameString
+        //        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
+        //    );
+        SqlConnection cn = new SqlConnection();
 
         public DBConnection()
         {
@@ -37,7 +39,7 @@ namespace Stored_Procedure_Manager
                         + "\\" + Properties.Settings.Default.InstanceString
                         + ";database=" + Properties.Settings.Default.DatabaseString
                         + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                         ))
                 {
                     cn.Open();
@@ -47,7 +49,6 @@ namespace Stored_Procedure_Manager
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Invalid Connection - Please Update Database Connection Information");
-                LoadDBConfig();
             }
             finally
             {
@@ -63,41 +64,17 @@ namespace Stored_Procedure_Manager
             this.InstanceTextBox.Text = Properties.Settings.Default.InstanceString;
             this.DatabaseTextBox.Text = Properties.Settings.Default.DatabaseString;
             this.UserNameTextBox.Text = Properties.Settings.Default.UserNameString;
-            this.PasswordTextBox.Text = Properties.Settings.Default.PasswordString;
-        }
-
-        private void ServerNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InstanceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DatabaseTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
+            this.PasswordTextBox.Text = Cipher.Decrypt(Properties.Settings.Default.PasswordString);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+
             Properties.Settings.Default.ServerNameString = ServerNameTextBox.Text;
             Properties.Settings.Default.InstanceString = InstanceTextBox.Text;
             Properties.Settings.Default.DatabaseString = DatabaseTextBox.Text;
             Properties.Settings.Default.UserNameString = UserNameTextBox.Text;
-            Properties.Settings.Default.PasswordString = PasswordTextBox.Text;
+            Properties.Settings.Default.PasswordString = Cipher.Encrypt(PasswordTextBox.Text);
             Properties.Settings.Default.Save();
             try
             {
@@ -108,7 +85,7 @@ namespace Stored_Procedure_Manager
                         + "\\" + Properties.Settings.Default.InstanceString
                         + ";database=" + Properties.Settings.Default.DatabaseString
                         + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                         ))
                 {
                     cn.Open();
@@ -151,7 +128,7 @@ namespace Stored_Procedure_Manager
                         + "\\" + Properties.Settings.Default.InstanceString
                         + ";database=" + Properties.Settings.Default.DatabaseString
                         + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                         ))
                 {
                     cn.Open();

@@ -51,7 +51,6 @@
             this.ServerNameTextBox.Name = "ServerNameTextBox";
             this.ServerNameTextBox.Size = new System.Drawing.Size(288, 20);
             this.ServerNameTextBox.TabIndex = 0;
-            this.ServerNameTextBox.TextChanged += new System.EventHandler(this.ServerNameTextBox_TextChanged);
             // 
             // InstanceTextBox
             // 
@@ -59,7 +58,6 @@
             this.InstanceTextBox.Name = "InstanceTextBox";
             this.InstanceTextBox.Size = new System.Drawing.Size(288, 20);
             this.InstanceTextBox.TabIndex = 1;
-            this.InstanceTextBox.TextChanged += new System.EventHandler(this.InstanceTextBox_TextChanged);
             // 
             // label1
             // 
@@ -127,7 +125,6 @@
             this.DatabaseTextBox.Name = "DatabaseTextBox";
             this.DatabaseTextBox.Size = new System.Drawing.Size(288, 20);
             this.DatabaseTextBox.TabIndex = 7;
-            this.DatabaseTextBox.TextChanged += new System.EventHandler(this.DatabaseTextBox_TextChanged);
             // 
             // UserNameTextBox
             // 
@@ -135,7 +132,6 @@
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.Size = new System.Drawing.Size(288, 20);
             this.UserNameTextBox.TabIndex = 8;
-            this.UserNameTextBox.TextChanged += new System.EventHandler(this.UserNameTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
@@ -144,7 +140,6 @@
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(288, 20);
             this.PasswordTextBox.TabIndex = 9;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // SaveButton
             // 

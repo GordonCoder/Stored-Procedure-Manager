@@ -24,7 +24,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
             );
 
         SqlConnection cnAMDB = new SqlConnection
@@ -34,7 +34,7 @@ namespace Stored_Procedure_Manager
             + "\\" + Properties.Settings.Default.InstanceString
             + ";database= AutomationManager"
             + ";uid=" + Properties.Settings.Default.UserNameString
-            + ";pwd=" + Properties.Settings.Default.PasswordString
+            + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
             );
 
         public Main()
@@ -47,13 +47,13 @@ namespace Stored_Procedure_Manager
         {
             try
             {
-                string AMDBconnectionString = 
+                string AMDBconnectionString =
                 "server="
                 + Properties.Settings.Default.ServerNameString
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             }
             catch (Exception ex)
             {
@@ -76,7 +76,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
             }
             catch (Exception ex)
@@ -218,7 +218,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -226,7 +226,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B1 = new SqlConnection(AMDBconnectionString);
@@ -317,7 +317,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -325,7 +325,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B2 = new SqlConnection(AMDBconnectionString);
@@ -412,7 +412,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -420,7 +420,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B3 = new SqlConnection(AMDBconnectionString);
@@ -507,7 +507,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -515,7 +515,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B4 = new SqlConnection(AMDBconnectionString);
@@ -601,7 +601,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -609,7 +609,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B5 = new SqlConnection(AMDBconnectionString);
@@ -696,7 +696,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -704,7 +704,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B6 = new SqlConnection(AMDBconnectionString);
@@ -791,7 +791,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -799,7 +799,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B7 = new SqlConnection(AMDBconnectionString);
@@ -885,7 +885,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -893,7 +893,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B8 = new SqlConnection(AMDBconnectionString);
@@ -980,7 +980,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -988,7 +988,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B9 = new SqlConnection(AMDBconnectionString);
@@ -1075,7 +1075,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
 
             string SPDBconnectionString =
                 "server="
@@ -1083,7 +1083,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database=" + Properties.Settings.Default.DatabaseString
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString;
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString);
             try
             {
                 SqlConnection AMDBconnectionString_B10 = new SqlConnection(AMDBconnectionString);

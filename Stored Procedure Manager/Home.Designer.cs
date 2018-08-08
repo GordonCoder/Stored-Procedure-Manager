@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.sidepanel = new System.Windows.Forms.Panel();
+            this.HolidayEngineButton = new System.Windows.Forms.Button();
             this.panelSlice = new System.Windows.Forms.Panel();
-            this.logopanel = new System.Windows.Forms.Panel();
-            this.HomeBorderPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.toolsButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dbconnectbutton = new System.Windows.Forms.Button();
             this.buttonconfigbutton = new System.Windows.Forms.Button();
             this.homebutton = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
             this.headerpanel = new System.Windows.Forms.Panel();
-            this.HolidayEngineButton = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.logopanel = new System.Windows.Forms.Panel();
+            this.HomeBorderPanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.sidepanel.SuspendLayout();
             this.logopanel.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(62)))), ((int)(((byte)(122)))));
+            this.sidepanel.Controls.Add(this.panel5);
             this.sidepanel.Controls.Add(this.HolidayEngineButton);
             this.sidepanel.Controls.Add(this.panelSlice);
             this.sidepanel.Controls.Add(this.logopanel);
@@ -68,6 +70,21 @@
             this.sidepanel.Size = new System.Drawing.Size(250, 468);
             this.sidepanel.TabIndex = 0;
             // 
+            // HolidayEngineButton
+            // 
+            this.HolidayEngineButton.FlatAppearance.BorderSize = 0;
+            this.HolidayEngineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
+            this.HolidayEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HolidayEngineButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HolidayEngineButton.Location = new System.Drawing.Point(78, 378);
+            this.HolidayEngineButton.Name = "HolidayEngineButton";
+            this.HolidayEngineButton.Size = new System.Drawing.Size(166, 55);
+            this.HolidayEngineButton.TabIndex = 13;
+            this.HolidayEngineButton.Text = "Engines";
+            this.HolidayEngineButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HolidayEngineButton.UseVisualStyleBackColor = true;
+            this.HolidayEngineButton.Click += new System.EventHandler(this.HolidayEngineButton_Click);
+            // 
             // panelSlice
             // 
             this.panelSlice.BackColor = System.Drawing.Color.DimGray;
@@ -76,43 +93,9 @@
             this.panelSlice.Size = new System.Drawing.Size(11, 55);
             this.panelSlice.TabIndex = 12;
             // 
-            // logopanel
-            // 
-            this.logopanel.BackColor = System.Drawing.Color.Transparent;
-            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
-            this.logopanel.Controls.Add(this.HomeBorderPanel);
-            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.logopanel.Location = new System.Drawing.Point(0, 0);
-            this.logopanel.Name = "logopanel";
-            this.logopanel.Size = new System.Drawing.Size(250, 83);
-            this.logopanel.TabIndex = 0;
-            // 
-            // HomeBorderPanel
-            // 
-            this.HomeBorderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HomeBorderPanel.Location = new System.Drawing.Point(0, 0);
-            this.HomeBorderPanel.Name = "HomeBorderPanel";
-            this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
-            this.HomeBorderPanel.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Clocks_60_55;
-            this.panel4.Location = new System.Drawing.Point(12, 99);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(60, 55);
-            this.panel4.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.TerminalsConfiguration_60_53;
-            this.panel3.Location = new System.Drawing.Point(12, 305);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 55);
-            this.panel3.TabIndex = 10;
-            // 
             // toolsButton
             // 
+            this.toolsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.toolsButton.FlatAppearance.BorderSize = 0;
             this.toolsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
             this.toolsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -125,22 +108,6 @@
             this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolsButton.UseVisualStyleBackColor = true;
             this.toolsButton.Click += new System.EventHandler(this.ToolsButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.DBConnectionManager_60_55;
-            this.panel2.Location = new System.Drawing.Point(12, 234);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(60, 55);
-            this.panel2.TabIndex = 8;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.ConfigurationCenter_60_55;
-            this.panel1.Location = new System.Drawing.Point(12, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 55);
-            this.panel1.TabIndex = 7;
             // 
             // dbconnectbutton
             // 
@@ -208,20 +175,64 @@
             this.headerpanel.Size = new System.Drawing.Size(855, 83);
             this.headerpanel.TabIndex = 1;
             // 
-            // HolidayEngineButton
+            // panel5
             // 
-            this.HolidayEngineButton.FlatAppearance.BorderSize = 0;
-            this.HolidayEngineButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(124)))), ((int)(((byte)(194)))));
-            this.HolidayEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HolidayEngineButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HolidayEngineButton.Location = new System.Drawing.Point(78, 378);
-            this.HolidayEngineButton.Name = "HolidayEngineButton";
-            this.HolidayEngineButton.Size = new System.Drawing.Size(166, 55);
-            this.HolidayEngineButton.TabIndex = 13;
-            this.HolidayEngineButton.Text = "Holiday Engine";
-            this.HolidayEngineButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HolidayEngineButton.UseVisualStyleBackColor = true;
-            this.HolidayEngineButton.Click += new System.EventHandler(this.HolidayEngineButton_Click);
+            this.panel5.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.OperationsCenter_60_551;
+            this.panel5.Location = new System.Drawing.Point(12, 378);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(60, 55);
+            this.panel5.TabIndex = 11;
+            // 
+            // logopanel
+            // 
+            this.logopanel.BackColor = System.Drawing.Color.Transparent;
+            this.logopanel.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Sierra_WS_250_83;
+            this.logopanel.Controls.Add(this.HomeBorderPanel);
+            this.logopanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logopanel.Location = new System.Drawing.Point(0, 0);
+            this.logopanel.Name = "logopanel";
+            this.logopanel.Size = new System.Drawing.Size(250, 83);
+            this.logopanel.TabIndex = 0;
+            // 
+            // HomeBorderPanel
+            // 
+            this.HomeBorderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HomeBorderPanel.Location = new System.Drawing.Point(0, 0);
+            this.HomeBorderPanel.Name = "HomeBorderPanel";
+            this.HomeBorderPanel.Size = new System.Drawing.Size(250, 83);
+            this.HomeBorderPanel.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.Clocks_60_55;
+            this.panel4.Location = new System.Drawing.Point(12, 99);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(60, 55);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.TerminalsConfiguration_60_53;
+            this.panel3.Location = new System.Drawing.Point(12, 305);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(60, 55);
+            this.panel3.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.DBConnectionManager_60_55;
+            this.panel2.Location = new System.Drawing.Point(12, 234);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(60, 55);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Stored_Procedure_Manager.Properties.Resources.ConfigurationCenter_60_55;
+            this.panel1.Location = new System.Drawing.Point(12, 163);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(60, 55);
+            this.panel1.TabIndex = 7;
             // 
             // Home
             // 
@@ -263,5 +274,6 @@
         private System.Windows.Forms.Panel HomeBorderPanel;
         private System.Windows.Forms.Panel panelSlice;
         private System.Windows.Forms.Button HolidayEngineButton;
+        private System.Windows.Forms.Panel panel5;
     }
 }

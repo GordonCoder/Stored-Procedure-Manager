@@ -123,6 +123,7 @@
     <Compile Include="Activation.Designer.cs">
       <DependentUpon>Activation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AMDBConnection.cs" />
     <Compile Include="ButtonConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +268,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Favicon.ico" />
+    <None Include="Resources\OperationsCenter 60-551.jpg" />
+    <None Include="Resources\OperationsCenter 60-55.jpg" />
     <None Include="Resources\Header_Graphic_855x83_v3.jpg" />
     <None Include="Resources\Body_Graphic_855x385_v2.jpg" />
     <None Include="Resources\Header_Graphic_855x83_v2.jpg" />

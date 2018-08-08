@@ -23,7 +23,7 @@ namespace Stored_Procedure_Manager
             + "\\" + Properties.Settings.Default.InstanceString
             + ";database=" + Properties.Settings.Default.DatabaseString
             + ";uid=" + Properties.Settings.Default.UserNameString
-            + ";pwd=" + Properties.Settings.Default.PasswordString
+            + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
             );
 
         SqlCommand cmd = new SqlCommand();
@@ -40,7 +40,7 @@ namespace Stored_Procedure_Manager
                         + "\\" + Properties.Settings.Default.InstanceString
                         + ";database=" + Properties.Settings.Default.DatabaseString
                         + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                         ))
                 {
                     cn.Open();
@@ -103,7 +103,7 @@ namespace Stored_Procedure_Manager
             + "\\" + Properties.Settings.Default.InstanceString
             + ";database= master" 
             + ";uid=" + Properties.Settings.Default.UserNameString
-            + ";pwd=" + Properties.Settings.Default.PasswordString
+            + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
             );
 
         strDB = "CREATE DATABASE [AutomationManager]";
@@ -137,7 +137,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
 
             strTables =
@@ -222,7 +222,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
 
             FileInfo fileV1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo1.sql");
@@ -329,7 +329,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
 
             FileInfo filedd = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Default Data\\Default Data.sql");
@@ -369,7 +369,7 @@ namespace Stored_Procedure_Manager
                 + "\\" + Properties.Settings.Default.InstanceString
                 + ";database= AutomationManager"
                 + ";uid=" + Properties.Settings.Default.UserNameString
-                + ";pwd=" + Properties.Settings.Default.PasswordString
+                + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
 
             FileInfo filespb = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Stored Procedures\\Button Test.sql");
@@ -417,7 +417,7 @@ namespace Stored_Procedure_Manager
             + "\\" + Properties.Settings.Default.InstanceString
             + ";database= AutomationManager"
             + ";uid=" + Properties.Settings.Default.UserNameString
-            + ";pwd=" + Properties.Settings.Default.PasswordString
+            + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
             ))
                 try
                 {

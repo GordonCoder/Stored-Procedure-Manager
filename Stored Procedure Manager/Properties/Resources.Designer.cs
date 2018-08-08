@@ -143,6 +143,36 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OperationsCenter_60_55 {
+            get {
+                object obj = ResourceManager.GetObject("OperationsCenter 60-55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OperationsCenter_60_551 {
+            get {
+                object obj = ResourceManager.GetObject("OperationsCenter 60-551", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OperationsCenterNoText {
+            get {
+                object obj = ResourceManager.GetObject("OperationsCenterNoText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sierra_WS_250_83 {
             get {
                 object obj = ResourceManager.GetObject("Sierra WS 250-83", resourceCulture);

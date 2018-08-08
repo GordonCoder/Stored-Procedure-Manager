@@ -22,7 +22,7 @@ namespace Stored_Procedure_Manager
             + "\\" + Properties.Settings.Default.InstanceString
             + ";database= AutomationManager"
             + ";uid=" + Properties.Settings.Default.UserNameString
-            + ";pwd=" + Properties.Settings.Default.PasswordString
+            + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
         );
         public ButtonConfig()
         {
@@ -37,7 +37,7 @@ namespace Stored_Procedure_Manager
                         + "\\" + Properties.Settings.Default.InstanceString
                         + ";database= AutomationManager"
                         + ";uid=" + Properties.Settings.Default.UserNameString
-                        + ";pwd=" + Properties.Settings.Default.PasswordString
+                        + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                         ))
                 {
                     cnAMDB.Open();
