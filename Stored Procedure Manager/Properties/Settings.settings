@@ -23,39 +23,6 @@
     <Setting Name="InstallerFolderString" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\Program Files (x86)\Sierra Workforce Solutions\Automation Manager\Installers</Value>
     </Setting>
-    <Setting Name="PasswordOk" Type="System.String" Scope="User">
-      <Value Profile="(Default)">scsint</Value>
-    </Setting>
-    <Setting Name="EXE1checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE2checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE3checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE4checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE5checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE6checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE7checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE8checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE9checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="EXE10checkBoxString" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="InfoTextBoxButtonNameString" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Enter the name you would like this button to have.</Value>
     </Setting>
@@ -64,14 +31,6 @@
     </Setting>
     <Setting Name="ActivationPass" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="AutomationManagerConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=SGDT-CTV6-2016\CELERITIMEV6;Initial Catalog=AutomationManager;Integrated Security=True&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=SGDT-CTV6-2016\CELERITIMEV6;Initial Catalog=AutomationManager;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

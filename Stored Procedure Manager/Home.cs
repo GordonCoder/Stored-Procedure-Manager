@@ -20,9 +20,20 @@ namespace Stored_Procedure_Manager
         {
             InitializeComponent();
 
-            String var = Properties.Settings.Default.ActivationPass;
+            string ActivationPass = Properties.Settings.Default.ActivationPass;
+            string PassFail = Properties.Settings.Default.PassFailString;
 
-            if (var.Equals("620190") == true)
+
+            // If Blank - first time install and use
+            if (Properties.Settings.Default.ActivationPass == "")
+            {
+                homebutton.Enabled = false;
+                buttonconfigbutton.Enabled = false;
+                dbconnectbutton.Enabled = false;
+                toolsButton.Enabled = false;
+                LoadActivation();
+            }
+            else if (Cipher.Decrypt(Properties.Settings.Default.ActivationPass).Contains("trial") == true)
             {
                 homebutton.Enabled = true;
                 buttonconfigbutton.Enabled = true;
@@ -35,29 +46,30 @@ namespace Stored_Procedure_Manager
                 buttonconfigbutton.Enabled = false;
                 dbconnectbutton.Enabled = false;
                 toolsButton.Enabled = false;
-
-                if
-                (MessageBox.Show("Invalid Activation Password - Please enter an Activation Password", "Activation Invalid" ,MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    Activation a = new Activation();
-                    a.Show();
-                    a.Focus();
-                }
-                else
-                {
-
-                }
+                LoadActivation();
             }
         }
 
-        private void LoadButtonConfig()
-        {
-            String var = Properties.Settings.Default.PassFailString;
-            if (var.Contains("Pass") == true)
-            { homebutton.Enabled = true; }
-            else { homebutton.Enabled = false; }
+        //private void LoadButtonConfig()
+        //{
+        //    string var = Properties.Settings.Default.PassFailString;
+        //    if (var.Contains("Pass") == true)
+        //    { homebutton.Enabled = true; }
+        //    else { homebutton.Enabled = false; }
 
+        //}
+
+        private void LoadActivation()
+        {
+            if
+            (MessageBox.Show("Invalid Activation Password - Please enter an Activation Password", "Activation Invalid", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Activation a = new Activation();
+                a.Show();
+                a.Focus();
+            }
         }
+
         private void HomeButton_Click(object sender, EventArgs e)
         {
             panelSlice.Height = homebutton.Height;
