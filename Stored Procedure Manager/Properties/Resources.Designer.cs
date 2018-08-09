@@ -183,6 +183,26 @@ namespace Stored_Procedure_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SierraLogo {
+            get {
+                object obj = ResourceManager.GetObject("SierraLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SpinningSierra {
+            get {
+                object obj = ResourceManager.GetObject("SpinningSierra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Splash_Page_713_383 {
             get {
                 object obj = ResourceManager.GetObject("Splash Page 713-383", resourceCulture);
