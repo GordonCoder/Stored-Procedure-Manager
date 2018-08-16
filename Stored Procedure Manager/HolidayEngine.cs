@@ -182,5 +182,14 @@ namespace Stored_Procedure_Manager
             }
             cnAMDB.Close();
         }
+
+        private void HolidayEngine_Load(object sender, EventArgs e)
+        {
+            ToolTip TP = new ToolTip();
+            TP.ShowAlways = true;
+            TP.SetToolTip(PayPolicyNameTextBox, "Enter the exact Pay Policy name that's in the Time and Attendance application or ALL to apply the rules");
+            TP.SetToolTip(HolidayPayCodeTextBox, "Enter the exact Holiday Pay Code name that's in the Time and Attendance application");
+            
+        }
     }
 }

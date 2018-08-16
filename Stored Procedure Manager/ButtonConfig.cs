@@ -183,7 +183,7 @@ namespace Stored_Procedure_Manager
                 "set " +
                 "ButtonName = '" + ButtonName + "', " +
                 "SPName = '" + SPName + "' " +
-                "WHERE ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "WHERE ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -192,7 +192,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '1' " +
                 "AND " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -201,7 +201,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '2' " +
                 "AND " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -210,7 +210,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '3' " +
                 "AND " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -219,7 +219,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '4' " +
                 "AND " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_ButtonParam " +
                 "set " +
@@ -228,7 +228,7 @@ namespace Stored_Procedure_Manager
                 "WHERE " +
                 "ParamID = '5' " +
                 "AND " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_Executable " +
                 "set " +
@@ -236,13 +236,13 @@ namespace Stored_Procedure_Manager
                 "ExecutableParam = '" + ExecutableParam + "', " +
                 "EPCheckBox = '" + EPCheckBox + "'" +
                 "WHERE " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))" +
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))" +
 
                 "update dbo.AM_Buttons " +
                 "set " +
-                "IDandName = (SELECT CONCAT('Button ', CONVERT(varchar(10), ButtonId) , ' - ', ButtonName)  FROM [dbo].[AM_Buttons] WHERE ButtonId = (SELECT ButtonID FROM AM_Buttons WHERE ButtonId = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))))" +
+                "IDandName = (SELECT CONCAT('Button ', CONVERT(varchar(10), ButtonId) , ' - ', ButtonName)  FROM [dbo].[AM_Buttons] WHERE ButtonId = (SELECT ButtonID FROM AM_Buttons WHERE ButtonId = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))))" +
                 "WHERE " +
-                "ButtonID = (SELECT TRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button ')))"
+                "ButtonID = (SELECT RTRIM(LTRIM(dbo.fn_GetRestOfLineAfterLast(dbo.fn_GetLineUpToValue('" + ButtonConfigComboBox.Text + "','-'),'Button '))))"
                 ;
 
             using (SqlCommand SaveButtonCMD = new SqlCommand(InsertStatement, cnAMDB))

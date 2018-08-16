@@ -353,6 +353,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HolidayEngine";
             this.Text = "HolidayEngine";
+            this.Load += new System.EventHandler(this.HolidayEngine_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

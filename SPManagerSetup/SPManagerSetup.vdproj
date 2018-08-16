@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_187BF6DF76BE43DAB3C53BEDF3263740"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1AA43403F5F245EAAEBD7FFE0599C062"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -179,12 +185,6 @@
         {
         "MsmKey" = "8:_5D847549FB163E5C060604E5EC47A384"
         "OwnerKey" = "8:_7FE799305C106EDE06A66F088B152D6B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6592179AD2164A2B8CBC605732385296"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -686,6 +686,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_187BF6DF76BE43DAB3C53BEDF3263740"
+            {
+            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfoAllButtons.sql"
+            "TargetName" = "8:ButtonInfoAllButtons.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1AA43403F5F245EAAEBD7FFE0599C062"
             {
             "SourcePath" = "8:..\\SQL\\Custom Tables\\Button 8.sql"
@@ -977,26 +997,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6592179AD2164A2B8CBC605732385296"
-            {
-            "SourcePath" = "8:..\\SQL\\Views\\ButtonInfoAllButtons.sql"
-            "TargetName" = "8:ButtonInfoAllButtons.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_AF618FABB97843C3AC122CC0A907E4D1"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6A90CD5252644B04A3C67C9CFD50435E"
@@ -1868,7 +1868,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Automation Manager"
         "ProductCode" = "8:{71CF2815-D3AD-4B3A-84C6-79399C2889D2}"
-        "PackageCode" = "8:{7B4D405B-8004-4148-8803-659D4C0631A3}"
+        "PackageCode" = "8:{3C383A6B-EA8B-491A-A834-84E9A391A476}"
         "UpgradeCode" = "8:{FD6DC4B7-DBC1-4E71-8412-E3BF01784AA5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

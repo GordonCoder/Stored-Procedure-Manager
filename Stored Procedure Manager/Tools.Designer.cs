@@ -50,11 +50,13 @@
             this.testButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.WaitTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxTools = new System.Windows.Forms.PictureBox();
             this.CreateTableLabel.SuspendLayout();
             this.CreateSPLabel.SuspendLayout();
             this.SQLUtilitieslabel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTools)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateTableLabel
@@ -62,7 +64,7 @@
             this.CreateTableLabel.Controls.Add(this.label2);
             this.CreateTableLabel.Controls.Add(this.label1);
             this.CreateTableLabel.ForeColor = System.Drawing.Color.Black;
-            this.CreateTableLabel.Location = new System.Drawing.Point(178, 39);
+            this.CreateTableLabel.Location = new System.Drawing.Point(182, 15);
             this.CreateTableLabel.Name = "CreateTableLabel";
             this.CreateTableLabel.Size = new System.Drawing.Size(523, 64);
             this.CreateTableLabel.TabIndex = 8;
@@ -100,7 +102,7 @@
             this.CreateSPLabel.Controls.Add(this.label3);
             this.CreateSPLabel.Controls.Add(this.label4);
             this.CreateSPLabel.ForeColor = System.Drawing.Color.Black;
-            this.CreateSPLabel.Location = new System.Drawing.Point(178, 116);
+            this.CreateSPLabel.Location = new System.Drawing.Point(182, 85);
             this.CreateSPLabel.Name = "CreateSPLabel";
             this.CreateSPLabel.Size = new System.Drawing.Size(523, 64);
             this.CreateSPLabel.TabIndex = 9;
@@ -149,7 +151,7 @@
             // 
             this.SQLUtilitieslabel.Controls.Add(this.label5);
             this.SQLUtilitieslabel.Controls.Add(this.label6);
-            this.SQLUtilitieslabel.Location = new System.Drawing.Point(178, 288);
+            this.SQLUtilitieslabel.Location = new System.Drawing.Point(182, 225);
             this.SQLUtilitieslabel.Name = "SQLUtilitieslabel";
             this.SQLUtilitieslabel.Size = new System.Drawing.Size(523, 64);
             this.SQLUtilitieslabel.TabIndex = 10;
@@ -185,7 +187,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(182, 193);
+            this.panel2.Location = new System.Drawing.Point(182, 155);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(523, 64);
             this.panel2.TabIndex = 10;
@@ -238,7 +240,7 @@
             this.SPButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SPButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SPButton.Location = new System.Drawing.Point(3, 104);
+            this.SPButton.Location = new System.Drawing.Point(3, 73);
             this.SPButton.Name = "SPButton";
             this.SPButton.Size = new System.Drawing.Size(154, 64);
             this.SPButton.TabIndex = 1;
@@ -253,7 +255,7 @@
             this.SQLUtilitiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.SQLUtilitiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SQLUtilitiesButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SQLUtilitiesButton.Location = new System.Drawing.Point(3, 258);
+            this.SQLUtilitiesButton.Location = new System.Drawing.Point(3, 213);
             this.SQLUtilitiesButton.Name = "SQLUtilitiesButton";
             this.SQLUtilitiesButton.Size = new System.Drawing.Size(154, 64);
             this.SQLUtilitiesButton.TabIndex = 6;
@@ -268,7 +270,7 @@
             this.TableButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.TableButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TableButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableButton.Location = new System.Drawing.Point(3, 27);
+            this.TableButton.Location = new System.Drawing.Point(3, 3);
             this.TableButton.Name = "TableButton";
             this.TableButton.Size = new System.Drawing.Size(154, 64);
             this.TableButton.TabIndex = 0;
@@ -283,7 +285,7 @@
             this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testButton.Location = new System.Drawing.Point(3, 181);
+            this.testButton.Location = new System.Drawing.Point(3, 143);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(154, 64);
             this.testButton.TabIndex = 7;
@@ -300,7 +302,7 @@
             this.panel1.Controls.Add(this.SPButton);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 359);
+            this.panel1.Size = new System.Drawing.Size(160, 286);
             this.panel1.TabIndex = 7;
             // 
             // WaitTimer
@@ -308,12 +310,21 @@
             this.WaitTimer.Enabled = true;
             this.WaitTimer.Tick += new System.EventHandler(this.WaitTimer_Tick);
             // 
+            // pictureBoxTools
+            // 
+            this.pictureBoxTools.Location = new System.Drawing.Point(241, 292);
+            this.pictureBoxTools.Name = "pictureBoxTools";
+            this.pictureBoxTools.Size = new System.Drawing.Size(375, 80);
+            this.pictureBoxTools.TabIndex = 11;
+            this.pictureBoxTools.TabStop = false;
+            // 
             // Tools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(855, 385);
+            this.Controls.Add(this.pictureBoxTools);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SQLUtilitieslabel);
             this.Controls.Add(this.CreateSPLabel);
@@ -328,6 +339,7 @@
             this.SQLUtilitieslabel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTools)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer WaitTimer;
+        private System.Windows.Forms.PictureBox pictureBoxTools;
     }
 }

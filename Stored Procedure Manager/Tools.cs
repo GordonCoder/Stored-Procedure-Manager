@@ -89,13 +89,10 @@ namespace Stored_Procedure_Manager
 
         private void TableButton_Click(object sender, EventArgs e)
         {
-            
-        //CreateDBLoading t = new CreateDBLoading();
-        //t.Show();
-        //t.Focus();
-        //t.CreateDBProgressBarTimer.Start();
 
-        String strDB;
+            this.pictureBoxTools.Image = Properties.Resources.SpinningSierra;
+
+            String strDB;
         SqlConnection cnDB = new SqlConnection
             (
             "server="
@@ -161,11 +158,11 @@ namespace Stored_Procedure_Manager
 
                 " WAITFOR DELAY '00:00:01'" +
 
-                "CREATE TABLE dbo.AM_FileImportStaging" +
-                "(Column0 varchar(50) NULL, Column1 varchar(50) NULL, Column2 varchar(50) NULL, Column3 varchar(50) NULL, Column4 varchar(50) NULL, Column5 varchar(50) NULL, Column6 varchar(50) NULL, Column7 varchar(50) NULL, Column8 varchar(50) NULL, Column9 varchar(50) NULL, Column10 varchar(50) NULL, Column11 varchar(50) NULL, Column12 varchar(50) NULL, Column13 varchar(50) NULL, Column14 varchar(50) NULL, Column15 varchar(50) NULL, Column16 varchar(50) NULL, Column17 varchar(50) NULL, Column18 varchar(50) NULL, Column19 varchar(50) NULL, Column20 varchar(50) NULL)" +
+                //"CREATE TABLE dbo.AM_FileImportStaging" +
+                //"(Column0 varchar(50) NULL, Column1 varchar(50) NULL, Column2 varchar(50) NULL, Column3 varchar(50) NULL, Column4 varchar(50) NULL, Column5 varchar(50) NULL, Column6 varchar(50) NULL, Column7 varchar(50) NULL, Column8 varchar(50) NULL, Column9 varchar(50) NULL, Column10 varchar(50) NULL, Column11 varchar(50) NULL, Column12 varchar(50) NULL, Column13 varchar(50) NULL, Column14 varchar(50) NULL, Column15 varchar(50) NULL, Column16 varchar(50) NULL, Column17 varchar(50) NULL, Column18 varchar(50) NULL, Column19 varchar(50) NULL, Column20 varchar(50) NULL)" +
 
                 "CREATE TABLE [dbo].[CT_HolidayEngine] " +
-                "([HolidayEngineID] [int] IDENTITY(1,1) NOT NULL,[PayPolicyName] [varchar](50) NULL,[HolidayPayCode] [varchar](50) NULL,[Amount] [int] NULL,[FutureDays] [int] NULL,[HolidayComment] [varchar](50) NULL,[ProbationDays] [int] NULL,[ProbationMths] [int] NULL,[DayBefore] [bit] NULL,[DayAfter] [bit] NULL,[ApplyExpRate] [bit] NULL,[CountOT] [bit] NULL,[CountHoliday] [bit] NULL,[Exception] [varchar](50) NULL,CONSTRAINT [PK_CT_HolidayEngine] PRIMARY KEY CLUSTERED ([HolidayEngineID] ASC)"
+                "([HolidayEngineID] [int] IDENTITY(1,1) NOT NULL,[PayPolicyName] [varchar](50) NULL,[HolidayPayCode] [varchar](50) NULL,[Amount] [int] NULL,[FutureDays] [int] NULL,[HolidayComment] [varchar](50) NULL,[ProbationDays] [int] NULL,[ProbationMths] [int] NULL,[DayBefore] [bit] NULL,[DayAfter] [bit] NULL,[ApplyExpRate] [bit] NULL,[CountOT] [bit] NULL,[CountHoliday] [bit] NULL,[Exception] [varchar](50) NULL,CONSTRAINT [PK_CT_HolidayEngine] PRIMARY KEY CLUSTERED ([HolidayEngineID] ASC))"
 
                 ;
 
@@ -174,7 +171,7 @@ namespace Stored_Procedure_Manager
             {
                 cnTables.Open();
                 cmdTables.ExecuteNonQuery();
-                //t.CreateDBProgressBarTimer.Stop();
+
                 if (MessageBox.Show
                     ("The Automation Manager Database and Tables were successfully created!", "Tables Created", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                 {
@@ -225,6 +222,7 @@ namespace Stored_Procedure_Manager
                 + ";pwd=" + Cipher.Decrypt(Properties.Settings.Default.PasswordString)
                 );
 
+            // Create Views
             FileInfo fileV1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo1.sql");
             FileInfo fileV2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo2.sql");
             FileInfo fileV3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo3.sql");
@@ -237,6 +235,7 @@ namespace Stored_Procedure_Manager
             FileInfo fileV10 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfo10.sql");
             FileInfo fileVall = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Views\\ButtonInfoAllButtons.sql");
 
+            // Create Functions
             FileInfo fileF1 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineBeforeLast.sql");
             FileInfo fileF2 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineThroughLast.sql");
             FileInfo fileF3 = new FileInfo("C:\\ProgramData\\Sierra Workforce Solutions\\Automation Manager\\SQL Scripts\\Functions\\GetLineUpToValue.sql");
@@ -307,7 +306,7 @@ namespace Stored_Procedure_Manager
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "View Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.ToString(), "View and Function Creation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -355,11 +354,13 @@ namespace Stored_Procedure_Manager
                     cndd.Close();
                 }
             }
-
+            //Stop the loading GIF
+            this.pictureBoxTools.Image = null;
         }
 
         private void SPButton_Click(object sender, EventArgs e)
         {
+            this.pictureBoxTools.Image = Properties.Resources.SpinningSierra;
             String strspb;
 
             SqlConnection cnspb = new SqlConnection
@@ -395,6 +396,8 @@ namespace Stored_Procedure_Manager
                     cnspb.Close();
                 }
             }
+            //Stop the loading GIF
+            this.pictureBoxTools.Image = null;
         }
 
         private void SQLUtilitiesButton_Click(object sender, EventArgs e)
