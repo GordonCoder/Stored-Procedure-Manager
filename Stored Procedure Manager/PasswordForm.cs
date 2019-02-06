@@ -29,7 +29,7 @@ namespace Stored_Procedure_Manager
 
         private void OKbutton_Click(object sender, EventArgs e)
         {
-            var Password = "scsint";
+            var Password = "testpassword";
             if (PasswordtextBox.Text == Password)
                 MessageBox.Show("Good password");
             else
